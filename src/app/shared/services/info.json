@@ -1,9 +1,9 @@
 {
 	"info": {
 		"name": "Ahmad Adlouni",
-		"position": "Software Engineer at Siren Analytics",
+		"position": "Senior Software Engineer at Siren Analytics",
 		"about": [
-			"👋 Greetings! I am a seasoned <span class='work-position'>Software Engineer</span> at <a href='https://sirenanalytics.com' target='_blank'>Siren Analytics</a>, and I moonlight as a <span class='work-position'>Full Stack Web Developer</span> for freelance projects.",
+			"👋 Greetings! I am a seasoned <span class='work-position'>Senior Software Engineer</span> at <a href='https://sirenanalytics.com' target='_blank'>Siren Analytics</a>, and I moonlight as a <span class='work-position'>Full Stack Web Developer</span> for freelance projects.",
 			"My expertise spans both frontend and backend frameworks, enabling me to deliver high-quality solutions throughout the software development lifecycle. My secret weapon? A passion for innovation and a collaborative spirit. 🚀",
 			"Specializing in UI/UX, I shine as an Angular engineer, creating stunning user interfaces and seamless experiences. I pride myself on writing top-notch code that brings captivating designs to life. 💻",
 			"My diverse portfolio includes web development, backend systems, and chatbots. I am well-versed in Java, Spring Boot, Angular, Twilio Conversation API with DialogFlow CX, NodeJS, and GWT. Committed to continuous learning, I stay at the forefront of industry trends and technologies. 📚",
@@ -12,11 +12,11 @@
 	},
 	"experience": [
 		{
-			"position": "Software Engineer",
+			"position": "Senior Software Engineer",
 			"company": "Siren Analytics",
 			"companyLink": "https://sirenanalytics.com",
 			"period": "dec 2023 - present",
-			"description": "<p>I'm currently involved in the MODEE-EMRC project that mainly lies in front-end development. This project aims to digitize various aspects of government services in Jordan.</p>",
+			"description": "<p>- Involved in the MODEE-EMRC project that mainly lies in front-end development. This project aims to digitize various aspects of government services in Jordan.</p><p>- Develop and optimize user-friendly interfaces and modular components using Angular.</p><p>- Collaborate with backend teams to ensure seamless integration and responsive designs.</p><p>Lead frontend development efforts to deliver high-quality, scalable, and secure solutions.</p>",
 			"tags": [
 				"Angular",
 				"UI Design",
