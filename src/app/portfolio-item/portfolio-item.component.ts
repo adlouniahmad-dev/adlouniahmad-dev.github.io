@@ -1,9 +1,9 @@
-import { Component, ElementRef, Inject, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, Inject, OnDestroy, OnInit, Renderer2, ViewChild, DOCUMENT } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { faExpand, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { IPortfolioItem } from '../shared/interfaces/portfolio-item';
 import { GeneralService } from '../shared/services/general.service';
-import { DOCUMENT } from '@angular/common';
+
 
 @Component({
     selector: 'adl-portfolio-item',
