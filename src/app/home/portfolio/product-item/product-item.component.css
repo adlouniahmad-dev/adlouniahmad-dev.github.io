@@ -1,3 +1,79 @@
 :host {
-	width: 100%;
+  display: block;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: .6rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--bg-raised);
+  transition: transform .3s cubic-bezier(.2, .8, .2, 1), border-color .3s ease, box-shadow .3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+  box-shadow: 0 24px 48px -24px rgba(167, 139, 250, .35);
+}
+
+/* The logos are on white, so they sit on a light plate */
+.plate {
+  overflow: hidden;
+  border-radius: .65rem;
+  background: #f8fafc;
+}
+
+.plate img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  transition: transform .5s cubic-bezier(.2, .8, .2, 1);
+}
+
+.card:hover .plate img {
+  transform: scale(1.06);
+}
+
+.body {
+  padding: .9rem .4rem .35rem;
+}
+
+.kind {
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.name {
+  display: flex;
+  justify-content: space-between;
+  gap: .5rem;
+  margin: .25rem 0 .2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  color: var(--text);
+}
+
+.arrow {
+  color: var(--text-faint);
+  transition: transform .25s ease, color .25s ease;
+}
+
+.card:hover .arrow {
+  transform: translateX(4px);
+  color: var(--accent);
+}
+
+.stack {
+  margin: 0;
+  font-size: .82rem;
+  color: var(--text-muted);
 }

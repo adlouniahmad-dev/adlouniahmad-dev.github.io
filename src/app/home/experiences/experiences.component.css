@@ -2,6 +2,27 @@
   display: block;
 }
 
+/* Divider label between regular positions and internships */
+.group-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 4rem 0 1.75rem;
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.group-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
 @media (hover: hover) {
 
   :host:hover adl-experience ::ng-deep .opacity-half {

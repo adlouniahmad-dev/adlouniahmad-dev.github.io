@@ -1,67 +1,87 @@
-<section class="main-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="d-flex flex-md-row flex-column">
-          <div class="left-product-info">
-            <div class="product-logo" [ngStyle]="{'background-image': 'url(' + product.featuredImage + ')'}"
-              [title]="product.name" data-aos="fade-right" (click)="openGallery()">
-            </div>
-            @if (product.details.screenshots) {
-              <button class="gallery-button" (click)="openGallery()">
-                <fa-icon [icon]="expandIcon" [fixedWidth]="true"></fa-icon>
-                Open Gallery
-              </button>
-            }
+@if (product) {
+  <div class="page">
+    <nav class="top-bar enter">
+      <a class="back" routerLink="/" fragment="projects">
+        <span class="back-arrow" aria-hidden="true">←</span> All projects
+      </a>
+      <a class="home" routerLink="/" aria-label="Ahmad Adlouni, home">
+        <adl-logo [wordmark]="true"></adl-logo>
+      </a>
+    </nav>
 
-            @if (product.details.screenshots) {
-              <div class="d-none" #galleryContainer lightbox-group>
-                @for (screenshot of product.details.screenshots; track screenshot) {
-                  <!-- <img class="d-none" [counter]="true" [src]="screenshot" lightbox> -->
-                }
-              </div>
-            }
-          </div>
-          <div class="info" data-aos="fade-left">
-            <h3 class="underline">{{ product.name }}</h3>
-            <div class="description mb-4">
-              @for (info of product.details.description; track info) {
-                <p class="mb-2">{{ info }}</p>
-              }
-            </div>
-            @if (product.details.links) {
-              <div class="description mb-4">
-                <h6>Links</h6>
-                @for (link of product.details.links; track link) {
-                  <a class="link" rel="noopener" href="{{ link.link }}" target="_blank">{{ link.name }}</a>
-                }
-              </div>
-            }
-            <div class="description">
-              <h6>Tech info</h6>
-              @for (info of product.details.techDescription; track info) {
-                <p class="mb-2">{{ info }}</p>
-              }
-              <div class="d-flex flex-wrap mt-3">
-                @for (tag of product.details.tags; track tag) {
-                  <span class="badge bg-light text-dark me-2 mb-2" [title]="tag">{{ tag }}</span>
-                }
-              </div>
-            </div>
-          </div>
-        </div>
+    <header class="hero">
+      <div class="plate enter">
+        @if (product.featuredImage) {
+          <img [src]="product.featuredImage" [alt]="product.name + ' logo'" width="1920" height="1080">
+        } @else {
+          <adl-project-cover class="cover" [name]="product.name"></adl-project-cover>
+        }
       </div>
-    </div>
+      <div class="intro enter enter-delay">
+        <span class="kind">{{ product.tags }} · {{ product.languages }}</span>
+        <h1 class="name">{{ product.name }}</h1>
+        @for (paragraph of product.details.description; track $index) {
+          <p>{{ paragraph }}</p>
+        }
+        @if (product.details.links?.length) {
+          <div class="links">
+            @for (link of product.details.links; track link.link; let first = $first) {
+              <a class="button" [class.primary]="first" [href]="link.link" target="_blank" rel="noopener">
+                {{ link.name }} <span aria-hidden="true">↗</span>
+              </a>
+            }
+          </div>
+        }
+      </div>
+    </header>
+
+    <section class="block">
+      <h2 class="block-title">Tech</h2>
+      @for (paragraph of product.details.techDescription; track $index) {
+        <p>{{ paragraph }}</p>
+      }
+      <ul class="chips" aria-label="Technologies">
+        @for (tag of product.details.tags; track tag) {
+          <li class="chip">{{ tag }}</li>
+        }
+      </ul>
+    </section>
+
+    @if (screenshots.length) {
+      <section class="block">
+        <h2 class="block-title">Screenshots <span class="muted">{{ screenshots.length }}</span></h2>
+        <div class="shots">
+          @for (shot of screenshots; track shot; let i = $index) {
+            <button type="button" class="shot" (click)="openShot(i)" [attr.aria-label]="'Open screenshot ' + (i + 1)">
+              <img [src]="shot" [alt]="product.name + ' screenshot ' + (i + 1)" loading="lazy">
+            </button>
+          }
+        </div>
+      </section>
+    }
+
+    <nav class="pager" aria-label="More projects">
+      <a class="pager-link" [routerLink]="['/projects', previous.id]">
+        <span class="pager-label">← Previous</span>
+        <span class="pager-name">{{ previous.name }}</span>
+      </a>
+      <a class="pager-link next" [routerLink]="['/projects', next.id]">
+        <span class="pager-label">Next →</span>
+        <span class="pager-name">{{ next.name }}</span>
+      </a>
+    </nav>
   </div>
-</section>
-@if (product.details.screenshots) {
-  <section class="py-5 bg-light-grey d-none">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <h3 class="underline-center text-center" data-aos="fade-down">Screenshots</h3>
-        </div>
+
+  <dialog #lightbox class="lightbox" (keydown)="onLightboxKeydown($event)" (click)="onLightboxClick($event)"
+    [attr.aria-label]="product.name + ' screenshots'">
+    @if (screenshots.length) {
+      <img class="lightbox-image" [src]="screenshots[activeShot]" [alt]="product.name + ' screenshot ' + (activeShot + 1)">
+      <div class="lightbox-bar">
+        <button type="button" class="icon-button" (click)="step(-1)" aria-label="Previous screenshot">←</button>
+        <span class="counter">{{ activeShot + 1 }} / {{ screenshots.length }}</span>
+        <button type="button" class="icon-button" (click)="step(1)" aria-label="Next screenshot">→</button>
+        <button type="button" class="icon-button close" (click)="closeLightbox()" aria-label="Close">✕</button>
       </div>
-    </div>
-  </section>
+    }
+  </dialog>
 }

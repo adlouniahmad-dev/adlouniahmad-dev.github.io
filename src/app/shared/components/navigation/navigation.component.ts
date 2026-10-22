@@ -13,7 +13,7 @@ export class NavigationComponent implements AfterViewInit, OnDestroy {
   links: Array<{ name: string, href: string }> = [
     { name: 'about', href: '#about' },
     { name: 'experience', href: '#experience' },
-    // { name: 'projects', href: '#projects' },
+    { name: 'projects', href: '#projects' },
   ];
 
   activeHref = this.links[0].href;

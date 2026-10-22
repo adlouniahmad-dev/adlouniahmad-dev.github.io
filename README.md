@@ -2,7 +2,7 @@
 
 Personal portfolio site, live at **<https://adlouniahmad-dev.github.io/>**.
 
-Built with Angular 22, Bootstrap 5, Font Awesome and AOS scroll animations, and installable as a PWA via the Angular service worker. The home page is prerendered to static HTML at build time so crawlers and link previews see the full content.
+Built with Angular 22, Bootstrap 5, Font Awesome and AOS scroll animations, and installable as a PWA via the Angular service worker. The home page and every project page are prerendered to static HTML at build time so crawlers and link previews see the full content.
 
 ## Getting started
 
@@ -24,8 +24,8 @@ All site content lives in [`src/app/shared/services/info.json`](src/app/shared/s
 | `experience` | Work history entries (position, company, period, description, tags)  |
 | `contact`    | Email and location shown in the sidebar                              |
 | `social`     | Social profile links shown in the sidebar                            |
-| `categories` | Filter categories for the portfolio section                          |
-| `portfolio`  | Portfolio projects with images, links and details                    |
+| `categories` | Filter categories for the Projects section                           |
+| `portfolio`  | Projects with images, links and details (one page per `id`)          |
 
 Images go in [`src/assets/img/`](src/assets/img/). Keep them small: export at the size they're displayed and prefer WebP.
 
@@ -35,9 +35,9 @@ The contact form (not currently shown on the page) posts to [Getform](https://ge
 
 ```text
 src/app/
-├── home/              # Main page (about + experience); portfolio and contact
-│                      # sections exist but aren't currently rendered
-├── portfolio-item/    # Project detail page
+├── home/              # Main page (about, experience, projects); the contact
+│                      # section exists but isn't currently rendered
+├── portfolio-item/    # Project detail page (/projects/:id)
 ├── page-not-found/    # 404 page
 └── shared/
     ├── components/    # Navigation and footer
@@ -51,7 +51,7 @@ src/app/
 npm run build
 ```
 
-Output goes to `dist/adlouniahmad-portfolio/browser/`. The home page (`/`) is prerendered into `index.html`; other routes are rendered client-side from `index.csr.html`, which the build also copies to `404.html` so GitHub Pages serves the app's own 404 page for unknown URLs.
+Output goes to `dist/adlouniahmad-portfolio/browser/`. The home page (`/`) is prerendered into `index.html` and each project into `projects/<id>/index.html` (new projects in `info.json` are picked up automatically); other routes are rendered client-side from `index.csr.html`, which the build also copies to `404.html` so GitHub Pages serves the app's own 404 page for unknown URLs.
 
 Prerendered routes are configured in [`app.routes.server.ts`](src/app/app.routes.server.ts). Code that touches `window` or `document` must only run in the browser (guard it with `isPlatformBrowser`), otherwise the build fails while prerendering.
 

@@ -4,19 +4,28 @@
 		"position": "Senior Software Engineer at Siren Analytics",
 		"about": {
 			"paragraphs": [
-				"👋 Greetings! I am a seasoned **Senior Software Engineer** at [Siren Analytics](https://sirenanalytics.com), and I moonlight as a **Full Stack Web Developer** for freelance projects.",
-				"My expertise spans both frontend and backend frameworks, enabling me to deliver high-quality solutions throughout the software development lifecycle. My secret weapon? A passion for innovation and a collaborative spirit. 🚀",
-				"Specializing in UI/UX, I shine as an Angular engineer, creating stunning user interfaces and seamless experiences. I pride myself on writing top-notch code that brings captivating designs to life. 💻",
-				"My diverse portfolio includes web development, backend systems, and chatbots. Committed to continuous learning, I stay at the forefront of industry trends and technologies. 📚"
+				"👋 Hi! I'm a **Senior Software Engineer** at [Siren Analytics](https://sirenanalytics.com) with 7+ years of experience building responsive, accessible and scalable web applications for government, enterprise and digital-service platforms.",
+				"I specialise in **Angular, TypeScript and frontend architecture**, with deep experience in dynamic multi-step forms, configurable form-builder tools, dashboards, workflow interfaces and API integration. 💻",
+				"I've delivered bilingual Arabic/English (RTL) public-sector portals integrated with national government systems, offline-capable Progressive Web Apps for field data collection, and secure frontends hardened against penetration-test findings. 🚀",
+				"I'm comfortable across the full delivery lifecycle: requirements, prototyping, development, UAT, deployment, documentation, training and post-launch support. 📚"
 			],
 			"skills": [
-				"Java",
-				"Spring Boot",
 				"Angular",
-				"Twilio Conversation API",
-				"Dialogflow CX",
-				"Node.js",
-				"GWT"
+				"TypeScript",
+				"RxJS",
+				"NgRx",
+				"Angular Material",
+				"Angular Formly",
+				"SCSS",
+				"PWA / Offline-first",
+				"RTL / Bilingual UI",
+				"Dynamic Forms & Form Builders",
+				"Frontend Architecture",
+				"Figma",
+				"Node.js / Express",
+				"Java / Spring Boot",
+				"SQL",
+				"Dialogflow CX / Twilio"
 			],
 			"signOff": "Welcome to my portfolio, where code meets creativity! ✨"
 		}
@@ -28,76 +37,86 @@
 				"name": "Siren Analytics",
 				"url": "https://sirenanalytics.com"
 			},
+			"location": "Lebanon, Jordan",
 			"start": "2023-12",
 			"end": null,
-			"summary": "Involved in the MODEE-EMRC project that mainly lies in front-end development. This project aims to digitize various aspects of government services in Jordan.",
+			"roles": [
+				{
+					"title": "Senior Software Engineer",
+					"start": "2024-11",
+					"end": null
+				},
+				{
+					"title": "Software Engineer",
+					"start": "2023-12",
+					"end": "2024-11"
+				}
+			],
+			"summary": "Lead frontend development for public-sector platforms and government service-delivery systems in Jordan and Lebanon, working with backend, QA, design and business-analysis teams. Promoted to Senior Software Engineer in November 2024.",
 			"highlights": [
-				"Develop and optimize user-friendly interfaces and modular components using Angular.",
-				"Collaborate with backend teams to ensure seamless integration and responsive designs.",
-				"Lead frontend development efforts to deliver high-quality, scalable, and secure solutions."
+				"**MoDEE–EMRC e-Licensing Portal (Jordan):** dozens of bilingual (Arabic/English) licensing and renewal services, with multi-step forms validated in real time against national registries through the Government Service Bus.",
+				"**DAEM National Social Assistance Platform (Lebanon):** main frontend developer across four Angular apps, including an offline-capable field-survey PWA and a citizen portal with QR and PDF417 ID-card scanning.",
+				"Led **Form Studio**, a drag-and-drop form builder library shared across the DAEM apps, and the UI/UX revamp of three portals under one shared theme.",
+				"**PAX Foundation Project Management System:** applicant and back-office portals with phased review workflows, map-based project search and an AI assistant chat.",
+				"Remediated penetration-test findings (token storage, XSS, exposed file access) and added reCAPTCHA and session auto-logout."
 			],
 			"skills": [
 				"Angular",
-				"UI Design",
-				"Material",
-				"SCSS"
+				"TypeScript",
+				"Angular Material",
+				"Angular Formly",
+				"RxJS",
+				"SCSS",
+				"PWA",
+				"RTL / Bilingual UI"
 			]
 		},
 		{
-			"position": "Software Engineer, Senior UI & Frontend Engineer",
+			"position": "Software Engineer, Senior UI & Front-End Engineer",
 			"company": {
 				"name": "VestaCare Inc.",
 				"url": "https://vestacare.com"
 			},
+			"location": "California, United States",
 			"start": "2020-12",
 			"end": "2023-11",
-			"summary": "Responsible for the complete software development life cycle for the VestaPay product, from analysis to testing.",
+			"summary": "Owned the complete software development life cycle for the VestaPay product, from analysis to testing, using Java, GWT, Spring Boot and Oracle Database.",
 			"highlights": [
-				"Coordinate team efforts to ensure project plan adherence and translate user requirements into actionable tasks.",
-				"Manage implementation and maintenance of the VSC dashboard and integrating Live Chat functionality in GWT.",
-				"Used Figma to design visually appealing interfaces for the MPR project as a Senior UI and Front-End Engineer and led the transition from GWT to Angular and Spring Boot, integrating cutting-edge technologies like Angular 15, RxJs, NGRX, and Spring Boot.",
-				"Implemented NodeJs/Express web server with JWT authentication, API implementation, HTTPS security, TypeScript integration, logging, and Webpack configuration.",
-				"Developed, deployed, and maintained Dialogflow CX chatbots, designing and implementing intents, entities, and dialogue flows for seamless user experience.",
-				"Integrated external APIs and webhooks to enhance chatbot capabilities and demonstrated capacity to innovate within business logic, exceeding business expectations through collaborative efforts."
+				"Designed the MPR project in Figma as Senior UI and Front-End Engineer and led its transition from GWT to Angular 15, NgRx and Spring Boot.",
+				"Built dashboards, data tables and reusable UI components, and maintained the VSC dashboard with integrated live chat.",
+				"Developed Dialogflow CX chatbots on the Twilio Conversations API, extended with external APIs and webhooks.",
+				"Implemented a Node.js/Express server with JWT authentication and HTTPS."
 			],
 			"skills": [
 				"Java",
 				"GWT",
-				"Sprint Boot",
+				"Spring Boot",
 				"Oracle Database",
 				"Angular",
-				"RxJs",
-				"NGRX",
+				"RxJS",
+				"NgRx",
 				"UI/UX Design",
 				"Figma",
 				"Twilio",
-				"DialogFlow CX",
-				"NodeJS"
+				"Dialogflow CX",
+				"Node.js"
 			]
 		},
 		{
-			"position": "Frontend Web Development and Database Instructor",
+			"position": "Front-End Web Development and Database Instructor",
 			"company": {
-				"name": "Anera",
+				"name": "ANERA",
 				"url": "https://anera.org"
 			},
+			"location": "Saida, Lebanon",
 			"start": "2023-02",
 			"end": "2023-05",
-			"summary": "Instruct Palestinian university students and recent graduates in Front-End Web Development and MySQL database management.",
+			"summary": "Taught Front-End Web Development and MySQL database management to Palestinian university students and recent graduates.",
 			"highlights": [
-				{
-					"text": "The curriculum includes:",
-					"items": [
-						"HTML essentials.",
-						"CSS basics and layout techniques.",
-						"Introductory JavaScript, covering basics, objects, and DOM manipulation.",
-						"Angular basics, routing, HttpClient, and services.",
-						"Foundational principles of MySQL Database."
-					]
-				}
+				"Curriculum: HTML, CSS layout, JavaScript and the DOM, Angular (routing, HttpClient, services) and MySQL."
 			],
 			"skills": [
-				"Instructor",
+				"Teaching",
 				"Communication",
 				"HTML",
 				"CSS",
@@ -107,45 +126,89 @@
 			]
 		},
 		{
-			"position": "Full Stack Web Developer",
+			"position": "Full Stack Developer",
 			"company": {
-				"name": "Freelance",
-				"url": "https://adlouniahmad-dev.github.io"
+				"name": "Freelance"
 			},
-			"start": "2019-08",
-			"end": null,
-			"summary": "Built various web application projects and mobile applications contributing to the creation and deployment of functional Android mobile applications accessible on the Google Play Store.",
+			"start": "2019-06",
+			"end": "2023-01",
+			"summary": "Built full-stack web applications and Android apps published on Google Play (see Projects below).",
 			"highlights": [
-				"Specialize in building diverse full-stack web applications using Angular, PHP Slim, MySQL, and Microsoft SQL Server.",
-				"Proficient in Front-End development with Angular, HTML5, CSS3, and JavaScript, incorporating libraries like jQuery and Bootstrap for a seamless user experience.",
-				"Efficient database design and management, adapting solutions to project-specific requirements and developing RESTful APIs for data exchange and integration.",
-				"Integrated third-party APIs such as OnlineSim.io",
-				"Used Git and Bitbucket as version control tools for efficient collaboration and maintaining code integrity across projects."
+				"Web apps with Angular, PHP Slim and MySQL / SQL Server, including admin dashboards, PWAs and RESTful APIs.",
+				"Integrated third-party APIs such as OnlineSim.io."
 			],
 			"skills": [
 				"Angular",
-				"Databases",
-				"Slim Microframework",
-				"EF Core",
-				"Web Services API"
+				"PHP Slim",
+				"MySQL",
+				"SQL Server",
+				"RESTful APIs",
+				"Android",
+				"Git"
 			]
 		},
 		{
-			"position": "Frontend Web Developer",
+			"position": "Front-End Web Developer",
 			"company": {
 				"name": "Bluering",
 				"url": "https://bluering.com"
 			},
+			"location": "Beirut, Lebanon",
 			"start": "2019-02",
 			"end": "2019-05",
-			"summary": "As a frontend developer, I was in charge of creating visually appealing and interactive user interfaces, as well as designing reusable components for the Bluering Retail platform product. This involves leveraging HTML5, CSS3, Bootstrap 4, and Angular 5 to enhance the user experience and functionality of the platform.",
+			"summary": "Built interfaces and reusable components for the Bluering Retail platform with Angular 5, Bootstrap 4, HTML5 and CSS3.",
+			"highlights": [
+				"Implemented design system standards, reusable UI modules and responsive layouts.",
+				"Improved navigation flows, form validation, loading performance and cross-browser compatibility."
+			],
 			"skills": [
+				"HTML5",
 				"CSS3",
 				"Bootstrap",
 				"JavaScript",
-				"Angular",
-				"HTML5",
-				"JSON"
+				"Angular"
+			]
+		},
+		{
+			"position": "Software Developer Intern",
+			"type": "internship",
+			"company": {
+				"name": "Vanrise"
+			},
+			"location": "Beirut, Lebanon",
+			"start": "2018-08",
+			"end": "2018-09",
+			"skills": [
+				"AngularJS",
+				"C#",
+				"ASP.NET",
+				"Web APIs",
+				"SQL Server"
+			],
+			"summary": "Contributed to a single-page application built with AngularJS, C# / ASP.NET Web APIs and Microsoft SQL Server stored procedures."
+		},
+		{
+			"position": "Junior Software Developer Intern",
+			"type": "internship",
+			"company": {
+				"name": "Integrated Digital Systems"
+			},
+			"location": "Beirut, Lebanon",
+			"start": "2017-06",
+			"end": "2018-06",
+			"summary": "Worked on the \"ID Card Reader\" project, from requirements and UML design to a Symfony web dashboard.",
+			"highlights": [
+				"Built the dashboard (Symfony MVC, Doctrine ORM, MySQL) with Google OAuth sign-in.",
+				"Created RESTful APIs for the companion Android app."
+			],
+			"skills": [
+				"PHP",
+				"Symfony",
+				"Doctrine ORM",
+				"MySQL",
+				"Google OAuth",
+				"RESTful APIs",
+				"UML"
 			]
 		}
 	],
@@ -172,6 +235,33 @@
 	],
 	"portfolio": [
 		{
+			"id": "form-studio",
+			"name": "Form Studio",
+			"tags": "web",
+			"languages": "Angular / Formly / RxJS",
+			"details": {
+				"description": [
+					"A reusable, configurable drag-and-drop form builder for designing dynamic multi-step forms and workflows (DAEM, Siren Analytics), packaged as a standalone library (v1.0) and shared across the WFPS portal, an offline-capable field-survey PWA and the citizen registration portal."
+				],
+				"techDescription": [
+					"Builder: drag-and-drop and click-to-add palette, grid layouts, repeatable sections, steppers with step reordering, a visual conditional-logic builder, validation rules, a validation dependency graph, and JSON and consistency-rule code editors (CodeMirror).",
+					"Workflow: draft, publish and archive layout versions per survey type, clone layouts across survey types, export/import configurations between environments, permission-gated actions and a guided product tour.",
+					"Runtime: a reusable application renderer with responsive and RTL/LTR preview, lookup data sources, file uploads, camera and barcode scanner fields, resumable linear steppers and a read-only document view of submitted applications.",
+					"Extensible through runtime APIs for custom fields, property panels, event handlers and consistency rules; includes an AI form-assistant panel whose responses are validated against a schema before being applied.",
+					"Built with Angular, TypeScript, Angular Formly, RxJS and SCSS, with Karma/Jasmine tests and bilingual (Arabic/English) user and developer documentation."
+				],
+				"tags": [
+					"Angular",
+					"TypeScript",
+					"Angular Formly",
+					"RxJS",
+					"SCSS",
+					"CodeMirror",
+					"Karma / Jasmine"
+				]
+			}
+		},
+		{
 			"id": "ask",
 			"name": "ASK - Agile Share Knowledge",
 			"tags": "web",
@@ -181,19 +271,25 @@
 			"details": {
 				"description": [
 					"The project aims to spread knowledge among all the employees at all levels of the institution's sectors and departments, in order to raise the learning curve, spread the supportive institutional culture in a practical and systematic way, maximize the use of the knowledge and expertise in the organization which is a major element in promoting proactive knowledge.",
-					"The application is available in English and Arabic languages."
+					"The application is available in English and Arabic versions."
 				],
 				"techDescription": [
-					"This web application was developed in Entity Framework Core Web API and Angular."
+					"Responsible for creating efficient design and developing User Interaction screens using HTML, CSS3, Bootstrap and Angular 8.",
+					"Organizing and structuring the Angular app into modules in addition to creating custom reusable components.",
+					"Implemented HTTP requests using RxJS Observable library to handle multiple values over time.",
+					"Implemented RESTful APIs in Entity Framework Core 2.0 and Microsoft SQL Server, securing the APIs with JWT and used JSON for data exchange between the client side and the server side."
 				],
 				"tags": [
+					"Angular",
+					"TypeScript",
+					"RxJS",
+					"Bootstrap",
 					"HTML",
 					"CSS",
-					"EF Core",
 					"C#",
-					"TypeScript",
-					"Angular",
-					"Web APIs"
+					"EF Core",
+					"SQL Server",
+					"JWT"
 				],
 				"links": [
 					{
@@ -210,6 +306,48 @@
 			}
 		},
 		{
+			"id": "sim-phones",
+			"name": "Sim-Phones",
+			"tags": "web",
+			"languages": "Angular / Slim PHP / PWA",
+			"featuredImage": "/assets/img/simphones-logo.png",
+			"link": "https://app.sim-phones.com",
+			"details": {
+				"description": [
+					"A Web Application that allows people to buy virtual numbers from various countries (Russia, Germany, etc...) to use it in different services, such as: WhatsApp, Facebook, Viber, etc...",
+					"The web application consists of a dashboard that is used by admin users and a PWA (Progressive Web Application) application that is used by normal users."
+				],
+				"techDescription": [
+					"It is developed using Angular, PHP Slim micro-framework (RESTful APIs / JWT) and MySQL.",
+					"Integrated Online-Sim APIs for purchasing virtual numbers for different social networks platforms and used Firebase Cloud Messaging for sending push notifications."
+				],
+				"tags": [
+					"Angular",
+					"PHP",
+					"Slim Framework",
+					"JWT",
+					"MySQL",
+					"PWA",
+					"Firebase Cloud Messaging"
+				],
+				"links": [
+					{
+						"name": "Go to Website",
+						"link": "https://sim-phones.com"
+					},
+					{
+						"name": "Go to App",
+						"link": "https://app.sim-phones.com"
+					}
+				],
+				"screenshots": [
+					"/assets/img/simphones-1.JPG",
+					"/assets/img/simphones-2.JPG",
+					"/assets/img/simphones-3.JPG"
+				]
+			}
+		},
+		{
 			"id": "leb-phones",
 			"name": "LebPhones",
 			"tags": "web",
@@ -221,7 +359,7 @@
 					"A website that displays the wholesale prices of various mobile phones in Lebanon."
 				],
 				"techDescription": [
-					"This website was written in PHP using Slim Framework and added the PWA - Progressive Web Apps - capability to it."
+					"Developed in PHP using the Slim Framework, with Progressive Web App (PWA) capabilities."
 				],
 				"tags": [
 					"HTML",
@@ -245,48 +383,6 @@
 			}
 		},
 		{
-			"id": "sim-phones",
-			"name": "Sim-Phones",
-			"tags": "web",
-			"languages": "Angular / Slim PHP / PWA",
-			"featuredImage": "/assets/img/simphones-logo.png",
-			"link": "https://app.sim-phones.com",
-			"details": {
-				"description": [
-					"Sim-Phones is a Web Application that allows people to buy virtual numbers from various countries (Russia, Germany, etc...) to use it in different services, such as: WhatsApp, Facebook, Viber, etc..."
-				],
-				"techDescription": [
-					"This application consists of a Main website, PWA app and a Dashboard",
-					"All Web Services are written in PHP using Slim Framework, the PWA App and Dashboard are developed using Angular."
-				],
-				"tags": [
-					"HTML",
-					"CSS",
-					"PHP",
-					"Slim Framework",
-					"Web APIs",
-					"JavaScript",
-					"Angular",
-					"Firebase Cloud Messaging"
-				],
-				"links": [
-					{
-						"name": "Go to Website",
-						"link": "https://sim-phones.com"
-					},
-					{
-						"name": "Go to App",
-						"link": "https://app.sim-phones.com"
-					}
-				],
-				"screenshots": [
-					"/assets/img/simphones-1.JPG",
-					"/assets/img/simphones-2.JPG",
-					"/assets/img/simphones-3.JPG"
-				]
-			}
-		},
-		{
 			"id": "mms-server",
 			"name": "MMS Server",
 			"tags": "mobile",
@@ -294,15 +390,17 @@
 			"featuredImage": "/assets/img/mmserver-logo.png",
 			"details": {
 				"description": [
-					"An android application which acts as a server for the MMService application.",
-					"This application server handles the operations for sending dollars and days to touch and alfa mobile numbers from the MMService application."
+					"An android application that handles all the operations for sending dollars and days to touch and alfa mobile numbers from the MMService application."
 				],
 				"techDescription": [
-					"This application was written in Java language."
+					"Worked on implementing the required listeners for reading and processing incoming messages and USSD messages.",
+					"Worked on the implementation for sending messages from both Sim 1 and 2 programmatically using the SmsManager and running USSD codes.",
+					"Used SQLite and Firebase Cloud Firestore for saving and reading data."
 				],
 				"tags": [
 					"Java",
 					"Android",
+					"SQLite",
 					"Firebase",
 					"Firestore"
 				]
@@ -320,17 +418,17 @@
 					"A website that displays deals from different online stores such as AliExpress."
 				],
 				"techDescription": [
-					"The Web App consists of a Main page and a Dashboard.",
-					"The frontend of the Main page and the Dashboard were developed in Angular and consume Web APIs which are written in PHP using Slim Framework."
+					"Responsible for implementing the UI interfaces and reusable components for the admin dashboard and the store in Angular.",
+					"Responsible for implementing RESTful APIs using PHP Slim micro-framework and MySQL."
 				],
 				"tags": [
-					"HTML",
-					"CSS",
+					"Angular",
 					"PHP",
 					"Slim Framework",
+					"MySQL",
 					"Web APIs",
-					"JavaScript",
-					"Angular"
+					"HTML",
+					"CSS"
 				],
 				"links": [
 					{
@@ -346,21 +444,47 @@
 			}
 		},
 		{
+			"id": "gorraf",
+			"name": "Gorraf",
+			"tags": "web",
+			"languages": "Flask / React / PostgreSQL",
+			"details": {
+				"description": [
+					"Led a small team which consists of two software developers."
+				],
+				"techDescription": [
+					"Responsible for the implementation of the server-side changes using Flask micro-framework with the Flask-RESTX extension for building REST APIs and PostgreSQL relational database.",
+					"Worked on the implementation of some client-side components using React and Bootstrap."
+				],
+				"tags": [
+					"Python",
+					"Flask",
+					"Flask-RESTX",
+					"PostgreSQL",
+					"React",
+					"Bootstrap"
+				]
+			}
+		},
+		{
 			"id": "status-saver",
-			"name": "Status Saver",
+			"name": "WhatsApp Status Saver",
 			"tags": "mobile",
 			"languages": "Android Java",
 			"featuredImage": "/assets/img/statussaver-logo.png",
 			"details": {
 				"description": [
-					"Status Saver application lets you save photo images and videos from WhatsApp application and it also allows you to share the media directly from the application to your friends."
+					"An Android application lets you view and save WhatsApp photo images and video statuses of your friends. It also enables you to share them directly from the app with your friends."
 				],
 				"techDescription": [
-					"This application was written in Java language and uses third party libraries such as Picasso."
+					"Used Java programming language for the implementation and followed the MVP (Model-View-Presenter) pattern.",
+					"Used Picasso library for displaying images and video thumbnails."
 				],
 				"tags": [
 					"Java",
-					"Android"
+					"Android",
+					"MVP",
+					"Picasso"
 				],
 				"links": [
 					{
@@ -386,12 +510,14 @@
 					"An android application that lets you search for a domain name to check its availability and its price."
 				],
 				"techDescription": [
-					"This application was written in Java language and uses GoDaddy Domains APIs."
+					"Worked on the design and implementation of the user interfaces.",
+					"Worked on the integration of GoDaddy APIs and consuming them with Retrofit REST client."
 				],
 				"tags": [
 					"Java",
 					"Android",
-					"Retrofit"
+					"Retrofit",
+					"GoDaddy APIs"
 				],
 				"links": [
 					{
@@ -414,10 +540,10 @@
 			"featuredImage": "/assets/img/electronicmasbaha-logo.png",
 			"details": {
 				"description": [
-					"An android application that lets you count your prayers on phone."
+					"An Android application that lets you count your prayers on your phone."
 				],
 				"techDescription": [
-					"This application was written in Java language."
+					"Developed in Java."
 				],
 				"tags": [
 					"Java",

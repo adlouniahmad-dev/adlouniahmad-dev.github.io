@@ -1,58 +1,316 @@
-.main-section {
-	padding: 120px 0 5rem 0;
+:host {
+  display: block;
 }
 
-.left-product-info {
-	margin-bottom: 20px;
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 5rem;
 }
 
-.product-logo {
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	overflow: hidden;
-	height: 200px;
-	border-radius: 5px;
-	border: 3px solid var(--color-light-gray);
-	cursor: pointer;
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  font-size: .875rem;
 }
 
-.product-logo:hover+.gallery-button {
-	color: inherit;
-	opacity: .7;
+.back {
+  color: var(--text-muted);
 }
 
-.description {
-	margin-top: 15px;
-	font-weight: lighter;
+.back-arrow {
+  display: inline-block;
+  transition: transform .25s ease;
 }
 
-.link {
-	margin-right: 8px;
+.back:hover .back-arrow {
+  transform: translateX(-4px);
 }
 
-.badge-primary {
-	background-color: var(--color-lighter-blue);
+.home {
+  font-size: 1.15rem;
+  color: var(--text);
 }
 
-.gallery-button {
-	outline: none;
-	border: none;
-	background: none;
-	font-size: .8rem;
-	width: 100%;
-	padding: 0;
-	margin-top: .7rem;
+.home:hover {
+  color: var(--text);
+}
+
+.home adl-logo ::ng-deep .monogram {
+  transition: transform .3s cubic-bezier(.2, .8, .2, 1);
+}
+
+.home:hover adl-logo ::ng-deep .monogram {
+  transform: scale(1.08);
+}
+
+.hero {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.plate {
+  overflow: hidden;
+  padding: .6rem;
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  background: var(--bg-raised);
+}
+
+.plate img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: .8rem;
+  background: #f8fafc;
+}
+
+.cover {
+  border-radius: .8rem;
+  overflow: hidden;
+}
+
+.kind,
+.block-title {
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.kind {
+  color: var(--accent);
+}
+
+.name {
+  margin: .5rem 0 1rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -.03em;
+  color: var(--text);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin-top: 1.5rem;
+}
+
+.button {
+  padding: .6rem 1.2rem;
+  font-size: .875rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: var(--bg-raised);
+  transition: border-color .2s ease, color .2s ease, transform .2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.button.primary {
+  color: var(--bg);
+  border-color: transparent;
+  background: var(--gradient);
+}
+
+.block {
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.block-title {
+  margin-bottom: 1.25rem;
+  color: var(--text);
+}
+
+.muted {
+  margin-left: .4rem;
+  color: var(--text-faint);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip {
+  padding: .3rem .8rem;
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-raised);
+}
+
+/* Uniform tiles; phone and desktop screenshots are letterboxed inside them */
+.shots {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .75rem;
+}
+
+.shot {
+  display: block;
+  padding: .5rem;
+  border: 1px solid var(--border);
+  border-radius: .8rem;
+  background: rgba(148, 163, 184, .06);
+  cursor: zoom-in;
+  transition: border-color .25s ease, transform .25s ease;
+}
+
+.shot:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-strong);
+}
+
+.shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  border-radius: .4rem;
+}
+
+.pager {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.pager-link {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--bg-raised);
+  transition: border-color .25s ease;
+}
+
+.pager-link:hover {
+  border-color: var(--border-strong);
+}
+
+.pager-link.next {
+  text-align: right;
+}
+
+.pager-label {
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.pager-name {
+  font-weight: 600;
+}
+
+.lightbox {
+  max-width: min(96vw, 1400px);
+  max-height: 96vh;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+}
+
+.lightbox::backdrop {
+  background: rgba(5, 8, 16, .85);
+  backdrop-filter: blur(6px);
+}
+
+.lightbox-image {
+  display: block;
+  max-width: 100%;
+  max-height: calc(96vh - 4rem);
+  margin: 0 auto;
+  border-radius: .75rem;
+}
+
+.lightbox-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .75rem;
+  margin-top: .75rem;
+}
+
+.counter {
+  min-width: 4rem;
+  font-family: var(--font-mono);
+  font-size: .8rem;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.icon-button {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+  border-radius: 50%;
+  background: rgba(15, 20, 35, .8);
+}
+
+.icon-button:hover {
+  border-color: var(--accent);
+}
+
+.close {
+  margin-left: 1rem;
+}
+
+.enter {
+  animation: enter .7s cubic-bezier(.2, .8, .2, 1) both;
+}
+
+.enter-delay {
+  animation-delay: .1s;
+}
+
+@keyframes enter {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
 }
 
 @media screen and (min-width: 768px) {
 
-	.left-product-info {
-		flex: 0 0 300px;
-		margin-bottom: 0;
-	}
+  .page {
+    padding: 3rem 3rem 6rem;
+  }
 
-	.info {
-		margin-left: 5rem;
-	}
+  .hero {
+    grid-template-columns: 5fr 6fr;
+    gap: 3.5rem;
+  }
+
+  .shots {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+
 }

@@ -11,10 +11,13 @@ import { GeneralService } from '../../shared/services/general.service';
 })
 export class ExperiencesComponent {
 
-  constructor(private generalService: GeneralService) {}
+  readonly positions: IExperience[];
+  readonly internships: IExperience[];
 
-  get experiences(): IExperience[] {
-    return this.generalService.getExperience();
+  constructor(generalService: GeneralService) {
+    const all = generalService.getExperience();
+    this.positions = all.filter(experience => experience.type !== 'internship');
+    this.internships = all.filter(experience => experience.type === 'internship');
   }
 
 }

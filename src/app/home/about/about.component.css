@@ -7,22 +7,8 @@ p {
   font-size: 1.02rem;
 }
 
-a {
-  color: var(--text);
-  background-image: linear-gradient(var(--accent), var(--accent));
-  background-size: 0 1px;
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size .3s ease, color .2s ease;
-}
-
-a:hover {
-  color: var(--accent);
-  background-size: 100% 1px;
-}
-
-.highlight {
-  font-weight: 600;
+/* About uses the gradient for its highlights */
+adl-inline-text ::ng-deep .highlight {
   background: var(--gradient);
   -webkit-background-clip: text;
   background-clip: text;

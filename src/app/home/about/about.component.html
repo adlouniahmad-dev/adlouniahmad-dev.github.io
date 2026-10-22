@@ -2,16 +2,7 @@
   <h3 class="section-title">About</h3>
   <div>
     @for (paragraph of info.about.paragraphs; track $index) {
-      <p>
-        @for (segment of paragraph | inlineMarkdown; track $index) {
-          <!-- no whitespace inside the cases, or it ends up in the sentence -->
-          @switch (segment.type) {
-            @case ('strong') {<strong class="highlight">{{ segment.text }}</strong>}
-            @case ('link') {<a [href]="segment.href" target="_blank" rel="noopener">{{ segment.text }}</a>}
-            @default {<ng-container>{{ segment.text }}</ng-container>}
-          }
-        }
-      </p>
+      <p><adl-inline-text [text]="paragraph"></adl-inline-text></p>
     }
 
     @if (info.about.skills?.length) {

@@ -1,6 +1,4 @@
-import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { Router } from '@angular/router';
-import { faLink, faInfo } from '@fortawesome/free-solid-svg-icons';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { IPortfolioItem } from '../../../shared/interfaces/portfolio-item';
 
 @Component({
@@ -10,30 +8,8 @@ import { IPortfolioItem } from '../../../shared/interfaces/portfolio-item';
     changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
-export class ProductItemComponent implements OnInit {
+export class ProductItemComponent {
 
   @Input() item: IPortfolioItem;
-  icons: any;
-
-  constructor(private router: Router) { }
-
-  ngOnInit(): void {
-    this.initializeIcons();
-  }
-
-  initializeIcons(): void {
-    this.icons = {
-      link: faLink,
-      info: faInfo
-    };
-  }
-
-  goToLink(): void {
-    window.open(this.item.link, '_blank');
-  }
-
-  navigateToDetails(id: string): void {
-    this.router.navigate(['/portfolio', id]);
-  }
 
 }

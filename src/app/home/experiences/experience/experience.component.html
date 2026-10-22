@@ -3,15 +3,37 @@
   <div class="row">
     <div class="col-3 d-none d-md-block">
       <span class="period d-block me-2">{{ period }}</span>
+      @if (experience.location) {
+        <span class="location d-block me-2">{{ experience.location }}</span>
+      }
     </div>
     <div class="col-sm-12 col-md-9">
       <div class="mb-2">
-        <a class="title" [href]="experience.company.url" target="_blank" rel="noopener" (click)="$event.stopPropagation()">
-          {{ experience.position }} <span class="company">· {{ experience.company.name }}</span>
-          <span class="arrow" aria-hidden="true">↗</span>
-        </a>
-        <span class="period d-md-none">{{ period }}</span>
+        @if (experience.company.url) {
+          <a class="title" [href]="experience.company.url" target="_blank" rel="noopener" (click)="$event.stopPropagation()">
+            {{ experience.position }} <span class="company">· {{ experience.company.name }}</span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        } @else {
+          <span class="title">
+            {{ experience.position }} <span class="company">· {{ experience.company.name }}</span>
+          </span>
+        }
+        <span class="period d-md-none">
+          {{ period }}@if (experience.location) {<span> · {{ experience.location }}</span>}
+        </span>
       </div>
+
+      @if (experience.roles?.length > 1) {
+        <ol class="roles" aria-label="Titles">
+          @for (role of experience.roles; track role.title) {
+            <li>
+              <span class="role-title">{{ role.title }}</span>
+              <span class="role-period">{{ formatPeriod(role.start, role.end) }}</span>
+            </li>
+          }
+        </ol>
+      }
 
       <div class="description">
         @if (experience.summary) {
@@ -21,13 +43,13 @@
           <ul class="highlights">
             @for (highlight of experience.highlights; track $index) {
               @if (typeof highlight === 'string') {
-                <li>{{ highlight }}</li>
+                <li><adl-inline-text [text]="highlight"></adl-inline-text></li>
               } @else {
                 <li>
-                  {{ highlight.text }}
+                  <adl-inline-text [text]="highlight.text"></adl-inline-text>
                   <ul class="sub-items">
                     @for (item of highlight.items; track $index) {
-                      <li>{{ item }}</li>
+                      <li><adl-inline-text [text]="item"></adl-inline-text></li>
                     }
                   </ul>
                 </li>

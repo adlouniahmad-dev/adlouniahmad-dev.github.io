@@ -6,6 +6,7 @@ export interface IPortfolioItem {
     tags: string,
     link?: string,
     languages: string,
-    featuredImage: string,
+    /** 16:9 cover image; a typographic placeholder is shown when missing */
+    featuredImage?: string,
     details: IPortfolioItemDetails
 }
