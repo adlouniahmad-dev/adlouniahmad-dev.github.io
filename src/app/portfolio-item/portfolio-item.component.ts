@@ -1,9 +1,9 @@
-import { Component, ElementRef, Inject, OnDestroy, OnInit, Renderer2, ViewChild, DOCUMENT, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { faExpand, IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { Subscription } from 'rxjs';
 import { IPortfolioItem } from '../shared/interfaces/portfolio-item';
 import { GeneralService } from '../shared/services/general.service';
-
+import { SeoService } from '../shared/services/seo.service';
 
 @Component({
     selector: 'adl-portfolio-item',
@@ -14,34 +14,86 @@ import { GeneralService } from '../shared/services/general.service';
 })
 export class PortfolioItemComponent implements OnInit, OnDestroy {
 
-  @ViewChild('galleryContainer') galleryContainer: ElementRef;
+  @ViewChild('lightbox') lightbox: ElementRef<HTMLDialogElement>;
 
-  expandIcon: IconDefinition = faExpand
   product: IPortfolioItem;
+  previous: IPortfolioItem;
+  next: IPortfolioItem;
+  activeShot = 0;
+
+  private routeSub: Subscription;
 
   constructor(
     private generalService: GeneralService,
     private route: ActivatedRoute,
     private router: Router,
-    private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document,
-  ) { }
+    private seo: SeoService,
+  ) {}
+
+  get screenshots(): string[] {
+    return this.product?.details.screenshots ?? [];
+  }
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id');
-    this.product = this.generalService.getPortfolioItemDetails(id);
-    if (!this.product)
-      this.router.navigate(['/']);
+    // The component is reused when moving between projects, so follow the param
+    this.routeSub = this.route.paramMap.subscribe(params => this.load(params.get('id')));
   }
 
   ngOnDestroy(): void {
-    const lb = this.document.querySelector('crystal-lightbox');
-    if (lb)
-      this.renderer.removeChild(this.document, lb);
+    this.routeSub?.unsubscribe();
+    this.seo.reset();
   }
 
-  openGallery(): void {
-    this.galleryContainer.nativeElement.children[0].click();
+  openShot(index: number): void {
+    this.activeShot = index;
+    this.lightbox.nativeElement.showModal();
+  }
+
+  closeLightbox(): void {
+    if (this.lightbox?.nativeElement.open)
+      this.lightbox.nativeElement.close();
+  }
+
+  step(delta: number): void {
+    const count = this.screenshots.length;
+    this.activeShot = (this.activeShot + delta + count) % count;
+  }
+
+  onLightboxKeydown(event: KeyboardEvent): void {
+    if (event.key === 'ArrowRight')
+      this.step(1);
+    else if (event.key === 'ArrowLeft')
+      this.step(-1);
+  }
+
+  /** Clicks on the dialog element itself (not its content) are on the backdrop */
+  onLightboxClick(event: MouseEvent): void {
+    if (event.target === this.lightbox.nativeElement)
+      this.closeLightbox();
+  }
+
+  private load(id: string): void {
+    const items = this.generalService.getPortfolioItems();
+    const index = items.findIndex(item => item.id === id);
+    if (index < 0) {
+      // Unknown project: show the 404 page without changing the URL
+      this.router.navigate(['/404'], { skipLocationChange: true });
+      return;
+    }
+
+    this.closeLightbox();
+    this.product = items[index];
+    this.previous = items[(index - 1 + items.length) % items.length];
+    this.next = items[(index + 1) % items.length];
+
+    this.seo.update({
+      title: `${this.product.name} — Ahmad Adlouni`,
+      description: this.product.details.description[0],
+      // GitHub Pages serves prerendered pages from folders, so the canonical URL has a trailing slash
+      path: `/projects/${this.product.id}/`,
+      image: this.product.featuredImage,
+      imageAlt: `${this.product.name} logo`,
+    });
   }
 
 }

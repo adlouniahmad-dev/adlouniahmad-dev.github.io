@@ -1,27 +1,27 @@
+<div class="spotlight" aria-hidden="true"></div>
+
 <div class="main position-relative">
 	<div class="d-flex flex-column flex-lg-row justify-content-between gap-3">
 
-		<header class="header d-flex flex-column justify-content-between overflow-auto">
-			<div data-aos="fade-right">
-				<div>
-					<div class="font-size-30px">
-						<span class="adl-text-primary welcoming">Hello There! I'm</span>
-					</div>
-					<div class="fw-bold name">
-						<span class="adl-text-primary">{{ info.name }}</span>
-					</div>
-					<div class="typewritter">
-						<span>{{ info.position }}</span>
-					</div>
-				</div>
-				<adl-navigation class="mt-5 navigation-container"></adl-navigation>
+		<header class="header d-flex flex-column justify-content-between">
+			<div class="enter">
+				<span class="eyebrow">
+					<span class="pulse" aria-hidden="true"></span>
+					Hello there, I'm
+				</span>
+				<h1 class="name">{{ info.name }}</h1>
+				<p class="role">
+					<span class="gradient-text">{{ info.position }}</span><span class="caret" aria-hidden="true"></span>
+				</p>
+				<adl-navigation class="navigation-container"></adl-navigation>
 			</div>
-			<adl-footer class="mt-4" data-aos="fade-right"></adl-footer>
+			<adl-footer class="mt-4 enter enter-delay"></adl-footer>
 		</header>
 
 		<main class="content">
 			<adl-about data-aos="fade-left"></adl-about>
 			<adl-experiences></adl-experiences>
+			<adl-portfolio></adl-portfolio>
 		</main>
 
 	</div>

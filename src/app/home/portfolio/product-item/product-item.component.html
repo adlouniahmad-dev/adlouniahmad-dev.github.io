@@ -1,18 +1,17 @@
-<div [ngStyle]="{'background-image': 'url(' + item.featuredImage + ')'}" class="portfolio-item position-relative on-hover">
-  <div class="text-center p-3 portfolio-header">
-    <div class="title fw-bold">{{ item.name }}</div>
-    <div class="tags">{{ item.languages }}</div>
+<a class="card" [routerLink]="['/projects', item.id]">
+  <div class="plate">
+    @if (item.featuredImage) {
+      <img [src]="item.featuredImage" [alt]="item.name + ' logo'" width="1920" height="1080" loading="lazy">
+    } @else {
+      <adl-project-cover [name]="item.name"></adl-project-cover>
+    }
   </div>
-  <div class="portfolio-footer p-2">
-    <div class="d-flex align-items-center justify-content-center">
-      @if (item.link) {
-        <button class="btn font-weight-lighter" (click)="goToLink()">
-          <fa-icon [icon]="icons.link" [fixedWidth]="true"></fa-icon>
-        </button>
-      }
-      <button class="btn font-weight-lighter" (click)="navigateToDetails(item.id)">
-        <fa-icon [icon]="icons.info" [fixedWidth]="true"></fa-icon>
-      </button>
-    </div>
+  <div class="body">
+    <span class="kind">{{ item.tags }}</span>
+    <h4 class="name">
+      {{ item.name }}
+      <span class="arrow" aria-hidden="true">→</span>
+    </h4>
+    <p class="stack">{{ item.languages }}</p>
   </div>
-</div>
+</a>

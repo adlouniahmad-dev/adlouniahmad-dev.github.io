@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { IExperiece } from '../../shared/interfaces/experiece';
+import { IExperience } from '../../shared/interfaces/experience';
 import { GeneralService } from '../../shared/services/general.service';
 
 @Component({
@@ -11,10 +11,13 @@ import { GeneralService } from '../../shared/services/general.service';
 })
 export class ExperiencesComponent {
 
-  constructor(private generalService: GeneralService) {}
+  readonly positions: IExperience[];
+  readonly internships: IExperience[];
 
-  get experiences(): IExperiece[] {
-    return this.generalService.getExperience();
+  constructor(generalService: GeneralService) {
+    const all = generalService.getExperience();
+    this.positions = all.filter(experience => experience.type !== 'internship');
+    this.internships = all.filter(experience => experience.type === 'internship');
   }
 
 }

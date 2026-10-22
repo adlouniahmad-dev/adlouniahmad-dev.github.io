@@ -1,21 +1,66 @@
 <div class="overlay"></div>
-<div class="container-fluid opacity-half">
+<div class="container-fluid card-body-wrap opacity-half">
   <div class="row">
     <div class="col-3 d-none d-md-block">
-      <span class="text-uppercase small d-block me-2">{{ experience.period }}</span>
+      <span class="period d-block me-2">{{ period }}</span>
+      @if (experience.location) {
+        <span class="location d-block me-2">{{ experience.location }}</span>
+      }
     </div>
     <div class="col-sm-12 col-md-9">
       <div class="mb-2">
-        <a class="d-block" [href]="experience.companyLink" target="_blank">{{ experience.position }} · {{ experience.company }}</a>
-        <span class="text-uppercase small d-md-none">{{ experience.period }}</span>
+        @if (experience.company.url) {
+          <a class="title" [href]="experience.company.url" target="_blank" rel="noopener" (click)="$event.stopPropagation()">
+            {{ experience.position }} <span class="company">· {{ experience.company.name }}</span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        } @else {
+          <span class="title">
+            {{ experience.position }} <span class="company">· {{ experience.company.name }}</span>
+          </span>
+        }
+        <span class="period d-md-none">
+          {{ period }}@if (experience.location) {<span> · {{ experience.location }}</span>}
+        </span>
       </div>
-      
+
+      @if (experience.roles?.length > 1) {
+        <ol class="roles" aria-label="Titles">
+          @for (role of experience.roles; track role.title) {
+            <li>
+              <span class="role-title">{{ role.title }}</span>
+              <span class="role-period">{{ formatPeriod(role.start, role.end) }}</span>
+            </li>
+          }
+        </ol>
+      }
+
       <div class="description">
-        <span [innerHTML]="experience.description"></span>
+        @if (experience.summary) {
+          <p class="summary">{{ experience.summary }}</p>
+        }
+        @if (experience.highlights?.length) {
+          <ul class="highlights">
+            @for (highlight of experience.highlights; track $index) {
+              @if (typeof highlight === 'string') {
+                <li><adl-inline-text [text]="highlight"></adl-inline-text></li>
+              } @else {
+                <li>
+                  <adl-inline-text [text]="highlight.text"></adl-inline-text>
+                  <ul class="sub-items">
+                    @for (item of highlight.items; track $index) {
+                      <li><adl-inline-text [text]="item"></adl-inline-text></li>
+                    }
+                  </ul>
+                </li>
+              }
+            }
+          </ul>
+        }
       </div>
-      <div class="d-flex flex-wrap align-items-center tags mt-2">
-        @for (tag of experience.tags; track tag) {
-          <span class="tag">{{ tag }}</span>
+      <div class="d-flex flex-wrap align-items-center tags mt-3">
+        @for (skill of experience.skills; track skill) {
+          <span class="tag">{{ skill }}</span>
         }
       </div>
     </div>

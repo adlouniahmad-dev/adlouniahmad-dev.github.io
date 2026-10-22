@@ -4,7 +4,7 @@ import { ICategory } from '../interfaces/category';
 import data from './info.json';
 import { ISocialNetwork } from '../interfaces/social-network';
 import { IInfo } from '../interfaces/info';
-import { IExperiece } from '../interfaces/experiece';
+import { IExperience } from '../interfaces/experience';
 import { IContactInfo } from '../interfaces/contact-info';
 
 @Injectable({
@@ -18,8 +18,8 @@ export class GeneralService {
     return data.info as IInfo;
   }
 
-  getExperience(): Array<IExperiece> {
-    return data.experience;
+  getExperience(): Array<IExperience> {
+    return data.experience as Array<IExperience>;
   }
 
   getCategories(): Array<ICategory> {

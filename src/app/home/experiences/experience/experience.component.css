@@ -1,6 +1,9 @@
 :host {
   display: block;
   position: relative;
+}
+
+:host.linked {
   cursor: pointer;
 }
 
@@ -9,50 +12,204 @@
   padding-right: 0;
 }
 
-a {
-  font-size: 1.09rem;
-  transition: none;
+.card-body-wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.period {
+  display: block;
+  padding-top: .2rem;
+  padding-right: 1.25rem;
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.location {
+  margin-top: .3rem;
+  padding-right: 1.25rem;
+  font-size: .78rem;
+  color: var(--text-faint);
+}
+
+.roles {
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+  margin: -.2rem 0 .8rem;
+  padding: 0 0 0 .9rem;
+  list-style: none;
+  border-left: 1px solid var(--border-strong);
+}
+
+.roles li {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: .6rem;
+  font-size: .82rem;
+}
+
+.role-title {
+  color: var(--text);
+}
+
+.roles li + li .role-title {
+  color: var(--text-muted);
+}
+
+.role-period {
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  line-height: 1.9;
+  color: var(--text-faint);
+}
+
+.title {
+  display: inline;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+.company {
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: color .2s;
+}
+
+.arrow {
+  display: inline-block;
+  margin-left: .2rem;
+  font-size: .9em;
+  transition: transform .25s ease;
+}
+
+.description {
+  font-size: .94rem;
+  line-height: 1.7;
+}
+
+.summary {
+  margin: 0 0 .6rem;
+}
+
+.highlights {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.highlights > li {
+  position: relative;
+  margin: 0 0 .45rem;
+  padding-left: 1.1rem;
+}
+
+.highlights > li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: .7em;
+  width: .35rem;
+  height: .35rem;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: .7;
+}
+
+.sub-items {
+  margin: .35rem 0 0;
+  padding-left: 1rem;
+}
+
+.sub-items li {
+  margin-bottom: .2rem;
+}
+
+.sub-items li::marker {
+  color: var(--text-faint);
 }
 
 .tags {
-  gap: .3rem;
+  gap: .45rem;
 }
 
 .tag {
-  padding: .25rem .75rem;
-  font-size: .75rem;
-  color: var(--color-light-orange);
-  border-radius: 2rem;
-  background-color: rgb(98 74 65 / 75%);
+  padding: .25rem .7rem;
+  font-size: .72rem;
   font-weight: 500;
+  line-height: 1.5;
+  color: var(--accent);
+  border: 1px solid rgba(246, 177, 122, .2);
+  border-radius: 999px;
+  background-color: rgba(246, 177, 122, .08);
 }
 
 .overlay {
-  display: block;
   position: absolute;
-  border-radius: .375rem;
-  left: -1.5rem;
-  right: -1.5rem;
-  top: -1rem;
-  bottom: -1rem;
+  inset: -1.25rem -1.5rem;
   z-index: 0;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  transition: background-color .25s ease, border-color .25s ease, box-shadow .25s ease;
 }
 
 .opacity-half {
-  transition: .2s;
+  transition: opacity .25s ease;
 }
 
 :host:hover .opacity-half {
   opacity: 1 !important;
 }
 
-:host:hover a {
-  color: var(--color-light-orange);
+:host.linked:hover .title,
+:host.linked:hover .company {
+  color: var(--accent);
+}
+
+:host:hover .arrow {
+  transform: translate(3px, -3px);
 }
 
 :host:hover .overlay {
-  background-color: rgb(33 41 67 / 50%);
-  --shadow: inset 0 1px 0 0 rgba(148, 163, 184, .1);
-  --shadow-colored: inset 0 1px 0 0 var(--shadow-color);
-  box-shadow: var(--ring-offset-shadow, 0 0 #0000), var(--ring-shadow, 0 0 #0000), var(--shadow);
+  border-color: var(--border);
+  background-color: rgba(148, 163, 184, .045);
+  box-shadow: inset 0 1px 0 0 rgba(148, 163, 184, .08), 0 20px 40px -24px rgba(0, 0, 0, .6);
+}
+
+@media screen and (max-width: 991px) {
+
+  .overlay {
+    display: none;
+  }
+
+}
+
+/* Internships: same layout, quieter type */
+:host.compact .title {
+  font-size: .95rem;
+  font-weight: 500;
+}
+
+:host.compact .description {
+  font-size: .875rem;
+}
+
+:host.compact .summary {
+  margin-bottom: .4rem;
+}
+
+:host.compact .tags {
+  margin-top: .75rem !important;
+}
+
+:host.compact .tag {
+  color: var(--text-muted);
+  border-color: var(--border);
+  background-color: var(--bg-raised);
 }

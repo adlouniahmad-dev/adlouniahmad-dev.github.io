@@ -5,38 +5,147 @@
   padding: 0 1.5rem;
 }
 
+/* Soft glow that follows the cursor (desktop only, positioned from HomeComponent) */
+.spotlight {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .4s ease;
+  background: radial-gradient(600px circle at var(--spot-x, 50%) var(--spot-y, 50%), rgba(167, 139, 250, .09), transparent 40%);
+}
+
+:host.spotlight-on .spotlight {
+  opacity: 1;
+}
+
 .header,
 .content {
-  padding-top: 3rem;
+  padding-top: 3.5rem;
   width: 100%;
 }
 
 .content ::ng-deep .section {
   margin-bottom: 5rem;
+  scroll-margin-top: 6rem;
+}
+
+/* Greeting chip */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .35rem .85rem .35rem .7rem;
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  letter-spacing: .04em;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-raised);
+  backdrop-filter: blur(6px);
+}
+
+.pulse {
+  position: relative;
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  background: #34d399;
+}
+
+.pulse::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: inherit;
+  animation: pulse 2s ease-out infinite;
+}
+
+.name {
+  margin: 1.25rem 0 .5rem;
+  font-size: clamp(2.5rem, 6vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -.035em;
+  color: var(--text);
+}
+
+.role {
+  margin: 0;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-weight: 600;
+  letter-spacing: -.01em;
+}
+
+.caret {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  margin-left: .3rem;
+  vertical-align: -.15em;
+  background: var(--accent-3);
+  animation: blink 1s step-end infinite;
 }
 
 .navigation-container {
   display: none;
 }
 
+/* Mobile section headings: sticky, frosted */
 :host ::ng-deep .section-title {
   display: block;
-  font-size: 1.1rem;
-  text-transform: uppercase;
   position: sticky;
-  z-index: 1;
+  z-index: 2;
   top: 0;
-  padding: 1.2rem 0;
-  background-color: var(--color-blue-dark-shade);
-}
-
-.welcoming {
-  font-size: 60%;
+  margin: 0 -1.5rem 1.25rem;
+  padding: 1rem 1.5rem;
+  font-family: var(--font-mono);
+  font-size: .8rem;
+  font-weight: 500;
+  letter-spacing: .12em;
   text-transform: uppercase;
-  color: #aa7142;
+  color: var(--text);
+  background: rgba(10, 14, 26, .75);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
 }
 
-@media screen and (min-width: 991px) {
+/* The sidebar is always on screen, so it animates on load instead of on scroll (AOS) */
+.enter {
+  animation: enter .8s cubic-bezier(.2, .8, .2, 1) both;
+}
+
+.enter-delay {
+  animation-delay: .15s;
+}
+
+@keyframes enter {
+  from { opacity: 0; transform: translateX(-24px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: .7; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@media screen and (min-width: 769px) {
+
+  .header,
+  .content {
+    padding-top: 6rem;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
 
   :host {
     padding: 0 4.5rem;
@@ -50,29 +159,23 @@
     position: sticky;
     top: 0;
     max-height: 100vh;
+    overflow-y: auto;
+    padding-bottom: 6rem;
+    width: 48%;
   }
 
-  .header,
   .content {
     padding-bottom: 6rem;
-    width: 50%;
+    width: 52%;
   }
 
   .content ::ng-deep .section {
-    margin-bottom: 9rem;
+    margin-bottom: 8rem;
   }
 
   .navigation-container {
     display: block;
-  }
-
-}
-
-@media screen and (min-width: 769px) {
-
-  .header,
-  .content {
-    padding-top: 6rem;
+    margin-top: 4rem;
   }
 
 }

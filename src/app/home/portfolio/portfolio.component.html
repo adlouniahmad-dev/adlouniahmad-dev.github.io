@@ -1,13 +1,19 @@
-<section id="projects">
+<section class="section" id="projects">
   <h3 class="section-title">Projects</h3>
 
-  <div>
-    <div class="portfolio-container">
-      @for (item of portfolioItems; track item) {
-        <adl-product-item
-          [ngClass]="{'show-portfolio-item': item.tags.includes(filterValue) || filterValue == '*'}"
-          [item]="item"></adl-product-item>
-      }
-    </div>
+  <div class="filters" role="group" aria-label="Filter projects">
+    @for (category of categories; track category.value) {
+      <button type="button" class="filter" [class.active]="category.value === filterValue"
+        [attr.aria-pressed]="category.value === filterValue" (click)="filterValue = category.value">
+        {{ category.name }}
+        <span class="count">{{ counts[category.value] }}</span>
+      </button>
+    }
+  </div>
+
+  <div class="grid">
+    @for (item of visibleItems; track item.id) {
+      <adl-product-item class="grid-item" [item]="item"></adl-product-item>
+    }
   </div>
 </section>

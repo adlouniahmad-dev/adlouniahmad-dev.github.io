@@ -1,0 +1,57 @@
+:host {
+  display: block;
+}
+
+.filters {
+  display: inline-flex;
+  gap: .25rem;
+  margin-bottom: 1.5rem;
+  padding: .3rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-raised);
+}
+
+.filter {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .4rem .95rem;
+  font-size: .8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  transition: color .2s ease, background-color .2s ease;
+}
+
+.filter:hover {
+  color: var(--text);
+}
+
+.filter.active {
+  color: var(--bg);
+  background: var(--text);
+}
+
+.count {
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  opacity: .6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+  gap: 1.25rem;
+}
+
+.grid-item {
+  animation: appear .4s cubic-bezier(.2, .8, .2, 1) both;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(8px) scale(.98); }
+  to { opacity: 1; transform: none; }
+}
