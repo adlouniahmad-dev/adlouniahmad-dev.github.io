@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { faTerminal } from '@fortawesome/free-solid-svg-icons';
-import { IInfo } from 'src/app/shared/interfaces/info';
-import { GeneralService } from 'src/app/shared/services/general.service';
+import { IInfo } from '../../shared/interfaces/info';
+import { GeneralService } from '../../shared/services/general.service';
 
 @Component({
     selector: 'adl-about',
     templateUrl: './about.component.html',
     styleUrls: ['./about.component.css'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class AboutComponent implements OnInit {

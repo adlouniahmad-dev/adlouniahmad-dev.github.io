@@ -1,12 +1,13 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Router } from '@angular/router';
 import { faLink, faInfo } from '@fortawesome/free-solid-svg-icons';
-import { IPortfolioItem } from 'src/app/shared/interfaces/portfolio-item';
+import { IPortfolioItem } from '../../../shared/interfaces/portfolio-item';
 
 @Component({
     selector: 'adl-product-item',
     templateUrl: './product-item.component.html',
     styleUrls: ['./product-item.component.css'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class ProductItemComponent implements OnInit {

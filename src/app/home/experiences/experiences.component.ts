@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
-import { IExperiece } from 'src/app/shared/interfaces/experiece';
-import { GeneralService } from 'src/app/shared/services/general.service';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { IExperiece } from '../../shared/interfaces/experiece';
+import { GeneralService } from '../../shared/services/general.service';
 
 @Component({
     selector: 'adl-experiences',
     templateUrl: './experiences.component.html',
     styleUrl: './experiences.component.css',
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class ExperiencesComponent {

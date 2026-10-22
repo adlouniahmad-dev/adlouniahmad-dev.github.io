@@ -11,7 +11,7 @@ import { NavigationComponent } from './shared/components/navigation/navigation.c
 import { RouterModule } from '@angular/router';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ContactComponent } from './home/contact/contact.component';
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi, withXhr } from '@angular/common/http';
 import { AboutComponent } from './home/about/about.component';
 import { PortfolioComponent } from './home/portfolio/portfolio.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
@@ -50,7 +50,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
         NgbModule,
         BrowserAnimationsModule,
         CarouselModule,
-        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })], providers: [SwUpdate, provideHttpClient(withInterceptorsFromDi())] })
+        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })], providers: [SwUpdate, provideHttpClient(withXhr(), withInterceptorsFromDi())] })
 export class AppModule {
 
   constructor(library: FaIconLibrary) {

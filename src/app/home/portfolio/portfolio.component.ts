@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ICategory } from 'src/app/shared/interfaces/category';
-import { IPortfolioItem } from 'src/app/shared/interfaces/portfolio-item';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { ICategory } from '../../shared/interfaces/category';
+import { IPortfolioItem } from '../../shared/interfaces/portfolio-item';
 import { GeneralService } from '../../shared/services/general.service';
 declare var $: any;
 
@@ -8,6 +8,7 @@ declare var $: any;
     selector: 'adl-portfolio',
     templateUrl: './portfolio.component.html',
     styleUrls: ['./portfolio.component.css'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class PortfolioComponent implements OnInit {

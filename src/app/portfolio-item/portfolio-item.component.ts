@@ -1,4 +1,4 @@
-import { Component, ElementRef, Inject, OnDestroy, OnInit, Renderer2, ViewChild, DOCUMENT } from '@angular/core';
+import { Component, ElementRef, Inject, OnDestroy, OnInit, Renderer2, ViewChild, DOCUMENT, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { faExpand, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { IPortfolioItem } from '../shared/interfaces/portfolio-item';
@@ -9,6 +9,7 @@ import { GeneralService } from '../shared/services/general.service';
     selector: 'adl-portfolio-item',
     templateUrl: './portfolio-item.component.html',
     styleUrls: ['./portfolio-item.component.css'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class PortfolioItemComponent implements OnInit, OnDestroy {
