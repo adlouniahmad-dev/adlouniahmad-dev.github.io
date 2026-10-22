@@ -30,6 +30,12 @@
   background-color: var(--color-blue-dark-shade);
 }
 
+.welcoming {
+  font-size: 60%;
+  text-transform: uppercase;
+  color: #aa7142;
+}
+
 @media screen and (min-width: 991px) {
 
   :host {

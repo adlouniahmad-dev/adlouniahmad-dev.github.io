@@ -1,38 +1,43 @@
 {
 	"info": {
 		"name": "Ahmad Adlouni",
-		"position": "Software Engineer at Siren Analytics",
+		"position": "Senior Software Engineer at Siren Analytics",
 		"about": [
-			"I am a seasoned <span class='work-position'>Software Engineer</span> currently employed at <a href='https://sirenanalytics.com'>Siren Analytics</a>, and I am also actively involved in freelance work as a <span class='work-position'>Full Stack Web Developer</span>.",
-			"I have proficiency in frontend and backend frameworks and technologies. With a collaborative approach, I excel in delivering high-quality solutions throughout the software development life cycle, driven by a passion for innovation.",
-			"Specializing in UI/UX, I am an adept Angular engineer with hands-on experience in front-end development and the Angular framework. My commitment is to produce top-notch code, crafting captivating user experiences.",
-			"Actively participating in diverse projects, including web, backend systems and chatbots, I bring expertise in Java, Spring Boot, Angular, Twilio Conversation API with DialogFlow CX, NodeJS and GWT. Additionally, my commitment to continuous learning ensures I stay updated with the latest industry trends and technologies."
+			"👋 Greetings! I am a seasoned <span class='work-position'>Senior Software Engineer</span> at <a href='https://sirenanalytics.com' target='_blank'>Siren Analytics</a>, and I moonlight as a <span class='work-position'>Full Stack Web Developer</span> for freelance projects.",
+			"My expertise spans both frontend and backend frameworks, enabling me to deliver high-quality solutions throughout the software development lifecycle. My secret weapon? A passion for innovation and a collaborative spirit. 🚀",
+			"Specializing in UI/UX, I shine as an Angular engineer, creating stunning user interfaces and seamless experiences. I pride myself on writing top-notch code that brings captivating designs to life. 💻",
+			"My diverse portfolio includes web development, backend systems, and chatbots. I am well-versed in Java, Spring Boot, Angular, Twilio Conversation API with DialogFlow CX, NodeJS, and GWT. Committed to continuous learning, I stay at the forefront of industry trends and technologies. 📚",
+			"Welcome to my portfolio, where code meets creativity! ✨"
 		]
 	},
 	"experience": [
 		{
-			"position": "Software Engineer",
+			"position": "Senior Software Engineer",
 			"company": "Siren Analytics",
 			"companyLink": "https://sirenanalytics.com",
 			"period": "dec 2023 - present",
-			"description": "<p>As a Software Engineer at Siren Analytics, I play a crucial role in the development of the EMRC-MODEE project. My responsibilities encompass crafting engaging and user-friendly interfaces, utilizing my expertise in front-end technologies. Working collaboratively with the team, I contribute to the design, development, and optimization of the user interface, ensuring a seamless and visually appealing experience for the end-users.</p>",
+			"description": "<p>- Involved in the MODEE-EMRC project that mainly lies in front-end development. This project aims to digitize various aspects of government services in Jordan.</p><p>- Develop and optimize user-friendly interfaces and modular components using Angular.</p><p>- Collaborate with backend teams to ensure seamless integration and responsive designs.</p><p>- Lead frontend development efforts to deliver high-quality, scalable, and secure solutions.</p>",
 			"tags": [
 				"Angular",
-				"UI Design"
+				"UI Design",
+				"Material",
+				"SCSS"
 			]
 		},
 		{
 			"position": "Software Engineer, Senior UI & Frontend Engineer",
-			"company": "VestaCate Inc.",
+			"company": "VestaCare Inc.",
 			"companyLink": "https://vestacare.com",
 			"period": "dec 2020 - nov 2023",
-			"description": "<p>As a Software Engineer, I play a key role in the complete software development life cycle, handling tasks from analysis to testing for the VestaPay product. My responsibilities include translating user requirements into actionable tasks and coordinating team efforts to ensure project plan adherence. Additionally, I manage the implementation and maintenance of the VSC dashboard, serving as a primary interface for showcasing and selling VestaPay, incorporating Live Chat functionality.</p><p>In my role as a Senior UI and Front-End Engineer, I've utilized Figma to design visually appealing interfaces for the MPR project. Leading the transition from GWT to Angular and Spring Boot, I integrated cutting-edge technologies like Angular 15, RxJs, NGRX, and Spring Boot, significantly influencing project development. I've also implemented a NodeJs/Express web server with features like JWT authentication, API implementation, HTTPS security, TypeScript integration, logging, and Webpack configuration.</p><p>Additionally, my work involves the development, deployment, and maintenance of Dialogflow CX chatbots, where I design and implement intents, entities, and dialogue flows to ensure a seamless user experience. Integration of external APIs and webhooks enhances chatbot capabilities. My capacity to comprehend and innovate within business logic, coupled with robust technical expertise, positions me as a valuable team member deeply committed to exceeding business expectations through collaborative efforts.</p>",
+			"description": "<p>- Responsible for the complete software development life cycle for the VestaPay product, from analysis to testing.</p><p>- Coordinate team efforts to ensure project plan adherence and translate user requirements into actionable tasks.</p><p>- Manage implementation and maintenance of the VSC dashboard and integrating Live Chat functionality in GWT.</p><p>- Used Figma to design visually appealing interfaces for the MPR project as a Senior UI and Front-End Engineer and led the transition from GWT to Angular and Spring Boot, integrating cutting-edge technologies like Angular 15, RxJs, NGRX, and Spring Boot.</p><p>- Implemented NodeJs/Express web server with JWT authentication, API implementation, HTTPS security, TypeScript integration, logging, and Webpack configuration.</p><p>- Developed, deployed, and maintained Dialogflow CX chatbots, designing and implementing intents, entities, and dialogue flows for seamless user experience.</p><p>- Integrated external APIs and webhooks to enhance chatbot capabilities and demonstrated capacity to innovate within business logic, exceeding business expectations through collaborative efforts.</p>",
 			"tags": [
 				"Java",
 				"GWT",
 				"Sprint Boot",
 				"Oracle Database",
 				"Angular",
+				"RxJs",
+				"NGRX",
 				"UI/UX Design",
 				"Figma",
 				"Twilio",
@@ -45,7 +50,7 @@
 			"company": "Anera",
 			"companyLink": "https://anera.org",
 			"period": "feb 2023 - may 2023",
-			"description": "<p>I instruct university students and recent graduates in Front-End Web Development and MySQL database management fundamentals. The curriculum covers HTML essentials, CSS basics and layout techniques, introductory JavaScript encompassing basics, objects, and DOM manipulation. Additionally, students explore Angular, delving into basics, routing, services, and utilizing HttpClient, along with gaining a foundational understanding of MySQL Database principles.</p>",
+			"description": "<p>- Instruct Palestinian university students and recent graduates in Front-End Web Development and MySQL database management.</p><p>- The curriculum includes: <ul><li>HTML essentials.</li><li>CSS basics and layout techniques.</li><li>Introductory JavaScript, covering basics, objects, and DOM manipulation.</li><li>Angular basics, routing, HttpClient, and services.</li><li>Foundational principles of MySQL Database.</li></ul></p>",
 			"tags": [
 				"Instructor",
 				"Communication",
@@ -61,7 +66,7 @@
 			"company": "Freelance",
 			"companyLink": "https://adlouniahmad-dev.github.io",
 			"period": "aug 2019 - present",
-			"description": "<p>In my role as a Freelance Full-Stack Developer, I specialize in building diverse full-stack web applications using Angular, PHP Slim, and databases like MySQL and Microsoft SQL Server.</p><p>Proficient in Front-End development with technologies such as Angular, HTML5, CSS3, and JavaScript, I ensure a seamless user experience by incorporating libraries like jQuery and Bootstrap.</p><p>Efficient database design and management are integral to my work, adapting solutions to project-specific requirements. I excel in developing RESTful APIs for data exchange and integration, utilizing third-party APIs and ensuring data security through JWT authentication.</p><p>Additionally, I contribute to the creation and deployment of functional Android mobile applications accessible on the Google Play Store. Git and Bitbucket are my preferred version control tools, ensuring efficient collaboration and maintaining code integrity across projects.</p>",
+			"description": "<p>- Built various web application projects and mobile applications contributing to the creation and deployment of functional Android mobile applications accessible on the Google Play Store.</p><p>- Specialize in building diverse full-stack web applications using Angular, PHP Slim, MySQL, and Microsoft SQL Server.</p><p>- Proficient in Front-End development with Angular, HTML5, CSS3, and JavaScript, incorporating libraries like jQuery and Bootstrap for a seamless user experience.</p></p>- Efficient database design and management, adapting solutions to project-specific requirements and developing RESTful APIs for data exchange and integration.</p><p>- Integrated third-party APIs such as OnlineSim.io</p><p>- Used Git and Bitbucket as version control tools for efficient collaboration and maintaining code integrity across projects.</p>",
 			"tags": [
 				"Angular",
 				"Databases",

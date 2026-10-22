@@ -1,11 +1,11 @@
 <div class="main position-relative">
 	<div class="d-flex flex-column flex-lg-row justify-content-between gap-1">
 
-		<header class="header d-flex flex-column justify-content-between">
+		<header class="header d-flex flex-column justify-content-between overflow-auto">
 			<div data-aos="fade-right">
 				<div>
 					<div class="font-size-30px">
-						<span class="adl-text-primary">Hello, I'm</span>
+						<span class="adl-text-primary welcoming">Hello There! I'm</span>
 					</div>
 					<div class="font-weight-bold name">
 						<span class="adl-text-primary">{{ info.name }}</span>
@@ -16,13 +16,12 @@
 				</div>
 				<adl-navigation class="mt-5 navigation-container"></adl-navigation>
 			</div>
-			<adl-footer class="mt-4"></adl-footer>
+			<adl-footer class="mt-4" data-aos="fade-right"></adl-footer>
 		</header>
 
 		<main class="content">
-			<adl-about data-aos="fade-right"></adl-about>
-			<adl-experiences data-aos="fade-right"></adl-experiences>
-			<!-- <adl-portfolio data-aos="fade-right"></adl-portfolio> -->
+			<adl-about data-aos="fade-left"></adl-about>
+			<adl-experiences></adl-experiences>
 		</main>
 
 	</div>

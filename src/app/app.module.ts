@@ -11,7 +11,7 @@ import { NavigationComponent } from './shared/components/navigation/navigation.c
 import { RouterModule } from '@angular/router';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ContactComponent } from './home/contact/contact.component';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi, withXhr } from '@angular/common/http';
 import { AboutComponent } from './home/about/about.component';
 import { PortfolioComponent } from './home/portfolio/portfolio.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
@@ -27,37 +27,30 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    NavigationComponent,
-    ContactComponent,
-    AboutComponent,
-    PortfolioComponent,
-    FooterComponent,
-    ProductItemComponent,
-    PortfolioItemComponent,
-    PageNotFoundComponent,
-    ExperiencesComponent,
-    ExperienceComponent
-  ],
-  imports: [
-    BrowserModule,
-    RouterModule,
-    AppRoutingModule,
-    FontAwesomeModule,
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
-    NgbModule,
-    BrowserAnimationsModule,
-    CarouselModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
-  ],
-  providers: [SwUpdate],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HomeComponent,
+        NavigationComponent,
+        ContactComponent,
+        AboutComponent,
+        PortfolioComponent,
+        FooterComponent,
+        ProductItemComponent,
+        PortfolioItemComponent,
+        PageNotFoundComponent,
+        ExperiencesComponent,
+        ExperienceComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        RouterModule,
+        AppRoutingModule,
+        FontAwesomeModule,
+        FormsModule,
+        ReactiveFormsModule,
+        NgbModule,
+        BrowserAnimationsModule,
+        CarouselModule,
+        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })], providers: [SwUpdate, provideHttpClient(withXhr(), withInterceptorsFromDi())] })
 export class AppModule {
 
   constructor(library: FaIconLibrary) {
