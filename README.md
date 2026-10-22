@@ -1,27 +1,60 @@
-# AdlouniahmadPortfolio
+# Ahmad Adlouni — Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
+Personal portfolio site, live at **<https://adlouniahmad-dev.github.io/>**.
 
-## Development server
+Built with Angular 22, Bootstrap, Font Awesome and AOS scroll animations, and installable as a PWA via the Angular service worker.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Getting started
 
-## Code scaffolding
+Requires **Node 24** (see [`.nvmrc`](.nvmrc)).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+nvm use          # switch to the Node version in .nvmrc
+npm install
+npm start        # dev server at http://localhost:4200
+```
 
-## Build
+## Updating content
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+All site content lives in [`src/app/shared/services/info.json`](src/app/shared/services/info.json). No component changes are needed to update it.
 
-## Running unit tests
+| Key          | What it controls                                                     |
+| ------------ | -------------------------------------------------------------------- |
+| `info`       | Name, job title and the paragraphs of the About section              |
+| `experience` | Work history entries (position, company, period, description, tags)  |
+| `contact`    | Email and location shown in the sidebar                              |
+| `social`     | Social profile links shown in the sidebar                            |
+| `categories` | Filter categories for the portfolio section                          |
+| `portfolio`  | Portfolio projects with images, links and details                    |
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Images go in [`src/assets/img/`](src/assets/img/). Keep them small: export at the size they're displayed and prefer WebP.
 
-## Running end-to-end tests
+The contact form (not currently shown on the page) posts to [Getform](https://getform.io); the endpoint is in [`contact.service.ts`](src/app/shared/services/contact.service.ts).
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Project structure
 
-## Further help
+```text
+src/app/
+├── home/              # Main page (about + experience); portfolio and contact
+│                      # sections exist but aren't currently rendered
+├── portfolio-item/    # Project detail page
+├── page-not-found/    # 404 page
+└── shared/
+    ├── components/    # Navigation and footer
+    ├── interfaces/    # TypeScript types for info.json
+    └── services/      # Content (info.json) and contact form services
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Building
+
+```bash
+npm run build
+```
+
+Output goes to `dist/adlouniahmad-portfolio/`.
+
+## Deployment
+
+Pushing to `main` triggers the [Deploy workflow](.github/workflows/deploy.yml), which builds the site and publishes it to the `gh-pages` branch that GitHub Pages serves. It can also be run manually from the **Actions** tab.
+
+`npm run deploy` still works as a manual fallback; run `npm run build` first.
