@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { IPortfolioItem } from 'src/app/shared/interfaces/portfolio-item';
-import { ICategory } from 'src/app/shared/interfaces/category';
+import { IPortfolioItem } from '../interfaces/portfolio-item';
+import { ICategory } from '../interfaces/category';
 import data from './info.json';
-import { ISocialNetwork } from 'src/app/shared/interfaces/social-network';
-import { IInfo } from 'src/app/shared/interfaces/info';
+import { ISocialNetwork } from '../interfaces/social-network';
+import { IInfo } from '../interfaces/info';
 import { IExperiece } from '../interfaces/experiece';
 import { IContactInfo } from '../interfaces/contact-info';
 

@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { ContactService } from 'src/app/shared/services/contact.service';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { ContactService } from '../../shared/services/contact.service';
 import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'adl-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+    selector: 'adl-contact',
+    templateUrl: './contact.component.html',
+    styleUrls: ['./contact.component.css'],
+    changeDetection: ChangeDetectionStrategy.Eager,
+    standalone: false
 })
 export class ContactComponent implements OnInit {
 
