@@ -4,9 +4,10 @@ import { filter } from 'rxjs/operators'
 import AOS from 'aos';
 
 @Component({
-  selector: 'adl-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+    selector: 'adl-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css'],
+    standalone: false
 })
 export class AppComponent implements OnInit {
 

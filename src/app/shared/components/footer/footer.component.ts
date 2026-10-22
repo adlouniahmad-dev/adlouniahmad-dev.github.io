@@ -5,9 +5,10 @@ import { GeneralService } from '../../services/general.service';
 import { IContactInfo } from '../../interfaces/contact-info';
 
 @Component({
-  selector: 'adl-footer',
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+    selector: 'adl-footer',
+    templateUrl: './footer.component.html',
+    styleUrls: ['./footer.component.css'],
+    standalone: false
 })
 export class FooterComponent implements OnInit {
 

@@ -4,9 +4,10 @@ import { IInfo } from 'src/app/shared/interfaces/info';
 import { GeneralService } from 'src/app/shared/services/general.service';
 
 @Component({
-  selector: 'adl-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+    selector: 'adl-about',
+    templateUrl: './about.component.html',
+    styleUrls: ['./about.component.css'],
+    standalone: false
 })
 export class AboutComponent implements OnInit {
 

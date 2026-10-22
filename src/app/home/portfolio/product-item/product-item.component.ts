@@ -4,9 +4,10 @@ import { faLink, faInfo } from '@fortawesome/free-solid-svg-icons';
 import { IPortfolioItem } from 'src/app/shared/interfaces/portfolio-item';
 
 @Component({
-  selector: 'adl-product-item',
-  templateUrl: './product-item.component.html',
-  styleUrls: ['./product-item.component.css']
+    selector: 'adl-product-item',
+    templateUrl: './product-item.component.html',
+    styleUrls: ['./product-item.component.css'],
+    standalone: false
 })
 export class ProductItemComponent implements OnInit {
 

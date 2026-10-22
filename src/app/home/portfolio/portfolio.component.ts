@@ -5,9 +5,10 @@ import { GeneralService } from '../../shared/services/general.service';
 declare var $: any;
 
 @Component({
-  selector: 'adl-portfolio',
-  templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.css']
+    selector: 'adl-portfolio',
+    templateUrl: './portfolio.component.html',
+    styleUrls: ['./portfolio.component.css'],
+    standalone: false
 })
 export class PortfolioComponent implements OnInit {
 

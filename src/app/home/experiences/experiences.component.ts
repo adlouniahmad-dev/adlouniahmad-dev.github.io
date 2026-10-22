@@ -3,9 +3,10 @@ import { IExperiece } from 'src/app/shared/interfaces/experiece';
 import { GeneralService } from 'src/app/shared/services/general.service';
 
 @Component({
-  selector: 'adl-experiences',
-  templateUrl: './experiences.component.html',
-  styleUrl: './experiences.component.css'
+    selector: 'adl-experiences',
+    templateUrl: './experiences.component.html',
+    styleUrl: './experiences.component.css',
+    standalone: false
 })
 export class ExperiencesComponent {
 

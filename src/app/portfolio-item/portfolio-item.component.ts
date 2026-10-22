@@ -6,9 +6,10 @@ import { GeneralService } from '../shared/services/general.service';
 import { DOCUMENT } from '@angular/common';
 
 @Component({
-  selector: 'adl-portfolio-item',
-  templateUrl: './portfolio-item.component.html',
-  styleUrls: ['./portfolio-item.component.css']
+    selector: 'adl-portfolio-item',
+    templateUrl: './portfolio-item.component.html',
+    styleUrls: ['./portfolio-item.component.css'],
+    standalone: false
 })
 export class PortfolioItemComponent implements OnInit, OnDestroy {
 
