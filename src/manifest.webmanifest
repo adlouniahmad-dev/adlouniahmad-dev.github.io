@@ -1,8 +1,8 @@
 {
   "name": "Ahmad Adlouni  - Software Engineer",
   "short_name": "Ahmad Adlouni",
-  "theme_color": "#0e4598",
-  "background_color": "#ffffff",
+  "theme_color": "#0a0e1a",
+  "background_color": "#0a0e1a",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",

@@ -2,6 +2,10 @@
   display: block;
 }
 
-:host:hover adl-experience ::ng-deep .opacity-half {
-  opacity: .5;
+@media (hover: hover) {
+
+  :host:hover adl-experience ::ng-deep .opacity-half {
+    opacity: .45;
+  }
+
 }

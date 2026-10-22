@@ -1,34 +1,62 @@
 :host {
-	display: block;
-	font-size: 14px;
+  display: block;
+  font-size: .875rem;
 }
 
-a {
-	color: inherit;
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+
+.contact-line {
+  display: inline-flex;
+  align-items: center;
+  gap: .75rem;
+  width: fit-content;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.contact-line fa-icon {
+  color: var(--text-faint);
+  transition: color .2s;
+}
+
+a.contact-line:hover,
+a.contact-line:hover fa-icon {
+  color: var(--accent);
 }
 
 .icon-item {
-	padding: .6rem .6rem .6rem 0;
-	display: block;
-	cursor: pointer;
-	font-size: 20px;
-	position: relative;
-	transition: color .3s;
-	color: var(--color-light-orange);
+  display: grid;
+  place-items: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  font-size: 1rem;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--bg-raised);
+  transition: transform .25s ease, color .25s ease, border-color .25s ease, background-color .25s ease, box-shadow .25s ease;
+}
+
+.icon-item:hover {
+  transform: translateY(-3px);
+  color: var(--text);
+  border-color: var(--border-strong);
+  background-color: rgba(148, 163, 184, .08);
+  box-shadow: 0 10px 24px -12px rgba(167, 139, 250, .6);
 }
 
 .icon-item.facebook:hover {
-	color: #4267B2;
+  color: #5b8def;
 }
 
 .icon-item.instagram:hover {
-	color: #E1306C;
+  color: #f472b6;
 }
 
 .icon-item.linkedIn:hover {
-	color: #2867B2;
-}
-
-.icon-item.github:hover {
-	color: #fff;
+  color: #4f9ce8;
 }
