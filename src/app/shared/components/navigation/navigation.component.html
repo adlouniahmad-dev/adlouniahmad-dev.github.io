@@ -2,7 +2,8 @@
 	<ul class="header-menu">
 		@for (link of links; track link) {
 			<li class="nav-item">
-				<a class="header-menu-link nav-link d-flex align-items-center" [href]="link.href">
+				<a class="header-menu-link nav-link d-flex align-items-center" [href]="link.href"
+					[class.active]="link.href === activeHref" [attr.aria-current]="link.href === activeHref ? 'location' : null">
 					<span class="nav-indicator"></span>
 					<span class="text-uppercase link-name">{{ link.name }}</span>
 				</a>

@@ -1,6 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, AfterViewInit, OnDestroy, Inject, PLATFORM_ID, DOCUMENT, ElementRef, NgZone } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import type ScrollSpy from 'bootstrap/js/dist/scrollspy';
 import { IInfo } from '../shared/interfaces/info';
 import { GeneralService } from '../shared/services/general.service';
 import { faFacebookF, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
@@ -16,8 +15,6 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
   icons: any;
   info: IInfo;
-  private scrollSpy: ScrollSpy;
-  private destroyed = false;
   private removeSpotlight: () => void;
 
   constructor(
@@ -34,21 +31,12 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     this.initializeIcons();
   }
 
-  async ngAfterViewInit(): Promise<void> {
-    if (!isPlatformBrowser(this.platformId))
-      return;
-
-    this.initializeSpotlight();
-
-    // Bootstrap's scrollspy touches `window` when imported, so load it only in the browser
-    const { default: ScrollSpyCtor } = await import('bootstrap/js/dist/scrollspy');
-    if (!this.destroyed)
-      this.scrollSpy = new ScrollSpyCtor(this.document.body, { target: '#menu' });
+  ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platformId))
+      this.initializeSpotlight();
   }
 
   ngOnDestroy(): void {
-    this.destroyed = true;
-    this.scrollSpy?.dispose();
     this.removeSpotlight?.();
   }
 

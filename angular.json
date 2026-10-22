@@ -42,8 +42,7 @@
             "server": "src/main.server.ts",
             "outputMode": "static",
             "allowedCommonJsDependencies": [
-              "aos",
-              "bootstrap/js/dist/scrollspy"
+              "aos"
             ]
           },
           "configurations": {
