@@ -21,6 +21,7 @@ import { environment } from '../environments/environment';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ExperiencesComponent } from './home/experiences/experiences.component';
 import { ExperienceComponent } from './home/experiences/experience/experience.component';
+import { InlineMarkdownPipe } from './shared/pipes/inline-markdown.pipe';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
@@ -38,7 +39,8 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
     PortfolioItemComponent,
     PageNotFoundComponent,
     ExperiencesComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    InlineMarkdownPipe
   ],
   bootstrap: [AppComponent],
   imports: [

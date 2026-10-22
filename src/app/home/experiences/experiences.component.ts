@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { IExperiece } from '../../shared/interfaces/experiece';
+import { IExperience } from '../../shared/interfaces/experience';
 import { GeneralService } from '../../shared/services/general.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class ExperiencesComponent {
 
   constructor(private generalService: GeneralService) {}
 
-  get experiences(): IExperiece[] {
+  get experiences(): IExperience[] {
     return this.generalService.getExperience();
   }
 

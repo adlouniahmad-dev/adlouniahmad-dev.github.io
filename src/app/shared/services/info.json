@@ -2,22 +2,41 @@
 	"info": {
 		"name": "Ahmad Adlouni",
 		"position": "Senior Software Engineer at Siren Analytics",
-		"about": [
-			"👋 Greetings! I am a seasoned <span class='work-position'>Senior Software Engineer</span> at <a href='https://sirenanalytics.com' target='_blank'>Siren Analytics</a>, and I moonlight as a <span class='work-position'>Full Stack Web Developer</span> for freelance projects.",
-			"My expertise spans both frontend and backend frameworks, enabling me to deliver high-quality solutions throughout the software development lifecycle. My secret weapon? A passion for innovation and a collaborative spirit. 🚀",
-			"Specializing in UI/UX, I shine as an Angular engineer, creating stunning user interfaces and seamless experiences. I pride myself on writing top-notch code that brings captivating designs to life. 💻",
-			"My diverse portfolio includes web development, backend systems, and chatbots. I am well-versed in Java, Spring Boot, Angular, Twilio Conversation API with DialogFlow CX, NodeJS, and GWT. Committed to continuous learning, I stay at the forefront of industry trends and technologies. 📚",
-			"Welcome to my portfolio, where code meets creativity! ✨"
-		]
+		"about": {
+			"paragraphs": [
+				"👋 Greetings! I am a seasoned **Senior Software Engineer** at [Siren Analytics](https://sirenanalytics.com), and I moonlight as a **Full Stack Web Developer** for freelance projects.",
+				"My expertise spans both frontend and backend frameworks, enabling me to deliver high-quality solutions throughout the software development lifecycle. My secret weapon? A passion for innovation and a collaborative spirit. 🚀",
+				"Specializing in UI/UX, I shine as an Angular engineer, creating stunning user interfaces and seamless experiences. I pride myself on writing top-notch code that brings captivating designs to life. 💻",
+				"My diverse portfolio includes web development, backend systems, and chatbots. Committed to continuous learning, I stay at the forefront of industry trends and technologies. 📚"
+			],
+			"skills": [
+				"Java",
+				"Spring Boot",
+				"Angular",
+				"Twilio Conversation API",
+				"Dialogflow CX",
+				"Node.js",
+				"GWT"
+			],
+			"signOff": "Welcome to my portfolio, where code meets creativity! ✨"
+		}
 	},
 	"experience": [
 		{
 			"position": "Senior Software Engineer",
-			"company": "Siren Analytics",
-			"companyLink": "https://sirenanalytics.com",
-			"period": "dec 2023 - present",
-			"description": "<p>- Involved in the MODEE-EMRC project that mainly lies in front-end development. This project aims to digitize various aspects of government services in Jordan.</p><p>- Develop and optimize user-friendly interfaces and modular components using Angular.</p><p>- Collaborate with backend teams to ensure seamless integration and responsive designs.</p><p>- Lead frontend development efforts to deliver high-quality, scalable, and secure solutions.</p>",
-			"tags": [
+			"company": {
+				"name": "Siren Analytics",
+				"url": "https://sirenanalytics.com"
+			},
+			"start": "2023-12",
+			"end": null,
+			"summary": "Involved in the MODEE-EMRC project that mainly lies in front-end development. This project aims to digitize various aspects of government services in Jordan.",
+			"highlights": [
+				"Develop and optimize user-friendly interfaces and modular components using Angular.",
+				"Collaborate with backend teams to ensure seamless integration and responsive designs.",
+				"Lead frontend development efforts to deliver high-quality, scalable, and secure solutions."
+			],
+			"skills": [
 				"Angular",
 				"UI Design",
 				"Material",
@@ -26,11 +45,22 @@
 		},
 		{
 			"position": "Software Engineer, Senior UI & Frontend Engineer",
-			"company": "VestaCare Inc.",
-			"companyLink": "https://vestacare.com",
-			"period": "dec 2020 - nov 2023",
-			"description": "<p>- Responsible for the complete software development life cycle for the VestaPay product, from analysis to testing.</p><p>- Coordinate team efforts to ensure project plan adherence and translate user requirements into actionable tasks.</p><p>- Manage implementation and maintenance of the VSC dashboard and integrating Live Chat functionality in GWT.</p><p>- Used Figma to design visually appealing interfaces for the MPR project as a Senior UI and Front-End Engineer and led the transition from GWT to Angular and Spring Boot, integrating cutting-edge technologies like Angular 15, RxJs, NGRX, and Spring Boot.</p><p>- Implemented NodeJs/Express web server with JWT authentication, API implementation, HTTPS security, TypeScript integration, logging, and Webpack configuration.</p><p>- Developed, deployed, and maintained Dialogflow CX chatbots, designing and implementing intents, entities, and dialogue flows for seamless user experience.</p><p>- Integrated external APIs and webhooks to enhance chatbot capabilities and demonstrated capacity to innovate within business logic, exceeding business expectations through collaborative efforts.</p>",
-			"tags": [
+			"company": {
+				"name": "VestaCare Inc.",
+				"url": "https://vestacare.com"
+			},
+			"start": "2020-12",
+			"end": "2023-11",
+			"summary": "Responsible for the complete software development life cycle for the VestaPay product, from analysis to testing.",
+			"highlights": [
+				"Coordinate team efforts to ensure project plan adherence and translate user requirements into actionable tasks.",
+				"Manage implementation and maintenance of the VSC dashboard and integrating Live Chat functionality in GWT.",
+				"Used Figma to design visually appealing interfaces for the MPR project as a Senior UI and Front-End Engineer and led the transition from GWT to Angular and Spring Boot, integrating cutting-edge technologies like Angular 15, RxJs, NGRX, and Spring Boot.",
+				"Implemented NodeJs/Express web server with JWT authentication, API implementation, HTTPS security, TypeScript integration, logging, and Webpack configuration.",
+				"Developed, deployed, and maintained Dialogflow CX chatbots, designing and implementing intents, entities, and dialogue flows for seamless user experience.",
+				"Integrated external APIs and webhooks to enhance chatbot capabilities and demonstrated capacity to innovate within business logic, exceeding business expectations through collaborative efforts."
+			],
+			"skills": [
 				"Java",
 				"GWT",
 				"Sprint Boot",
@@ -47,11 +77,26 @@
 		},
 		{
 			"position": "Frontend Web Development and Database Instructor",
-			"company": "Anera",
-			"companyLink": "https://anera.org",
-			"period": "feb 2023 - may 2023",
-			"description": "<p>- Instruct Palestinian university students and recent graduates in Front-End Web Development and MySQL database management.</p><p>- The curriculum includes: <ul><li>HTML essentials.</li><li>CSS basics and layout techniques.</li><li>Introductory JavaScript, covering basics, objects, and DOM manipulation.</li><li>Angular basics, routing, HttpClient, and services.</li><li>Foundational principles of MySQL Database.</li></ul></p>",
-			"tags": [
+			"company": {
+				"name": "Anera",
+				"url": "https://anera.org"
+			},
+			"start": "2023-02",
+			"end": "2023-05",
+			"summary": "Instruct Palestinian university students and recent graduates in Front-End Web Development and MySQL database management.",
+			"highlights": [
+				{
+					"text": "The curriculum includes:",
+					"items": [
+						"HTML essentials.",
+						"CSS basics and layout techniques.",
+						"Introductory JavaScript, covering basics, objects, and DOM manipulation.",
+						"Angular basics, routing, HttpClient, and services.",
+						"Foundational principles of MySQL Database."
+					]
+				}
+			],
+			"skills": [
 				"Instructor",
 				"Communication",
 				"HTML",
@@ -63,11 +108,21 @@
 		},
 		{
 			"position": "Full Stack Web Developer",
-			"company": "Freelance",
-			"companyLink": "https://adlouniahmad-dev.github.io",
-			"period": "aug 2019 - present",
-			"description": "<p>- Built various web application projects and mobile applications contributing to the creation and deployment of functional Android mobile applications accessible on the Google Play Store.</p><p>- Specialize in building diverse full-stack web applications using Angular, PHP Slim, MySQL, and Microsoft SQL Server.</p><p>- Proficient in Front-End development with Angular, HTML5, CSS3, and JavaScript, incorporating libraries like jQuery and Bootstrap for a seamless user experience.</p></p>- Efficient database design and management, adapting solutions to project-specific requirements and developing RESTful APIs for data exchange and integration.</p><p>- Integrated third-party APIs such as OnlineSim.io</p><p>- Used Git and Bitbucket as version control tools for efficient collaboration and maintaining code integrity across projects.</p>",
-			"tags": [
+			"company": {
+				"name": "Freelance",
+				"url": "https://adlouniahmad-dev.github.io"
+			},
+			"start": "2019-08",
+			"end": null,
+			"summary": "Built various web application projects and mobile applications contributing to the creation and deployment of functional Android mobile applications accessible on the Google Play Store.",
+			"highlights": [
+				"Specialize in building diverse full-stack web applications using Angular, PHP Slim, MySQL, and Microsoft SQL Server.",
+				"Proficient in Front-End development with Angular, HTML5, CSS3, and JavaScript, incorporating libraries like jQuery and Bootstrap for a seamless user experience.",
+				"Efficient database design and management, adapting solutions to project-specific requirements and developing RESTful APIs for data exchange and integration.",
+				"Integrated third-party APIs such as OnlineSim.io",
+				"Used Git and Bitbucket as version control tools for efficient collaboration and maintaining code integrity across projects."
+			],
+			"skills": [
 				"Angular",
 				"Databases",
 				"Slim Microframework",
@@ -77,11 +132,14 @@
 		},
 		{
 			"position": "Frontend Web Developer",
-			"company": "Bluering",
-			"companyLink": "https://bluering.com",
-			"period": "feb 2019 - may 2019",
-			"description": "<p>As a frontend developer, I was in charge of creating visually appealing and interactive user interfaces, as well as designing reusable components for the Bluering Retail platform product. This involves leveraging HTML5, CSS3, Bootstrap 4, and Angular 5 to enhance the user experience and functionality of the platform.</p>",
-			"tags": [
+			"company": {
+				"name": "Bluering",
+				"url": "https://bluering.com"
+			},
+			"start": "2019-02",
+			"end": "2019-05",
+			"summary": "As a frontend developer, I was in charge of creating visually appealing and interactive user interfaces, as well as designing reusable components for the Bluering Retail platform product. This involves leveraging HTML5, CSS3, Bootstrap 4, and Angular 5 to enhance the user experience and functionality of the platform.",
+			"skills": [
 				"CSS3",
 				"Bootstrap",
 				"JavaScript",
