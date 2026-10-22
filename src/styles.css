@@ -54,10 +54,6 @@ a:hover {
 	border-radius: 100px !important;
 }
 
-.gap-1 {
-	gap: 1rem;
-}
-
 .adl-text-primary {
 	color: var(--color-primary);
 }

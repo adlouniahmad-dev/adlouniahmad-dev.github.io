@@ -1,17 +1,17 @@
 <footer>
   <div class="contact-info mb-3">
-    <div class="d-flex gap-1">
+    <div class="d-flex gap-3">
       <fa-icon [icon]="['fas', 'envelope']" [fixedWidth]="true"></fa-icon>
       <span>
         <a [href]="'mailto:' + contactInfo.email" target="_blank">{{ contactInfo.email }}</a>
       </span>
     </div>
-    <div class="d-flex gap-1">
+    <div class="d-flex gap-3">
       <fa-icon [icon]="['fas', 'location-dot']" [fixedWidth]="true"></fa-icon>
       <span>{{ contactInfo.address }}</span>
     </div>
   </div>
-  <div class="d-flex gap-1">
+  <div class="d-flex gap-3">
     @for (socialNetwork of socialNetworks; track socialNetwork) {
       <span>
         <a [href]="socialNetwork.link" rel="noopener" class="icon-item {{ socialNetwork.name }}" target="_blank">

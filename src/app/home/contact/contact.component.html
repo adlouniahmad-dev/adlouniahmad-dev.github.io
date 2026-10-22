@@ -12,19 +12,19 @@
         @if (!showSuccess) {
           <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
             <h4 class="mb-5">Get In Touch</h4>
-            <div class="form-group">
+            <div class="mb-3">
               <label for="name" class="d-none">Name</label>
               <input type="text" class="form-control" id="name" name="name" formControlName="name" required
                 [attr.disabled]="showLoader ? true : null" placeholder="Your Name *"
                 [ngClass]="{'is-invalid': form.name.errors && isSubmitted}">
             </div>
-            <div class="form-group">
+            <div class="mb-3">
               <label for="email" class="d-none">Email</label>
               <input type="email" class="form-control" id="email" name="email" formControlName="email"
                 required [attr.disabled]="showLoader ? true : null" placeholder="Your Email *"
                 [ngClass]="{'is-invalid': form.email.errors && isSubmitted}">
             </div>
-            <div class="form-group">
+            <div class="mb-3">
               <label for="message" class="d-none">Message</label>
               <textarea class="form-control" name="message" id="message" rows="4" name="message"
                 formControlName="message" required [attr.disabled]="showLoader ? true : null"
@@ -74,7 +74,7 @@
           </div>
         </ng-template>
       </div>
-      <div class="col-md-5 pl-md-5" data-aos="fade-left">
+      <div class="col-md-5 ps-md-5" data-aos="fade-left">
         <h4 class="mb-5">My Contact Details</h4>
         <ul class="site-contact-details font-weight-lighter">
           <li>

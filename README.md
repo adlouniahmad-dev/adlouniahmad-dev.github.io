@@ -2,7 +2,7 @@
 
 Personal portfolio site, live at **<https://adlouniahmad-dev.github.io/>**.
 
-Built with Angular 22, Bootstrap, Font Awesome and AOS scroll animations, and installable as a PWA via the Angular service worker.
+Built with Angular 22, Bootstrap 5, Font Awesome and AOS scroll animations, and installable as a PWA via the Angular service worker. The home page is prerendered to static HTML at build time so crawlers and link previews see the full content.
 
 ## Getting started
 
@@ -51,7 +51,9 @@ src/app/
 npm run build
 ```
 
-Output goes to `dist/adlouniahmad-portfolio/`.
+Output goes to `dist/adlouniahmad-portfolio/browser/`. The home page (`/`) is prerendered into `index.html`; other routes are rendered client-side from `index.csr.html`, which the build also copies to `404.html` so GitHub Pages serves the app's own 404 page for unknown URLs.
+
+Prerendered routes are configured in [`app.routes.server.ts`](src/app/app.routes.server.ts). Code that touches `window` or `document` must only run in the browser (guard it with `isPlatformBrowser`), otherwise the build fails while prerendering.
 
 ## Deployment
 

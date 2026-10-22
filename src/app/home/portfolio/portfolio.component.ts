@@ -2,7 +2,6 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ICategory } from '../../shared/interfaces/category';
 import { IPortfolioItem } from '../../shared/interfaces/portfolio-item';
 import { GeneralService } from '../../shared/services/general.service';
-declare var $: any;
 
 @Component({
     selector: 'adl-portfolio',
