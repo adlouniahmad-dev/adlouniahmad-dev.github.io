@@ -9,12 +9,15 @@
       <span>{{ contactInfo.address }}</span>
     </div>
   </div>
-  <div class="d-flex gap-2">
+  <div class="footer-row">
+    <div class="d-flex gap-2">
     @for (socialNetwork of socialNetworks; track socialNetwork) {
       <a [href]="socialNetwork.link" rel="noopener" class="icon-item {{ socialNetwork.name }}" target="_blank"
         [attr.aria-label]="socialNetwork.name" [title]="socialNetwork.name">
         <fa-icon [icon]="icons[socialNetwork.name]" [fixedWidth]="true"></fa-icon>
       </a>
     }
+    </div>
+    <adl-site-controls path="/"></adl-site-controls>
   </div>
 </footer>

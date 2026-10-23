@@ -50,38 +50,36 @@
 	letter-spacing: 0 !important;
 }
 
-/* Light theme, following the visitor's system setting. The accents are deeper so text stays readable on white. */
-@media (prefers-color-scheme: light) {
-	:root {
-		color-scheme: light;
+/* Light theme. index.html sets data-theme before the first paint: the saved choice, otherwise the system setting. */
+:root[data-theme="light"] {
+	color-scheme: light;
 
-		--bg: #f8fafc;
-		--bg-raised: rgba(255, 255, 255, .75);
-		--bg-hover: rgba(15, 23, 42, .04);
-		--bg-input: #fff;
-		--glass: rgba(248, 250, 252, .82);
-		--border: rgba(15, 23, 42, .1);
-		--border-strong: rgba(15, 23, 42, .18);
-		--text: #0f172a;
-		--text-muted: #475569;
-		--text-faint: #64748b; /* 4.8:1 on --bg */
-		--accent: #ea580c;
-		--accent-2: #db2777;
-		--accent-3: #7c3aed;
-		--accent-text: #c2410c; /* 5.2:1 on --bg */
-		--glow-1: rgba(124, 58, 237, .08);
-		--glow-2: rgba(234, 88, 12, .06);
-		--grid-line: rgba(15, 23, 42, .05);
-		--shadow: rgba(15, 23, 42, .18);
-		--success: #10b981;
-		--success-border: rgba(5, 150, 105, .35);
-		--success-bg: rgba(16, 185, 129, .08);
-		--danger: #dc2626;
-		--danger-text: #b91c1c;
-		--danger-strong-text: #991b1b;
-		--danger-border: rgba(220, 38, 38, .35);
-		--danger-bg: rgba(220, 38, 38, .06);
-	}
+	--bg: #f8fafc;
+	--bg-raised: rgba(255, 255, 255, .75);
+	--bg-hover: rgba(15, 23, 42, .04);
+	--bg-input: #fff;
+	--glass: rgba(248, 250, 252, .82);
+	--border: rgba(15, 23, 42, .1);
+	--border-strong: rgba(15, 23, 42, .18);
+	--text: #0f172a;
+	--text-muted: #475569;
+	--text-faint: #64748b; /* 4.8:1 on --bg */
+	--accent: #ea580c;
+	--accent-2: #db2777;
+	--accent-3: #7c3aed;
+	--accent-text: #c2410c; /* 5.2:1 on --bg */
+	--glow-1: rgba(124, 58, 237, .08);
+	--glow-2: rgba(234, 88, 12, .06);
+	--grid-line: rgba(15, 23, 42, .05);
+	--shadow: rgba(15, 23, 42, .18);
+	--success: #10b981;
+	--success-border: rgba(5, 150, 105, .35);
+	--success-bg: rgba(16, 185, 129, .08);
+	--danger: #dc2626;
+	--danger-text: #b91c1c;
+	--danger-strong-text: #991b1b;
+	--danger-border: rgba(220, 38, 38, .35);
+	--danger-bg: rgba(220, 38, 38, .06);
 }
 
 html,

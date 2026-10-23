@@ -36,15 +36,6 @@ export class PortfolioItemComponent implements OnInit, OnDestroy {
     return this.language.pathIn(this.language.lang, '/');
   }
 
-  get otherLang(): 'en' | 'ar' {
-    return this.language.lang === 'ar' ? 'en' : 'ar';
-  }
-
-  /** The same project in the other language */
-  get switchLink(): string {
-    return this.language.pathIn(this.otherLang, `/projects/${this.product?.id}`);
-  }
-
   link(...segments: string[]): string[] {
     return this.language.link(...segments);
   }

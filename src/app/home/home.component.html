@@ -13,14 +13,10 @@
 
 		<header class="header d-flex flex-column justify-content-between">
 			<div class="enter">
-				<div class="top-row">
-					<span class="eyebrow">
-						<span class="pulse" aria-hidden="true"></span>
-						{{ 'greeting' | t }}
-					</span>
-					<a class="lang-switch" [routerLink]="switchLink" [attr.hreflang]="otherLang" [attr.lang]="otherLang"
-						[attr.aria-label]="'switchLangLabel' | t">{{ 'switchLang' | t }}</a>
-				</div>
+				<span class="eyebrow">
+					<span class="pulse" aria-hidden="true"></span>
+					{{ 'greeting' | t }}
+				</span>
 				<h1 class="name">{{ info.name }}</h1>
 				<p class="role">
 					<span class="gradient-text">{{ info.position }}</span><span class="caret" aria-hidden="true"></span>

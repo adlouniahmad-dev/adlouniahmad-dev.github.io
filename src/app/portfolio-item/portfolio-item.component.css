@@ -35,20 +35,6 @@
   gap: 1.25rem;
 }
 
-.lang-switch {
-  padding: .3rem .8rem;
-  font-size: .8rem;
-  font-weight: 500;
-  color: var(--text-muted);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-}
-
-.lang-switch:hover {
-  color: var(--text);
-  border-color: var(--border-strong);
-}
-
 .home {
   font-size: 1.15rem;
   color: var(--text);

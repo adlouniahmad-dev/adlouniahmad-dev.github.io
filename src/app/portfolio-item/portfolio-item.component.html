@@ -5,8 +5,7 @@
         <span class="back-arrow" aria-hidden="true">{{ 'arrow.back' | t }}</span> {{ 'allProjects' | t }}
       </a>
       <div class="top-actions">
-        <a class="lang-switch" [routerLink]="switchLink" [attr.hreflang]="otherLang" [attr.lang]="otherLang"
-          [attr.aria-label]="'switchLangLabel' | t">{{ 'switchLang' | t }}</a>
+        <adl-site-controls [path]="'/projects/' + product.id"></adl-site-controls>
         <a class="home" [routerLink]="homeLink" [attr.aria-label]="'homeLink' | t">
           <adl-logo [wordmark]="true"></adl-logo>
         </a>

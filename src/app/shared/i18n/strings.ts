@@ -70,6 +70,8 @@ const en = {
   // language switch (labels the *other* language)
   switchLang: 'العربية',
   switchLangLabel: 'اقرأ الموقع بالعربية',
+  'theme.toLight': 'Switch to light theme',
+  'theme.toDark': 'Switch to dark theme',
   // arrows follow the reading direction
   'arrow.back': '←',
   'arrow.forward': '→',
@@ -145,6 +147,8 @@ const ar: Record<StringKey, string> = {
   backHome: 'العودة إلى الرئيسية',
   switchLang: 'English',
   switchLangLabel: 'Read the site in English',
+  'theme.toLight': 'التبديل إلى الوضع الفاتح',
+  'theme.toDark': 'التبديل إلى الوضع الداكن',
   'arrow.back': '→',
   'arrow.forward': '←',
   'arrow.out': '↖',

@@ -21,8 +21,18 @@
   <meta name="google-site-verification" content="3mvB4O2lUauJu67WvVdlNUVHiuctebYoEpUMcJQKQN4" />
   
   <meta name="color-scheme" content="dark light">
-  <meta name="theme-color" content="#0a0e1a" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0e1a">
+  <!-- Theme before first paint, so there is no flash: the saved choice, otherwise the system setting -->
+  <script>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('adl.theme'); } catch (e) {}
+      var theme = saved === 'light' || saved === 'dark' ? saved
+        : (window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', theme);
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', theme === 'light' ? '#f8fafc' : '#0a0e1a');
+    })();
+  </script>
   <meta name="apple-mobile-web-app-status-bar" content="#0a0e1a">
   <meta name="description" content="Senior Software Engineer at Siren Analytics with 7+ years of experience building responsive, accessible and scalable web applications for government, enterprise and digital-service platforms. Specialised in Angular, TypeScript and frontend architecture.">
   <meta name="keywords" content="Senior Software Engineer, Frontend Engineer, Angular, TypeScript, RxJS, NgRx, Frontend Architecture, Progressive Web Apps, Form Builder, RTL, Arabic/English, Java, Spring Boot, Node.js, Siren Analytics, Lebanon" />

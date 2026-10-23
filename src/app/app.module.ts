@@ -25,6 +25,7 @@ import { ProjectCoverComponent } from './shared/components/project-cover/project
 import { LogoComponent } from './shared/components/logo/logo.component';
 import { TranslatePipe } from './shared/i18n/translate.pipe';
 import { RecommendationsComponent } from './home/recommendations/recommendations.component';
+import { SiteControlsComponent } from './shared/components/site-controls/site-controls.component';
 import { faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
@@ -46,7 +47,8 @@ import { faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
     ProjectCoverComponent,
     LogoComponent,
     TranslatePipe,
-    RecommendationsComponent
+    RecommendationsComponent,
+    SiteControlsComponent
   ],
   bootstrap: [AppComponent],
   imports: [

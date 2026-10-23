@@ -38,14 +38,6 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     });
   }
 
-  /** The same page in the other language */
-  get otherLang(): 'en' | 'ar' {
-    return this.language.lang === 'ar' ? 'en' : 'ar';
-  }
-
-  get switchLink(): string {
-    return this.language.pathIn(this.otherLang, '/');
-  }
 
   ngAfterViewInit(): void {
     if (!isPlatformBrowser(this.platformId))

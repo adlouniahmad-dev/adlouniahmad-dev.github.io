@@ -60,3 +60,11 @@ a.contact-line:hover fa-icon {
 .icon-item.linkedIn:hover {
   color: #4f9ce8;
 }
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}

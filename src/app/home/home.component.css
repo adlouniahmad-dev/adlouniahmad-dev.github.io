@@ -31,30 +31,6 @@
   scroll-margin-top: 6rem;
 }
 
-.top-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: .75rem;
-}
-
-/* Language switch: names the other language, in that language */
-.lang-switch {
-  padding: .3rem .8rem;
-  font-size: .8rem;
-  font-weight: 500;
-  color: var(--text-muted);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  transition: color .2s ease, border-color .2s ease;
-}
-
-.lang-switch:hover {
-  color: var(--text);
-  border-color: var(--border-strong);
-}
-
 /* Greeting chip */
 .eyebrow {
   display: inline-flex;
