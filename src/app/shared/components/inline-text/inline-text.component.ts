@@ -29,7 +29,7 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
       }
 
       a:hover {
-        color: var(--accent);
+        color: var(--accent-text);
         background-size: 100% 1px;
       }
     `,
