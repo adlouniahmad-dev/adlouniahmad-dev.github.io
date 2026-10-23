@@ -37,8 +37,12 @@ test('a project page shows its details, screenshots and neighbours', async ({ pa
   await page.keyboard.press('Escape');
   await expect(viewer).toBeHidden();
 
+  // the page component is reused between projects, so its content has to follow the URL both ways
   await page.locator('.pager-link.next').click();
   await expect(page).toHaveURL(/\/projects\/leb-phones$/);
+  await expect(page.locator('h1')).not.toHaveText('ASK - Agile Share Knowledge');
+  await page.goBack();
+  await expect(page.locator('h1')).toHaveText('ASK - Agile Share Knowledge');
 });
 
 test('old /portfolio URLs redirect and unknown projects show the 404 page', async ({ page }) => {

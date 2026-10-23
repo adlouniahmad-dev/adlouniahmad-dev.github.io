@@ -1,15 +1,16 @@
-import { Component, HostBinding, HostListener, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, HostBinding, HostListener, Input } from '@angular/core';
 import { IExperience } from '../../../shared/interfaces/experience';
 import { LanguageService } from '../../../shared/i18n/language.service';
 import { MONTHS } from '../../../shared/i18n/strings';
+import { InlineTextComponent } from '../../../shared/components/inline-text/inline-text.component';
+import { TranslatePipe } from '../../../shared/i18n/translate.pipe';
 
 
 @Component({
     selector: 'adl-experience',
     templateUrl: './experience.component.html',
     styleUrl: './experience.component.css',
-    changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+    imports: [InlineTextComponent, TranslatePipe]
 })
 export class ExperienceComponent {
 

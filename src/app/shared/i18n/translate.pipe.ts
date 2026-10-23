@@ -6,10 +6,7 @@ import { StringKey } from './strings';
  * `{{ 'send' | t }}` or `{{ 'showProjects' | t: { n: 9 } }}`. Pure is fine: switching language navigates to
  * a different route, which recreates the components.
  */
-@Pipe({
-  name: 't',
-  standalone: false
-})
+@Pipe({ name: 't' })
 export class TranslatePipe implements PipeTransform {
 
   constructor(private language: LanguageService) {}

@@ -1,4 +1,4 @@
-import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 let nextId = 0;
 
@@ -74,8 +74,6 @@ let nextId = 0;
         color: transparent;
       }
     `,
-    changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
 })
 export class LogoComponent {
 

@@ -1,9 +1,10 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { Component, signal } from '@angular/core';
+import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ContactService } from '../../shared/services/contact.service';
 import { GeneralService } from '../../shared/services/general.service';
 import { LanguageService } from '../../shared/i18n/language.service';
+import { TranslatePipe } from '../../shared/i18n/translate.pipe';
 
 type State = 'idle' | 'sending' | 'sent' | 'error';
 
@@ -11,14 +12,14 @@ type State = 'idle' | 'sending' | 'sent' | 'error';
     selector: 'adl-contact',
     templateUrl: './contact.component.html',
     styleUrls: ['./contact.component.css'],
-    changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+    imports: [ReactiveFormsModule, TranslatePipe]
 })
 export class ContactComponent {
 
   readonly email: string;
-  state: State = 'idle';
-  errorMessage = '';
+  // signals, so the view updates when the request settles
+  readonly state = signal<State>('idle');
+  readonly errorMessage = signal('');
   submitted = false;
 
   readonly form = this.fb.nonNullable.group({
@@ -45,27 +46,27 @@ export class ContactComponent {
 
   submit(): void {
     this.submitted = true;
-    if (this.form.invalid || this.state === 'sending')
+    if (this.form.invalid || this.state() === 'sending')
       return;
 
-    this.state = 'sending';
+    this.state.set('sending');
     this.contactService.send(this.form.getRawValue()).subscribe({
       next: () => {
-        this.state = 'sent';
+        this.state.set('sent');
         // Google Analytics' recommended event for contact requests (gtag is a no-op stub off the live site)
         (window as { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'generate_lead', { method: 'contact_form' });
         this.form.reset();
         this.submitted = false;
       },
       error: (error: HttpErrorResponse) => {
-        this.state = 'error';
-        this.errorMessage = this.language.t(error.status === 429 ? 'error.rateLimit' : 'error.generic');
+        this.state.set('error');
+        this.errorMessage.set(this.language.t(error.status === 429 ? 'error.rateLimit' : 'error.generic'));
       },
     });
   }
 
   sendAnother(): void {
-    this.state = 'idle';
+    this.state.set('idle');
   }
 
 }

@@ -1,13 +1,13 @@
-import { Component, ChangeDetectionStrategy, AfterViewInit, OnDestroy, Inject, PLATFORM_ID, DOCUMENT, NgZone, ChangeDetectorRef, Input, HostBinding } from '@angular/core';
+import { Component, AfterViewInit, OnDestroy, Inject, PLATFORM_ID, DOCUMENT, ChangeDetectorRef, Input, HostBinding } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { StringKey } from '../../i18n/strings';
+import { TranslatePipe } from '../../i18n/translate.pipe';
 
 @Component({
     selector: 'adl-navigation',
     templateUrl: './navigation.component.html',
     styleUrls: ['./navigation.component.css'],
-    changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+    imports: [TranslatePipe]
 })
 export class NavigationComponent implements AfterViewInit, OnDestroy {
 
@@ -32,7 +32,6 @@ export class NavigationComponent implements AfterViewInit, OnDestroy {
   constructor(
     @Inject(PLATFORM_ID) private platformId: object,
     @Inject(DOCUMENT) private document: Document,
-    private zone: NgZone,
     private cdr: ChangeDetectorRef,
   ) {}
 
@@ -47,11 +46,9 @@ export class NavigationComponent implements AfterViewInit, OnDestroy {
       frame = requestAnimationFrame(() => this.updateActive(view));
     };
 
-    // Outside Angular so scrolling only triggers change detection when the active link changes
-    this.zone.runOutsideAngular(() => {
-      view.addEventListener('scroll', onScroll, { passive: true });
-      view.addEventListener('resize', onScroll, { passive: true });
-    });
+    // Plain listeners: scrolling only triggers change detection when the active link changes
+    view.addEventListener('scroll', onScroll, { passive: true });
+    view.addEventListener('resize', onScroll, { passive: true });
     this.removeListeners = () => {
       cancelAnimationFrame(frame);
       view.removeEventListener('scroll', onScroll);
@@ -86,11 +83,10 @@ export class NavigationComponent implements AfterViewInit, OnDestroy {
     if (atBottom)
       active = sections[sections.length - 1].href;
 
-    if (active !== this.activeHref)
-      this.zone.run(() => {
-        this.activeHref = active;
-        this.cdr.markForCheck();
-      });
+    if (active !== this.activeHref) {
+      this.activeHref = active;
+      this.cdr.markForCheck();
+    }
   }
 
 }

@@ -1,6 +1,8 @@
-import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { LanguageService } from '../../i18n/language.service';
 import { ThemeService } from '../../theme/theme.service';
+import { RouterLink } from '@angular/router';
+import { TranslatePipe } from '../../i18n/translate.pipe';
 
 /** Language switch and light/dark toggle, shown together wherever the site offers controls. */
 @Component({
@@ -9,9 +11,9 @@ import { ThemeService } from '../../theme/theme.service';
       <a class="control lang" [routerLink]="switchLink" [attr.hreflang]="otherLang" [attr.lang]="otherLang"
         [attr.aria-label]="'switchLangLabel' | t" [title]="'switchLangLabel' | t">{{ 'switchLang' | t }}</a>
       <button type="button" class="control theme" (click)="theme.toggle()"
-        [attr.aria-label]="(theme.theme === 'light' ? 'theme.toDark' : 'theme.toLight') | t"
-        [title]="(theme.theme === 'light' ? 'theme.toDark' : 'theme.toLight') | t">
-        @if (theme.theme === 'light') {
+        [attr.aria-label]="(theme.theme() === 'light' ? 'theme.toDark' : 'theme.toLight') | t"
+        [title]="(theme.theme() === 'light' ? 'theme.toDark' : 'theme.toLight') | t">
+        @if (theme.theme() === 'light') {
           <!-- moon -->
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg>
         } @else {
@@ -68,8 +70,7 @@ import { ThemeService } from '../../theme/theme.service';
         stroke-linejoin: round;
       }
     `,
-    changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+    imports: [RouterLink, TranslatePipe]
 })
 export class SiteControlsComponent {
 

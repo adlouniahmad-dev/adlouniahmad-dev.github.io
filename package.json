@@ -15,7 +15,6 @@
     "@angular/core": "^22.2.3",
     "@angular/forms": "^22.2.3",
     "@angular/platform-browser": "^22.2.3",
-    "@angular/platform-browser-dynamic": "^22.2.3",
     "@angular/platform-server": "^22.2.3",
     "@angular/router": "^22.2.3",
     "@angular/service-worker": "^22.2.3",
@@ -26,8 +25,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "bootstrap": "^5.3.8",
     "rxjs": "^7.8.2",
-    "tslib": "^2.0.0",
-    "zone.js": "~0.15.1"
+    "tslib": "^2.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^22.2.4",

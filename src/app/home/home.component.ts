@@ -1,17 +1,25 @@
-import { Component, ChangeDetectionStrategy, AfterViewInit, OnDestroy, Inject, PLATFORM_ID, DOCUMENT, ElementRef, NgZone } from '@angular/core';
+import { Component, AfterViewInit, OnDestroy, Inject, PLATFORM_ID, DOCUMENT, ElementRef } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { LanguageService } from '../shared/i18n/language.service';
 import { SeoService } from '../shared/services/seo.service';
 import { IInfo } from '../shared/interfaces/info';
 import { GeneralService } from '../shared/services/general.service';
+import { LogoComponent } from '../shared/components/logo/logo.component';
+import { NavigationComponent } from '../shared/components/navigation/navigation.component';
+import { FooterComponent } from '../shared/components/footer/footer.component';
+import { AboutComponent } from './about/about.component';
+import { ExperiencesComponent } from './experiences/experiences.component';
+import { RecommendationsComponent } from './recommendations/recommendations.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ContactComponent } from './contact/contact.component';
+import { TranslatePipe } from '../shared/i18n/translate.pipe';
 
 @Component({
     selector: 'adl-home',
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.css'],
-    changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+    imports: [LogoComponent, NavigationComponent, FooterComponent, AboutComponent, ExperiencesComponent, RecommendationsComponent, PortfolioComponent, ContactComponent, TranslatePipe]
 })
 export class HomeComponent implements AfterViewInit, OnDestroy {
 
@@ -24,7 +32,6 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     @Inject(PLATFORM_ID) private platformId: object,
     @Inject(DOCUMENT) private document: Document,
     private host: ElementRef<HTMLElement>,
-    private zone: NgZone,
     private route: ActivatedRoute,
     private language: LanguageService,
     seo: SeoService,
@@ -110,8 +117,8 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
       });
     };
 
-    // Outside Angular so mouse movement doesn't trigger change detection
-    this.zone.runOutsideAngular(() => view.addEventListener('mousemove', onMove, { passive: true }));
+    // A plain listener, so mouse movement doesn't trigger change detection
+    view.addEventListener('mousemove', onMove, { passive: true });
     this.removeSpotlight = () => {
       cancelAnimationFrame(frame);
       view.removeEventListener('mousemove', onMove);

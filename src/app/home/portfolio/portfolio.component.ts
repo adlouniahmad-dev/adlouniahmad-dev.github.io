@@ -1,9 +1,12 @@
-import { Component, OnInit, ChangeDetectionStrategy, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { ICategory } from '../../shared/interfaces/category';
 import { IPortfolioItem } from '../../shared/interfaces/portfolio-item';
 import { GeneralService } from '../../shared/services/general.service';
 import { LanguageService } from '../../shared/i18n/language.service';
+import { ProductItemComponent } from './product-item/product-item.component';
+import { RouterLink } from '@angular/router';
+import { TranslatePipe } from '../../shared/i18n/translate.pipe';
 
 const ALL = '*';
 /** Remembers whether "Early work" is expanded, so it stays open when coming back from a project */
@@ -13,8 +16,7 @@ const EARLY_OPEN_KEY = 'adl.earlyWorkOpen';
     selector: 'adl-portfolio',
     templateUrl: './portfolio.component.html',
     styleUrls: ['./portfolio.component.css'],
-    changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+    imports: [ProductItemComponent, RouterLink, TranslatePipe]
 })
 export class PortfolioComponent implements OnInit {
 

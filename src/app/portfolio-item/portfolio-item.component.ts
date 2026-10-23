@@ -1,18 +1,21 @@
-import { Component, ElementRef, OnDestroy, OnInit, ViewChild, ChangeDetectionStrategy } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ChangeDetectorRef, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { IPortfolioItem } from '../shared/interfaces/portfolio-item';
 import { GeneralService } from '../shared/services/general.service';
 import { SeoService } from '../shared/services/seo.service';
 import { LanguageService } from '../shared/i18n/language.service';
 import { kindKey } from '../shared/i18n/strings';
+import { SiteControlsComponent } from '../shared/components/site-controls/site-controls.component';
+import { LogoComponent } from '../shared/components/logo/logo.component';
+import { ProjectCoverComponent } from '../shared/components/project-cover/project-cover.component';
+import { TranslatePipe } from '../shared/i18n/translate.pipe';
 
 @Component({
     selector: 'adl-portfolio-item',
     templateUrl: './portfolio-item.component.html',
     styleUrls: ['./portfolio-item.component.css'],
-    changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+    imports: [RouterLink, SiteControlsComponent, LogoComponent, ProjectCoverComponent, TranslatePipe]
 })
 export class PortfolioItemComponent implements OnInit, OnDestroy {
 
@@ -33,6 +36,7 @@ export class PortfolioItemComponent implements OnInit, OnDestroy {
     private router: Router,
     private seo: SeoService,
     private language: LanguageService,
+    private cdr: ChangeDetectorRef,
   ) {}
 
   get homeLink(): string {
@@ -103,6 +107,8 @@ export class PortfolioItemComponent implements OnInit, OnDestroy {
     this.product = items[index];
     this.previous = items[(index - 1 + items.length) % items.length];
     this.next = items[(index + 1) % items.length];
+    // the param changes outside a template event (e.g. browser back/forward)
+    this.cdr.markForCheck();
 
     this.seo.update({
       title: this.product.name + this.language.t('seo.titleSuffix'),

@@ -1,4 +1,5 @@
-import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { InlineMarkdownPipe } from '../../pipes/inline-markdown.pipe';
 
 /** Renders a string with `**highlight**` and `[text](url)` markup as plain elements. */
 @Component({
@@ -33,8 +34,7 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
         background-size: 100% 1px;
       }
     `,
-    changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+    imports: [InlineMarkdownPipe]
 })
 export class InlineTextComponent {
 

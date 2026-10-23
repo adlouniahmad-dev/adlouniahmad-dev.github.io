@@ -1,14 +1,16 @@
-import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IPortfolioItem } from '../../../shared/interfaces/portfolio-item';
 import { LanguageService } from '../../../shared/i18n/language.service';
 import { kindKey } from '../../../shared/i18n/strings';
+import { RouterLink } from '@angular/router';
+import { ProjectCoverComponent } from '../../../shared/components/project-cover/project-cover.component';
+import { TranslatePipe } from '../../../shared/i18n/translate.pipe';
 
 @Component({
     selector: 'adl-product-item',
     templateUrl: './product-item.component.html',
     styleUrls: ['./product-item.component.css'],
-    changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+    imports: [RouterLink, ProjectCoverComponent, TranslatePipe]
 })
 export class ProductItemComponent {
 

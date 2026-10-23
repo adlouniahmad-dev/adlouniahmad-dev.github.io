@@ -11,10 +11,7 @@ const TOKEN = /\*\*(.+?)\*\*|\[(.+?)\]\((.+?)\)/g;
  * Splits a string using `**highlight**` and `[text](url)` into segments the
  * template can render, so content never has to go through innerHTML.
  */
-@Pipe({
-  name: 'inlineMarkdown',
-  standalone: false
-})
+@Pipe({ name: 'inlineMarkdown' })
 export class InlineMarkdownPipe implements PipeTransform {
 
   transform(value: string | null | undefined): InlineSegment[] {

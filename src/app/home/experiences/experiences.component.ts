@@ -1,13 +1,14 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component } from '@angular/core';
 import { IExperience } from '../../shared/interfaces/experience';
 import { GeneralService } from '../../shared/services/general.service';
+import { ExperienceComponent } from './experience/experience.component';
+import { TranslatePipe } from '../../shared/i18n/translate.pipe';
 
 @Component({
     selector: 'adl-experiences',
     templateUrl: './experiences.component.html',
     styleUrl: './experiences.component.css',
-    changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+    imports: [ExperienceComponent, TranslatePipe]
 })
 export class ExperiencesComponent {
 

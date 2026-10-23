@@ -1,4 +1,4 @@
-import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 /** 16:9 typographic cover for projects that don't have a logo image. */
 @Component({
@@ -56,8 +56,6 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
         opacity: .85;
       }
     `,
-    changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
 })
 export class ProjectCoverComponent {
 
