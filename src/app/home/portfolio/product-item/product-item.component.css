@@ -69,7 +69,7 @@
 }
 
 .card:hover .arrow {
-  transform: translateX(4px);
+  transform: translateX(calc(4px * var(--dir)));
   color: var(--accent-text);
 }
 
@@ -88,7 +88,7 @@
   position: absolute;
   z-index: 1;
   top: .6rem;
-  left: .6rem;
+  inset-inline-start: .6rem;
   display: inline-flex;
   align-items: center;
   gap: .45rem;

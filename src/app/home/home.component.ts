@@ -1,6 +1,8 @@
 import { Component, ChangeDetectionStrategy, AfterViewInit, OnDestroy, Inject, PLATFORM_ID, DOCUMENT, ElementRef, NgZone } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { LanguageService } from '../shared/i18n/language.service';
+import { SeoService } from '../shared/services/seo.service';
 import { IInfo } from '../shared/interfaces/info';
 import { GeneralService } from '../shared/services/general.service';
 
@@ -24,8 +26,25 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     private host: ElementRef<HTMLElement>,
     private zone: NgZone,
     private route: ActivatedRoute,
+    private language: LanguageService,
+    seo: SeoService,
   ) { 
     this.info = generalService.getBasicInfo();
+    seo.update({
+      title: language.t('seo.homeTitle'),
+      description: language.t('seo.homeDescription'),
+      // GitHub Pages serves /ar from a folder, so it's canonical with a trailing slash
+      path: language.lang === 'ar' ? '/ar/' : '/',
+    });
+  }
+
+  /** The same page in the other language */
+  get otherLang(): 'en' | 'ar' {
+    return this.language.lang === 'ar' ? 'en' : 'ar';
+  }
+
+  get switchLink(): string {
+    return this.language.pathIn(this.otherLang, '/');
   }
 
   ngAfterViewInit(): void {

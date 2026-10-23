@@ -8,8 +8,7 @@
 }
 
 [class^='col'] {
-  padding-left: 0;
-  padding-right: 0;
+  padding-inline: 0;
 }
 
 .card-body-wrap {
@@ -20,7 +19,7 @@
 .period {
   display: block;
   padding-top: .2rem;
-  padding-right: 1.25rem;
+  padding-inline-end: 1.25rem;
   font-family: var(--font-mono);
   font-size: .72rem;
   letter-spacing: .06em;
@@ -30,7 +29,7 @@
 
 .location {
   margin-top: .3rem;
-  padding-right: 1.25rem;
+  padding-inline-end: 1.25rem;
   font-size: .78rem;
   color: var(--text-faint);
 }
@@ -40,9 +39,10 @@
   flex-direction: column;
   gap: .15rem;
   margin: -.2rem 0 .8rem;
-  padding: 0 0 0 .9rem;
+  padding: 0;
+  padding-inline-start: .9rem;
   list-style: none;
-  border-left: 1px solid var(--border-strong);
+  border-inline-start: 1px solid var(--border-strong);
 }
 
 .roles li {
@@ -84,7 +84,7 @@
 
 .arrow {
   display: inline-block;
-  margin-left: .2rem;
+  margin-inline-start: .2rem;
   font-size: .9em;
   transition: transform .25s ease;
 }
@@ -107,13 +107,13 @@
 .highlights > li {
   position: relative;
   margin: 0 0 .45rem;
-  padding-left: 1.1rem;
+  padding-inline-start: 1.1rem;
 }
 
 .highlights > li::before {
   content: '';
   position: absolute;
-  left: 0;
+  inset-inline-start: 0;
   top: .7em;
   width: .35rem;
   height: .35rem;
@@ -124,7 +124,7 @@
 
 .sub-items {
   margin: .35rem 0 0;
-  padding-left: 1rem;
+  padding-inline-start: 1rem;
 }
 
 .sub-items li {
@@ -173,7 +173,7 @@
 }
 
 :host:hover .arrow {
-  transform: translate(3px, -3px);
+  transform: translate(calc(3px * var(--dir)), -3px);
 }
 
 :host:hover .overlay {

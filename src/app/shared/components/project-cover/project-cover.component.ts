@@ -62,8 +62,12 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 export class ProjectCoverComponent {
 
   @Input() name: string;
+  /** Overrides the initials taken from the name */
+  @Input() letters?: string;
 
   get initials(): string {
+    if (this.letters)
+      return this.letters;
     return this.name
       .split(/\s+/)
       // skip abbreviated titles such as "Dt." or "Dr."

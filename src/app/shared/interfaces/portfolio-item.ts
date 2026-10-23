@@ -15,5 +15,7 @@ export interface IPortfolioItem {
     languages: string,
     /** 16:9 cover image; a typographic placeholder is shown when missing */
     featuredImage?: string,
+    /** Letters for the typographic cover; defaults to the name's initials */
+    initials?: string,
     details: IPortfolioItemDetails
 }

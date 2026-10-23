@@ -23,6 +23,7 @@ import { InlineMarkdownPipe } from './shared/pipes/inline-markdown.pipe';
 import { InlineTextComponent } from './shared/components/inline-text/inline-text.component';
 import { ProjectCoverComponent } from './shared/components/project-cover/project-cover.component';
 import { LogoComponent } from './shared/components/logo/logo.component';
+import { TranslatePipe } from './shared/i18n/translate.pipe';
 import { faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
@@ -42,7 +43,8 @@ import { faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
     InlineMarkdownPipe,
     InlineTextComponent,
     ProjectCoverComponent,
-    LogoComponent
+    LogoComponent,
+    TranslatePipe
   ],
   bootstrap: [AppComponent],
   imports: [

@@ -26,7 +26,27 @@
 }
 
 .back:hover .back-arrow {
-  transform: translateX(-4px);
+  transform: translateX(calc(-4px * var(--dir)));
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.lang-switch {
+  padding: .3rem .8rem;
+  font-size: .8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.lang-switch:hover {
+  color: var(--text);
+  border-color: var(--border-strong);
 }
 
 .home {
@@ -141,7 +161,7 @@
   margin: 1.5rem 0 0;
   padding: 1rem 1.25rem;
   border: 1px solid var(--border);
-  border-left: 3px solid var(--accent-3);
+  border-inline-start: 3px solid var(--accent-3);
   border-radius: .75rem;
   background: var(--bg-raised);
 }
@@ -214,7 +234,7 @@
 }
 
 .muted {
-  margin-left: .4rem;
+  margin-inline-start: .4rem;
   color: var(--text-faint);
 }
 
@@ -292,7 +312,7 @@
 }
 
 .pager-link.next {
-  text-align: right;
+  text-align: end;
 }
 
 .pager-label {
@@ -360,7 +380,7 @@
 }
 
 .close {
-  margin-left: 1rem;
+  margin-inline-start: 1rem;
 }
 
 .enter {

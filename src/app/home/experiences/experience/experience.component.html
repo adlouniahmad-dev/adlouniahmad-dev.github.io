@@ -2,9 +2,9 @@
 <div class="container-fluid card-body-wrap opacity-half">
   <div class="row">
     <div class="col-3 d-none d-md-block">
-      <span class="period d-block me-2">{{ period }}</span>
+      <span class="period d-block">{{ period }}</span>
       @if (experience.location) {
-        <span class="location d-block me-2">{{ experience.location }}</span>
+        <span class="location d-block">{{ experience.location }}</span>
       }
     </div>
     <div class="col-sm-12 col-md-9">
@@ -12,7 +12,7 @@
         @if (experience.company.url) {
           <a class="title" [href]="experience.company.url" target="_blank" rel="noopener" (click)="$event.stopPropagation()">
             {{ experience.position }} <span class="company">· {{ experience.company.name }}</span>
-            <span class="arrow" aria-hidden="true">↗</span>
+            <span class="arrow" aria-hidden="true">{{ 'arrow.out' | t }}</span>
           </a>
         } @else {
           <span class="title">
@@ -25,7 +25,7 @@
       </div>
 
       @if (experience.roles?.length > 1) {
-        <ol class="roles" aria-label="Titles">
+        <ol class="roles" [attr.aria-label]="'titles' | t">
           @for (role of experience.roles; track role.title) {
             <li>
               <span class="role-title">{{ role.title }}</span>

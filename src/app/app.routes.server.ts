@@ -13,6 +13,15 @@ export const serverRoutes: ServerRoute[] = [
     getPrerenderParams: async () => inject(GeneralService).getPortfolioItems().map(item => ({ id: item.id }))
   },
   {
+    path: 'ar',
+    renderMode: RenderMode.Prerender
+  },
+  {
+    path: 'ar/projects/:id',
+    renderMode: RenderMode.Prerender,
+    getPrerenderParams: async () => inject(GeneralService).getPortfolioItems().map(item => ({ id: item.id }))
+  },
+  {
     path: 'portfolio/:id',
     renderMode: RenderMode.Client
   },

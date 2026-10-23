@@ -1,48 +1,46 @@
 <section class="section" id="contact">
-  <h2 class="section-title">Contact</h2>
+  <h2 class="section-title">{{ 'section.contact' | t }}</h2>
 
   <div class="card">
-    <h3 class="heading">Let's work together</h3>
-    <p class="intro">
-      Have a project in mind, a role to discuss, or just want to say hi? Send me a message and I'll get back to you.
-    </p>
+    <h3 class="heading">{{ 'contactHeading' | t }}</h3>
+    <p class="intro">{{ 'contactIntro' | t }}</p>
 
     @if (state === 'sent') {
       <div class="success" role="status">
         <span class="check" aria-hidden="true">✓</span>
         <div>
-          <p class="success-title">Thanks, your message is on its way.</p>
-          <p class="success-text">I'll reply to the email address you gave me.</p>
-          <button type="button" class="link-button" (click)="sendAnother()">Send another message</button>
+          <p class="success-title">{{ 'sentTitle' | t }}</p>
+          <p class="success-text">{{ 'sentText' | t }}</p>
+          <button type="button" class="link-button" (click)="sendAnother()">{{ 'sendAnother' | t }}</button>
         </div>
       </div>
     } @else {
       <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
         <div class="fields">
           <div class="field">
-            <label for="contact-name">Name</label>
+            <label for="contact-name">{{ 'field.name' | t }}</label>
             <input id="contact-name" type="text" formControlName="name" autocomplete="name"
               [attr.aria-invalid]="showError('name')" [attr.aria-describedby]="showError('name') ? 'contact-name-error' : null">
             @if (showError('name')) {
-              <span class="error" id="contact-name-error">Please enter your name.</span>
+              <span class="error" id="contact-name-error">{{ 'error.name' | t }}</span>
             }
           </div>
 
           <div class="field">
-            <label for="contact-email">Email</label>
+            <label for="contact-email">{{ 'field.email' | t }}</label>
             <input id="contact-email" type="email" formControlName="email" autocomplete="email"
               [attr.aria-invalid]="showError('email')" [attr.aria-describedby]="showError('email') ? 'contact-email-error' : null">
             @if (showError('email')) {
-              <span class="error" id="contact-email-error">Please enter a valid email address.</span>
+              <span class="error" id="contact-email-error">{{ 'error.email' | t }}</span>
             }
           </div>
 
           <div class="field wide">
-            <label for="contact-message">Message</label>
+            <label for="contact-message">{{ 'field.message' | t }}</label>
             <textarea id="contact-message" rows="5" formControlName="message"
               [attr.aria-invalid]="showError('message')" [attr.aria-describedby]="showError('message') ? 'contact-message-error' : null"></textarea>
             @if (showError('message')) {
-              <span class="error" id="contact-message-error">Please write a message (at least 10 characters).</span>
+              <span class="error" id="contact-message-error">{{ 'error.message' | t }}</span>
             }
           </div>
         </div>
@@ -52,19 +50,19 @@
 
         @if (state === 'error') {
           <p class="failure" role="alert">
-            {{ errorMessage }} You can also email me at <a [href]="'mailto:' + email">{{ email }}</a>.
+            {{ errorMessage }} {{ 'alsoEmail' | t }} <a [href]="'mailto:' + email" dir="ltr">{{ email }}</a>.
           </p>
         }
 
         <div class="actions">
           <button type="submit" class="submit" [disabled]="state === 'sending'">
             @if (state === 'sending') {
-              <span class="spinner" aria-hidden="true"></span> Sending…
+              <span class="spinner" aria-hidden="true"></span> {{ 'sending' | t }}
             } @else {
-              Send message <span aria-hidden="true">→</span>
+              {{ 'send' | t }} <span aria-hidden="true">{{ 'arrow.forward' | t }}</span>
             }
           </button>
-          <span class="or">or email <a [href]="'mailto:' + email">{{ email }}</a></span>
+          <span class="or">{{ 'orEmail' | t }} <a [href]="'mailto:' + email" dir="ltr">{{ email }}</a></span>
         </div>
       </form>
     }

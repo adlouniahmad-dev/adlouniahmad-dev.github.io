@@ -3,6 +3,7 @@ import { isPlatformBrowser } from '@angular/common';
 import { ICategory } from '../../shared/interfaces/category';
 import { IPortfolioItem } from '../../shared/interfaces/portfolio-item';
 import { GeneralService } from '../../shared/services/general.service';
+import { LanguageService } from '../../shared/i18n/language.service';
 
 const ALL = '*';
 /** Remembers whether "Early work" is expanded, so it stays open when coming back from a project */
@@ -29,7 +30,12 @@ export class PortfolioComponent implements OnInit {
   constructor(
     private generalService: GeneralService,
     @Inject(PLATFORM_ID) private platformId: object,
+    private language: LanguageService,
   ) {}
+
+  link(...segments: string[]): string[] {
+    return this.language.link(...segments);
+  }
 
   ngOnInit(): void {
     const items = this.generalService.getPortfolioItems();

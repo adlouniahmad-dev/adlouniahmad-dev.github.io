@@ -46,7 +46,7 @@
   display: inline-flex;
   align-items: center;
   gap: .4rem;
-  margin-left: auto;
+  margin-inline-start: auto;
   font-size: .8rem;
   color: var(--text-muted);
   transition: color .2s ease;
@@ -173,7 +173,7 @@
 }
 
 .early-item:hover .arrow {
-  transform: translateX(4px);
+  transform: translateX(calc(4px * var(--dir)));
   color: var(--accent-text);
 }
 
@@ -195,7 +195,7 @@
   .stack {
     grid-column: 3;
     grid-row: 1;
-    text-align: right;
+    text-align: end;
   }
 
   .arrow {

@@ -1,7 +1,8 @@
 import { Component, HostBinding, HostListener, Input, ChangeDetectionStrategy } from '@angular/core';
 import { IExperience } from '../../../shared/interfaces/experience';
+import { LanguageService } from '../../../shared/i18n/language.service';
+import { MONTHS } from '../../../shared/i18n/strings';
 
-const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 @Component({
     selector: 'adl-experience',
@@ -13,6 +14,8 @@ const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
 export class ExperienceComponent {
 
   @Input() experience: IExperience;
+
+  constructor(private language: LanguageService) {}
 
   /** Smaller variant, used for internships */
   @HostBinding('class.compact')
@@ -35,13 +38,13 @@ export class ExperienceComponent {
   }
 
   formatPeriod(start: string, end: string | null): string {
-    return `${this.formatMonth(start)} — ${end ? this.formatMonth(end) : 'Present'}`;
+    return `${this.formatMonth(start)} — ${end ? this.formatMonth(end) : this.language.t('present')}`;
   }
 
   /** `2023-12` -> `Dec 2023` */
   private formatMonth(value: string): string {
     const [year, month] = value.split('-');
-    return `${MONTHS[+month - 1]} ${year}`;
+    return `${MONTHS[this.language.lang][+month - 1]} ${year}`;
   }
 
 }

@@ -16,7 +16,9 @@ npm start        # dev server at http://localhost:4200
 
 ## Updating content
 
-All site content lives in [`src/app/shared/services/info.json`](src/app/shared/services/info.json). No component changes are needed to update it.
+All site content lives in [`src/app/shared/services/info.json`](src/app/shared/services/info.json), with the Arabic version in [`info.ar.json`](src/app/shared/services/info.ar.json). No component changes are needed to update it.
+
+The site is bilingual: English at `/` and Arabic (right-to-left) at `/ar/`, both prerendered. **The two content files must keep the same structure**, so when you add or change something in `info.json` (a project, an experience entry, a highlight), make the same change in `info.ar.json`, translating only the text. Interface text (buttons, labels, form messages) is in [`strings.ts`](src/app/shared/i18n/strings.ts); templates use it as `{{ 'key' | t }}`.
 
 | Key          | What it controls                                                     |
 | ------------ | -------------------------------------------------------------------- |

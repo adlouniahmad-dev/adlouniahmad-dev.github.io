@@ -46,6 +46,8 @@ let nextId = 0;
     `,
     styles: `
       :host {
+        /* a Latin brand lockup: keep "ahmad adlouni." left-to-right on Arabic pages too */
+        direction: ltr;
         display: inline-flex;
         align-items: center;
         gap: .6em;

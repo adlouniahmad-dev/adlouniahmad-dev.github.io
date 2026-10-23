@@ -4,6 +4,7 @@ import { Subscription } from 'rxjs';
 import { IPortfolioItem } from '../shared/interfaces/portfolio-item';
 import { GeneralService } from '../shared/services/general.service';
 import { SeoService } from '../shared/services/seo.service';
+import { LanguageService } from '../shared/i18n/language.service';
 
 @Component({
     selector: 'adl-portfolio-item',
@@ -28,7 +29,25 @@ export class PortfolioItemComponent implements OnInit, OnDestroy {
     private route: ActivatedRoute,
     private router: Router,
     private seo: SeoService,
+    private language: LanguageService,
   ) {}
+
+  get homeLink(): string {
+    return this.language.pathIn(this.language.lang, '/');
+  }
+
+  get otherLang(): 'en' | 'ar' {
+    return this.language.lang === 'ar' ? 'en' : 'ar';
+  }
+
+  /** The same project in the other language */
+  get switchLink(): string {
+    return this.language.pathIn(this.otherLang, `/projects/${this.product?.id}`);
+  }
+
+  link(...segments: string[]): string[] {
+    return this.language.link(...segments);
+  }
 
   get screenshots(): string[] {
     // in-progress work never shows images
@@ -44,7 +63,6 @@ export class PortfolioItemComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.routeSub?.unsubscribe();
-    this.seo.reset();
   }
 
   openShot(index: number): void {
@@ -63,9 +81,12 @@ export class PortfolioItemComponent implements OnInit, OnDestroy {
   }
 
   onLightboxKeydown(event: KeyboardEvent): void {
-    if (event.key === 'ArrowRight')
+    // arrow keys follow the reading direction
+    const forward = this.language.isRtl ? 'ArrowLeft' : 'ArrowRight';
+    const back = this.language.isRtl ? 'ArrowRight' : 'ArrowLeft';
+    if (event.key === forward)
       this.step(1);
-    else if (event.key === 'ArrowLeft')
+    else if (event.key === back)
       this.step(-1);
   }
 
@@ -80,7 +101,7 @@ export class PortfolioItemComponent implements OnInit, OnDestroy {
     const index = items.findIndex(item => item.id === id);
     if (index < 0) {
       // Unknown project: show the 404 page without changing the URL
-      this.router.navigate(['/404'], { skipLocationChange: true });
+      this.router.navigate(this.language.link('404'), { skipLocationChange: true });
       return;
     }
 
@@ -90,10 +111,10 @@ export class PortfolioItemComponent implements OnInit, OnDestroy {
     this.next = items[(index + 1) % items.length];
 
     this.seo.update({
-      title: `${this.product.name} — Ahmad Adlouni`,
+      title: this.product.name + this.language.t('seo.titleSuffix'),
       description: this.product.details.description[0],
       // GitHub Pages serves prerendered pages from folders, so the canonical URL has a trailing slash
-      path: `/projects/${this.product.id}/`,
+      path: this.language.pathIn(this.language.lang, `/projects/${this.product.id}`) + '/',
     });
   }
 

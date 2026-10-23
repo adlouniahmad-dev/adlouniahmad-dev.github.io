@@ -1,32 +1,36 @@
 @if (product) {
   <div class="page">
     <nav class="top-bar enter">
-      <a class="back" routerLink="/" fragment="projects">
-        <span class="back-arrow" aria-hidden="true">←</span> All projects
+      <a class="back" [routerLink]="homeLink" fragment="projects">
+        <span class="back-arrow" aria-hidden="true">{{ 'arrow.back' | t }}</span> {{ 'allProjects' | t }}
       </a>
-      <a class="home" routerLink="/" aria-label="Ahmad Adlouni, home">
-        <adl-logo [wordmark]="true"></adl-logo>
-      </a>
+      <div class="top-actions">
+        <a class="lang-switch" [routerLink]="switchLink" [attr.hreflang]="otherLang" [attr.lang]="otherLang"
+          [attr.aria-label]="'switchLangLabel' | t">{{ 'switchLang' | t }}</a>
+        <a class="home" [routerLink]="homeLink" [attr.aria-label]="'homeLink' | t">
+          <adl-logo [wordmark]="true"></adl-logo>
+        </a>
+      </div>
     </nav>
 
     <header class="hero">
       <div class="plate enter">
         <!-- in-progress work never shows images -->
         @if (product.featuredImage && product.status !== 'in-progress') {
-          <img [src]="product.featuredImage" [alt]="product.name + ' logo'" width="1920" height="1080">
+          <img [src]="product.featuredImage" [alt]="'logoAlt' | t: { name: product.name }" width="1920" height="1080">
         } @else {
-          <adl-project-cover class="cover" [name]="product.name"></adl-project-cover>
+          <adl-project-cover class="cover" [name]="product.name" [letters]="product.initials"></adl-project-cover>
         }
       </div>
       <div class="intro enter enter-delay">
         <div class="meta">
           @if (product.status === 'in-progress') {
-            <span class="badge live"><span class="pulse" aria-hidden="true"></span>In progress</span>
+            <span class="badge live"><span class="pulse" aria-hidden="true"></span>{{ 'inProgress' | t }}</span>
           }
           @if (product.stage === 'early') {
-            <span class="badge">Early work</span>
+            <span class="badge">{{ 'earlyWork' | t }}</span>
           }
-          <span class="kind">@if (product.context) {<span>{{ product.context }} · </span>}{{ product.tags }} · {{ product.year }} · {{ product.languages }}</span>
+          <span class="kind">@if (product.context) {<span>{{ product.context }} · </span>}{{ ('kind.' + product.tags) | t }} · {{ product.year }} · {{ product.languages }}</span>
         </div>
         <h1 class="name">{{ product.name }}</h1>
         @for (paragraph of product.details.description; track $index) {
@@ -34,7 +38,7 @@
         }
         @if (product.details.lesson) {
           <aside class="lesson">
-            <span class="lesson-label">What it taught me</span>
+            <span class="lesson-label">{{ 'whatItTaughtMe' | t }}</span>
             <p>{{ product.details.lesson }}</p>
           </aside>
         }
@@ -45,7 +49,7 @@
           <div class="links">
             @for (link of product.details.links; track link.link; let first = $first) {
               <a class="button" [class.primary]="first" [href]="link.link" target="_blank" rel="noopener">
-                {{ link.name }} <span aria-hidden="true">↗</span>
+                {{ link.name }} <span aria-hidden="true">{{ 'arrow.out' | t }}</span>
               </a>
             }
           </div>
@@ -54,11 +58,11 @@
     </header>
 
     <section class="block">
-      <h2 class="block-title">Tech</h2>
+      <h2 class="block-title">{{ 'tech' | t }}</h2>
       @for (paragraph of product.details.techDescription; track $index) {
         <p>{{ paragraph }}</p>
       }
-      <ul class="chips" aria-label="Technologies">
+      <ul class="chips" [attr.aria-label]="'technologies' | t">
         @for (tag of product.details.tags; track tag) {
           <li class="chip">{{ tag }}</li>
         }
@@ -67,38 +71,38 @@
 
     @if (screenshots.length) {
       <section class="block">
-        <h2 class="block-title">Screenshots <span class="muted">{{ screenshots.length }}</span></h2>
+        <h2 class="block-title">{{ 'screenshots' | t }} <span class="muted">{{ screenshots.length }}</span></h2>
         <div class="shots">
           @for (shot of screenshots; track shot; let i = $index) {
-            <button type="button" class="shot" (click)="openShot(i)" [attr.aria-label]="'Open screenshot ' + (i + 1)">
-              <img [src]="shot" [alt]="product.name + ' screenshot ' + (i + 1)" loading="lazy">
+            <button type="button" class="shot" (click)="openShot(i)" [attr.aria-label]="'openScreenshot' | t: { n: i + 1 }">
+              <img [src]="shot" [alt]="'screenshotAlt' | t: { name: product.name, n: i + 1 }" loading="lazy">
             </button>
           }
         </div>
       </section>
     }
 
-    <nav class="pager" aria-label="More projects">
-      <a class="pager-link" [routerLink]="['/projects', previous.id]">
-        <span class="pager-label">← Previous</span>
+    <nav class="pager" [attr.aria-label]="'moreProjects' | t">
+      <a class="pager-link" [routerLink]="link('projects', previous.id)">
+        <span class="pager-label">{{ 'arrow.back' | t }} {{ 'previous' | t }}</span>
         <span class="pager-name">{{ previous.name }}</span>
       </a>
-      <a class="pager-link next" [routerLink]="['/projects', next.id]">
-        <span class="pager-label">Next →</span>
+      <a class="pager-link next" [routerLink]="link('projects', next.id)">
+        <span class="pager-label">{{ 'next' | t }} {{ 'arrow.forward' | t }}</span>
         <span class="pager-name">{{ next.name }}</span>
       </a>
     </nav>
   </div>
 
   <dialog #lightbox class="lightbox" (keydown)="onLightboxKeydown($event)" (click)="onLightboxClick($event)"
-    [attr.aria-label]="product.name + ' screenshots'">
+    [attr.aria-label]="'screenshotsOf' | t: { name: product.name }">
     @if (screenshots.length) {
-      <img class="lightbox-image" [src]="screenshots[activeShot]" [alt]="product.name + ' screenshot ' + (activeShot + 1)">
+      <img class="lightbox-image" [src]="screenshots[activeShot]" [alt]="'screenshotAlt' | t: { name: product.name, n: activeShot + 1 }">
       <div class="lightbox-bar">
-        <button type="button" class="icon-button" (click)="step(-1)" aria-label="Previous screenshot">←</button>
+        <button type="button" class="icon-button" (click)="step(-1)" [attr.aria-label]="'previousScreenshot' | t">{{ 'arrow.back' | t }}</button>
         <span class="counter">{{ activeShot + 1 }} / {{ screenshots.length }}</span>
-        <button type="button" class="icon-button" (click)="step(1)" aria-label="Next screenshot">→</button>
-        <button type="button" class="icon-button close" (click)="closeLightbox()" aria-label="Close">✕</button>
+        <button type="button" class="icon-button" (click)="step(1)" [attr.aria-label]="'nextScreenshot' | t">{{ 'arrow.forward' | t }}</button>
+        <button type="button" class="icon-button close" (click)="closeLightbox()" [attr.aria-label]="'close' | t">✕</button>
       </div>
     }
   </dialog>

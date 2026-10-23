@@ -2,6 +2,7 @@ import { Component, OnInit, ChangeDetectionStrategy, Inject, PLATFORM_ID } from 
 import { isPlatformBrowser } from '@angular/common';
 import { SwUpdate } from '@angular/service-worker';
 import { filter } from 'rxjs/operators'
+import { LanguageService } from './shared/i18n/language.service';
 
 @Component({
     selector: 'adl-root',
@@ -12,7 +13,12 @@ import { filter } from 'rxjs/operators'
 })
 export class AppComponent implements OnInit {
 
-  constructor(private swUpdate: SwUpdate, @Inject(PLATFORM_ID) private platformId: object) {}
+  constructor(
+    private swUpdate: SwUpdate,
+    @Inject(PLATFORM_ID) private platformId: object,
+    // created here so it's listening before the first navigation sets the page language
+    _language: LanguageService,
+  ) {}
 
   ngOnInit(): void {
     if (!isPlatformBrowser(this.platformId))

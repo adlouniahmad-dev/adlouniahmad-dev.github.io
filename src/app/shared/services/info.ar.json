@@ -1,0 +1,623 @@
+{
+	"info": {
+		"name": "أحمد عدلوني",
+		"position": "مهندس برمجيات أول في Siren Analytics",
+		"about": {
+			"paragraphs": [
+				"👋 مرحباً! أنا **مهندس برمجيات أول** في [Siren Analytics](https://sirenanalytics.com)، ولديّ أكثر من 7 سنوات من الخبرة في بناء تطبيقات ويب متجاوبة وسهلة الوصول وقابلة للتوسّع، لمنصات حكومية ومؤسسية ومنصات خدمات رقمية.",
+				"أتخصّص في **Angular وTypeScript وهندسة الواجهات الأمامية**، مع خبرة عميقة في النماذج الديناميكية متعددة الخطوات، وأدوات بناء النماذج القابلة للتهيئة، ولوحات التحكم، وواجهات سير العمل، وتكامل واجهات برمجة التطبيقات. 💻",
+				"قدّمتُ بوابات للقطاع العام ثنائية اللغة (عربي/إنجليزي، من اليمين إلى اليسار) مدمجة مع الأنظمة الحكومية الوطنية، وتطبيقات ويب تقدّمية تعمل دون اتصال لجمع البيانات الميدانية، وواجهات أمامية آمنة عولجت فيها نتائج اختبارات الاختراق. 🚀",
+				"أعمل بارتياح عبر دورة التسليم كاملة: تحليل المتطلبات، والنماذج الأولية، والتطوير، واختبار قبول المستخدم، والنشر، والتوثيق، والتدريب، والدعم بعد الإطلاق. 📚",
+				"أبني باستخدام أدوات البرمجة بالذكاء الاصطناعي مثل **Claude Code**: أتولّى بنفسي الهندسة والمواصفات ومراجعة الكود والاختبارات، وأترك للذكاء الاصطناعي تسريع التنفيذ. 🤖"
+			],
+			"skills": [
+				"Angular",
+				"TypeScript",
+				"RxJS",
+				"NgRx",
+				"Angular Material",
+				"Angular Formly",
+				"SCSS",
+				"PWA / العمل دون اتصال",
+				"واجهات ثنائية اللغة (RTL)",
+				"النماذج الديناميكية ومنشئات النماذج",
+				"هندسة الواجهات الأمامية",
+				"Figma",
+				"Node.js / Express",
+				"Java / Spring Boot",
+				"SQL",
+				"Dialogflow CX / Twilio",
+				"التطوير بمساعدة الذكاء الاصطناعي"
+			],
+			"signOff": "أهلاً بك في معرض أعمالي، حيث يلتقي الكود بالإبداع! ✨"
+		}
+	},
+	"experience": [
+		{
+			"position": "مهندس برمجيات أول",
+			"company": {
+				"name": "Siren Analytics",
+				"url": "https://sirenanalytics.com"
+			},
+			"location": "لبنان، الأردن",
+			"start": "2023-12",
+			"end": null,
+			"roles": [
+				{
+					"title": "مهندس برمجيات أول",
+					"start": "2024-11",
+					"end": null
+				},
+				{
+					"title": "مهندس برمجيات",
+					"start": "2023-12",
+					"end": "2024-11"
+				}
+			],
+			"summary": "أقود تطوير الواجهات الأمامية لمنصات القطاع العام وأنظمة تقديم الخدمات الحكومية في الأردن ولبنان، بالتعاون مع فرق الخلفية وضمان الجودة والتصميم وتحليل الأعمال. رُقّيت إلى مهندس برمجيات أول في نوفمبر 2024.",
+			"highlights": [
+				"**بوابة الترخيص الإلكتروني MoDEE–EMRC (الأردن):** عشرات خدمات الترخيص والتجديد ثنائية اللغة (عربي/إنجليزي)، مع نماذج متعددة الخطوات يجري التحقق منها لحظياً مقابل السجلات الوطنية عبر ناقل الخدمات الحكومية (GSB).",
+				"**منصة DAEM الوطنية للمساعدة الاجتماعية (لبنان):** المطوّر الرئيسي للواجهات الأمامية عبر أربعة تطبيقات Angular، منها تطبيق ويب تقدّمي للمسوحات الميدانية يعمل دون اتصال، وبوابة للمواطنين تدعم مسح بطاقات الهوية برموز QR وPDF417.",
+				"قُدتُ تطوير **Form Studio**، وهي مكتبة لبناء النماذج بالسحب والإفلات تتشاركها تطبيقات DAEM، إضافةً إلى إعادة تصميم واجهات ثلاث بوابات تحت سمة موحّدة.",
+				"**نظام إدارة المشاريع لمؤسسة PAX:** بوابتا المتقدّمين والمكتب الخلفي، مع مسارات مراجعة على مراحل، وبحث عن المشاريع على الخريطة، ومساعد محادثة بالذكاء الاصطناعي.",
+				"عالجتُ نتائج اختبارات الاختراق (تخزين الرموز، وXSS، والوصول المكشوف إلى الملفات)، وأضفتُ reCAPTCHA وتسجيل الخروج التلقائي من الجلسة."
+			],
+			"skills": [
+				"Angular",
+				"TypeScript",
+				"Angular Material",
+				"Angular Formly",
+				"RxJS",
+				"SCSS",
+				"PWA",
+				"واجهات ثنائية اللغة (RTL)"
+			]
+		},
+		{
+			"position": "مهندس برمجيات، ومهندس أول لواجهات المستخدم والواجهات الأمامية",
+			"company": {
+				"name": "VestaCare Inc.",
+				"url": "https://vestacare.com"
+			},
+			"location": "كاليفورنيا، الولايات المتحدة",
+			"start": "2020-12",
+			"end": "2023-11",
+			"summary": "تولّيتُ دورة حياة تطوير البرمجيات كاملة لمنتج VestaPay، من التحليل إلى الاختبار، باستخدام Java وGWT وSpring Boot وقاعدة بيانات Oracle.",
+			"highlights": [
+				"صمّمتُ مشروع MPR على Figma بصفتي مهندساً أول لواجهات المستخدم، وقُدتُ انتقاله من GWT إلى Angular 15 وNgRx وSpring Boot.",
+				"بنيتُ لوحات تحكم وجداول بيانات ومكوّنات واجهة قابلة لإعادة الاستخدام، وتولّيتُ صيانة لوحة VSC مع ميزة الدردشة المباشرة المدمجة.",
+				"طوّرتُ روبوتات محادثة على Dialogflow CX متكاملة مع Twilio Conversations API، ووسّعتُها بواجهات برمجية خارجية وwebhooks.",
+				"نفّذتُ خادم Node.js/Express مع مصادقة JWT وبروتوكول HTTPS."
+			],
+			"skills": [
+				"Java",
+				"GWT",
+				"Spring Boot",
+				"Oracle Database",
+				"Angular",
+				"RxJS",
+				"NgRx",
+				"UI/UX Design",
+				"Figma",
+				"Twilio",
+				"Dialogflow CX",
+				"Node.js"
+			]
+		},
+		{
+			"position": "مدرّب تطوير الواجهات الأمامية وقواعد البيانات",
+			"company": {
+				"name": "ANERA",
+				"url": "https://anera.org"
+			},
+			"location": "صيدا، لبنان",
+			"start": "2023-02",
+			"end": "2023-05",
+			"summary": "درّستُ تطوير الواجهات الأمامية وإدارة قواعد بيانات MySQL لطلاب جامعيين وخريجين جدد فلسطينيين.",
+			"highlights": [
+				"المنهج: HTML، وتخطيط CSS، وJavaScript والتعامل مع DOM، وAngular (التوجيه وHttpClient والخدمات)، وMySQL."
+			],
+			"skills": [
+				"Teaching",
+				"Communication",
+				"HTML",
+				"CSS",
+				"JavaScript",
+				"Angular",
+				"MySQL"
+			]
+		},
+		{
+			"position": "مطوّر Full Stack",
+			"company": {
+				"name": "عمل حر"
+			},
+			"start": "2019-06",
+			"end": "2023-01",
+			"summary": "بنيتُ تطبيقات ويب متكاملة وتطبيقات Android منشورة على Google Play (انظر المشاريع أدناه).",
+			"highlights": [
+				"تطبيقات ويب باستخدام Angular وPHP Slim وMySQL / SQL Server، تشمل لوحات تحكم إدارية وتطبيقات ويب تقدّمية وواجهات REST.",
+				"دمجتُ واجهات برمجية خارجية مثل OnlineSim.io."
+			],
+			"skills": [
+				"Angular",
+				"PHP Slim",
+				"MySQL",
+				"SQL Server",
+				"RESTful APIs",
+				"Android",
+				"Git"
+			]
+		},
+		{
+			"position": "مطوّر واجهات أمامية",
+			"company": {
+				"name": "Bluering",
+				"url": "https://bluering.com"
+			},
+			"location": "بيروت، لبنان",
+			"start": "2019-02",
+			"end": "2019-05",
+			"summary": "بنيتُ الواجهات والمكوّنات القابلة لإعادة الاستخدام لمنصة Bluering Retail باستخدام Angular 5 وBootstrap 4 وHTML5 وCSS3.",
+			"highlights": [
+				"طبّقتُ معايير نظام التصميم ووحدات واجهة قابلة لإعادة الاستخدام وتخطيطات متجاوبة.",
+				"حسّنتُ مسارات التنقّل والتحقق من النماذج وسرعة التحميل والتوافق بين المتصفحات."
+			],
+			"skills": [
+				"HTML5",
+				"CSS3",
+				"Bootstrap",
+				"JavaScript",
+				"Angular"
+			]
+		},
+		{
+			"position": "متدرّب في تطوير البرمجيات",
+			"type": "internship",
+			"company": {
+				"name": "Vanrise"
+			},
+			"location": "بيروت، لبنان",
+			"start": "2018-08",
+			"end": "2018-09",
+			"skills": [
+				"AngularJS",
+				"C#",
+				"ASP.NET",
+				"Web APIs",
+				"SQL Server"
+			],
+			"summary": "ساهمتُ في تطبيق صفحة واحدة (SPA) مبني بـ AngularJS وواجهات C# / ASP.NET وإجراءات مخزّنة في Microsoft SQL Server."
+		},
+		{
+			"position": "متدرّب مطوّر برمجيات مبتدئ",
+			"type": "internship",
+			"company": {
+				"name": "Integrated Digital Systems"
+			},
+			"location": "بيروت، لبنان",
+			"start": "2017-06",
+			"end": "2018-06",
+			"summary": "عملتُ على مشروع «قارئ بطاقات الهوية» (ID Card Reader)، من المتطلبات وتصميم UML إلى لوحة تحكم ويب مبنية بـ Symfony.",
+			"highlights": [
+				"بنيتُ لوحة التحكم (Symfony MVC وDoctrine ORM وMySQL) مع تسجيل الدخول عبر Google OAuth.",
+				"أنشأتُ واجهات REST لتطبيق Android المرافق."
+			],
+			"skills": [
+				"PHP",
+				"Symfony",
+				"Doctrine ORM",
+				"MySQL",
+				"Google OAuth",
+				"RESTful APIs",
+				"UML"
+			]
+		}
+	],
+	"contact": {
+		"email": "adlouniahmad@outlook.com",
+		"address": "صيدا، لبنان"
+	},
+	"categories": [
+		{
+			"name": "الكل",
+			"value": "*",
+			"active": true
+		},
+		{
+			"name": "ويب",
+			"value": "web",
+			"active": false
+		},
+		{
+			"name": "موبايل",
+			"value": "mobile",
+			"active": false
+		}
+	],
+	"portfolio": [
+		{
+			"id": "noura-clinic",
+			"name": "عيادة د. نورا مسالخي للتغذية العلاجية",
+			"initials": "NM",
+			"year": 2026,
+			"status": "in-progress",
+			"context": "عمل حر",
+			"tags": "web",
+			"languages": "Angular / Firebase",
+			"details": {
+				"description": [
+					"موقع إلكتروني ومنصة لإدارة العيادة ثنائيا اللغة (عربي/إنجليزي، مع أولوية للاتجاه من اليمين إلى اليسار) لأخصائية تغذية علاجية: موقع عام يتعرّف فيه المرضى على خدماتها، ومساحة عمل للفريق لإدارة العيادة يوماً بيوم."
+				],
+				"techDescription": [
+					"مساحة عمل أخصائية التغذية: دليل المرضى وملفاتهم، والسجل السريري والتاريخ الطبي، والحاسبات السريرية، ومنشئ خطط وجبات مع مكتبة أطعمة ونسخ للخطط وخيارات وجبات بقواعد اختيار.",
+					"المواعيد: عرض «اليوم» وطابور الاستقبال، وتقويم تُسحب فيه الزيارات لإعادة جدولتها أو تُحجز بالنقر على خانة فارغة، والبحث عن المواعيد المتاحة، والعطل والإغلاقات، ومتابعة المرضى الذين توشك خططهم على الانتهاء.",
+					"الرسائل: قوالب تذكير ومتابعة عبر WhatsApp ثنائية اللغة تحترم المرضى الذين اختاروا عدم التواصل.",
+					"الإدارة: الخدمات وساعات العمل وحسابات الفريق بأدوار (مالك، ممارس، استقبال)، تُفرض في قواعد أمان Firestore وCloud Functions وليس في الواجهة فقط.",
+					"مبني بـ Angular 19 وAngular Material وFirebase (Auth وFirestore وCloud Functions) وngx-translate؛ ومُختبَر باختبارات قواعد الأمان واختبارات تكامل Cloud Functions واختبارات Playwright الشاملة على محاكيات Firebase.",
+					"بُني باستخدام Claude Code انطلاقاً من مواصفات منتج كتبتُها بنفسي، مع مراجعة كل تغيير وتغطيته باختبارات آلية."
+				],
+				"tags": [
+					"Angular",
+					"TypeScript",
+					"Firebase",
+					"Firestore",
+					"Cloud Functions",
+					"Angular Material",
+					"Playwright",
+					"واجهات ثنائية اللغة (RTL)"
+				],
+				"availability": "قيد التطوير النشط · مستودع خاص"
+			}
+		},
+		{
+			"id": "form-studio",
+			"name": "Form Studio",
+			"year": 2025,
+			"status": "in-progress",
+			"context": "Siren Analytics",
+			"tags": "web",
+			"languages": "Angular / Formly / RxJS",
+			"details": {
+				"description": [
+					"منشئ نماذج قابل لإعادة الاستخدام والتهيئة بالسحب والإفلات لتصميم نماذج ومسارات عمل ديناميكية متعددة الخطوات (DAEM، Siren Analytics)، مُجمَّع كمكتبة مستقلة (الإصدار 1.0) ومشترك بين بوابة WFPS وتطبيق ويب تقدّمي للمسوحات الميدانية يعمل دون اتصال وبوابة تسجيل المواطنين."
+				],
+				"techDescription": [
+					"المنشئ: لوحة عناصر بالسحب والإفلات أو النقر للإضافة، وتخطيطات شبكية، وأقسام قابلة للتكرار، ومراحل مع إعادة ترتيبها، ومنشئ مرئي للمنطق الشرطي، وقواعد تحقق، ومخطط اعتماديات للتحقق، ومحررات كود لـ JSON وقواعد الاتساق (CodeMirror).",
+					"سير العمل: مسودات ونشر وأرشفة لنسخ التخطيط لكل نوع مسح، ونسخ التخطيطات بين أنواع المسوح، وتصدير الإعدادات واستيرادها بين البيئات، وإجراءات مقيّدة بالصلاحيات، وجولة إرشادية في المنتج.",
+					"وقت التشغيل: عارض تطبيقات قابل لإعادة الاستخدام مع معاينة متجاوبة بالاتجاهين RTL/LTR، ومصادر بيانات مرجعية، ورفع ملفات، وحقول للكاميرا ومسح الرموز، ومراحل خطية قابلة للاستئناف، وعرض للقراءة فقط للطلبات المُقدَّمة.",
+					"قابل للتوسيع عبر واجهات برمجية لوقت التشغيل للحقول المخصّصة ولوحات الخصائص ومعالجات الأحداث وقواعد الاتساق؛ ويتضمّن لوحة مساعد نماذج بالذكاء الاصطناعي يُتحقَّق من ردودها مقابل مخطط قبل تطبيقها.",
+					"مبني بـ Angular وTypeScript وAngular Formly وRxJS وSCSS، مع اختبارات Karma/Jasmine وتوثيق للمستخدمين والمطوّرين باللغتين العربية والإنجليزية."
+				],
+				"tags": [
+					"Angular",
+					"TypeScript",
+					"Angular Formly",
+					"RxJS",
+					"SCSS",
+					"CodeMirror",
+					"Karma / Jasmine"
+				],
+				"availability": "قيد التطوير النشط · مشروع داخلي"
+			}
+		},
+		{
+			"id": "ask",
+			"name": "ASK - Agile Share Knowledge",
+			"year": 2020,
+			"stage": "early",
+			"context": "عمل حر",
+			"tags": "web",
+			"languages": "Angular / EF Core",
+			"featuredImage": "/assets/img/ask-logo.webp",
+			"details": {
+				"description": [
+					"يهدف المشروع إلى نشر المعرفة بين جميع الموظفين على مختلف المستويات في قطاعات المؤسسة وإداراتها، بما يرفع منحنى التعلّم، وينشر ثقافة مؤسسية داعمة بطريقة عملية ومنهجية، ويعظّم الاستفادة من المعرفة والخبرات في المؤسسة بوصفها عنصراً أساسياً في تعزيز المعرفة الاستباقية.",
+					"التطبيق متاح باللغتين الإنجليزية والعربية."
+				],
+				"techDescription": [
+					"مسؤول عن تصميم وتطوير شاشات التفاعل مع المستخدم باستخدام HTML وCSS3 وBootstrap وAngular 8.",
+					"تنظيم تطبيق Angular وهيكلته في وحدات (modules)، إضافةً إلى إنشاء مكوّنات مخصّصة قابلة لإعادة الاستخدام.",
+					"تنفيذ طلبات HTTP باستخدام مكتبة RxJS للتعامل مع قيم متعددة عبر الزمن.",
+					"تنفيذ واجهات REST باستخدام Entity Framework Core 2.0 وMicrosoft SQL Server، وتأمينها بـ JWT، واستخدام JSON لتبادل البيانات بين العميل والخادم."
+				],
+				"tags": [
+					"Angular",
+					"TypeScript",
+					"RxJS",
+					"Bootstrap",
+					"HTML",
+					"CSS",
+					"C#",
+					"EF Core",
+					"SQL Server",
+					"JWT"
+				],
+				"screenshots": [
+					"/assets/img/ask-1.webp",
+					"/assets/img/ask-2.webp",
+					"/assets/img/ask-3.webp",
+					"/assets/img/ask-4.webp"
+				],
+				"lesson": "أكبر قاعدة كود عملتُ عليها حتى ذلك الوقت (232 commit على مدى ستة أشهر): تنظيم تطبيق Angular في وحدات ومكوّنات قابلة لإعادة الاستخدام، والعمل مع RxJS، وبناء شاشات ثنائية اللغة إنجليزية/عربية، وتأمين واجهة .NET Core بـ JWT.",
+				"availability": "لم يعد متاحاً على الإنترنت"
+			}
+		},
+		{
+			"id": "leb-phones",
+			"name": "LebPhones",
+			"year": 2020,
+			"stage": "early",
+			"context": "عمل حر",
+			"tags": "web",
+			"languages": "Slim PHP / PWA",
+			"featuredImage": "/assets/img/lebphones-logo.webp",
+			"details": {
+				"description": [
+					"موقع يعرض أسعار الجملة لمختلف الهواتف المحمولة في لبنان."
+				],
+				"techDescription": [
+					"مطوّر بلغة PHP باستخدام Slim Framework، مع إمكانات تطبيقات الويب التقدّمية (PWA)."
+				],
+				"tags": [
+					"HTML",
+					"CSS",
+					"PHP",
+					"Slim Framework",
+					"JavaScript",
+					"PWA"
+				],
+				"screenshots": [
+					"/assets/img/lebphones-1.webp",
+					"/assets/img/lebphones-2.webp",
+					"/assets/img/lebphones-3.webp"
+				],
+				"lesson": "بناء سريع عرّفني على تطبيقات الويب التقدّمية: جعلُ موقع PHP يُعرض من الخادم قابلاً للتثبيت كتطبيق.",
+				"availability": "لم يعد متاحاً على الإنترنت"
+			}
+		},
+		{
+			"id": "sim-phones",
+			"name": "Sim-Phones",
+			"year": 2020,
+			"stage": "early",
+			"context": "عمل حر",
+			"tags": "web",
+			"languages": "Angular / Slim PHP / PWA",
+			"featuredImage": "/assets/img/simphones-logo.webp",
+			"details": {
+				"description": [
+					"تطبيق ويب يتيح شراء أرقام افتراضية من دول مختلفة (روسيا، ألمانيا، وغيرها) لاستخدامها في خدمات مثل WhatsApp وFacebook وViber.",
+					"يتكوّن التطبيق من لوحة تحكم للمشرفين وتطبيق ويب تقدّمي (PWA) للمستخدمين."
+				],
+				"techDescription": [
+					"مطوّر باستخدام Angular وPHP Slim (واجهات REST / JWT) وMySQL.",
+					"دمجتُ واجهات Online-Sim لشراء الأرقام الافتراضية لمنصات التواصل المختلفة، واستخدمتُ Firebase Cloud Messaging لإرسال الإشعارات."
+				],
+				"tags": [
+					"Angular",
+					"PHP",
+					"Slim Framework",
+					"JWT",
+					"MySQL",
+					"PWA",
+					"Firebase Cloud Messaging"
+				],
+				"screenshots": [
+					"/assets/img/simphones-1.webp",
+					"/assets/img/simphones-2.webp",
+					"/assets/img/simphones-3.webp"
+				],
+				"lesson": "إطلاق منتج حقيقي من البداية إلى النهاية: تطبيق PWA بـ Angular للمستخدمين ولوحة تحكم للمشرفين فوق واجهة PHP خاصة بي مؤمّنة بـ JWT، مع دمج مزوّد خارجي (Online-Sim) وإشعارات عبر Firebase Cloud Messaging.",
+				"availability": "لم يعد متاحاً على الإنترنت"
+			}
+		},
+		{
+			"id": "status-saver",
+			"name": "WhatsApp Status Saver",
+			"year": 2019,
+			"stage": "early",
+			"context": "عمل حر",
+			"tags": "mobile",
+			"languages": "Android Java",
+			"featuredImage": "/assets/img/statussaver-logo.webp",
+			"details": {
+				"description": [
+					"تطبيق Android يتيح لك عرض حالات WhatsApp لأصدقائك من صور وفيديوهات وحفظها، ومشاركتها معهم مباشرة من التطبيق."
+				],
+				"techDescription": [
+					"استخدمتُ لغة Java للتنفيذ واتّبعتُ نمط MVP (Model-View-Presenter).",
+					"استخدمتُ مكتبة Picasso لعرض الصور والصور المصغّرة للفيديوهات."
+				],
+				"tags": [
+					"Java",
+					"Android",
+					"MVP",
+					"Picasso"
+				],
+				"screenshots": [
+					"/assets/img/statussaver-1.webp",
+					"/assets/img/statussaver-2.webp",
+					"/assets/img/statussaver-3.webp"
+				],
+				"lesson": "علّمني هيكلة تطبيق Android بنمط MVP والتعامل مع الوسائط بكفاءة، مع تحميل الصور والصور المصغّرة للفيديوهات عبر Picasso.",
+				"availability": "لم يعد متاحاً على Google Play"
+			}
+		},
+		{
+			"id": "mega-deals",
+			"name": "MegaDeals",
+			"year": 2019,
+			"stage": "early",
+			"context": "عمل حر",
+			"tags": "web",
+			"languages": "Angular / Slim PHP",
+			"featuredImage": "/assets/img/megadeals-logo.webp",
+			"link": "https://www.megadeals.world",
+			"details": {
+				"description": [
+					"موقع يعرض العروض من متاجر إلكترونية مختلفة مثل AliExpress."
+				],
+				"techDescription": [
+					"مسؤول عن تنفيذ واجهات المستخدم والمكوّنات القابلة لإعادة الاستخدام للوحة الإدارة والمتجر بـ Angular.",
+					"مسؤول عن تنفيذ واجهات REST باستخدام PHP Slim وMySQL."
+				],
+				"tags": [
+					"Angular",
+					"PHP",
+					"Slim Framework",
+					"MySQL",
+					"Web APIs",
+					"HTML",
+					"CSS"
+				],
+				"links": [
+					{
+						"name": "زيارة الموقع",
+						"link": "https://www.megadeals.world"
+					}
+				],
+				"screenshots": [
+					"/assets/img/megadeals-1.webp",
+					"/assets/img/megadeals-2.webp",
+					"/assets/img/megadeals-3.webp"
+				],
+				"lesson": "بناء طرفي المنتج بنفسي: متجر ولوحة إدارة بـ Angular فوق واجهة REST بـ PHP Slim وقاعدة بيانات MySQL صمّمتُها."
+			}
+		},
+		{
+			"id": "mms-server",
+			"name": "MMS Server",
+			"year": 2019,
+			"stage": "early",
+			"context": "عمل حر",
+			"tags": "mobile",
+			"languages": "Android Java",
+			"featuredImage": "/assets/img/mmserver-logo.webp",
+			"details": {
+				"description": [
+					"تطبيق Android يتولّى جميع عمليات إرسال الرصيد والأيام إلى أرقام Touch وAlfa من تطبيق MMService."
+				],
+				"techDescription": [
+					"عملتُ على تنفيذ المستمعات اللازمة لقراءة الرسائل الواردة ورسائل USSD ومعالجتها.",
+					"عملتُ على إرسال الرسائل من الشريحتين 1 و2 برمجياً باستخدام SmsManager وتشغيل رموز USSD.",
+					"استخدمتُ SQLite وFirebase Cloud Firestore لحفظ البيانات وقراءتها."
+				],
+				"tags": [
+					"Java",
+					"Android",
+					"SQLite",
+					"Firebase",
+					"Firestore"
+				],
+				"lesson": "العمل قريباً من منصة Android: الاستماع للرسائل الواردة وردود USSD، والإرسال من شريحتين، ومزامنة البيانات بين SQLite وFirestore."
+			}
+		},
+		{
+			"id": "gorraf",
+			"name": "Gorraf",
+			"year": 2019,
+			"stage": "early",
+			"context": "عمل حر",
+			"tags": "web",
+			"languages": "Flask / React / PostgreSQL",
+			"details": {
+				"description": [
+					"قُدتُ فريقاً صغيراً من مطوّرَين اثنين."
+				],
+				"techDescription": [
+					"مسؤول عن تنفيذ تغييرات الخادم باستخدام Flask مع إضافة Flask-RESTX لبناء واجهات REST وقاعدة بيانات PostgreSQL.",
+					"عملتُ على تنفيذ بعض مكوّنات الواجهة باستخدام React وBootstrap."
+				],
+				"tags": [
+					"Python",
+					"Flask",
+					"Flask-RESTX",
+					"PostgreSQL",
+					"React",
+					"Bootstrap"
+				],
+				"lesson": "أول تجربة لي في قيادة مطوّرين آخرين: توزيع العمل بين زميلَين أثناء بناء واجهات REST بـ Flask-RESTX وPostgreSQL، وتعلّم React على الطريق."
+			}
+		},
+		{
+			"id": "domain-finder",
+			"name": "Domain Finder",
+			"year": 2019,
+			"stage": "early",
+			"context": "عمل حر",
+			"tags": "mobile",
+			"languages": "Android Java",
+			"featuredImage": "/assets/img/domainfinder-logo.webp",
+			"details": {
+				"description": [
+					"تطبيق Android يتيح لك البحث عن اسم نطاق للتحقق من توفّره وسعره."
+				],
+				"techDescription": [
+					"عملتُ على تصميم واجهات المستخدم وتنفيذها.",
+					"عملتُ على دمج واجهات GoDaddy واستهلاكها عبر عميل Retrofit."
+				],
+				"tags": [
+					"Java",
+					"Android",
+					"Retrofit",
+					"GoDaddy APIs"
+				],
+				"screenshots": [
+					"/assets/img/domainfinder-1.webp",
+					"/assets/img/domainfinder-2.webp",
+					"/assets/img/domainfinder-3.webp"
+				],
+				"lesson": "تعلّم استهلاك واجهة REST خارجية بالشكل الصحيح، عبر Retrofit وواجهة النطاقات من GoDaddy، وتصميم شاشات التطبيق بنفسي.",
+				"availability": "لم يعد متاحاً على Google Play"
+			}
+		},
+		{
+			"id": "electronic-masbaha",
+			"name": "المسبحة الإلكترونية",
+			"year": 2019,
+			"stage": "early",
+			"context": "عمل حر",
+			"tags": "mobile",
+			"languages": "Android Java",
+			"featuredImage": "/assets/img/electronicmasbaha-logo.webp",
+			"details": {
+				"description": [
+					"تطبيق Android يتيح لك عدّ التسبيحات على هاتفك."
+				],
+				"techDescription": [
+					"مطوّر بلغة Java."
+				],
+				"tags": [
+					"Java",
+					"Android"
+				],
+				"screenshots": [
+					"/assets/img/electronicmasbaha-1.webp",
+					"/assets/img/electronicmasbaha-2.webp",
+					"/assets/img/electronicmasbaha-3.webp"
+				],
+				"lesson": "فكرة صغيرة أخذتُها من مشروع Android فارغ حتى نشرها على Google Play.",
+				"availability": "لم يعد متاحاً على Google Play"
+			}
+		}
+	],
+	"social": [
+		{
+			"name": "facebook",
+			"link": "https://www.facebook.com/adlouni.ahmad/"
+		},
+		{
+			"name": "instagram",
+			"link": "https://www.instagram.com/ahmad_adlouni/"
+		},
+		{
+			"name": "linkedIn",
+			"link": "https://www.linkedin.com/in/adlouni-ahmad/"
+		},
+		{
+			"name": "github",
+			"link": "https://www.github.com/adlouniahmad-dev"
+		}
+	]
+}

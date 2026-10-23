@@ -1,4 +1,5 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { LanguageService } from '../shared/i18n/language.service';
 
 @Component({
     selector: 'adl-page-not-found',
@@ -7,11 +8,12 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
     changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
-export class PageNotFoundComponent implements OnInit {
+export class PageNotFoundComponent {
 
-  constructor() { }
+  readonly home: string;
 
-  ngOnInit(): void {
+  constructor(language: LanguageService) {
+    this.home = language.pathIn(language.lang, '/');
   }
 
 }

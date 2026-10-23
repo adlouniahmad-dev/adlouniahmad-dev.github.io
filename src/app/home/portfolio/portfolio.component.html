@@ -1,5 +1,5 @@
 <section class="section" id="projects">
-  <h2 class="section-title">Projects</h2>
+  <h2 class="section-title">{{ 'section.projects' | t }}</h2>
 
   <div class="featured">
     @for (item of featured; track item.id) {
@@ -11,21 +11,18 @@
     <!-- <details> keeps the links in the prerendered HTML even while collapsed -->
     <details class="early" [open]="earlyOpen" (toggle)="onEarlyToggle($event)">
       <summary>
-        <span class="early-title">Early work</span>
+        <span class="early-title">{{ 'earlyWork' | t }}</span>
         <span class="early-range">{{ earlyRange }}</span>
         <span class="early-toggle">
-          <span class="when-closed">Show {{ early.length }} projects</span>
-          <span class="when-open">Hide</span>
+          <span class="when-closed">{{ 'showProjects' | t: { n: early.length } }}</span>
+          <span class="when-open">{{ 'hide' | t }}</span>
           <span class="chevron" aria-hidden="true">⌄</span>
         </span>
       </summary>
 
-      <p class="early-intro">
-        Where it started: freelance projects from my first years as a developer, built while I was learning
-        Android, PHP and Angular. Each one taught me something I still use today.
-      </p>
+      <p class="early-intro">{{ 'earlyIntro' | t }}</p>
 
-      <div class="filters" role="group" aria-label="Filter early projects">
+      <div class="filters" role="group" [attr.aria-label]="'filterEarly' | t">
         @for (category of categories; track category.value) {
           <button type="button" class="filter" [class.active]="category.value === filterValue"
             [attr.aria-pressed]="category.value === filterValue" (click)="filterValue = category.value">
@@ -38,11 +35,11 @@
       <ul class="early-list">
         @for (item of visibleEarly; track item.id) {
           <li class="grid-item">
-            <a class="early-item" [routerLink]="['/projects', item.id]">
+            <a class="early-item" [routerLink]="link('projects', item.id)">
               <span class="year">{{ item.year }}</span>
               <span class="early-name">{{ item.name }}</span>
               <span class="stack">{{ item.languages }}</span>
-              <span class="arrow" aria-hidden="true">→</span>
+              <span class="arrow" aria-hidden="true">{{ 'arrow.forward' | t }}</span>
             </a>
           </li>
         }

@@ -1,20 +1,20 @@
-<a class="card" [routerLink]="['/projects', item.id]">
+<a class="card" [routerLink]="link">
   <div class="plate">
     @if (item.status === 'in-progress') {
-      <span class="status"><span class="pulse" aria-hidden="true"></span>In progress</span>
+      <span class="status"><span class="pulse" aria-hidden="true"></span>{{ 'inProgress' | t }}</span>
     }
     <!-- in-progress work never shows images -->
     @if (item.featuredImage && item.status !== 'in-progress') {
-      <img [src]="item.featuredImage" [alt]="item.name + ' logo'" width="1920" height="1080" loading="lazy">
+      <img [src]="item.featuredImage" [alt]="'logoAlt' | t: { name: item.name }" width="1920" height="1080" loading="lazy">
     } @else {
-      <adl-project-cover [name]="item.name"></adl-project-cover>
+      <adl-project-cover [name]="item.name" [letters]="item.initials"></adl-project-cover>
     }
   </div>
   <div class="body">
-    <span class="kind">{{ item.tags }} · {{ item.year }}@if (item.context) {<span> · {{ item.context }}</span>}</span>
+    <span class="kind">{{ ('kind.' + item.tags) | t }} · {{ item.year }}@if (item.context) {<span> · {{ item.context }}</span>}</span>
     <h3 class="name">
       {{ item.name }}
-      <span class="arrow" aria-hidden="true">→</span>
+      <span class="arrow" aria-hidden="true">{{ 'arrow.forward' | t }}</span>
     </h3>
     <p class="stack">{{ item.languages }}</p>
   </div>

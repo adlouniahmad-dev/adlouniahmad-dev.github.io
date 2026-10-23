@@ -35,7 +35,19 @@
 
 	/* Inter has no Arabic glyphs, so Arabic text falls through to IBM Plex Sans Arabic */
 	--font-sans: 'Inter', 'IBM Plex Sans Arabic', system-ui, -apple-system, 'Segoe UI', sans-serif;
-	--font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+	--font-mono: 'JetBrains Mono', 'IBM Plex Sans Arabic', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+	/* 1 left-to-right, -1 right-to-left: multiplies horizontal slides and nudges */
+	--dir: 1;
+}
+
+[dir="rtl"] {
+	--dir: -1;
+}
+
+/* Letter-spacing pulls apart joined Arabic letters; the Latin wordmark keeps its tracking */
+[dir="rtl"] *:not(.wordmark) {
+	letter-spacing: 0 !important;
 }
 
 /* Light theme, following the visitor's system setting. The accents are deeper so text stays readable on white. */

@@ -24,7 +24,7 @@
 .nav-indicator {
   width: 2rem;
   height: 1px;
-  margin-right: 1rem;
+  margin-inline-end: 1rem;
   background-color: var(--text-faint);
 }
 

@@ -8,11 +8,25 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: { lang: 'en' }
   },
   {
     path: 'projects/:id',
-    component: PortfolioItemComponent
+    component: PortfolioItemComponent,
+    data: { lang: 'en' }
+  },
+  // Arabic: the same pages under /ar, right-to-left
+  {
+    path: 'ar',
+    component: HomeComponent,
+    pathMatch: 'full',
+    data: { lang: 'ar' }
+  },
+  {
+    path: 'ar/projects/:id',
+    component: PortfolioItemComponent,
+    data: { lang: 'ar' }
   },
   {
     // Version 1 URLs

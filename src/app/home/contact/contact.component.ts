@@ -3,6 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ContactService } from '../../shared/services/contact.service';
 import { GeneralService } from '../../shared/services/general.service';
+import { LanguageService } from '../../shared/i18n/language.service';
 
 type State = 'idle' | 'sending' | 'sent' | 'error';
 
@@ -31,6 +32,7 @@ export class ContactComponent {
     private fb: FormBuilder,
     private contactService: ContactService,
     generalService: GeneralService,
+    private language: LanguageService,
   ) {
     this.email = generalService.getContactInfo().email;
   }
@@ -57,9 +59,7 @@ export class ContactComponent {
       },
       error: (error: HttpErrorResponse) => {
         this.state = 'error';
-        this.errorMessage = error.status === 429
-          ? 'Messages can only be sent once every few seconds. Please wait a moment and try again.'
-          : 'Something went wrong and your message wasn\'t sent.';
+        this.errorMessage = this.language.t(error.status === 429 ? 'error.rateLimit' : 'error.generic');
       },
     });
   }
