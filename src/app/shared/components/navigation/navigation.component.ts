@@ -1,5 +1,6 @@
 import { Component, ChangeDetectionStrategy, AfterViewInit, OnDestroy, Inject, PLATFORM_ID, DOCUMENT, NgZone, ChangeDetectorRef, Input, HostBinding } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { StringKey } from '../../i18n/strings';
 
 @Component({
     selector: 'adl-navigation',
@@ -10,11 +11,11 @@ import { isPlatformBrowser } from '@angular/common';
 })
 export class NavigationComponent implements AfterViewInit, OnDestroy {
 
-  links: Array<{ name: string, href: string }> = [
-    { name: 'about', href: '#about' },
-    { name: 'experience', href: '#experience' },
-    { name: 'projects', href: '#projects' },
-    { name: 'contact', href: '#contact' },
+  links: Array<{ label: StringKey, href: string }> = [
+    { label: 'nav.about', href: '#about' },
+    { label: 'nav.experience', href: '#experience' },
+    { label: 'nav.projects', href: '#projects' },
+    { label: 'nav.contact', href: '#contact' },
   ];
 
   /** `sidebar`: the desktop menu with indicator lines; `bar`: the compact top bar on small screens */

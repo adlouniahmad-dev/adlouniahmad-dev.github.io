@@ -5,6 +5,7 @@ import { IPortfolioItem } from '../shared/interfaces/portfolio-item';
 import { GeneralService } from '../shared/services/general.service';
 import { SeoService } from '../shared/services/seo.service';
 import { LanguageService } from '../shared/i18n/language.service';
+import { kindKey } from '../shared/i18n/strings';
 
 @Component({
     selector: 'adl-portfolio-item',
@@ -21,6 +22,8 @@ export class PortfolioItemComponent implements OnInit, OnDestroy {
   previous: IPortfolioItem;
   next: IPortfolioItem;
   activeShot = 0;
+
+  readonly kindKey = kindKey;
 
   private routeSub: Subscription;
 

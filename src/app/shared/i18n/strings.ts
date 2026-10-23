@@ -160,6 +160,11 @@ const ar: Record<StringKey, string> = {
 
 export const STRINGS: Record<Lang, Record<StringKey, string>> = { en, ar };
 
+/** Label key for a project's category (`tags` in info.json: 'web' or 'mobile') */
+export function kindKey(tag: string): StringKey {
+  return tag === 'mobile' ? 'kind.mobile' : 'kind.web';
+}
+
 /** Month names for experience dates */
 export const MONTHS: Record<Lang, string[]> = {
   en: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],

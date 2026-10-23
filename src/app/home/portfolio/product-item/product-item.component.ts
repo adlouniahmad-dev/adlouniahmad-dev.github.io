@@ -1,6 +1,7 @@
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { IPortfolioItem } from '../../../shared/interfaces/portfolio-item';
 import { LanguageService } from '../../../shared/i18n/language.service';
+import { kindKey } from '../../../shared/i18n/strings';
 
 @Component({
     selector: 'adl-product-item',
@@ -12,6 +13,8 @@ import { LanguageService } from '../../../shared/i18n/language.service';
 export class ProductItemComponent {
 
   @Input() item: IPortfolioItem;
+
+  readonly kindKey = kindKey;
 
   constructor(private language: LanguageService) {}
 

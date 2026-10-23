@@ -11,7 +11,7 @@
     }
   </div>
   <div class="body">
-    <span class="kind">{{ ('kind.' + item.tags) | t }} · {{ item.year }}@if (item.context) {<span> · {{ item.context }}</span>}</span>
+    <span class="kind">{{ kindKey(item.tags) | t }} · {{ item.year }}@if (item.context) {<span> · {{ item.context }}</span>}</span>
     <h3 class="name">
       {{ item.name }}
       <span class="arrow" aria-hidden="true">{{ 'arrow.forward' | t }}</span>
