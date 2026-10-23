@@ -50,6 +50,8 @@ export class ContactComponent {
     this.contactService.send(this.form.getRawValue()).subscribe({
       next: () => {
         this.state = 'sent';
+        // Google Analytics' recommended event for contact requests (gtag is a no-op stub off the live site)
+        (window as { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'generate_lead', { method: 'contact_form' });
         this.form.reset();
         this.submitted = false;
       },
