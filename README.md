@@ -63,10 +63,10 @@ Both commands run against the production build, so run `npm run build` first. Th
 
 ```bash
 npm test             # Playwright end-to-end tests (e2e/): home, projects, contact form, Arabic pages, theme, SEO files
-npm run lighthouse   # Lighthouse CI: fails below 85 performance or 95 accessibility, best practices and SEO
+npm run lighthouse   # Lighthouse CI: fails below 70 performance or 95 accessibility, best practices and SEO
 ```
 
-Locally the tests use your installed Chrome; CI installs Playwright's Chromium. The contact form tests mock Forminit, so nothing is sent.
+Locally the tests use your installed Chrome; CI installs Playwright's Chromium. The performance budget is lower than the scores you'll see locally (90+) because GitHub's shared runners are slower and noisier; it's there to catch big regressions. The contact form tests mock Forminit, so nothing is sent.
 
 ## Deployment
 
