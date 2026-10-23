@@ -22,7 +22,7 @@ let nextId = 0;
             <rect width="512" height="512" fill="#fff"/>
             <path d="M190 452 L322 100 L454 452" fill="none" stroke="#000" stroke-width="92" stroke-miterlimit="10"/>
           </mask>
-          <clipPath [attr.id]="id + '-weave'"><rect y="330" width="512" height="182"/></clipPath>
+          <clipPath [attr.id]="id + '-weave'"><rect y="312" width="512" height="200"/></clipPath>
           <mask [attr.id]="id + '-under-second'" maskUnits="userSpaceOnUse">
             <rect width="512" height="512" fill="#fff"/>
             <path d="M58 452 L190 100 L322 452" fill="none" stroke="#000" stroke-width="92" stroke-miterlimit="10"
