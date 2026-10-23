@@ -34,8 +34,9 @@
 	--danger-bg: rgba(248, 113, 113, .08);
 
 	/* Inter has no Arabic glyphs, so Arabic text falls through to IBM Plex Sans Arabic */
-	--font-sans: 'Inter', 'IBM Plex Sans Arabic', system-ui, -apple-system, 'Segoe UI', sans-serif;
-	--font-mono: 'JetBrains Mono', 'IBM Plex Sans Arabic', ui-monospace, SFMono-Regular, Menlo, monospace;
+	/* Self-hosted, see src/fonts.css */
+	--font-sans: 'Inter Variable', 'IBM Plex Sans Arabic', system-ui, -apple-system, 'Segoe UI', sans-serif;
+	--font-mono: 'JetBrains Mono Variable', 'IBM Plex Sans Arabic', ui-monospace, SFMono-Regular, Menlo, monospace;
 
 	/* 1 left-to-right, -1 right-to-left: multiplies horizontal slides and nudges */
 	--dir: 1;

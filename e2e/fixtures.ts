@@ -1,11 +1,2 @@
-import { test as base, expect } from '@playwright/test';
-
-/** Every test runs without external fonts (keeps runs fast and deterministic) */
-export const test = base.extend({
-  page: async ({ page }, use) => {
-    await page.route(/fonts\.(googleapis|gstatic)\.com/, route => route.abort());
-    await use(page);
-  },
-});
-
-export { expect };
+/** Shared entry point for the specs, so page-wide setup can be added in one place */
+export { test, expect } from '@playwright/test';

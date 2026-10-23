@@ -50,3 +50,16 @@ test('the theme is dark by default, even when the system prefers light', async (
   await page.goto('/');
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
 });
+
+test('fonts are self-hosted and load after the page', async ({ page }) => {
+  const fontHosts = new Set<string>();
+  page.on('request', request => {
+    if (request.resourceType() === 'font')
+      fontHosts.add(new URL(request.url()).host);
+  });
+  await page.goto('/ar/');
+  await expect(page.locator('link[rel="stylesheet"][href="fonts.css"]')).toHaveCount(1);
+  const loaded = () => page.evaluate(() => [...document.fonts].filter(font => font.status === 'loaded').map(font => font.family));
+  await expect.poll(loaded).toEqual(expect.arrayContaining(['Inter Variable', 'IBM Plex Sans Arabic']));
+  expect([...fontHosts]).toEqual([new URL(page.url()).host]);
+});
