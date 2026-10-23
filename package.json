@@ -4,18 +4,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0",
-    "build": "ng build --configuration production && node scripts/postbuild.mjs",
-    "test": "ng test",
-    "deploy": "gh-pages -d dist/adlouniahmad-portfolio/browser"
+    "build": "ng build --configuration production && node scripts/postbuild.mjs"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^22.2.3",
     "@angular/common": "^22.2.3",
     "@angular/compiler": "^22.2.3",
     "@angular/core": "^22.2.3",
     "@angular/forms": "^22.2.3",
-    "@angular/localize": "^22.2.3",
     "@angular/platform-browser": "^22.2.3",
     "@angular/platform-browser-dynamic": "^22.2.3",
     "@angular/platform-server": "^22.2.3",
@@ -25,11 +21,8 @@
     "@fortawesome/angular-fontawesome": "^5.1.0",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
-    "@fortawesome/free-regular-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
-    "aos": "^2.3.4",
     "bootstrap": "^5.3.8",
-    "gh-pages": "^6.1.1",
     "rxjs": "^7.8.2",
     "tslib": "^2.0.0",
     "zone.js": "~0.15.1"
@@ -38,17 +31,6 @@
     "@angular-devkit/build-angular": "^22.2.4",
     "@angular/cli": "^22.2.4",
     "@angular/compiler-cli": "^22.2.3",
-    "@types/aos": "^3.0.7",
-    "@types/jasmine": "~3.6.0",
-    "@types/node": "^12.11.1",
-    "angular-cli-ghpages": "^0.6.2",
-    "istanbul-lib-instrument": "^6.0.3",
-    "jasmine-core": "~4.1.1",
-    "karma": "~6.4.2",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage-istanbul-reporter": "~3.0.2",
-    "karma-jasmine": "~4.0.0",
-    "karma-jasmine-html-reporter": "^1.5.0",
     "typescript": "~6.0.3"
   }
 }

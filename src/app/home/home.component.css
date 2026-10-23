@@ -154,6 +154,15 @@
   animation-delay: .15s;
 }
 
+.enter-left {
+  animation: enter-left .8s .1s cubic-bezier(.2, .8, .2, 1) both;
+}
+
+@keyframes enter-left {
+  from { opacity: 0; transform: translateX(24px); }
+  to { opacity: 1; transform: none; }
+}
+
 @keyframes enter {
   from { opacity: 0; transform: translateX(-24px); }
   to { opacity: 1; transform: none; }

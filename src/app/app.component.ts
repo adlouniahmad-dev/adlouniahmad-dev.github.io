@@ -2,7 +2,6 @@ import { Component, OnInit, ChangeDetectionStrategy, Inject, PLATFORM_ID } from 
 import { isPlatformBrowser } from '@angular/common';
 import { SwUpdate } from '@angular/service-worker';
 import { filter } from 'rxjs/operators'
-import AOS from 'aos';
 
 @Component({
     selector: 'adl-root',
@@ -18,10 +17,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     if (!isPlatformBrowser(this.platformId))
       return;
-
-    AOS.init({
-      once: true
-    });
 
     if (this.swUpdate.isEnabled)
       this.swUpdate.versionUpdates
