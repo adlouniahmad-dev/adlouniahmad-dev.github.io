@@ -23,19 +23,16 @@
             "assets": [
               "src/favicon.ico",
               "src/favicon.svg",
+              "src/robots.txt",
               "src/assets",
               "src/manifest.webmanifest"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/bootstrap.scss",
               "node_modules/aos/dist/aos.css",
-              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css",
               "src/styles.css"
             ],
-            "scripts": [
-              "node_modules/aos/dist/aos.js",
-              "node_modules/isotope-layout/dist/isotope.pkgd.min.js"
-            ],
+            "scripts": [],
             "extractLicenses": false,
             "sourceMap": true,
             "optimization": false,
@@ -44,7 +41,16 @@
             "outputMode": "static",
             "allowedCommonJsDependencies": [
               "aos"
-            ]
+            ],
+            "stylePreprocessorOptions": {
+              "sass": {
+                "silenceDeprecations": [
+                  "import",
+                  "global-builtin",
+                  "color-functions"
+                ]
+              }
+            }
           },
           "configurations": {
             "production": {

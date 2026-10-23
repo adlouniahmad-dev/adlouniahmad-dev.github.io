@@ -21,6 +21,7 @@
 
 /* The logos are on white, so they sit on a light plate */
 .plate {
+  position: relative;
   overflow: hidden;
   border-radius: .65rem;
   background: #f8fafc;
@@ -76,4 +77,51 @@
   margin: 0;
   font-size: .82rem;
   color: var(--text-muted);
+}
+
+/* the card already shows the name under the cover */
+.plate adl-project-cover ::ng-deep .label {
+  display: none;
+}
+
+.status {
+  position: absolute;
+  z-index: 1;
+  top: .6rem;
+  left: .6rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .25rem .65rem .25rem .55rem;
+  font-family: var(--font-mono);
+  font-size: .66rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: 999px;
+  background: rgba(10, 14, 26, .7);
+  backdrop-filter: blur(6px);
+}
+
+.pulse {
+  position: relative;
+  width: .45rem;
+  height: .45rem;
+  border-radius: 50%;
+  background: #34d399;
+}
+
+.pulse::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: inherit;
+  animation: pulse 2s ease-out infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: .7; }
+  100% { transform: scale(3); opacity: 0; }
 }

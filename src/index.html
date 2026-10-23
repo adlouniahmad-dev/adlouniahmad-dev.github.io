@@ -13,7 +13,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <!-- Loaded without blocking rendering: text shows in a fallback font first, then swaps to Inter -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"></noscript>
 
   <meta name="google-site-verification" content="3mvB4O2lUauJu67WvVdlNUVHiuctebYoEpUMcJQKQN4" />
   
@@ -26,19 +29,19 @@
   <meta property="og:title" content="Ahmad Adlouni - Senior Software Engineer">
   <meta property="og:url" content="https://adlouniahmad-dev.github.io/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://adlouniahmad-dev.github.io/assets/icons/icon-512x512.png">
-  <meta property="og:image:width" content="512">
-  <meta property="og:image:height" content="512">
-  <meta property="og:image:alt" content="Ahmad Adlouni monogram: two interlocked letter A shapes">
+  <meta property="og:image" content="https://adlouniahmad-dev.github.io/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ahmad Adlouni, Senior Software Engineer: Frontend and Angular">
   <meta property="og:description" content="Senior Software Engineer at Siren Analytics with 7+ years of experience building responsive, accessible and scalable web applications for government, enterprise and digital-service platforms. Specialised in Angular, TypeScript and frontend architecture.">
   <meta property="og:site_name" content="Ahmad Adlouni - Senior Software Engineer">
   <meta property="og:locale" content="en_US">
 
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Ahmad Adlouni - Senior Software Engineer">
   <meta name="twitter:description" content="Senior Software Engineer at Siren Analytics with 7+ years of experience building responsive, accessible and scalable web applications for government, enterprise and digital-service platforms. Specialised in Angular, TypeScript and frontend architecture.">
-  <meta name="twitter:image" content="https://adlouniahmad-dev.github.io/assets/icons/icon-512x512.png">
-  <meta name="twitter:image:alt" content="Ahmad Adlouni monogram: two interlocked letter A shapes">
+  <meta name="twitter:image" content="https://adlouniahmad-dev.github.io/assets/og-image.png">
+  <meta name="twitter:image:alt" content="Ahmad Adlouni, Senior Software Engineer: Frontend and Angular">
 
   <link rel="canonical" href="https://adlouniahmad-dev.github.io/">
 
@@ -48,7 +51,6 @@
     "@type": "Person",
     "name": "Ahmad Adlouni",
     "url": "https://adlouniahmad-dev.github.io/",
-    "image": "https://adlouniahmad-dev.github.io/assets/img/me.png",
     "jobTitle": "Senior Software Engineer",
     "worksFor": {
       "@type": "Organization",

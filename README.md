@@ -29,14 +29,13 @@ All site content lives in [`src/app/shared/services/info.json`](src/app/shared/s
 
 Images go in [`src/assets/img/`](src/assets/img/). Keep them small: export at the size they're displayed and prefer WebP.
 
-The contact form (not currently shown on the page) posts to [Getform](https://getform.io); the endpoint is in [`contact.service.ts`](src/app/shared/services/contact.service.ts).
+The contact form posts to [Forminit](https://forminit.com) (formerly Getform). The form ID is in [`contact.service.ts`](src/app/shared/services/contact.service.ts); fields use Forminit's `fi-…` names, and `_gotcha` is the spam honeypot.
 
 ## Project structure
 
 ```text
 src/app/
-├── home/              # Main page (about, experience, projects); the contact
-│                      # section exists but isn't currently rendered
+├── home/              # Main page: about, experience, projects and contact
 ├── portfolio-item/    # Project detail page (/projects/:id)
 ├── page-not-found/    # 404 page
 └── shared/

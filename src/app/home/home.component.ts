@@ -1,9 +1,8 @@
-import { Component, OnInit, ChangeDetectionStrategy, AfterViewInit, OnDestroy, Inject, PLATFORM_ID, DOCUMENT, ElementRef, NgZone } from '@angular/core';
+import { Component, ChangeDetectionStrategy, AfterViewInit, OnDestroy, Inject, PLATFORM_ID, DOCUMENT, ElementRef, NgZone } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { IInfo } from '../shared/interfaces/info';
 import { GeneralService } from '../shared/services/general.service';
-import { faFacebookF, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
     selector: 'adl-home',
@@ -12,9 +11,8 @@ import { faFacebookF, faInstagram, faLinkedinIn } from '@fortawesome/free-brands
     changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
-export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
+export class HomeComponent implements AfterViewInit, OnDestroy {
 
-  icons: any;
   info: IInfo;
   private removeSpotlight: () => void;
   private cancelFragmentScroll: () => void;
@@ -28,10 +26,6 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     private route: ActivatedRoute,
   ) { 
     this.info = generalService.getBasicInfo();
-  }
-
-  ngOnInit(): void {
-    this.initializeIcons();
   }
 
   ngAfterViewInit(): void {
@@ -54,6 +48,11 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
    * jump to the section again without animation, unless the user has already
    * started scrolling.
    */
+  scrollToTop(event: Event): void {
+    event.preventDefault();
+    this.document.defaultView?.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   private settleOnFragment(): void {
     const fragment = this.route.snapshot.fragment;
     const view = this.document.defaultView;
@@ -108,12 +107,5 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     };
   }
 
-  initializeIcons(): void {
-    this.icons = {
-      instagram: faInstagram,
-      facebook: faFacebookF,
-      linkedIn: faLinkedinIn
-    };
-  }
 
 }

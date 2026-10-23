@@ -95,22 +95,54 @@
 }
 
 /* Mobile section headings: sticky, frosted */
+/* Small screens: section headings (the top bar shows where you are, so they no longer stick) */
 :host ::ng-deep .section-title {
   display: block;
-  position: sticky;
-  z-index: 2;
-  top: 0;
-  margin: 0 -1.5rem 1.25rem;
-  padding: 1rem 1.5rem;
+  margin: 0 0 1.25rem;
+  padding: 0 0 .75rem;
   font-family: var(--font-mono);
   font-size: .8rem;
   font-weight: 500;
   letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--text);
-  background: rgba(10, 14, 26, .75);
-  backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
+}
+
+/* Small screens: frosted bar with the monogram and section links */
+.mobile-bar {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 -1.5rem;
+  padding: .45rem .75rem .45rem 1.5rem;
+  background: rgba(10, 14, 26, .78);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.bar-logo {
+  display: flex;
+  font-size: .95rem;
+}
+
+/* Very narrow phones: the four section links need the whole width */
+@media screen and (max-width: 359px) {
+
+  .mobile-bar {
+    justify-content: center;
+    padding: .45rem .5rem;
+  }
+
+  .bar-logo {
+    display: none;
+  }
+
 }
 
 /* The sidebar is always on screen, so it animates on load instead of on scroll (AOS) */
@@ -151,8 +183,22 @@
     padding: 0 4.5rem;
   }
 
-  :host ::ng-deep .section-title {
+  .mobile-bar {
     display: none;
+  }
+
+  /* The sidebar menu labels the sections on desktop; keep the headings for screen readers and
+     search engines (display: none would break the heading order) */
+  :host ::ng-deep .section-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
   }
 
   .header {

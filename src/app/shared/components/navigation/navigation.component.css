@@ -48,3 +48,70 @@
   height: 2px;
   background: var(--gradient);
 }
+
+/* ---------- bar variant (small screens) ---------- */
+:host.bar .header-menu {
+  display: flex;
+  gap: .15rem;
+}
+
+:host.bar .header-menu-link {
+  position: relative;
+  padding: .5rem .6rem;
+}
+
+:host.bar .nav-indicator {
+  display: none;
+}
+
+:host.bar .link-name {
+  font-size: .7rem;
+  letter-spacing: .1em;
+}
+
+/* gradient underline instead of the indicator line */
+:host.bar .header-menu-link::after {
+  content: '';
+  position: absolute;
+  left: .6rem;
+  right: .6rem;
+  bottom: .2rem;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--gradient);
+  transform: scaleX(0);
+  transition: transform .3s cubic-bezier(.2, .8, .2, 1);
+}
+
+:host.bar .header-menu-link.active::after {
+  transform: scaleX(1);
+}
+
+/* Narrow phones: tighter links; if they still don't fit, they scroll sideways rather than overflow */
+:host.bar {
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+:host.bar::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (max-width: 400px) {
+
+  :host.bar .header-menu-link {
+    padding: .5rem .4rem;
+  }
+
+  :host.bar .header-menu-link::after {
+    left: .4rem;
+    right: .4rem;
+  }
+
+  :host.bar .link-name {
+    font-size: .64rem;
+    letter-spacing: .06em;
+  }
+
+}

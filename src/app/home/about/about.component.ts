@@ -1,5 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { faTerminal } from '@fortawesome/free-solid-svg-icons';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { IInfo } from '../../shared/interfaces/info';
 import { GeneralService } from '../../shared/services/general.service';
 
@@ -10,23 +9,12 @@ import { GeneralService } from '../../shared/services/general.service';
     changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent {
 
-  icons: any;
   info: IInfo;
 
   constructor(private generalService: GeneralService) { 
     this.info = generalService.getBasicInfo();
-  }
-
-  ngOnInit(): void {
-    this.initializeIcons();
-  }
-
-  initializeIcons(): void {
-    this.icons = {
-      terminal: faTerminal
-    };
   }
 
 }

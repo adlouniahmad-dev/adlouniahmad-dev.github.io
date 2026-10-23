@@ -1,12 +1,12 @@
 <section class="section" id="experience">
-  <h3 class="section-title">Experience</h3>
+  <h2 class="section-title">Experience</h2>
 
   @for (experience of positions; track experience) {
     <adl-experience class="mb-5" [experience]="experience"></adl-experience>
   }
 
   @if (internships.length) {
-    <h4 class="group-title">Internships</h4>
+    <h3 class="group-title">Internships</h3>
     @for (experience of internships; track experience) {
       <adl-experience class="mb-4" [experience]="experience" [compact]="true"></adl-experience>
     }

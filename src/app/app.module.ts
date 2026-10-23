@@ -1,8 +1,6 @@
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CarouselModule } from 'ngx-owl-carousel-o';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -25,9 +23,7 @@ import { InlineMarkdownPipe } from './shared/pipes/inline-markdown.pipe';
 import { InlineTextComponent } from './shared/components/inline-text/inline-text.component';
 import { ProjectCoverComponent } from './shared/components/project-cover/project-cover.component';
 import { LogoComponent } from './shared/components/logo/logo.component';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import { far } from '@fortawesome/free-regular-svg-icons';
-import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
   declarations: [
@@ -56,8 +52,6 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
     FontAwesomeModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule,
-    CarouselModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [SwUpdate, provideHttpClient(withXhr(), withInterceptorsFromDi()), provideClientHydration(withEventReplay())]
@@ -65,7 +59,8 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 export class AppModule {
 
   constructor(library: FaIconLibrary) {
-    library.addIconPacks(fas, far, fab);
+    // Register only the icons used by name in templates; whole packs added ~1.3 MB to the bundle
+    library.addIcons(faEnvelope, faLocationDot);
   }
 
 }

@@ -45,6 +45,10 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
       .label {
         position: relative;
+        max-width: 90%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
         font-family: var(--font-mono);
         font-size: .7rem;
         letter-spacing: .12em;
@@ -62,7 +66,8 @@ export class ProjectCoverComponent {
   get initials(): string {
     return this.name
       .split(/\s+/)
-      .filter(word => /^\p{L}/u.test(word))
+      // skip abbreviated titles such as "Dt." or "Dr."
+      .filter(word => /^\p{L}/u.test(word) && !word.endsWith('.'))
       .slice(0, 2)
       .map(word => word[0].toUpperCase())
       .join('');

@@ -107,6 +107,36 @@
   border-radius: 999px;
 }
 
+.badge.live {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  color: var(--text);
+  border-color: rgba(52, 211, 153, .45);
+}
+
+.pulse {
+  position: relative;
+  width: .45rem;
+  height: .45rem;
+  border-radius: 50%;
+  background: #34d399;
+}
+
+.pulse::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: inherit;
+  animation: pulse 2s ease-out infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: .7; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
 .lesson {
   margin: 1.5rem 0 0;
   padding: 1rem 1.25rem;

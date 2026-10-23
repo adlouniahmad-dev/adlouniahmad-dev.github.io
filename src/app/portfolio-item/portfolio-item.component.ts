@@ -31,6 +31,9 @@ export class PortfolioItemComponent implements OnInit, OnDestroy {
   ) {}
 
   get screenshots(): string[] {
+    // in-progress work never shows images
+    if (this.product?.status === 'in-progress')
+      return [];
     return this.product?.details.screenshots ?? [];
   }
 
@@ -91,8 +94,6 @@ export class PortfolioItemComponent implements OnInit, OnDestroy {
       description: this.product.details.description[0],
       // GitHub Pages serves prerendered pages from folders, so the canonical URL has a trailing slash
       path: `/projects/${this.product.id}/`,
-      image: this.product.featuredImage,
-      imageAlt: `${this.product.name} logo`,
     });
   }
 

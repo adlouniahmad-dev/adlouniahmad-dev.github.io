@@ -1,6 +1,10 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { HttpErrorResponse } from '@angular/common/http';
 import { ContactService } from '../../shared/services/contact.service';
-import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
+import { GeneralService } from '../../shared/services/general.service';
+
+type State = 'idle' | 'sending' | 'sent' | 'error';
 
 @Component({
     selector: 'adl-contact',
@@ -9,49 +13,57 @@ import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms
     changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent {
 
-  constructor(private contactService: ContactService, private fb: UntypedFormBuilder) { }
+  readonly email: string;
+  state: State = 'idle';
+  errorMessage = '';
+  submitted = false;
 
-  contactForm: UntypedFormGroup;
-  showLoader: boolean = false;
-  showSuccess: boolean = false;
-  isSubmitted: boolean = false;
+  readonly form = this.fb.nonNullable.group({
+    name: ['', [Validators.required, Validators.maxLength(120)]],
+    email: ['', [Validators.required, Validators.email, Validators.maxLength(200)]],
+    message: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(5000)]],
+    gotcha: [''],
+  });
 
-  ngOnInit(): void {
-    this.initializeForm();
+  constructor(
+    private fb: FormBuilder,
+    private contactService: ContactService,
+    generalService: GeneralService,
+  ) {
+    this.email = generalService.getContactInfo().email;
   }
 
-  initializeForm(): void {
-    this.contactForm = this.fb.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      message: ['', Validators.required]
-    })
+  /** Show a field's error once the user has left it or tried to submit */
+  showError(field: 'name' | 'email' | 'message'): boolean {
+    const control = this.form.controls[field];
+    return control.invalid && (control.touched || this.submitted);
   }
 
-  get form() { return this.contactForm.controls; }
-
-  onSubmit(): void {
-
-    if (this.contactForm.invalid) {
-      this.isSubmitted = true;
+  submit(): void {
+    this.submitted = true;
+    if (this.form.invalid || this.state === 'sending')
       return;
-    }
 
-    this.showLoader = true;
-    const { name, email, message } = this.contactForm.value;
-    this.contactService.send(name, email, message)
-      .subscribe((response: string) => {
-        this.isSubmitted = false;
-        this.showLoader = false;
-        if (response.includes('Thank You!')) {
-          this.showSuccess = true;
-        }
-      }, (e) => {
-        this.isSubmitted = false;
-        this.showLoader = false;
-      });
+    this.state = 'sending';
+    this.contactService.send(this.form.getRawValue()).subscribe({
+      next: () => {
+        this.state = 'sent';
+        this.form.reset();
+        this.submitted = false;
+      },
+      error: (error: HttpErrorResponse) => {
+        this.state = 'error';
+        this.errorMessage = error.status === 429
+          ? 'Messages can only be sent once every few seconds. Please wait a moment and try again.'
+          : 'Something went wrong and your message wasn\'t sent.';
+      },
+    });
+  }
+
+  sendAnother(): void {
+    this.state = 'idle';
   }
 
 }

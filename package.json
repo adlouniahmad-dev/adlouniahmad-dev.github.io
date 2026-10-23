@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0",
-    "build": "ng build --configuration production && cp dist/adlouniahmad-portfolio/browser/index.csr.html dist/adlouniahmad-portfolio/browser/404.html",
+    "build": "ng build --configuration production && node scripts/postbuild.mjs",
     "test": "ng test",
     "deploy": "gh-pages -d dist/adlouniahmad-portfolio/browser"
   },
@@ -30,8 +30,6 @@
     "aos": "^2.3.4",
     "bootstrap": "^5.3.8",
     "gh-pages": "^6.1.1",
-    "isotope-layout": "^3.0.6",
-    "ngx-owl-carousel-o": "^22.0.0",
     "rxjs": "^7.8.2",
     "tslib": "^2.0.0",
     "zone.js": "~0.15.1"

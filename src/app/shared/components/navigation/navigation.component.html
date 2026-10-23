@@ -1,4 +1,4 @@
-<nav class="position-relative" id="menu">
+<nav class="position-relative" [attr.id]="isBar ? null : 'menu'" [attr.aria-label]="isBar ? 'Sections' : null">
 	<ul class="header-menu">
 		@for (link of links; track link) {
 			<li class="nav-item">

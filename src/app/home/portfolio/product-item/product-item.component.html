@@ -1,17 +1,21 @@
 <a class="card" [routerLink]="['/projects', item.id]">
   <div class="plate">
-    @if (item.featuredImage) {
+    @if (item.status === 'in-progress') {
+      <span class="status"><span class="pulse" aria-hidden="true"></span>In progress</span>
+    }
+    <!-- in-progress work never shows images -->
+    @if (item.featuredImage && item.status !== 'in-progress') {
       <img [src]="item.featuredImage" [alt]="item.name + ' logo'" width="1920" height="1080" loading="lazy">
     } @else {
       <adl-project-cover [name]="item.name"></adl-project-cover>
     }
   </div>
   <div class="body">
-    <span class="kind">{{ item.tags }} · {{ item.year }}</span>
-    <h4 class="name">
+    <span class="kind">{{ item.tags }} · {{ item.year }}@if (item.context) {<span> · {{ item.context }}</span>}</span>
+    <h3 class="name">
       {{ item.name }}
       <span class="arrow" aria-hidden="true">→</span>
-    </h4>
+    </h3>
     <p class="stack">{{ item.languages }}</p>
   </div>
 </a>

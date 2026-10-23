@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, AfterViewInit, OnDestroy, Inject, PLATFORM_ID, DOCUMENT, NgZone, ChangeDetectorRef } from '@angular/core';
+import { Component, ChangeDetectionStrategy, AfterViewInit, OnDestroy, Inject, PLATFORM_ID, DOCUMENT, NgZone, ChangeDetectorRef, Input, HostBinding } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 @Component({
@@ -14,7 +14,16 @@ export class NavigationComponent implements AfterViewInit, OnDestroy {
     { name: 'about', href: '#about' },
     { name: 'experience', href: '#experience' },
     { name: 'projects', href: '#projects' },
+    { name: 'contact', href: '#contact' },
   ];
+
+  /** `sidebar`: the desktop menu with indicator lines; `bar`: the compact top bar on small screens */
+  @Input() variant: 'sidebar' | 'bar' = 'sidebar';
+
+  @HostBinding('class.bar')
+  get isBar(): boolean {
+    return this.variant === 'bar';
+  }
 
   activeHref = this.links[0].href;
   private removeListeners: () => void;

@@ -7,7 +7,8 @@
 				"👋 Hi! I'm a **Senior Software Engineer** at [Siren Analytics](https://sirenanalytics.com) with 7+ years of experience building responsive, accessible and scalable web applications for government, enterprise and digital-service platforms.",
 				"I specialise in **Angular, TypeScript and frontend architecture**, with deep experience in dynamic multi-step forms, configurable form-builder tools, dashboards, workflow interfaces and API integration. 💻",
 				"I've delivered bilingual Arabic/English (RTL) public-sector portals integrated with national government systems, offline-capable Progressive Web Apps for field data collection, and secure frontends hardened against penetration-test findings. 🚀",
-				"I'm comfortable across the full delivery lifecycle: requirements, prototyping, development, UAT, deployment, documentation, training and post-launch support. 📚"
+				"I'm comfortable across the full delivery lifecycle: requirements, prototyping, development, UAT, deployment, documentation, training and post-launch support. 📚",
+				"I build with AI coding tools like **Claude Code**: I own the architecture, specs, code review and tests, and let AI speed up the implementation. 🤖"
 			],
 			"skills": [
 				"Angular",
@@ -25,7 +26,8 @@
 				"Node.js / Express",
 				"Java / Spring Boot",
 				"SQL",
-				"Dialogflow CX / Twilio"
+				"Dialogflow CX / Twilio",
+				"AI-assisted development"
 			],
 			"signOff": "Welcome to my portfolio, where code meets creativity! ✨"
 		}
@@ -235,9 +237,44 @@
 	],
 	"portfolio": [
 		{
+			"id": "noura-clinic",
+			"name": "Dt. Noura Masalkhi Nutrition Clinic",
+			"year": 2026,
+			"status": "in-progress",
+			"context": "Freelance",
+			"tags": "web",
+			"languages": "Angular / Firebase",
+			"details": {
+				"description": [
+					"A bilingual (Arabic/English, right-to-left first) website and clinic management platform for a clinical dietitian: a public site where patients learn about her services, and a staff workspace for running the clinic day to day."
+				],
+				"techDescription": [
+					"Dietitian workspace: patient directory and files, clinical record and medical history, clinical calculators, and a meal-plan builder with a food library, plan revisions, and meal options with pick rules.",
+					"Scheduling: a Today view and reception queue, a calendar where visits are dragged to reschedule or booked by clicking an empty slot, availability search, holidays and closures, and a follow-up tracker for patients whose plans are ending.",
+					"Messaging: bilingual WhatsApp reminder and follow-up templates that respect patients who opted out.",
+					"Administration: services, opening hours, and staff accounts with roles (owner, practitioner, reception), enforced in Firestore Security Rules and Cloud Functions rather than only in the UI.",
+					"Built with Angular 19, Angular Material, Firebase (Auth, Firestore, Cloud Functions) and ngx-translate; tested with Security Rules tests, Cloud Functions integration tests and Playwright end-to-end tests against the Firebase emulators.",
+					"Built with Claude Code from a product spec I wrote, with every change reviewed and covered by automated tests."
+				],
+				"tags": [
+					"Angular",
+					"TypeScript",
+					"Firebase",
+					"Firestore",
+					"Cloud Functions",
+					"Angular Material",
+					"Playwright",
+					"RTL / Bilingual UI"
+				],
+				"availability": "In active development · private repository"
+			}
+		},
+		{
 			"id": "form-studio",
 			"name": "Form Studio",
 			"year": 2025,
+			"status": "in-progress",
+			"context": "Siren Analytics",
 			"tags": "web",
 			"languages": "Angular / Formly / RxJS",
 			"details": {
@@ -259,7 +296,8 @@
 					"SCSS",
 					"CodeMirror",
 					"Karma / Jasmine"
-				]
+				],
+				"availability": "In active development · internal project"
 			}
 		},
 		{
@@ -267,9 +305,10 @@
 			"name": "ASK - Agile Share Knowledge",
 			"year": 2020,
 			"stage": "early",
+			"context": "Freelance",
 			"tags": "web",
 			"languages": "Angular / EF Core",
-			"featuredImage": "/assets/img/ask-logo.png",
+			"featuredImage": "/assets/img/ask-logo.webp",
 			"details": {
 				"description": [
 					"The project aims to spread knowledge among all the employees at all levels of the institution's sectors and departments, in order to raise the learning curve, spread the supportive institutional culture in a practical and systematic way, maximize the use of the knowledge and expertise in the organization which is a major element in promoting proactive knowledge.",
@@ -294,10 +333,10 @@
 					"JWT"
 				],
 				"screenshots": [
-					"/assets/img/ask-1.PNG",
-					"/assets/img/ask-2.PNG",
-					"/assets/img/ask-3.PNG",
-					"/assets/img/ask-4.PNG"
+					"/assets/img/ask-1.webp",
+					"/assets/img/ask-2.webp",
+					"/assets/img/ask-3.webp",
+					"/assets/img/ask-4.webp"
 				],
 				"lesson": "The biggest codebase I'd worked on at that point (232 commits over six months): organising an Angular app into modules and reusable components, working with RxJS, building bilingual English/Arabic screens and securing a .NET Core API with JWT.",
 				"availability": "No longer online"
@@ -308,9 +347,10 @@
 			"name": "LebPhones",
 			"year": 2020,
 			"stage": "early",
+			"context": "Freelance",
 			"tags": "web",
 			"languages": "Slim PHP / PWA",
-			"featuredImage": "/assets/img/lebphones-logo.png",
+			"featuredImage": "/assets/img/lebphones-logo.webp",
 			"details": {
 				"description": [
 					"A website that displays the wholesale prices of various mobile phones in Lebanon."
@@ -327,9 +367,9 @@
 					"PWA"
 				],
 				"screenshots": [
-					"/assets/img/lebphones-1.PNG",
-					"/assets/img/lebphones-2.PNG",
-					"/assets/img/lebphones-3.PNG"
+					"/assets/img/lebphones-1.webp",
+					"/assets/img/lebphones-2.webp",
+					"/assets/img/lebphones-3.webp"
 				],
 				"lesson": "A quick build that introduced me to Progressive Web Apps: making a server-rendered PHP site installable like an app.",
 				"availability": "No longer online"
@@ -340,9 +380,10 @@
 			"name": "Sim-Phones",
 			"year": 2020,
 			"stage": "early",
+			"context": "Freelance",
 			"tags": "web",
 			"languages": "Angular / Slim PHP / PWA",
-			"featuredImage": "/assets/img/simphones-logo.png",
+			"featuredImage": "/assets/img/simphones-logo.webp",
 			"details": {
 				"description": [
 					"A Web Application that allows people to buy virtual numbers from various countries (Russia, Germany, etc...) to use it in different services, such as: WhatsApp, Facebook, Viber, etc...",
@@ -362,9 +403,9 @@
 					"Firebase Cloud Messaging"
 				],
 				"screenshots": [
-					"/assets/img/simphones-1.JPG",
-					"/assets/img/simphones-2.JPG",
-					"/assets/img/simphones-3.JPG"
+					"/assets/img/simphones-1.webp",
+					"/assets/img/simphones-2.webp",
+					"/assets/img/simphones-3.webp"
 				],
 				"lesson": "Shipping a real product end to end: an Angular PWA for users and a dashboard for admins on top of my own JWT-secured PHP API, plus a third-party provider integration (Online-Sim) and push notifications with Firebase Cloud Messaging.",
 				"availability": "No longer online"
@@ -375,9 +416,10 @@
 			"name": "WhatsApp Status Saver",
 			"year": 2019,
 			"stage": "early",
+			"context": "Freelance",
 			"tags": "mobile",
 			"languages": "Android Java",
-			"featuredImage": "/assets/img/statussaver-logo.png",
+			"featuredImage": "/assets/img/statussaver-logo.webp",
 			"details": {
 				"description": [
 					"An Android application lets you view and save WhatsApp photo images and video statuses of your friends. It also enables you to share them directly from the app with your friends."
@@ -393,9 +435,9 @@
 					"Picasso"
 				],
 				"screenshots": [
-					"/assets/img/statussaver-1.png",
-					"/assets/img/statussaver-2.png",
-					"/assets/img/statussaver-3.png"
+					"/assets/img/statussaver-1.webp",
+					"/assets/img/statussaver-2.webp",
+					"/assets/img/statussaver-3.webp"
 				],
 				"lesson": "Taught me to structure an Android app with the MVP pattern and to handle media efficiently, loading image and video thumbnails with Picasso.",
 				"availability": "No longer on Google Play"
@@ -406,9 +448,10 @@
 			"name": "MegaDeals",
 			"year": 2019,
 			"stage": "early",
+			"context": "Freelance",
 			"tags": "web",
 			"languages": "Angular / Slim PHP",
-			"featuredImage": "/assets/img/megadeals-logo.png",
+			"featuredImage": "/assets/img/megadeals-logo.webp",
 			"link": "https://www.megadeals.world",
 			"details": {
 				"description": [
@@ -434,9 +477,9 @@
 					}
 				],
 				"screenshots": [
-					"/assets/img/megadeals-1.png",
-					"/assets/img/megadeals-2.png",
-					"/assets/img/megadeals-3.PNG"
+					"/assets/img/megadeals-1.webp",
+					"/assets/img/megadeals-2.webp",
+					"/assets/img/megadeals-3.webp"
 				],
 				"lesson": "Building both sides of a product myself: an Angular store and admin dashboard on top of a PHP Slim REST API and MySQL database I designed."
 			}
@@ -446,9 +489,10 @@
 			"name": "MMS Server",
 			"year": 2019,
 			"stage": "early",
+			"context": "Freelance",
 			"tags": "mobile",
 			"languages": "Android Java",
-			"featuredImage": "/assets/img/mmserver-logo.png",
+			"featuredImage": "/assets/img/mmserver-logo.webp",
 			"details": {
 				"description": [
 					"An android application that handles all the operations for sending dollars and days to touch and alfa mobile numbers from the MMService application."
@@ -473,6 +517,7 @@
 			"name": "Gorraf",
 			"year": 2019,
 			"stage": "early",
+			"context": "Freelance",
 			"tags": "web",
 			"languages": "Flask / React / PostgreSQL",
 			"details": {
@@ -499,9 +544,10 @@
 			"name": "Domain Finder",
 			"year": 2019,
 			"stage": "early",
+			"context": "Freelance",
 			"tags": "mobile",
 			"languages": "Android Java",
-			"featuredImage": "/assets/img/domainfinder-logo.png",
+			"featuredImage": "/assets/img/domainfinder-logo.webp",
 			"details": {
 				"description": [
 					"An android application that lets you search for a domain name to check its availability and its price."
@@ -517,9 +563,9 @@
 					"GoDaddy APIs"
 				],
 				"screenshots": [
-					"/assets/img/domainfinder-1.png",
-					"/assets/img/domainfinder-2.png",
-					"/assets/img/domainfinder-3.png"
+					"/assets/img/domainfinder-1.webp",
+					"/assets/img/domainfinder-2.webp",
+					"/assets/img/domainfinder-3.webp"
 				],
 				"lesson": "Learning to consume a third-party REST API properly, with Retrofit and GoDaddy's domains API, and designing an app's screens myself.",
 				"availability": "No longer on Google Play"
@@ -530,9 +576,10 @@
 			"name": "المسبحة الإلكترونية",
 			"year": 2019,
 			"stage": "early",
+			"context": "Freelance",
 			"tags": "mobile",
 			"languages": "Android Java",
-			"featuredImage": "/assets/img/electronicmasbaha-logo.png",
+			"featuredImage": "/assets/img/electronicmasbaha-logo.webp",
 			"details": {
 				"description": [
 					"An Android application that lets you count your prayers on your phone."
@@ -545,9 +592,9 @@
 					"Android"
 				],
 				"screenshots": [
-					"/assets/img/electronicmasbaha-1.png",
-					"/assets/img/electronicmasbaha-2.png",
-					"/assets/img/electronicmasbaha-3.png"
+					"/assets/img/electronicmasbaha-1.webp",
+					"/assets/img/electronicmasbaha-2.webp",
+					"/assets/img/electronicmasbaha-3.webp"
 				],
 				"lesson": "A small idea taken all the way from an empty Android project to a published Google Play release.",
 				"availability": "No longer on Google Play"

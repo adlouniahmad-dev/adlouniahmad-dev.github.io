@@ -1,5 +1,13 @@
 <div class="spotlight" aria-hidden="true"></div>
 
+<!-- small screens only: the sidebar menu is hidden there -->
+<div class="mobile-bar">
+	<a class="bar-logo" href="#" (click)="scrollToTop($event)" aria-label="Back to top">
+		<adl-logo></adl-logo>
+	</a>
+	<adl-navigation variant="bar"></adl-navigation>
+</div>
+
 <div class="main position-relative">
 	<div class="d-flex flex-column flex-lg-row justify-content-between gap-3">
 
@@ -22,6 +30,7 @@
 			<adl-about data-aos="fade-left"></adl-about>
 			<adl-experiences></adl-experiences>
 			<adl-portfolio></adl-portfolio>
+			<adl-contact></adl-contact>
 		</main>
 
 	</div>
