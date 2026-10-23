@@ -18,10 +18,24 @@
         }
       </div>
       <div class="intro enter enter-delay">
-        <span class="kind">{{ product.tags }} · {{ product.languages }}</span>
+        <div class="meta">
+          @if (product.stage === 'early') {
+            <span class="badge">Early work</span>
+          }
+          <span class="kind">{{ product.tags }} · {{ product.year }} · {{ product.languages }}</span>
+        </div>
         <h1 class="name">{{ product.name }}</h1>
         @for (paragraph of product.details.description; track $index) {
           <p>{{ paragraph }}</p>
+        }
+        @if (product.details.lesson) {
+          <aside class="lesson">
+            <span class="lesson-label">What it taught me</span>
+            <p>{{ product.details.lesson }}</p>
+          </aside>
+        }
+        @if (product.details.availability) {
+          <p class="availability">{{ product.details.availability }}</p>
         }
         @if (product.details.links?.length) {
           <div class="links">

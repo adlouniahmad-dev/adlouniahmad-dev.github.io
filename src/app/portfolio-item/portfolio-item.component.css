@@ -85,8 +85,56 @@
   text-transform: uppercase;
 }
 
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .4rem .75rem;
+}
+
 .kind {
   color: var(--accent);
+}
+
+.badge {
+  padding: .2rem .65rem;
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+}
+
+.lesson {
+  margin: 1.5rem 0 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent-3);
+  border-radius: .75rem;
+  background: var(--bg-raised);
+}
+
+.lesson-label {
+  display: block;
+  margin-bottom: .35rem;
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--accent-3);
+}
+
+.lesson p {
+  margin: 0;
+  color: var(--text);
+}
+
+.availability {
+  margin: 1rem 0 0;
+  font-size: .85rem;
+  color: var(--text-faint);
 }
 
 .name {

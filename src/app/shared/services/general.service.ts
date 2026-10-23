@@ -27,7 +27,7 @@ export class GeneralService {
   }
 
   getPortfolioItems(): Array<IPortfolioItem> {
-    return data.portfolio;
+    return data.portfolio as Array<IPortfolioItem>;
   }
 
   getPortfolioItemDetails(id: string): IPortfolioItem {

@@ -237,6 +237,7 @@
 		{
 			"id": "form-studio",
 			"name": "Form Studio",
+			"year": 2025,
 			"tags": "web",
 			"languages": "Angular / Formly / RxJS",
 			"details": {
@@ -264,10 +265,11 @@
 		{
 			"id": "ask",
 			"name": "ASK - Agile Share Knowledge",
+			"year": 2020,
+			"stage": "early",
 			"tags": "web",
 			"languages": "Angular / EF Core",
 			"featuredImage": "/assets/img/ask-logo.png",
-			"link": "https://www.dgitme.com/copy-of-automation-and-av-systems",
 			"details": {
 				"description": [
 					"The project aims to spread knowledge among all the employees at all levels of the institution's sectors and departments, in order to raise the learning curve, spread the supportive institutional culture in a practical and systematic way, maximize the use of the knowledge and expertise in the organization which is a major element in promoting proactive knowledge.",
@@ -291,27 +293,56 @@
 					"SQL Server",
 					"JWT"
 				],
-				"links": [
-					{
-						"name": "Go to Website",
-						"link": "https://www.dgitme.com/copy-of-automation-and-av-systems"
-					}
-				],
 				"screenshots": [
 					"/assets/img/ask-1.PNG",
 					"/assets/img/ask-2.PNG",
 					"/assets/img/ask-3.PNG",
 					"/assets/img/ask-4.PNG"
-				]
+				],
+				"lesson": "The biggest codebase I'd worked on at that point (232 commits over six months): organising an Angular app into modules and reusable components, working with RxJS, building bilingual English/Arabic screens and securing a .NET Core API with JWT.",
+				"availability": "No longer online"
+			}
+		},
+		{
+			"id": "leb-phones",
+			"name": "LebPhones",
+			"year": 2020,
+			"stage": "early",
+			"tags": "web",
+			"languages": "Slim PHP / PWA",
+			"featuredImage": "/assets/img/lebphones-logo.png",
+			"details": {
+				"description": [
+					"A website that displays the wholesale prices of various mobile phones in Lebanon."
+				],
+				"techDescription": [
+					"Developed in PHP using the Slim Framework, with Progressive Web App (PWA) capabilities."
+				],
+				"tags": [
+					"HTML",
+					"CSS",
+					"PHP",
+					"Slim Framework",
+					"JavaScript",
+					"PWA"
+				],
+				"screenshots": [
+					"/assets/img/lebphones-1.PNG",
+					"/assets/img/lebphones-2.PNG",
+					"/assets/img/lebphones-3.PNG"
+				],
+				"lesson": "A quick build that introduced me to Progressive Web Apps: making a server-rendered PHP site installable like an app.",
+				"availability": "No longer online"
 			}
 		},
 		{
 			"id": "sim-phones",
 			"name": "Sim-Phones",
+			"year": 2020,
+			"stage": "early",
 			"tags": "web",
 			"languages": "Angular / Slim PHP / PWA",
 			"featuredImage": "/assets/img/simphones-logo.png",
-			"link": "https://app.sim-phones.com",
 			"details": {
 				"description": [
 					"A Web Application that allows people to buy virtual numbers from various countries (Russia, Germany, etc...) to use it in different services, such as: WhatsApp, Facebook, Viber, etc...",
@@ -330,85 +361,51 @@
 					"PWA",
 					"Firebase Cloud Messaging"
 				],
-				"links": [
-					{
-						"name": "Go to Website",
-						"link": "https://sim-phones.com"
-					},
-					{
-						"name": "Go to App",
-						"link": "https://app.sim-phones.com"
-					}
-				],
 				"screenshots": [
 					"/assets/img/simphones-1.JPG",
 					"/assets/img/simphones-2.JPG",
 					"/assets/img/simphones-3.JPG"
-				]
+				],
+				"lesson": "Shipping a real product end to end: an Angular PWA for users and a dashboard for admins on top of my own JWT-secured PHP API, plus a third-party provider integration (Online-Sim) and push notifications with Firebase Cloud Messaging.",
+				"availability": "No longer online"
 			}
 		},
 		{
-			"id": "leb-phones",
-			"name": "LebPhones",
-			"tags": "web",
-			"languages": "Slim PHP / PWA",
-			"featuredImage": "/assets/img/lebphones-logo.png",
-			"link": "http://lebphones.com",
-			"details": {
-				"description": [
-					"A website that displays the wholesale prices of various mobile phones in Lebanon."
-				],
-				"techDescription": [
-					"Developed in PHP using the Slim Framework, with Progressive Web App (PWA) capabilities."
-				],
-				"tags": [
-					"HTML",
-					"CSS",
-					"PHP",
-					"Slim Framework",
-					"JavaScript",
-					"PWA"
-				],
-				"links": [
-					{
-						"name": "Go to Website",
-						"link": "http://lebphones.com"
-					}
-				],
-				"screenshots": [
-					"/assets/img/lebphones-1.PNG",
-					"/assets/img/lebphones-2.PNG",
-					"/assets/img/lebphones-3.PNG"
-				]
-			}
-		},
-		{
-			"id": "mms-server",
-			"name": "MMS Server",
+			"id": "status-saver",
+			"name": "WhatsApp Status Saver",
+			"year": 2019,
+			"stage": "early",
 			"tags": "mobile",
 			"languages": "Android Java",
-			"featuredImage": "/assets/img/mmserver-logo.png",
+			"featuredImage": "/assets/img/statussaver-logo.png",
 			"details": {
 				"description": [
-					"An android application that handles all the operations for sending dollars and days to touch and alfa mobile numbers from the MMService application."
+					"An Android application lets you view and save WhatsApp photo images and video statuses of your friends. It also enables you to share them directly from the app with your friends."
 				],
 				"techDescription": [
-					"Worked on implementing the required listeners for reading and processing incoming messages and USSD messages.",
-					"Worked on the implementation for sending messages from both Sim 1 and 2 programmatically using the SmsManager and running USSD codes.",
-					"Used SQLite and Firebase Cloud Firestore for saving and reading data."
+					"Used Java programming language for the implementation and followed the MVP (Model-View-Presenter) pattern.",
+					"Used Picasso library for displaying images and video thumbnails."
 				],
 				"tags": [
 					"Java",
 					"Android",
-					"SQLite",
-					"Firebase",
-					"Firestore"
-				]
+					"MVP",
+					"Picasso"
+				],
+				"screenshots": [
+					"/assets/img/statussaver-1.png",
+					"/assets/img/statussaver-2.png",
+					"/assets/img/statussaver-3.png"
+				],
+				"lesson": "Taught me to structure an Android app with the MVP pattern and to handle media efficiently, loading image and video thumbnails with Picasso.",
+				"availability": "No longer on Google Play"
 			}
 		},
 		{
 			"id": "mega-deals",
 			"name": "MegaDeals",
+			"year": 2019,
+			"stage": "early",
 			"tags": "web",
 			"languages": "Angular / Slim PHP",
 			"featuredImage": "/assets/img/megadeals-logo.png",
@@ -440,12 +437,42 @@
 					"/assets/img/megadeals-1.png",
 					"/assets/img/megadeals-2.png",
 					"/assets/img/megadeals-3.PNG"
-				]
+				],
+				"lesson": "Building both sides of a product myself: an Angular store and admin dashboard on top of a PHP Slim REST API and MySQL database I designed."
+			}
+		},
+		{
+			"id": "mms-server",
+			"name": "MMS Server",
+			"year": 2019,
+			"stage": "early",
+			"tags": "mobile",
+			"languages": "Android Java",
+			"featuredImage": "/assets/img/mmserver-logo.png",
+			"details": {
+				"description": [
+					"An android application that handles all the operations for sending dollars and days to touch and alfa mobile numbers from the MMService application."
+				],
+				"techDescription": [
+					"Worked on implementing the required listeners for reading and processing incoming messages and USSD messages.",
+					"Worked on the implementation for sending messages from both Sim 1 and 2 programmatically using the SmsManager and running USSD codes.",
+					"Used SQLite and Firebase Cloud Firestore for saving and reading data."
+				],
+				"tags": [
+					"Java",
+					"Android",
+					"SQLite",
+					"Firebase",
+					"Firestore"
+				],
+				"lesson": "Working close to the Android platform: listening for incoming SMS and USSD responses, sending from two SIM cards and keeping data in sync between SQLite and Firestore."
 			}
 		},
 		{
 			"id": "gorraf",
 			"name": "Gorraf",
+			"year": 2019,
+			"stage": "early",
 			"tags": "web",
 			"languages": "Flask / React / PostgreSQL",
 			"details": {
@@ -463,45 +490,15 @@
 					"PostgreSQL",
 					"React",
 					"Bootstrap"
-				]
-			}
-		},
-		{
-			"id": "status-saver",
-			"name": "WhatsApp Status Saver",
-			"tags": "mobile",
-			"languages": "Android Java",
-			"featuredImage": "/assets/img/statussaver-logo.png",
-			"details": {
-				"description": [
-					"An Android application lets you view and save WhatsApp photo images and video statuses of your friends. It also enables you to share them directly from the app with your friends."
 				],
-				"techDescription": [
-					"Used Java programming language for the implementation and followed the MVP (Model-View-Presenter) pattern.",
-					"Used Picasso library for displaying images and video thumbnails."
-				],
-				"tags": [
-					"Java",
-					"Android",
-					"MVP",
-					"Picasso"
-				],
-				"links": [
-					{
-						"name": "Download App",
-						"link": "https://play.google.com/store/apps/details?id=com.adlouniahmad.statussaver"
-					}
-				],
-				"screenshots": [
-					"/assets/img/statussaver-1.png",
-					"/assets/img/statussaver-2.png",
-					"/assets/img/statussaver-3.png"
-				]
+				"lesson": "My first time leading other developers: splitting work between two teammates while building REST APIs with Flask-RESTX and PostgreSQL, and picking up React along the way."
 			}
 		},
 		{
 			"id": "domain-finder",
 			"name": "Domain Finder",
+			"year": 2019,
+			"stage": "early",
 			"tags": "mobile",
 			"languages": "Android Java",
 			"featuredImage": "/assets/img/domainfinder-logo.png",
@@ -519,22 +516,20 @@
 					"Retrofit",
 					"GoDaddy APIs"
 				],
-				"links": [
-					{
-						"name": "Download App",
-						"link": "https://play.google.com/store/apps/details?id=com.adlouniahmad.domainfinder"
-					}
-				],
 				"screenshots": [
 					"/assets/img/domainfinder-1.png",
 					"/assets/img/domainfinder-2.png",
 					"/assets/img/domainfinder-3.png"
-				]
+				],
+				"lesson": "Learning to consume a third-party REST API properly, with Retrofit and GoDaddy's domains API, and designing an app's screens myself.",
+				"availability": "No longer on Google Play"
 			}
 		},
 		{
 			"id": "electronic-masbaha",
 			"name": "المسبحة الإلكترونية",
+			"year": 2019,
+			"stage": "early",
 			"tags": "mobile",
 			"languages": "Android Java",
 			"featuredImage": "/assets/img/electronicmasbaha-logo.png",
@@ -549,17 +544,13 @@
 					"Java",
 					"Android"
 				],
-				"links": [
-					{
-						"name": "Download App",
-						"link": "https://play.google.com/store/apps/details?id=com.adlouniahmad.electronicmasbaha"
-					}
-				],
 				"screenshots": [
 					"/assets/img/electronicmasbaha-1.png",
 					"/assets/img/electronicmasbaha-2.png",
 					"/assets/img/electronicmasbaha-3.png"
-				]
+				],
+				"lesson": "A small idea taken all the way from an empty Android project to a published Google Play release.",
+				"availability": "No longer on Google Play"
 			}
 		}
 	],
