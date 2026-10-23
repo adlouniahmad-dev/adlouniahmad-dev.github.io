@@ -53,12 +53,21 @@ src/app/
 npm run build
 ```
 
-Output goes to `dist/adlouniahmad-portfolio/browser/`. The home page (`/`) is prerendered into `index.html` and each project into `projects/<id>/index.html` (new projects in `info.json` are picked up automatically); other routes are rendered client-side from `index.csr.html`, which the build also copies to `404.html` so GitHub Pages serves the app's own 404 page for unknown URLs.
+Output goes to `dist/adlouniahmad-portfolio/browser/`. Every page is prerendered to static HTML in both languages: `/` and `/ar/`, and each project at `projects/<id>/` and `ar/projects/<id>/` (new projects in `info.json` are picked up automatically). After the Angular build, [`scripts/postbuild.mjs`](scripts/postbuild.mjs) writes `sitemap.xml` and copies the client-side shell to `404.html`, so GitHub Pages serves the app's own 404 page for unknown URLs.
 
 Prerendered routes are configured in [`app.routes.server.ts`](src/app/app.routes.server.ts). Code that touches `window` or `document` must only run in the browser (guard it with `isPlatformBrowser`), otherwise the build fails while prerendering.
 
+## Testing
+
+Both commands run against the production build, so run `npm run build` first. They serve it the way GitHub Pages does ([`scripts/serve-dist.mjs`](scripts/serve-dist.mjs), port 4317).
+
+```bash
+npm test             # Playwright end-to-end tests (e2e/): home, projects, contact form, Arabic pages, theme, SEO files
+npm run lighthouse   # Lighthouse CI: fails below 85 performance or 95 accessibility, best practices and SEO
+```
+
+Locally the tests use your installed Chrome; CI installs Playwright's Chromium. The contact form tests mock Forminit, so nothing is sent.
+
 ## Deployment
 
-Pushing to `main` triggers the [Deploy workflow](.github/workflows/deploy.yml), which builds the site and publishes it to the `gh-pages` branch that GitHub Pages serves. It can also be run manually from the **Actions** tab.
-
-`npm run deploy` still works as a manual fallback; run `npm run build` first.
+The [CI workflow](.github/workflows/ci.yml) runs on every push and pull request: it builds the site, runs the end-to-end tests and the Lighthouse budgets. On pushes to `main`, once those pass, it publishes the tested build to the `gh-pages` branch that GitHub Pages serves. It can also be run manually from the **Actions** tab.
