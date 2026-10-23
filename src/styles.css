@@ -14,7 +14,8 @@
 	--accent-3: #a78bfa;
 	--gradient: linear-gradient(100deg, var(--accent) 0%, var(--accent-2) 55%, var(--accent-3) 100%);
 
-	--font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+	/* Inter has no Arabic glyphs, so Arabic text falls through to IBM Plex Sans Arabic */
+	--font-sans: 'Inter', 'IBM Plex Sans Arabic', system-ui, -apple-system, 'Segoe UI', sans-serif;
 	--font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
 	/* Legacy names still used by older components */
