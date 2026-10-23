@@ -1,0 +1,27 @@
+@if (recommendations.length) {
+  <section class="section" id="recommendations">
+    <h2 class="section-title">{{ 'section.recommendations' | t }}</h2>
+
+    <div class="quotes">
+      @for (item of recommendations; track item.name) {
+        <figure class="quote">
+          <span class="mark" aria-hidden="true">“</span>
+          <blockquote>
+            <p><adl-inline-text [text]="item.quote"></adl-inline-text></p>
+          </blockquote>
+          <figcaption>
+            @if (item.url) {
+              <a class="name" [href]="item.url" target="_blank" rel="noopener">{{ item.name }}</a>
+            } @else {
+              <span class="name">{{ item.name }}</span>
+            }
+            <span class="title">{{ item.title }}</span>
+            @if (item.relationship) {
+              <span class="relationship">{{ item.relationship }}</span>
+            }
+          </figcaption>
+        </figure>
+      }
+    </div>
+  </section>
+}

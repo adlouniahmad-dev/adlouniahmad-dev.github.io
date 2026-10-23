@@ -8,6 +8,7 @@ import { ISocialNetwork } from '../interfaces/social-network';
 import { IInfo } from '../interfaces/info';
 import { IExperience } from '../interfaces/experience';
 import { IContactInfo } from '../interfaces/contact-info';
+import { IRecommendation } from '../interfaces/recommendation';
 
 @Injectable({
   providedIn: 'root'
@@ -39,6 +40,10 @@ export class GeneralService {
 
   getPortfolioItemDetails(id: string): IPortfolioItem {
     return (this.data.portfolio as Array<IPortfolioItem>).find((item: any) => item.id === id);
+  }
+
+  getRecommendations(): Array<IRecommendation> {
+    return (this.data.recommendations ?? []) as Array<IRecommendation>;
   }
 
   getContactInfo(): IContactInfo{

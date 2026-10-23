@@ -28,6 +28,7 @@ The site is bilingual: English at `/` and Arabic (right-to-left) at `/ar/`, both
 | `social`     | Social profile links shown in the sidebar                            |
 | `categories` | Filter categories for the Projects section                           |
 | `portfolio`  | Projects with images, links and details (one page per `id`)          |
+| `recommendations` | Quotes from colleagues, e.g. LinkedIn recommendations (`quote`, `name`, `title`, optional `relationship` and `url`). The section is hidden while the list is empty. |
 
 Images go in [`src/assets/img/`](src/assets/img/). Keep them small: export at the size they're displayed and prefer WebP.
 

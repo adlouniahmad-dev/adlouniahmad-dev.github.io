@@ -24,6 +24,7 @@ import { InlineTextComponent } from './shared/components/inline-text/inline-text
 import { ProjectCoverComponent } from './shared/components/project-cover/project-cover.component';
 import { LogoComponent } from './shared/components/logo/logo.component';
 import { TranslatePipe } from './shared/i18n/translate.pipe';
+import { RecommendationsComponent } from './home/recommendations/recommendations.component';
 import { faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
@@ -44,7 +45,8 @@ import { faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
     InlineTextComponent,
     ProjectCoverComponent,
     LogoComponent,
-    TranslatePipe
+    TranslatePipe,
+    RecommendationsComponent
   ],
   bootstrap: [AppComponent],
   imports: [
