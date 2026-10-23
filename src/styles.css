@@ -50,7 +50,7 @@
 	letter-spacing: 0 !important;
 }
 
-/* Light theme. index.html sets data-theme before the first paint: the saved choice, otherwise the system setting. */
+/* Light theme, when chosen with the toggle (dark is the default). index.html sets data-theme before the first paint. */
 :root[data-theme="light"] {
 	color-scheme: light;
 

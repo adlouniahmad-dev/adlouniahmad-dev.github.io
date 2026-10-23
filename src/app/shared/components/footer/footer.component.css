@@ -65,6 +65,11 @@ a.contact-line:hover fa-icon {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  gap: .75rem 1rem;
+}
+
+/* thin divider between the social links and the site controls */
+.footer-row adl-site-controls {
+  padding-inline-start: 1rem;
+  border-inline-start: 1px solid var(--border);
 }
