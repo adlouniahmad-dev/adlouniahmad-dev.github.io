@@ -2,7 +2,7 @@
 
 Personal portfolio site, live at **<https://adlouniahmad-dev.github.io/>**.
 
-Built with Angular 22, Bootstrap 5, Font Awesome and AOS scroll animations, and installable as a PWA via the Angular service worker. The home page and every project page are prerendered to static HTML at build time so crawlers and link previews see the full content.
+Built with Angular 22 (standalone components, zoneless), a slimmed-down Bootstrap 5 and Font Awesome, with self-hosted fonts, and installable as a PWA via the Angular service worker. The home page and every project page are prerendered to static HTML at build time so crawlers and link previews see the full content.
 
 ## Getting started
 
@@ -41,11 +41,19 @@ src/app/
 ├── home/              # Main page: about, experience, projects and contact
 ├── portfolio-item/    # Project detail page (/projects/:id)
 ├── page-not-found/    # 404 page
+├── app.config.ts      # App providers (router, HTTP, hydration, service worker)
+├── app.routes.ts      # Routes; app.routes.server.ts sets which ones are prerendered
 └── shared/
-    ├── components/    # Navigation and footer
+    ├── components/    # Navigation, footer, logo, language and theme controls
+    ├── i18n/          # Interface text (strings.ts), the `t` pipe and the language service
     ├── interfaces/    # TypeScript types for info.json
-    └── services/      # Content (info.json) and contact form services
+    ├── services/      # Content (info.json), contact form and SEO services
+    └── theme/         # Light/dark theme
 ```
+
+The app runs without zone.js, and components use `OnPush` change detection (Angular's default). A template refreshes after its own events (clicks, input) and when a signal it reads changes. State that changes anywhere else, such as in an HTTP callback, a route subscription or a `window` listener, must be a signal or call `ChangeDetectorRef.markForCheck()`, otherwise the page won't update.
+
+Fonts (Inter, JetBrains Mono and IBM Plex Sans Arabic) come from the `@fontsource` packages, listed in [`src/fonts.css`](src/fonts.css). That file is built separately and loaded after the page, so text first shows in the system font.
 
 ## Building
 
@@ -63,7 +71,7 @@ Both commands run against the production build, so run `npm run build` first. Th
 
 ```bash
 npm test             # Playwright end-to-end tests (e2e/): home, projects, contact form, Arabic pages, theme, SEO files
-npm run lighthouse   # Lighthouse CI: fails below 70 performance or 95 accessibility, best practices and SEO
+npm run lighthouse   # Lighthouse CI: fails below 75 performance or 95 accessibility, best practices and SEO
 ```
 
 Locally the tests use your installed Chrome; CI installs Playwright's Chromium. The performance budget is lower than the scores you'll see locally (90+) because GitHub's shared runners are slower and noisier; it's there to catch big regressions. The contact form tests mock Forminit, so nothing is sent.
