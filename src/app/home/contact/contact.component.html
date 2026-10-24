@@ -5,7 +5,7 @@
     <h3 class="heading">{{ 'contactHeading' | t }}</h3>
     <p class="intro">{{ 'contactIntro' | t }}</p>
 
-    @if (state() === 'sent') {
+    @if (sent()) {
       <div class="success" role="status">
         <span class="check" aria-hidden="true">✓</span>
         <div>
@@ -48,15 +48,15 @@
         <!-- spam trap: hidden from people, bots fill it in -->
         <input type="hidden" formControlName="gotcha" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
 
-        @if (state() === 'error') {
+        @if (failed()) {
           <p class="failure" role="alert">
             {{ errorMessage() }} {{ 'alsoEmail' | t }} <a [href]="'mailto:' + email" dir="ltr">{{ email }}</a>.
           </p>
         }
 
         <div class="actions">
-          <button type="submit" class="submit" [disabled]="state() === 'sending'">
-            @if (state() === 'sending') {
+          <button type="submit" class="submit" [disabled]="sending()">
+            @if (sending()) {
               <span class="spinner" aria-hidden="true"></span> {{ 'sending' | t }}
             } @else {
               {{ 'send' | t }} <span aria-hidden="true">{{ 'arrow.forward' | t }}</span>

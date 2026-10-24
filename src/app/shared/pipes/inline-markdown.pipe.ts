@@ -1,9 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { SegmentType } from '../enums/segment-type';
 
 export type InlineSegment =
-  | { type: 'text'; text: string }
-  | { type: 'strong'; text: string }
-  | { type: 'link'; text: string; href: string };
+  | { type: SegmentType.Text; text: string }
+  | { type: SegmentType.Strong; text: string }
+  | { type: SegmentType.Link; text: string; href: string };
 
 const TOKEN = /\*\*(.+?)\*\*|\[(.+?)\]\((.+?)\)/g;
 
@@ -22,17 +23,17 @@ export class InlineMarkdownPipe implements PipeTransform {
     let last = 0;
     for (const match of value.matchAll(TOKEN)) {
       if (match.index > last)
-        segments.push({ type: 'text', text: value.slice(last, match.index) });
+        segments.push({ type: SegmentType.Text, text: value.slice(last, match.index) });
 
       if (match[1] !== undefined)
-        segments.push({ type: 'strong', text: match[1] });
+        segments.push({ type: SegmentType.Strong, text: match[1] });
       else
-        segments.push({ type: 'link', text: match[2], href: match[3] });
+        segments.push({ type: SegmentType.Link, text: match[2], href: match[3] });
 
       last = match.index + match[0].length;
     }
     if (last < value.length)
-      segments.push({ type: 'text', text: value.slice(last) });
+      segments.push({ type: SegmentType.Text, text: value.slice(last) });
 
     return segments;
   }

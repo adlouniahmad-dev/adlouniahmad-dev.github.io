@@ -8,14 +8,15 @@ import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { environment } from '../environments/environment';
 import { routes } from './app.routes';
+import { SCROLL_OFFSET } from './shared/services/scroll.service';
 
 // No zone.js: Angular is zoneless by default, and components refresh through signals,
 // template events and markForCheck
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes, withInMemoryScrolling({ anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled' })),
-    // Anchor scrolling leaves 64px above the section (HomeComponent.settleOnFragment uses the same)
-    provideAppInitializer(() => inject(ViewportScroller).setOffset([0, 64])),
+    // Anchor scrolling leaves the same space above the section as ScrollService.settleOnFragment
+    provideAppInitializer(() => inject(ViewportScroller).setOffset([0, SCROLL_OFFSET])),
     provideHttpClient(withXhr()),
     provideClientHydration(withEventReplay()),
     provideServiceWorker('ngsw-worker.js', { enabled: environment.production }),

@@ -1,10 +1,11 @@
-import { Inject, Injectable, PLATFORM_ID, DOCUMENT, signal } from '@angular/core';
+import { Inject, Injectable, PLATFORM_ID, DOCUMENT, computed, signal } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-
-export type Theme = 'light' | 'dark';
+import { StorageService } from '../services/storage.service';
+import { Theme } from '../enums/theme';
+import { StorageArea } from '../enums/storage-area';
 
 const STORAGE_KEY = 'adl.theme';
-const THEME_COLOR: Record<Theme, string> = { dark: '#0a0e1a', light: '#f8fafc' };
+const THEME_COLOR: Record<Theme, string> = { [Theme.Dark]: '#0a0e1a', [Theme.Light]: '#f8fafc' };
 
 /**
  * Light/dark theme. Dark is the default; index.html applies the saved choice before the first paint,
@@ -16,23 +17,24 @@ const THEME_COLOR: Record<Theme, string> = { dark: '#0a0e1a', light: '#f8fafc' }
 export class ThemeService {
 
   /** A signal, so every toggle on the page updates, not just the one clicked */
-  readonly theme = signal<Theme>('dark');
+  readonly theme = signal<Theme>(Theme.Dark);
+  readonly isLight = computed(() => this.theme() === Theme.Light);
 
-  constructor(@Inject(DOCUMENT) private document: Document, @Inject(PLATFORM_ID) platformId: object) {
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    @Inject(PLATFORM_ID) platformId: object,
+    private storage: StorageService,
+  ) {
     if (!isPlatformBrowser(platformId))
       return;
 
-    this.theme.set(this.document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
+    this.theme.set(this.document.documentElement.getAttribute('data-theme') === Theme.Light ? Theme.Light : Theme.Dark);
   }
 
   toggle(): void {
-    const next: Theme = this.theme() === 'light' ? 'dark' : 'light';
+    const next = this.theme() === Theme.Light ? Theme.Dark : Theme.Light;
     this.apply(next);
-    try {
-      localStorage.setItem(STORAGE_KEY, next);
-    } catch {
-      // storage unavailable: the choice lasts for this page view
-    }
+    this.storage.set(StorageArea.Local, STORAGE_KEY, next);
   }
 
   private apply(theme: Theme): void {

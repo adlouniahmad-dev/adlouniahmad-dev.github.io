@@ -1,3 +1,5 @@
+import { ExperienceType } from '../enums/experience-type';
+
 export interface ICompany {
   name: string;
   url?: string;
@@ -18,7 +20,7 @@ export type IHighlight = string | { text: string; items: string[] };
 export interface IExperience {
   position: string;
   /** Internships are listed separately, after regular positions */
-  type?: 'internship';
+  type?: ExperienceType;
   company: ICompany;
   location?: string;
   /** `YYYY-MM` */

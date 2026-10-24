@@ -2,6 +2,7 @@ import { Component, AfterViewInit, OnDestroy, Inject, PLATFORM_ID, DOCUMENT, Cha
 import { isPlatformBrowser } from '@angular/common';
 import { StringKey } from '../../i18n/strings';
 import { TranslatePipe } from '../../i18n/translate.pipe';
+import { NavigationVariant } from '../../enums/navigation-variant';
 
 @Component({
     selector: 'adl-navigation',
@@ -18,12 +19,11 @@ export class NavigationComponent implements AfterViewInit, OnDestroy {
     { label: 'nav.contact', href: '#contact' },
   ];
 
-  /** `sidebar`: the desktop menu with indicator lines; `bar`: the compact top bar on small screens */
-  @Input() variant: 'sidebar' | 'bar' = 'sidebar';
+  @Input() variant = NavigationVariant.Sidebar;
 
   @HostBinding('class.bar')
   get isBar(): boolean {
-    return this.variant === 'bar';
+    return this.variant === NavigationVariant.Bar;
   }
 
   activeHref = this.links[0].href;

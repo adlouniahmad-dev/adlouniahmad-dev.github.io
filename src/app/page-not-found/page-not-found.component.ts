@@ -14,7 +14,7 @@ export class PageNotFoundComponent {
   readonly home: string;
 
   constructor(language: LanguageService) {
-    this.home = language.pathIn(language.lang, '/');
+    this.home = language.homePath;
   }
 
 }

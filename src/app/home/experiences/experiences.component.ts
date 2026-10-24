@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IExperience } from '../../shared/interfaces/experience';
+import { ExperienceType } from '../../shared/enums/experience-type';
 import { GeneralService } from '../../shared/services/general.service';
 import { ExperienceComponent } from './experience/experience.component';
 import { TranslatePipe } from '../../shared/i18n/translate.pipe';
@@ -17,8 +18,8 @@ export class ExperiencesComponent {
 
   constructor(generalService: GeneralService) {
     const all = generalService.getExperience();
-    this.positions = all.filter(experience => experience.type !== 'internship');
-    this.internships = all.filter(experience => experience.type === 'internship');
+    this.positions = all.filter(experience => experience.type !== ExperienceType.Internship);
+    this.internships = all.filter(experience => experience.type === ExperienceType.Internship);
   }
 
 }

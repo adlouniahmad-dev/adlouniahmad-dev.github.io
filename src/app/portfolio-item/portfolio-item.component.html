@@ -15,7 +15,7 @@
     <header class="hero">
       <div class="plate enter">
         <!-- in-progress work never shows images -->
-        @if (product.featuredImage && product.status !== 'in-progress') {
+        @if (product.featuredImage && !inProgress) {
           <img [src]="product.featuredImage" [alt]="'logoAlt' | t: { name: product.name }" width="1920" height="1080">
         } @else {
           <adl-project-cover class="cover" [name]="product.name" [letters]="product.initials"></adl-project-cover>
@@ -23,10 +23,10 @@
       </div>
       <div class="intro enter enter-delay">
         <div class="meta">
-          @if (product.status === 'in-progress') {
+          @if (inProgress) {
             <span class="badge live"><span class="pulse" aria-hidden="true"></span>{{ 'inProgress' | t }}</span>
           }
-          @if (product.stage === 'early') {
+          @if (early) {
             <span class="badge">{{ 'earlyWork' | t }}</span>
           }
           <span class="kind">@if (product.context) {<span>{{ product.context }} · </span>}{{ kindKey(product.tags) | t }} · {{ product.year }} · {{ product.languages }}</span>

@@ -29,7 +29,7 @@
           @for (role of experience.roles; track role.title) {
             <li>
               <span class="role-title">{{ role.title }}</span>
-              <span class="role-period">{{ formatPeriod(role.start, role.end) }}</span>
+              <span class="role-period">{{ rolePeriod(role) }}</span>
             </li>
           }
         </ol>

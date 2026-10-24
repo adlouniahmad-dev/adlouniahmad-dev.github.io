@@ -1,12 +1,12 @@
 import { Inject, Injectable, DOCUMENT } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { LanguageService } from '../i18n/language.service';
-import { Lang } from '../i18n/strings';
+import { Lang } from '../enums/lang';
 
 export interface IPageMeta {
   title: string;
   description: string;
-  /** Path relative to the site root, in the page's language, e.g. `/ar/projects/ask/` */
+  /** Language-neutral path of the page, e.g. `/` or `/projects/ask` */
   path: string;
 }
 
@@ -19,7 +19,7 @@ const SHARE_IMAGE = {
   height: '630',
 };
 
-const OG_LOCALE: Record<Lang, string> = { en: 'en_US', ar: 'ar_AR' };
+const OG_LOCALE: Record<Lang, string> = { [Lang.En]: 'en_US', [Lang.Ar]: 'ar_AR' };
 
 /**
  * Updates title, description, canonical URL, share tags and the hreflang alternates per page
@@ -38,9 +38,8 @@ export class SeoService {
   ) {}
 
   update(page: IPageMeta): void {
-    const url = ORIGIN + page.path;
     const lang = this.language.lang;
-    const other: Lang = lang === 'ar' ? 'en' : 'ar';
+    const url = ORIGIN + this.canonicalPath(lang, page.path);
     this.title.setTitle(page.title);
 
     this.meta.updateTag({ name: 'description', content: page.description });
@@ -48,7 +47,7 @@ export class SeoService {
     this.meta.updateTag({ property: 'og:description', content: page.description });
     this.meta.updateTag({ property: 'og:url', content: url });
     this.meta.updateTag({ property: 'og:locale', content: OG_LOCALE[lang] });
-    this.meta.updateTag({ property: 'og:locale:alternate', content: OG_LOCALE[other] });
+    this.meta.updateTag({ property: 'og:locale:alternate', content: OG_LOCALE[this.language.otherLang] });
     this.meta.updateTag({ name: 'twitter:title', content: page.title });
     this.meta.updateTag({ name: 'twitter:description', content: page.description });
 
@@ -64,12 +63,19 @@ export class SeoService {
 
     this.setLink('canonical', url);
     // Tell search engines about the same page in the other language
-    const trailingSlash = page.path !== '/' && page.path.endsWith('/') ? '/' : '';
-    const enPath = this.language.pathIn('en', page.path.replace(/\/$/, '') || '/');
-    const arPath = this.language.pathIn('ar', page.path.replace(/\/$/, '') || '/');
-    this.setLink('alternate', ORIGIN + enPath + (enPath === '/' ? '' : trailingSlash), 'en');
-    this.setLink('alternate', ORIGIN + arPath + '/', 'ar');
-    this.setLink('alternate', ORIGIN + enPath + (enPath === '/' ? '' : trailingSlash), 'x-default');
+    const enUrl = ORIGIN + this.canonicalPath(Lang.En, page.path);
+    this.setLink('alternate', enUrl, Lang.En);
+    this.setLink('alternate', ORIGIN + this.canonicalPath(Lang.Ar, page.path), Lang.Ar);
+    this.setLink('alternate', enUrl, 'x-default');
+  }
+
+  /**
+   * GitHub Pages serves prerendered pages from folders, so canonical URLs have a trailing slash,
+   * except the site root: `/`, `/ar/`, `/projects/ask/`, `/ar/projects/ask/`
+   */
+  private canonicalPath(lang: Lang, path: string): string {
+    const localized = this.language.pathIn(lang, path.replace(/\/+$/, '') || '/');
+    return localized === '/' ? localized : localized + '/';
   }
 
   private setLink(rel: string, href: string, hreflang?: string): void {

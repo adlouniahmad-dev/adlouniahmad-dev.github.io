@@ -8,12 +8,12 @@ import { TranslatePipe } from '../../i18n/translate.pipe';
 @Component({
     selector: 'adl-site-controls',
     template: `
-      <a class="control lang" [routerLink]="switchLink" [attr.hreflang]="otherLang" [attr.lang]="otherLang"
+      <a class="control lang" [routerLink]="switchLink" [attr.hreflang]="language.otherLang" [attr.lang]="language.otherLang"
         [attr.aria-label]="'switchLangLabel' | t" [title]="'switchLangLabel' | t">{{ 'switchLang' | t }}</a>
       <button type="button" class="control theme" (click)="theme.toggle()"
-        [attr.aria-label]="(theme.theme() === 'light' ? 'theme.toDark' : 'theme.toLight') | t"
-        [title]="(theme.theme() === 'light' ? 'theme.toDark' : 'theme.toLight') | t">
-        @if (theme.theme() === 'light') {
+        [attr.aria-label]="(theme.isLight() ? 'theme.toDark' : 'theme.toLight') | t"
+        [title]="(theme.isLight() ? 'theme.toDark' : 'theme.toLight') | t">
+        @if (theme.isLight()) {
           <!-- moon -->
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg>
         } @else {
@@ -77,14 +77,10 @@ export class SiteControlsComponent {
   /** Language-neutral path of the current page, e.g. `/` or `/projects/ask` */
   @Input() path = '/';
 
-  constructor(private language: LanguageService, public theme: ThemeService) {}
-
-  get otherLang(): 'en' | 'ar' {
-    return this.language.lang === 'ar' ? 'en' : 'ar';
-  }
+  constructor(public language: LanguageService, public theme: ThemeService) {}
 
   get switchLink(): string {
-    return this.language.pathIn(this.otherLang, this.path);
+    return this.language.pathIn(this.language.otherLang, this.path);
   }
 
 }

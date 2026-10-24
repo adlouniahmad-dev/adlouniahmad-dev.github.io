@@ -1,6 +1,7 @@
 /** Interface text in English and Arabic. Content (about, experience, projects) lives in info.json / info.ar.json. */
 
-export type Lang = 'en' | 'ar';
+import { ProjectKind } from '../enums/project-kind';
+import { Lang } from '../enums/lang';
 
 const en = {
   // home
@@ -158,15 +159,15 @@ const ar: Record<StringKey, string> = {
   'seo.imageAlt': 'أحمد عدلوني، مهندس برمجيات أول: الواجهات الأمامية وAngular',
 };
 
-export const STRINGS: Record<Lang, Record<StringKey, string>> = { en, ar };
+export const STRINGS: Record<Lang, Record<StringKey, string>> = { [Lang.En]: en, [Lang.Ar]: ar };
 
-/** Label key for a project's category (`tags` in info.json: 'web' or 'mobile') */
-export function kindKey(tag: string): StringKey {
-  return tag === 'mobile' ? 'kind.mobile' : 'kind.web';
+/** Label key for a project's category */
+export function kindKey(kind: ProjectKind): StringKey {
+  return kind === ProjectKind.Mobile ? 'kind.mobile' : 'kind.web';
 }
 
 /** Month names for experience dates */
 export const MONTHS: Record<Lang, string[]> = {
-  en: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-  ar: ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'],
+  [Lang.En]: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+  [Lang.Ar]: ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'],
 };

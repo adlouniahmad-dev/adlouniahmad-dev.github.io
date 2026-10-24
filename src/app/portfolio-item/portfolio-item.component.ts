@@ -6,6 +6,8 @@ import { GeneralService } from '../shared/services/general.service';
 import { SeoService } from '../shared/services/seo.service';
 import { LanguageService } from '../shared/i18n/language.service';
 import { kindKey } from '../shared/i18n/strings';
+import { ProjectStage } from '../shared/enums/project-stage';
+import { isInProgress } from '../shared/enums/project-status';
 import { SiteControlsComponent } from '../shared/components/site-controls/site-controls.component';
 import { LogoComponent } from '../shared/components/logo/logo.component';
 import { ProjectCoverComponent } from '../shared/components/project-cover/project-cover.component';
@@ -40,16 +42,23 @@ export class PortfolioItemComponent implements OnInit, OnDestroy {
   ) {}
 
   get homeLink(): string {
-    return this.language.pathIn(this.language.lang, '/');
+    return this.language.homePath;
   }
 
   link(...segments: string[]): string[] {
     return this.language.link(...segments);
   }
 
+  get inProgress(): boolean {
+    return isInProgress(this.product);
+  }
+
+  get early(): boolean {
+    return this.product?.stage === ProjectStage.Early;
+  }
+
   get screenshots(): string[] {
-    // in-progress work never shows images
-    if (this.product?.status === 'in-progress')
+    if (this.inProgress)
       return [];
     return this.product?.details.screenshots ?? [];
   }
@@ -95,26 +104,22 @@ export class PortfolioItemComponent implements OnInit, OnDestroy {
   }
 
   private load(id: string): void {
-    const items = this.generalService.getPortfolioItems();
-    const index = items.findIndex(item => item.id === id);
-    if (index < 0) {
+    const found = this.generalService.getPortfolioItem(id);
+    if (!found) {
       // Unknown project: show the 404 page without changing the URL
       this.router.navigate(this.language.link('404'), { skipLocationChange: true });
       return;
     }
 
     this.closeLightbox();
-    this.product = items[index];
-    this.previous = items[(index - 1 + items.length) % items.length];
-    this.next = items[(index + 1) % items.length];
+    ({ item: this.product, previous: this.previous, next: this.next } = found);
     // the param changes outside a template event (e.g. browser back/forward)
     this.cdr.markForCheck();
 
     this.seo.update({
       title: this.product.name + this.language.t('seo.titleSuffix'),
       description: this.product.details.description[0],
-      // GitHub Pages serves prerendered pages from folders, so the canonical URL has a trailing slash
-      path: this.language.pathIn(this.language.lang, `/projects/${this.product.id}`) + '/',
+      path: `/projects/${this.product.id}`,
     });
   }
 

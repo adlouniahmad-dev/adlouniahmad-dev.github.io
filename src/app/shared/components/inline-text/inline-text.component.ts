@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { InlineMarkdownPipe } from '../../pipes/inline-markdown.pipe';
+import { SegmentType } from '../../enums/segment-type';
 
 /** Renders a string with `**highlight**` and `[text](url)` markup as plain elements. */
 @Component({
@@ -8,8 +9,8 @@ import { InlineMarkdownPipe } from '../../pipes/inline-markdown.pipe';
       <!-- no whitespace inside the cases, or it ends up in the sentence -->
       @for (segment of text | inlineMarkdown; track $index) {
         @switch (segment.type) {
-          @case ('strong') {<strong class="highlight">{{ segment.text }}</strong>}
-          @case ('link') {<a [href]="segment.href" target="_blank" rel="noopener" (click)="$event.stopPropagation()">{{ segment.text }}</a>}
+          @case (SegmentType.Strong) {<strong class="highlight">{{ segment.text }}</strong>}
+          @case (SegmentType.Link) {<a [href]="segment.href" target="_blank" rel="noopener" (click)="$event.stopPropagation()">{{ segment.text }}</a>}
           @default {<ng-container>{{ segment.text }}</ng-container>}
         }
       }
@@ -39,5 +40,7 @@ import { InlineMarkdownPipe } from '../../pipes/inline-markdown.pipe';
 export class InlineTextComponent {
 
   @Input() text: string;
+
+  readonly SegmentType = SegmentType;
 
 }

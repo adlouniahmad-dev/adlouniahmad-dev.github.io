@@ -1,10 +1,10 @@
 <a class="card" [routerLink]="link">
   <div class="plate">
-    @if (item.status === 'in-progress') {
+    @if (inProgress) {
       <span class="status"><span class="pulse" aria-hidden="true"></span>{{ 'inProgress' | t }}</span>
     }
     <!-- in-progress work never shows images -->
-    @if (item.featuredImage && item.status !== 'in-progress') {
+    @if (item.featuredImage && !inProgress) {
       <img [src]="item.featuredImage" [alt]="'logoAlt' | t: { name: item.name }" width="1920" height="1080" loading="lazy">
     } @else {
       <adl-project-cover [name]="item.name" [letters]="item.initials"></adl-project-cover>
