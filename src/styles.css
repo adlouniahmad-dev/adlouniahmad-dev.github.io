@@ -146,6 +146,11 @@ a:focus-visible {
 }
 
 .gradient-text {
+	/* The background only covers the first font's (Inter's) line box; the padding extends it so Arabic
+	   glyphs that reach lower, like the dots under a final ي, aren't left transparent */
+	padding-block: .3em;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
 	background: var(--gradient);
 	-webkit-background-clip: text;
 	background-clip: text;
