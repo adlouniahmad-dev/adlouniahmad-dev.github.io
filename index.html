@@ -1,53 +1,1186 @@
-<!doctype html>
-<html lang="en" data-beasties-container>
-
-<head>
+<!DOCTYPE html><html lang="en" dir="ltr"><head>
   <meta charset="utf-8">
-  <title>Ahmad Adlouni - Software Engineer</title>
+  <title>Ahmad Adlouni - Senior Software Engineer</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="/assets/icons/icon-72x72.png">
-  <link rel="apple-touch-icon" href="/assets/icons/icon-96x96.png">
-  <link rel="apple-touch-icon" href="/assets/icons/icon-128x128.png">
-  <link rel="apple-touch-icon" href="/assets/icons/icon-144x144.png">
-  <link rel="apple-touch-icon" href="/assets/icons/icon-152x152.png">
-  <link rel="apple-touch-icon" href="/assets/icons/icon-180x180.png">
-  <link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
-  <link rel="apple-touch-icon" href="/assets/icons/icon-384x384.png">
-  <link rel="apple-touch-icon" href="/assets/icons/icon-512x512.png">
+  <style type="text/css" id="fa-auto-css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 'Font Awesome 7 Free';
+  --fa-font-regular: normal 400 1em/1 'Font Awesome 7 Free';
+  --fa-font-light: normal 300 1em/1 'Font Awesome 7 Pro';
+  --fa-font-thin: normal 100 1em/1 'Font Awesome 7 Pro';
+  --fa-font-duotone: normal 900 1em/1 'Font Awesome 7 Duotone';
+  --fa-font-duotone-regular: normal 400 1em/1 'Font Awesome 7 Duotone';
+  --fa-font-duotone-light: normal 300 1em/1 'Font Awesome 7 Duotone';
+  --fa-font-duotone-thin: normal 100 1em/1 'Font Awesome 7 Duotone';
+  --fa-font-brands: normal 400 1em/1 'Font Awesome 7 Brands';
+  --fa-font-sharp-solid: normal 900 1em/1 'Font Awesome 7 Sharp';
+  --fa-font-sharp-regular: normal 400 1em/1 'Font Awesome 7 Sharp';
+  --fa-font-sharp-light: normal 300 1em/1 'Font Awesome 7 Sharp';
+  --fa-font-sharp-thin: normal 100 1em/1 'Font Awesome 7 Sharp';
+  --fa-font-sharp-duotone-solid: normal 900 1em/1 'Font Awesome 7 Sharp Duotone';
+  --fa-font-sharp-duotone-regular: normal 400 1em/1 'Font Awesome 7 Sharp Duotone';
+  --fa-font-sharp-duotone-light: normal 300 1em/1 'Font Awesome 7 Sharp Duotone';
+  --fa-font-sharp-duotone-thin: normal 100 1em/1 'Font Awesome 7 Sharp Duotone';
+  --fa-font-slab-regular: normal 400 1em/1 'Font Awesome 7 Slab';
+  --fa-font-slab-press-regular: normal 400 1em/1 'Font Awesome 7 Slab Press';
+  --fa-font-slab-duo-regular: normal 400 1em/1 'Font Awesome 7 Slab Duo';
+  --fa-font-slab-press-duo-regular: normal 400 1em/1 'Font Awesome 7 Slab Press Duo';
+  --fa-font-pixel-regular: normal 400 1em/1 'Font Awesome 7 Pixel';
+  --fa-font-mosaic-solid: normal 900 1em/1 'Font Awesome 7 Mosaic';
+  --fa-font-vellum-solid: normal 900 1em/1 'Font Awesome 7 Vellum';
+  --fa-font-whiteboard-semibold: normal 600 1em/1 'Font Awesome 7 Whiteboard';
+  --fa-font-thumbprint-light: normal 300 1em/1 'Font Awesome 7 Thumbprint';
+  --fa-font-notdog-solid: normal 900 1em/1 'Font Awesome 7 Notdog';
+  --fa-font-notdog-duo-solid: normal 900 1em/1 'Font Awesome 7 Notdog Duo';
+  --fa-font-etch-solid: normal 900 1em/1 'Font Awesome 7 Etch';
+  --fa-font-graphite-thin: normal 100 1em/1 'Font Awesome 7 Graphite';
+  --fa-font-jelly-regular: normal 400 1em/1 'Font Awesome 7 Jelly';
+  --fa-font-jelly-fill-regular: normal 400 1em/1 'Font Awesome 7 Jelly Fill';
+  --fa-font-jelly-duo-regular: normal 400 1em/1 'Font Awesome 7 Jelly Duo';
+  --fa-font-chisel-regular: normal 400 1em/1 'Font Awesome 7 Chisel';
+  --fa-font-utility-semibold: normal 600 1em/1 'Font Awesome 7 Utility';
+  --fa-font-utility-duo-semibold: normal 600 1em/1 'Font Awesome 7 Utility Duo';
+  --fa-font-utility-fill-semibold: normal 600 1em/1 'Font Awesome 7 Utility Fill';
+}
+
+.svg-inline--fa {
+  box-sizing: content-box;
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+  width: var(--fa-width, 1.25em);
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285714em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left,
+.svg-inline--fa .fa-pull-start {
+  float: inline-start;
+  margin-inline-end: var(--fa-pull-margin, 0.3em);
+}
+.svg-inline--fa.fa-pull-right,
+.svg-inline--fa .fa-pull-end {
+  float: inline-end;
+  margin-inline-start: var(--fa-pull-margin, 0.3em);
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));
+  inset-block-start: 0.25em; /* syncing vertical alignment with Web Font rendering */
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: var(--fa-width, 1.25em);
+}
+.fa-layers .svg-inline--fa {
+  inset: 0;
+  margin: auto;
+  position: absolute;
+  transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-counter-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: calc(10 / 16 * 1em); /* converts a 10px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 10 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 10 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-xs {
+  font-size: calc(12 / 16 * 1em); /* converts a 12px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 12 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 12 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-sm {
+  font-size: calc(14 / 16 * 1em); /* converts a 14px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 14 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 14 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-lg {
+  font-size: calc(20 / 16 * 1em); /* converts a 20px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 20 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 20 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-xl {
+  font-size: calc(24 / 16 * 1em); /* converts a 24px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 24 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 24 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-2xl {
+  font-size: calc(32 / 16 * 1em); /* converts a 32px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 32 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 32 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-width-auto {
+  --fa-width: auto;
+}
+
+.fa-fw,
+.fa-width-fixed {
+  --fa-width: 1.25em;
+}
+
+.fa-canvas-square {
+  padding-block: 0.125em;
+  margin-block-end: -0.125em;
+}
+
+.fa-canvas-roomy {
+  padding-block: 0.25em;
+  padding-inline: 0.125em;
+  margin-block-end: -0.25em;
+  box-sizing: content-box;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-inline-start: var(--fa-li-margin, 2.5em);
+  padding-inline-start: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+/* Heads Up: Bordered Icons will not be supported in the future!
+  - This feature will be deprecated in the next major release of Font Awesome (v8)!
+  - You may continue to use it in this version *v7), but it will not be supported in Font Awesome v8.
+*/
+/* Notes:
+* --@{v.$css-prefix}-border-width = 1/16 by default (to render as ~1px based on a 16px default font-size)
+* --@{v.$css-prefix}-border-padding =
+  ** 3/16 for vertical padding (to give ~2px of vertical whitespace around an icon considering it's vertical alignment)
+  ** 4/16 for horizontal padding (to give ~4px of horizontal whitespace around an icon)
+*/
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.0625em);
+  box-sizing: var(--fa-border-box-sizing, content-box);
+  padding: var(--fa-border-padding, 0.1875em 0.25em);
+}
+
+.fa-pull-left,
+.fa-pull-start {
+  float: inline-start;
+  margin-inline-end: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right,
+.fa-pull-end {
+  float: inline-end;
+  margin-inline-start: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  animation-name: fa-beat;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  animation-name: fa-bounce;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  animation-name: fa-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-beat-fade {
+  animation-name: fa-beat-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-flip {
+  animation-name: fa-flip;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1.5s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-flip-360 {
+  animation-name: fa-flip-360;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  animation-name: fa-shake;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 0.75s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-spin {
+  animation-name: fa-spin;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 2s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  animation-name: fa-spin;
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+.fa-spin-snap {
+  animation-name: fa-spin-snap;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 3s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-snap-4 {
+  animation-name: fa-spin-snap-4;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 2.4s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-snap-8 {
+  animation-name: fa-spin-snap-8;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 4s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-buzz {
+  animation-name: fa-buzz;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 0.6s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-wag {
+  animation-name: fa-wag;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 0.9s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-out);
+  transform-origin: bottom center;
+}
+
+.fa-float {
+  animation-name: fa-float;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 3s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+  will-change: transform;
+}
+
+.fa-swing {
+  animation-name: fa-swing;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1.2s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-out);
+  transform-origin: top center;
+}
+
+.fa-jello {
+  animation-name: fa-jello;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 0.9s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+  .fa-bounce,
+  .fa-fade,
+  .fa-beat-fade,
+  .fa-flip,
+  .fa-flip-360,
+  .fa-pulse,
+  .fa-shake,
+  .fa-spin,
+  .fa-spin-pulse,
+  .fa-buzz,
+  .fa-float,
+  .fa-jello,
+  .fa-spin-snap,
+  .fa-spin-snap-4,
+  .fa-spin-snap-8,
+  .fa-swing,
+  .fa-wag {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+@keyframes fa-beat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(calc(1.25 * var(--fa-beat-scale, 1.25)));
+  }
+  45% {
+    transform: scale(calc(1.22 * var(--fa-beat-scale, 1.22)));
+  }
+  65% {
+    transform: scale(calc(1.25 * var(--fa-beat-scale, 1.25)));
+  }
+  90% {
+    transform: scale(1);
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+    animation-timing-function: var(--fa-animation-timing);
+  }
+  14% {
+    transform: scale(var(--fa-bounce-start-scale-x, 1.06), var(--fa-bounce-start-scale-y, 0.94)) translateY(var(--fa-bounce-anticipation, 3px));
+    animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33);
+  }
+  32% {
+    transform: scale(var(--fa-bounce-jump-scale-x, 0.94), var(--fa-bounce-jump-scale-y, 1.12)) translateY(calc(-1 * var(--fa-bounce-height, 0.5em)));
+    animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+  }
+  52% {
+    transform: scale(1, 1) translateY(calc(-1 * var(--fa-bounce-height, 0.5em) * 1.1));
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
+  70% {
+    transform: scale(var(--fa-bounce-land-scale-x, 1.06), var(--fa-bounce-land-scale-y, 0.92)) translateY(0);
+    animation-timing-function: cubic-bezier(0.33, 0.33, 0.66, 1);
+  }
+  85% {
+    transform: scale(0.98, 1.04) translateY(calc(-2px * var(--fa-bounce-rebound, 1)));
+    animation-timing-function: cubic-bezier(0.33, 0, 0.66, 1);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-fade {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    animation-timing-function: cubic-bezier(0.2, 0, 0.4, 1);
+  }
+  40% {
+    opacity: var(--fa-fade-opacity, 0.4);
+    transform: scale(0.98);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes fa-beat-fade {
+  0% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    transform: scale(1);
+    animation-timing-function: cubic-bezier(0.2, 0, 0.4, 1);
+  }
+  25% {
+    opacity: calc(var(--fa-beat-fade-opacity, 0.4) + 0.4);
+    transform: scale(var(--fa-beat-fade-scale, 1.28));
+    animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+  }
+  45% {
+    opacity: 1;
+    transform: scale(var(--fa-beat-fade-scale, 1.25));
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  65% {
+    opacity: calc(var(--fa-beat-fade-opacity, 0.4) + 0.4);
+    transform: scale(var(--fa-beat-fade-scale, 1.28));
+    animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+  }
+  100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    transform: scale(1);
+  }
+}
+@keyframes fa-flip {
+  0% {
+    transform: perspective(2em) scale(1) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), 0deg);
+    animation-timing-function: cubic-bezier(0.2, 0, 0.4, 1);
+  }
+  8% {
+    transform: perspective(2em) scale(var(--fa-flip-anticipation-scale, 0.95)) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), 0deg);
+    animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33);
+  }
+  35% {
+    transform: perspective(2em) scale(1) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), calc(var(--fa-flip-angle, -360deg) * 0.6));
+    animation-timing-function: linear;
+  }
+  65% {
+    transform: perspective(2em) scale(1) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), calc(var(--fa-flip-angle, -360deg) * 0.5));
+    animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+  }
+  92% {
+    transform: perspective(2em) scale(1) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), calc(var(--fa-flip-angle, -360deg) * var(--fa-flip-overshoot, 1.04)));
+    animation-timing-function: cubic-bezier(0.33, 0, 0.66, 1);
+  }
+  100% {
+    transform: perspective(2em) scale(1) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -360deg));
+  }
+}
+@keyframes fa-flip-360 {
+  0% {
+    transform: perspective(2em) scale(1) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), 0deg);
+    animation-timing-function: cubic-bezier(0.2, 0, 0.4, 1);
+  }
+  8% {
+    transform: perspective(2em) scale(var(--fa-flip-anticipation-scale, 0.95)) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), 0deg);
+    animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33);
+  }
+  50% {
+    transform: perspective(2em) scale(1) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), calc(var(--fa-flip-angle, -360deg) * 0.6));
+    animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+  }
+  80% {
+    transform: perspective(2em) scale(1) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), calc(var(--fa-flip-angle, -360deg) * var(--fa-flip-overshoot, 1.04)));
+    animation-timing-function: cubic-bezier(0.33, 0, 0.66, 1);
+  }
+  100% {
+    transform: perspective(2em) scale(1) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -360deg));
+  }
+}
+@keyframes fa-shake {
+  0% {
+    transform: rotate(0deg);
+    animation-timing-function: cubic-bezier(0.2, 0, 0.8, 1);
+  }
+  8% {
+    transform: rotate(35deg) translateX(1px);
+    animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1);
+  }
+  20% {
+    transform: rotate(-22deg) translateX(-1px);
+    animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1);
+  }
+  35% {
+    transform: rotate(15deg) translateX(1px);
+    animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1);
+  }
+  50% {
+    transform: rotate(-9deg);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+  }
+  65% {
+    transform: rotate(5deg);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+  }
+  78% {
+    transform: rotate(-3deg);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+  }
+  90% {
+    transform: rotate(1deg);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fa-spin-snap {
+  0% {
+    transform: rotate(0deg);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  12% {
+    transform: rotate(60deg);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  16.67% {
+    transform: rotate(60deg);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  28.67% {
+    transform: rotate(120deg);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  33.33% {
+    transform: rotate(120deg);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  45.33% {
+    transform: rotate(180deg);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: rotate(180deg);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  62% {
+    transform: rotate(240deg);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  66.67% {
+    transform: rotate(240deg);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  78.67% {
+    transform: rotate(300deg);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  83.33% {
+    transform: rotate(300deg);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  95.33% {
+    transform: rotate(360deg);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fa-spin-snap-4 {
+  0% {
+    transform: rotate(0deg);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  15% {
+    transform: rotate(90deg);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  25% {
+    transform: rotate(90deg);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  40% {
+    transform: rotate(180deg);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: rotate(180deg);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  65% {
+    transform: rotate(270deg);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  75% {
+    transform: rotate(270deg);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  90% {
+    transform: rotate(360deg);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fa-spin-snap-8 {
+  0% {
+    transform: rotate(0deg);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  9% {
+    transform: rotate(45deg);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  12.5% {
+    transform: rotate(45deg);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  21.5% {
+    transform: rotate(90deg);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  25% {
+    transform: rotate(90deg);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  34% {
+    transform: rotate(135deg);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  37.5% {
+    transform: rotate(135deg);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  46.5% {
+    transform: rotate(180deg);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: rotate(180deg);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  59% {
+    transform: rotate(225deg);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  62.5% {
+    transform: rotate(225deg);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  71.5% {
+    transform: rotate(270deg);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  75% {
+    transform: rotate(270deg);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  84% {
+    transform: rotate(315deg);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  87.5% {
+    transform: rotate(315deg);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  96.5% {
+    transform: rotate(360deg);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fa-buzz {
+  0% {
+    transform: translateX(0) rotate(0deg);
+    animation-timing-function: cubic-bezier(0.1, 0, 0.9, 1);
+  }
+  5% {
+    transform: translateX(var(--fa-buzz-distance, 4px)) rotate(0.5deg);
+  }
+  10% {
+    transform: translateX(calc(-1 * var(--fa-buzz-distance, 4px))) rotate(-0.5deg);
+  }
+  15% {
+    transform: translateX(var(--fa-buzz-distance, 4px)) rotate(0.3deg);
+  }
+  20% {
+    transform: translateX(calc(-1 * var(--fa-buzz-distance, 4px))) rotate(-0.3deg);
+  }
+  25% {
+    transform: translateX(calc(var(--fa-buzz-distance, 4px) * 0.7)) rotate(0.2deg);
+  }
+  30% {
+    transform: translateX(calc(-1 * var(--fa-buzz-distance, 4px) * 0.7)) rotate(-0.2deg);
+  }
+  35% {
+    transform: translateX(calc(var(--fa-buzz-distance, 4px) * 0.4)) rotate(0.1deg);
+  }
+  40% {
+    transform: translateX(0) rotate(0deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+}
+@keyframes fa-wag {
+  0% {
+    transform: rotate(0deg);
+    animation-timing-function: cubic-bezier(0.2, 0, 0.6, 1);
+  }
+  12% {
+    transform: rotate(var(--fa-wag-angle, 12deg));
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  24% {
+    transform: rotate(2deg);
+    animation-timing-function: cubic-bezier(0.2, 0, 0.6, 1);
+  }
+  36% {
+    transform: rotate(calc(var(--fa-wag-angle, 12deg) * 0.85));
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  48% {
+    transform: rotate(1deg);
+    animation-timing-function: cubic-bezier(0.2, 0, 0.6, 1);
+  }
+  58% {
+    transform: rotate(calc(var(--fa-wag-angle, 12deg) * 0.6));
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  68% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fa-float {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(var(--fa-float-squash-x, 1.02), var(--fa-float-squash-y, 0.98));
+    animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33);
+  }
+  15% {
+    transform: translateY(calc(-0.4 * var(--fa-float-height, 6px))) translateX(var(--fa-float-drift, 1px)) rotate(var(--fa-float-tilt, 1deg)) scale(1, 1);
+    animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+  }
+  35% {
+    transform: translateY(calc(-1 * var(--fa-float-height, 6px))) translateX(0) rotate(0deg) scale(var(--fa-float-stretch-x, 0.98), var(--fa-float-stretch-y, 1.03));
+    animation-timing-function: cubic-bezier(0.5, 0, 0.5, 0);
+  }
+  50% {
+    transform: translateY(calc(-0.92 * var(--fa-float-height, 6px))) translateX(calc(-0.5 * var(--fa-float-drift, 1px))) rotate(calc(-0.5 * var(--fa-float-tilt, 1deg))) scale(0.995, 1.01);
+    animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33);
+  }
+  70% {
+    transform: translateY(calc(-0.3 * var(--fa-float-height, 6px))) translateX(calc(-1 * var(--fa-float-drift, 1px))) rotate(calc(-1 * var(--fa-float-tilt, 1deg))) scale(1, 1);
+    animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+  }
+  90% {
+    transform: translateY(calc(0.05 * var(--fa-float-height, 6px))) translateX(0) rotate(0deg) scale(var(--fa-float-squash-x, 1.02), var(--fa-float-squash-y, 0.98));
+    animation-timing-function: cubic-bezier(0.33, 0, 0.66, 1);
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(var(--fa-float-squash-x, 1.02), var(--fa-float-squash-y, 0.98));
+  }
+}
+@keyframes fa-swing {
+  0% {
+    transform: rotate(0deg);
+    animation-timing-function: cubic-bezier(0.2, 0, 0.8, 1);
+  }
+  8% {
+    transform: rotate(var(--fa-swing-angle, 22deg));
+    animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1);
+  }
+  18% {
+    transform: rotate(calc(-1 * var(--fa-swing-angle, 22deg) * 0.85));
+    animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1);
+  }
+  28% {
+    transform: rotate(calc(var(--fa-swing-angle, 22deg) * 0.65));
+    animation-timing-function: cubic-bezier(0.35, 0, 0.65, 1);
+  }
+  38% {
+    transform: rotate(calc(-1 * var(--fa-swing-angle, 22deg) * 0.45));
+    animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+  }
+  48% {
+    transform: rotate(calc(var(--fa-swing-angle, 22deg) * 0.25));
+    animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+  }
+  56% {
+    transform: rotate(calc(-1 * var(--fa-swing-angle, 22deg) * 0.1));
+    animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+  }
+  64% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fa-jello {
+  0% {
+    transform: scale(1, 1);
+    animation-timing-function: cubic-bezier(0.2, 0, 0.8, 1);
+  }
+  12% {
+    transform: scale(var(--fa-jello-scale-x, 1.15), calc(2 - var(--fa-jello-scale-x, 1.15)));
+    animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1);
+  }
+  24% {
+    transform: scale(calc(2 - var(--fa-jello-scale-y, 1.12)), var(--fa-jello-scale-y, 1.12));
+    animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1);
+  }
+  36% {
+    transform: scale(calc(1 + (var(--fa-jello-scale-x, 1.15) - 1) * 0.5), calc(2 - (1 + (var(--fa-jello-scale-x, 1.15) - 1) * 0.5)));
+    animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+  }
+  48% {
+    transform: scale(calc(2 - (1 + (var(--fa-jello-scale-y, 1.12) - 1) * 0.3)), calc(1 + (var(--fa-jello-scale-y, 1.12) - 1) * 0.3));
+    animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+  }
+  58% {
+    transform: scale(1.02, 0.98);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  68% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+.fa-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  transform: rotate(var(--fa-rotate-angle, 0));
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}
+
+.svg-inline--fa.fa-inverse {
+  fill: var(--fa-inverse, #fff);
+}
+
+.fa-stack {
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  position: relative;
+  vertical-align: middle;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  --fa-width: 1.25em;
+  height: 1em;
+  width: var(--fa-width);
+}
+.svg-inline--fa.fa-stack-2x {
+  --fa-width: 2.5em;
+  height: 2em;
+  width: var(--fa-width);
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  inset: 0;
+  margin: auto;
+  position: absolute;
+  z-index: var(--fa-stack-z-index, auto);
+}</style><link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <!-- Web fonts load after the page, so they never hold up the first paint (see src/fonts.css) -->
+  <script>
+    addEventListener('load', function () {
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'fonts.css';
+      document.head.appendChild(link);
+    });
+  </script>
+  <noscript>&lt;link rel="stylesheet" href="fonts.css"&gt;</noscript>
 
   <meta name="google-site-verification" content="3mvB4O2lUauJu67WvVdlNUVHiuctebYoEpUMcJQKQN4">
   
-  <meta name="theme-color" content="#2d3250">
-  <meta name="apple-mobile-web-app-status-bar" content="#2d3250">
-  <meta name="description" content="Seasoned Software Engineer at Siren Analytics and freelance Full Stack Web Developer, specializing in UI/UX with expertise in Java, Spring Boot, Angular, Twilio, NodeJS, and GWT. Passionate about innovation and continuous learning.">
-  <meta name="keywords" content="Software Engineer, Full Stack Web Developer, UI/UX Specialist, Java, Spring Boot, Angular, Twilio, NodeJS, GWT, Innovation, Continuous Learning, Freelance, Siren Analytics">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0a0e1a">
+  <!-- Theme before first paint, so there is no flash: the saved choice, otherwise dark -->
+  <script>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('adl.theme'); } catch (e) {}
+      var theme = saved === 'light' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', theme === 'light' ? '#f8fafc' : '#0a0e1a');
+    })();
+  </script>
+  <meta name="apple-mobile-web-app-status-bar" content="#0a0e1a">
+  <meta name="description" content="Senior Software Engineer at Siren Analytics with 7+ years of experience building responsive, accessible and scalable web applications for government, enterprise and digital-service platforms. Specialised in Angular, TypeScript and frontend architecture.">
+  <meta name="keywords" content="Senior Software Engineer, Frontend Engineer, Angular, TypeScript, RxJS, NgRx, Frontend Architecture, Progressive Web Apps, Form Builder, RTL, Arabic/English, Java, Spring Boot, Node.js, Siren Analytics, Lebanon">
   <meta name="author" content="Ahmad Adlouni">
 
-  <meta property="og:title" content="Ahmad Adlouni - Software Engineer">
+  <meta property="og:title" content="Ahmad Adlouni - Senior Software Engineer">
   <meta property="og:url" content="https://adlouniahmad-dev.github.io/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/assets/icons/icon-512x512.png">
-  <meta property="og:description" content="Seasoned Software Engineer at Siren Analytics and freelance Full Stack Web Developer, specializing in UI/UX with expertise in Java, Spring Boot, Angular, Twilio, NodeJS, and GWT. Passionate about innovation and continuous learning.">
-  <meta property="og:site_name" content="Ahmad Adlouni - Software Engineer">
+  <meta property="og:image" content="https://adlouniahmad-dev.github.io/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ahmad Adlouni, Senior Software Engineer: Frontend and Angular">
+  <meta property="og:description" content="Senior Software Engineer at Siren Analytics with 7+ years of experience building responsive, accessible and scalable web applications for government, enterprise and digital-service platforms. Specialised in Angular, TypeScript and frontend architecture.">
+  <meta property="og:site_name" content="Ahmad Adlouni - Senior Software Engineer">
   <meta property="og:locale" content="en_US">
-<style>:root{--blue:#007bff;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#dc3545;--orange:#fd7e14;--yellow:#ffc107;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#007bff;--secondary:#6c757d;--success:#28a745;--info:#17a2b8;--warning:#ffc107;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}*,:after,:before{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}@media print{*,:after,:before{text-shadow:none!important;box-shadow:none!important}@page{size:a3}body{min-width:992px!important}}:root{--color-blue-dark-shade:#2d3250;--color-blue-indigo:#424769;--color-blue-light-indigo:#7077a1;--color-light-orange:#f6b17a;--color-primary:#fff;--color-secondary:#94a3b8}html,body{height:100%;scroll-behavior:smooth}body{font-family:Nunito,Tajawal,sans-serif;color:var(--color-secondary);background-color:var(--color-blue-dark-shade)}</style><link rel="stylesheet" href="styles.e1f1821487eed825.css" media="print" data-beasties-media="all"><noscript><link rel="stylesheet" href="styles.e1f1821487eed825.css"></noscript></head>
 
-<body data-spy="scroll" data-target="#menu" data-offset="100">
-  <adl-root></adl-root>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ahmad Adlouni - Senior Software Engineer">
+  <meta name="twitter:description" content="Senior Software Engineer at Siren Analytics with 7+ years of experience building responsive, accessible and scalable web applications for government, enterprise and digital-service platforms. Specialised in Angular, TypeScript and frontend architecture.">
+  <meta name="twitter:image" content="https://adlouniahmad-dev.github.io/assets/og-image.png">
+  <meta name="twitter:image:alt" content="Ahmad Adlouni, Senior Software Engineer: Frontend and Angular">
+
+  <link rel="canonical" href="https://adlouniahmad-dev.github.io/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ahmad Adlouni",
+    "url": "https://adlouniahmad-dev.github.io/",
+    "jobTitle": "Senior Software Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Siren Analytics",
+      "url": "https://sirenanalytics.com"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Saida",
+      "addressCountry": "LB"
+    },
+    "knowsAbout": ["Angular", "TypeScript", "RxJS", "NgRx", "Angular Material", "Angular Formly", "Progressive Web Apps", "Frontend Architecture", "Web Accessibility", "UI/UX Design", "Node.js", "Java", "Spring Boot", "Dialogflow CX"],
+    "knowsLanguage": ["ar", "en"],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Beirut Arab University"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/adlouni-ahmad/",
+      "https://github.com/adlouniahmad-dev",
+      "https://www.facebook.com/adlouni.ahmad/",
+      "https://www.instagram.com/ahmad_adlouni/"
+    ]
+  }
+  </script>
+<style>:root{--bs-blue:#0d6efd;--bs-indigo:#6610f2;--bs-purple:#6f42c1;--bs-pink:#d63384;--bs-red:#dc3545;--bs-orange:#fd7e14;--bs-yellow:#ffc107;--bs-green:#198754;--bs-teal:#20c997;--bs-cyan:#0dcaf0;--bs-black:#000;--bs-white:#fff;--bs-gray:#6c757d;--bs-gray-dark:#343a40;--bs-gray-100:#f8f9fa;--bs-gray-200:#e9ecef;--bs-gray-300:#dee2e6;--bs-gray-400:#ced4da;--bs-gray-500:#adb5bd;--bs-gray-600:#6c757d;--bs-gray-700:#495057;--bs-gray-800:#343a40;--bs-gray-900:#212529;--bs-primary:#0d6efd;--bs-secondary:#6c757d;--bs-success:#198754;--bs-info:#0dcaf0;--bs-warning:#ffc107;--bs-danger:#dc3545;--bs-light:#f8f9fa;--bs-dark:#212529;--bs-primary-rgb:13, 110, 253;--bs-secondary-rgb:108, 117, 125;--bs-success-rgb:25, 135, 84;--bs-info-rgb:13, 202, 240;--bs-warning-rgb:255, 193, 7;--bs-danger-rgb:220, 53, 69;--bs-light-rgb:248, 249, 250;--bs-dark-rgb:33, 37, 41;--bs-primary-text-emphasis:rgb(2.0392156863%, 17.2549019608%, 39.6862745098%);--bs-secondary-text-emphasis:rgb(16.9411764706%, 18.3529411765%, 19.6078431373%);--bs-success-text-emphasis:rgb(3.9215686275%, 21.1764705882%, 13.1764705882%);--bs-info-text-emphasis:rgb(2.0392156863%, 31.6862745098%, 37.6470588235%);--bs-warning-text-emphasis:rgb(40%, 30.2745098039%, 1.0980392157%);--bs-danger-text-emphasis:rgb(34.5098039216%, 8.3137254902%, 10.8235294118%);--bs-light-text-emphasis:#495057;--bs-dark-text-emphasis:#495057;--bs-primary-bg-subtle:rgb(81.0196078431%, 88.6274509804%, 99.8431372549%);--bs-secondary-bg-subtle:rgb(88.4705882353%, 89.1764705882%, 89.8039215686%);--bs-success-bg-subtle:rgb(81.9607843137%, 90.5882352941%, 86.5882352941%);--bs-info-bg-subtle:rgb(81.0196078431%, 95.8431372549%, 98.8235294118%);--bs-warning-bg-subtle:rgb(100%, 95.137254902%, 80.5490196078%);--bs-danger-bg-subtle:rgb(97.2549019608%, 84.1568627451%, 85.4117647059%);--bs-light-bg-subtle:rgb(98.6274509804%, 98.8235294118%, 99.0196078431%);--bs-dark-bg-subtle:#ced4da;--bs-primary-border-subtle:rgb(62.0392156863%, 77.2549019608%, 99.6862745098%);--bs-secondary-border-subtle:rgb(76.9411764706%, 78.3529411765%, 79.6078431373%);--bs-success-border-subtle:rgb(63.9215686275%, 81.1764705882%, 73.1764705882%);--bs-info-border-subtle:rgb(62.0392156863%, 91.6862745098%, 97.6470588235%);--bs-warning-border-subtle:rgb(100%, 90.2745098039%, 61.0980392157%);--bs-danger-border-subtle:rgb(94.5098039216%, 68.3137254902%, 70.8235294118%);--bs-light-border-subtle:#e9ecef;--bs-dark-border-subtle:#adb5bd;--bs-white-rgb:255, 255, 255;--bs-black-rgb:0, 0, 0;--bs-font-sans-serif:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";--bs-font-monospace:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;--bs-gradient:linear-gradient(180deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, 0));--bs-body-font-family:var(--bs-font-sans-serif);--bs-body-font-size:1rem;--bs-body-font-weight:400;--bs-body-line-height:1.5;--bs-body-color:#212529;--bs-body-color-rgb:33, 37, 41;--bs-body-bg:#fff;--bs-body-bg-rgb:255, 255, 255;--bs-emphasis-color:#000;--bs-emphasis-color-rgb:0, 0, 0;--bs-secondary-color:rgba(33, 37, 41, .75);--bs-secondary-color-rgb:33, 37, 41;--bs-secondary-bg:#e9ecef;--bs-secondary-bg-rgb:233, 236, 239;--bs-tertiary-color:rgba(33, 37, 41, .5);--bs-tertiary-color-rgb:33, 37, 41;--bs-tertiary-bg:#f8f9fa;--bs-tertiary-bg-rgb:248, 249, 250;--bs-heading-color:inherit;--bs-link-color:#0d6efd;--bs-link-color-rgb:13, 110, 253;--bs-link-decoration:underline;--bs-link-hover-color:rgb(4.0784313725%, 34.5098039216%, 79.3725490196%);--bs-link-hover-color-rgb:10, 88, 202;--bs-code-color:#d63384;--bs-highlight-color:#212529;--bs-highlight-bg:rgb(100%, 95.137254902%, 80.5490196078%);--bs-border-width:1px;--bs-border-style:solid;--bs-border-color:#dee2e6;--bs-border-color-translucent:rgba(0, 0, 0, .175);--bs-border-radius:.375rem;--bs-border-radius-sm:.25rem;--bs-border-radius-lg:.5rem;--bs-border-radius-xl:1rem;--bs-border-radius-xxl:2rem;--bs-border-radius-2xl:var(--bs-border-radius-xxl);--bs-border-radius-pill:50rem;--bs-box-shadow:0 .5rem 1rem rgba(0, 0, 0, .15);--bs-box-shadow-sm:0 .125rem .25rem rgba(0, 0, 0, .075);--bs-box-shadow-lg:0 1rem 3rem rgba(0, 0, 0, .175);--bs-box-shadow-inset:inset 0 1px 2px rgba(0, 0, 0, .075);--bs-focus-ring-width:.25rem;--bs-focus-ring-opacity:.25;--bs-focus-ring-color:rgba(13, 110, 253, .25);--bs-form-valid-color:#198754;--bs-form-valid-border-color:#198754;--bs-form-invalid-color:#dc3545;--bs-form-invalid-border-color:#dc3545}*,*:before,*:after{box-sizing:border-box}@media(prefers-reduced-motion:no-preference){:root{scroll-behavior:smooth}}body{margin:0;font-family:var(--bs-body-font-family);font-size:var(--bs-body-font-size);font-weight:var(--bs-body-font-weight);line-height:var(--bs-body-line-height);color:var(--bs-body-color);text-align:var(--bs-body-text-align);background-color:var(--bs-body-bg);-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}h3,h2,h1{margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2;color:var(--bs-heading-color)}h1{font-size:calc(1.375rem + 1.5vw)}@media(min-width:1200px){h1{font-size:2.5rem}}h2{font-size:calc(1.325rem + .9vw)}@media(min-width:1200px){h2{font-size:2rem}}h3{font-size:calc(1.3rem + .6vw)}@media(min-width:1200px){h3{font-size:1.75rem}}p{margin-top:0;margin-bottom:1rem}ol,ul{padding-left:2rem}ol,ul{margin-top:0;margin-bottom:1rem}strong{font-weight:bolder}a{color:rgba(var(--bs-link-color-rgb),var(--bs-link-opacity, 1));text-decoration:underline}a:hover{--bs-link-color-rgb:var(--bs-link-hover-color-rgb)}a:not([href]):not([class]),a:not([href]):not([class]):hover{color:inherit;text-decoration:none}svg{vertical-align:middle}label{display:inline-block}button{border-radius:0}button:focus:not(:focus-visible){outline:0}input,button,textarea{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button{text-transform:none}button,[type=button],[type=submit]{-webkit-appearance:button}button:not(:disabled),[type=button]:not(:disabled),[type=submit]:not(:disabled){cursor:pointer}textarea{resize:vertical}summary{display:list-item;cursor:pointer}.container-fluid{--bs-gutter-x:1.5rem;--bs-gutter-y:0;width:100%;padding-right:calc(var(--bs-gutter-x) * .5);padding-left:calc(var(--bs-gutter-x) * .5);margin-right:auto;margin-left:auto}:root{--bs-breakpoint-xs:0;--bs-breakpoint-sm:576px;--bs-breakpoint-md:768px;--bs-breakpoint-lg:992px;--bs-breakpoint-xl:1200px;--bs-breakpoint-xxl:1400px}.row{--bs-gutter-x:1.5rem;--bs-gutter-y:0;display:flex;flex-wrap:wrap;margin-top:calc(-1 * var(--bs-gutter-y));margin-right:calc(-.5 * var(--bs-gutter-x));margin-left:calc(-.5 * var(--bs-gutter-x))}.row>*{flex-shrink:0;width:100%;max-width:100%;padding-right:calc(var(--bs-gutter-x) * .5);padding-left:calc(var(--bs-gutter-x) * .5);margin-top:var(--bs-gutter-y)}.col-3{flex:0 0 auto;width:25%}@media(min-width:576px){.col-sm-12{flex:0 0 auto;width:100%}}@media(min-width:768px){.col-md-9{flex:0 0 auto;width:75%}}.d-block{display:block!important}.d-flex{display:flex!important}.d-none{display:none!important}.position-relative{position:relative!important}.flex-column{flex-direction:column!important}.flex-wrap{flex-wrap:wrap!important}.justify-content-between{justify-content:space-between!important}.align-items-center{align-items:center!important}.mt-3{margin-top:1rem!important}.mt-4{margin-top:1.5rem!important}.mb-2{margin-bottom:.5rem!important}.mb-4{margin-bottom:1.5rem!important}.mb-5{margin-bottom:3rem!important}.gap-2{gap:.5rem!important}.gap-3{gap:1rem!important}.text-uppercase{text-transform:uppercase!important}@media(min-width:768px){.d-md-block{display:block!important}.d-md-none{display:none!important}}@media(min-width:992px){.flex-lg-row{flex-direction:row!important}}:root{color-scheme:dark;--bg:#0a0e1a;--bg-raised:rgba(148, 163, 184, .04);--bg-hover:rgba(148, 163, 184, .06);--bg-input:rgba(10, 14, 26, .6);--glass:rgba(10, 14, 26, .78);--border:rgba(148, 163, 184, .1);--border-strong:rgba(148, 163, 184, .2);--text:#e2e8f0;--text-muted:#94a3b8;--text-faint:#7c8aa1;--accent:#f6b17a;--accent-2:#f472b6;--accent-3:#a78bfa;--accent-text:var(--accent);--gradient:linear-gradient(100deg, var(--accent) 0%, var(--accent-2) 55%, var(--accent-3) 100%);--glow-1:rgba(167, 139, 250, .12);--glow-2:rgba(246, 177, 122, .08);--grid-line:rgba(148, 163, 184, .045);--shadow:rgba(0, 0, 0, .6);--success:#34d399;--success-border:rgba(52, 211, 153, .35);--success-bg:rgba(52, 211, 153, .07);--danger:#f87171;--danger-text:#fca5a5;--danger-strong-text:#fecaca;--danger-border:rgba(248, 113, 113, .4);--danger-bg:rgba(248, 113, 113, .08);--font-sans:"Inter Variable", "IBM Plex Sans Arabic", system-ui, -apple-system, "Segoe UI", sans-serif;--font-mono:"JetBrains Mono Variable", "IBM Plex Sans Arabic", ui-monospace, SFMono-Regular, Menlo, monospace;--dir:1}html,body{min-height:100%;scroll-behavior:smooth}body{font-family:var(--font-sans);font-feature-settings:"cv11","ss01";-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;line-height:1.7;color:var(--text-muted);background-color:var(--bg);background-image:radial-gradient(60rem 40rem at 0% 0%,var(--glow-1),transparent 60%),radial-gradient(50rem 35rem at 100% 100%,var(--glow-2),transparent 60%);background-attachment:fixed}body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(ellipse at top,#000 20%,transparent 75%);mask-image:radial-gradient(ellipse at top,#000 20%,transparent 75%)}html{scrollbar-color:var(--border-strong) transparent}a{color:var(--text);font-weight:500;text-decoration:none;transition:color .2s ease}a:hover,a:focus-visible{color:var(--accent-text);text-decoration:none}.gradient-text{padding-block:.3em;-webkit-box-decoration-break:clone;box-decoration-break:clone;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}h1,h2,h3{font-weight:700}</style><link rel="stylesheet" href="styles-ZCIMCMLU.css" media="print" data-beasties-media="all"><noscript><link rel="stylesheet" href="styles-ZCIMCMLU.css"></noscript><style ng-app-id="ng">[_nghost-ng-c710586872]{display:block;max-width:1280px;margin:auto;padding:0 1.5rem}.spotlight[_ngcontent-ng-c710586872]{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:0;transition:opacity .4s ease;background:radial-gradient(600px circle at var(--spot-x, 50%) var(--spot-y, 50%),rgba(167,139,250,.09),transparent 40%)}.spotlight-on[_nghost-ng-c710586872]   .spotlight[_ngcontent-ng-c710586872]{opacity:1}.header[_ngcontent-ng-c710586872], .content[_ngcontent-ng-c710586872]{padding-top:3.5rem;width:100%}.content[_ngcontent-ng-c710586872]     .section{margin-bottom:5rem;scroll-margin-top:6rem}.eyebrow[_ngcontent-ng-c710586872]{display:inline-flex;align-items:center;gap:.6rem;padding:.35rem .85rem .35rem .7rem;font-family:var(--font-mono);font-size:.75rem;letter-spacing:.04em;color:var(--text-muted);border:1px solid var(--border);border-radius:999px;background:var(--bg-raised);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}.pulse[_ngcontent-ng-c710586872]{position:relative;width:.5rem;height:.5rem;border-radius:50%;background:var(--success)}.pulse[_ngcontent-ng-c710586872]:after{content:"";position:absolute;inset:0;border-radius:50%;background:inherit;animation:_ngcontent-ng-c710586872_pulse 2s ease-out infinite}.name[_ngcontent-ng-c710586872]{margin:1.25rem 0 .5rem;font-size:clamp(2.5rem,6vw,3.6rem);font-weight:800;line-height:1.05;letter-spacing:-.035em;color:var(--text)}.role[_ngcontent-ng-c710586872]{margin:0;font-size:clamp(1.05rem,2vw,1.25rem);font-weight:600;letter-spacing:-.01em}.caret[_ngcontent-ng-c710586872]{display:inline-block;width:2px;height:1.1em;margin-inline-start:.3rem;vertical-align:-.15em;background:var(--accent-3);animation:_ngcontent-ng-c710586872_blink 1s step-end infinite}.navigation-container[_ngcontent-ng-c710586872]{display:none}[_nghost-ng-c710586872]     .section-title{display:block;margin:0 0 1.25rem;padding:0 0 .75rem;font-family:var(--font-mono);font-size:.8rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--text);border-bottom:1px solid var(--border)}.mobile-bar[_ngcontent-ng-c710586872]{position:sticky;z-index:10;top:0;display:flex;align-items:center;justify-content:space-between;gap:1rem;margin:0 -1.5rem;padding-block:.45rem;padding-inline:1.5rem .75rem;background:var(--glass);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}.bar-logo[_ngcontent-ng-c710586872]{display:flex;font-size:.95rem}@media screen and (max-width:359px){.mobile-bar[_ngcontent-ng-c710586872]{justify-content:center;padding:.45rem .5rem}.bar-logo[_ngcontent-ng-c710586872]{display:none}}.enter[_ngcontent-ng-c710586872]{animation:_ngcontent-ng-c710586872_enter .8s cubic-bezier(.2,.8,.2,1) both}.enter-delay[_ngcontent-ng-c710586872]{animation-delay:.15s}.enter-left[_ngcontent-ng-c710586872]{animation:_ngcontent-ng-c710586872_enter-left .8s .1s cubic-bezier(.2,.8,.2,1) both}@keyframes _ngcontent-ng-c710586872_enter-left{0%{opacity:0;transform:translate(calc(24px * var(--dir)))}to{opacity:1;transform:none}}@keyframes _ngcontent-ng-c710586872_enter{0%{opacity:0;transform:translate(calc(-24px * var(--dir)))}to{opacity:1;transform:none}}@keyframes _ngcontent-ng-c710586872_pulse{0%{transform:scale(1);opacity:.7}to{transform:scale(3);opacity:0}}@keyframes _ngcontent-ng-c710586872_blink{50%{opacity:0}}@media screen and (min-width:769px){.header[_ngcontent-ng-c710586872], .content[_ngcontent-ng-c710586872]{padding-top:6rem}}@media screen and (min-width:992px){[_nghost-ng-c710586872]{padding:0 4.5rem}.mobile-bar[_ngcontent-ng-c710586872]{display:none}[_nghost-ng-c710586872]     .section-title{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}.header[_ngcontent-ng-c710586872]{position:sticky;top:0;max-height:100vh;overflow-y:auto;padding-bottom:6rem;width:48%}.content[_ngcontent-ng-c710586872]{padding-bottom:6rem;width:52%}.content[_ngcontent-ng-c710586872]     .section{margin-bottom:8rem}.navigation-container[_ngcontent-ng-c710586872]{display:block;margin-top:4rem}}</style><meta property="og:locale:alternate" content="ar_AR"><link rel="alternate" hreflang="en" href="https://adlouniahmad-dev.github.io/"><link rel="alternate" hreflang="ar" href="https://adlouniahmad-dev.github.io/ar/"><link rel="alternate" hreflang="x-default" href="https://adlouniahmad-dev.github.io/"><style ng-app-id="ng">[_nghost-ng-c2440283958]{direction:ltr;display:inline-flex;align-items:center;gap:.6em;color:var(--text)}.monogram[_ngcontent-ng-c2440283958]{display:block;width:1.9em;height:auto;flex:none}.wordmark[_ngcontent-ng-c2440283958]{font-weight:800;letter-spacing:-.045em;white-space:nowrap}.dot[_ngcontent-ng-c2440283958]{background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}</style><style ng-app-id="ng">[_nghost-ng-c601023480]{display:block}.header-menu[_ngcontent-ng-c601023480]{margin:0;padding:0;list-style:none}.header-menu-link[_ngcontent-ng-c601023480]{width:fit-content;padding:.55rem 0;font-family:var(--font-mono);font-weight:500;color:var(--text-faint)}.link-name[_ngcontent-ng-c601023480]{font-size:.75rem;letter-spacing:.14em}.nav-indicator[_ngcontent-ng-c601023480]{width:2rem;height:1px;margin-inline-end:1rem;background-color:var(--text-faint)}.header-menu-link[_ngcontent-ng-c601023480], .nav-indicator[_ngcontent-ng-c601023480]{transition:all .3s cubic-bezier(.2,.8,.2,1)}.header-menu-link[_ngcontent-ng-c601023480]:hover, .header-menu-link.active[_ngcontent-ng-c601023480]{color:var(--text)}.header-menu-link[_ngcontent-ng-c601023480]:hover   .nav-indicator[_ngcontent-ng-c601023480], .header-menu-link.active[_ngcontent-ng-c601023480]   .nav-indicator[_ngcontent-ng-c601023480]{width:4rem;background-color:var(--text)}.header-menu-link.active[_ngcontent-ng-c601023480]   .nav-indicator[_ngcontent-ng-c601023480]{height:2px;background:var(--gradient)}.bar[_nghost-ng-c601023480]   .header-menu[_ngcontent-ng-c601023480]{display:flex;gap:.15rem}.bar[_nghost-ng-c601023480]   .header-menu-link[_ngcontent-ng-c601023480]{position:relative;padding:.5rem .6rem}.bar[_nghost-ng-c601023480]   .nav-indicator[_ngcontent-ng-c601023480]{display:none}.bar[_nghost-ng-c601023480]   .link-name[_ngcontent-ng-c601023480]{font-size:.7rem;letter-spacing:.1em}.bar[_nghost-ng-c601023480]   .header-menu-link[_ngcontent-ng-c601023480]:after{content:"";position:absolute;left:.6rem;right:.6rem;bottom:.2rem;height:2px;border-radius:1px;background:var(--gradient);transform:scaleX(0);transition:transform .3s cubic-bezier(.2,.8,.2,1)}.bar[_nghost-ng-c601023480]   .header-menu-link.active[_ngcontent-ng-c601023480]:after{transform:scaleX(1)}.bar[_nghost-ng-c601023480]{min-width:0;overflow-x:auto;scrollbar-width:none}.bar[_nghost-ng-c601023480]::-webkit-scrollbar{display:none}@media screen and (max-width:400px){.bar[_nghost-ng-c601023480]   .header-menu-link[_ngcontent-ng-c601023480]{padding:.5rem .4rem}.bar[_nghost-ng-c601023480]   .header-menu-link[_ngcontent-ng-c601023480]:after{left:.4rem;right:.4rem}.bar[_nghost-ng-c601023480]   .link-name[_ngcontent-ng-c601023480]{font-size:.64rem;letter-spacing:.06em}}</style><style ng-app-id="ng">[_nghost-ng-c3330618378]{display:block;font-size:.875rem}.contact-info[_ngcontent-ng-c3330618378]{display:flex;flex-direction:column;gap:.4rem}.contact-line[_ngcontent-ng-c3330618378]{display:inline-flex;align-items:center;gap:.75rem;width:fit-content;font-weight:400;color:var(--text-muted)}.contact-line[_ngcontent-ng-c3330618378]   fa-icon[_ngcontent-ng-c3330618378]{color:var(--text-faint);transition:color .2s}a.contact-line[_ngcontent-ng-c3330618378]:hover, a.contact-line[_ngcontent-ng-c3330618378]:hover   fa-icon[_ngcontent-ng-c3330618378]{color:var(--accent-text)}.icon-item[_ngcontent-ng-c3330618378]{display:grid;place-items:center;width:2.6rem;height:2.6rem;font-size:1rem;color:var(--text-muted);border:1px solid var(--border);border-radius:50%;background:var(--bg-raised);transition:transform .25s ease,color .25s ease,border-color .25s ease,background-color .25s ease,box-shadow .25s ease}.icon-item[_ngcontent-ng-c3330618378]:hover{transform:translateY(-3px);color:var(--text);border-color:var(--border-strong);background-color:var(--bg-hover);box-shadow:0 10px 24px -12px #a78bfa99}.icon-item.facebook[_ngcontent-ng-c3330618378]:hover{color:#5b8def}.icon-item.instagram[_ngcontent-ng-c3330618378]:hover{color:#f472b6}.icon-item.linkedIn[_ngcontent-ng-c3330618378]:hover{color:#4f9ce8}.footer-row[_ngcontent-ng-c3330618378]{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1rem}.footer-row[_ngcontent-ng-c3330618378]   adl-site-controls[_ngcontent-ng-c3330618378]{padding-inline-start:1rem;border-inline-start:1px solid var(--border)}</style><style ng-app-id="ng">[_nghost-ng-c2730517686]{display:block}p[_ngcontent-ng-c2730517686]{margin-bottom:1.1rem;font-size:1.02rem}adl-inline-text[_ngcontent-ng-c2730517686]     .highlight{background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}.skills[_ngcontent-ng-c2730517686]{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.75rem 0;padding:0;list-style:none}.skill[_ngcontent-ng-c2730517686]{padding:.35rem .85rem;font-family:var(--font-mono);font-size:.75rem;color:var(--text);border:1px solid var(--border);border-radius:999px;background:var(--bg-raised);transition:border-color .2s ease,transform .2s ease}.skill[_ngcontent-ng-c2730517686]:hover{border-color:#a78bfa80;transform:translateY(-2px)}.sign-off[_ngcontent-ng-c2730517686]{margin:0;font-size:1.1rem;font-weight:500;color:var(--text)}</style><style ng-app-id="ng">[_nghost-ng-c2901899718]{display:block}.group-title[_ngcontent-ng-c2901899718]{display:flex;align-items:center;gap:1rem;margin:4rem 0 1.75rem;font-family:var(--font-mono);font-size:.72rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--text-faint)}.group-title[_ngcontent-ng-c2901899718]:after{content:"";flex:1;height:1px;background:var(--border)}@media(hover:hover){[_nghost-ng-c2901899718]:hover   adl-experience[_ngcontent-ng-c2901899718]     .opacity-half{opacity:.45}}</style><style ng-app-id="ng">[_nghost-ng-c125777909]{display:block}.quotes[_ngcontent-ng-c125777909]{display:grid;gap:1.25rem}.quote[_ngcontent-ng-c125777909]{position:relative;margin:0;padding:1.5rem 1.5rem 1.25rem;border:1px solid var(--border);border-radius:1.1rem;background:var(--bg-raised)}.mark[_ngcontent-ng-c125777909]{position:absolute;top:-.35rem;inset-inline-start:1.1rem;font-family:Georgia,serif;font-size:3.5rem;line-height:1;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}blockquote[_ngcontent-ng-c125777909]{margin:.5rem 0 1rem}blockquote[_ngcontent-ng-c125777909]   p[_ngcontent-ng-c125777909]{margin:0;font-size:.98rem;color:var(--text)}figcaption[_ngcontent-ng-c125777909]{display:flex;flex-direction:column;gap:.1rem}.name[_ngcontent-ng-c125777909]{font-weight:600;color:var(--text)}a.name[_ngcontent-ng-c125777909]:hover{color:var(--accent-text)}.title[_ngcontent-ng-c125777909]{font-size:.85rem;color:var(--text-muted)}.relationship[_ngcontent-ng-c125777909]{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.06em;color:var(--text-faint)}</style><style ng-app-id="ng">[_nghost-ng-c3554768778]{display:block}.featured[_ngcontent-ng-c3554768778]{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:1.25rem}.early[_ngcontent-ng-c3554768778]{margin-top:2.5rem;border-top:1px solid var(--border)}.early[_ngcontent-ng-c3554768778]   summary[_ngcontent-ng-c3554768778]{display:flex;align-items:baseline;gap:.75rem;padding:1.25rem 0;cursor:pointer;list-style:none}.early[_ngcontent-ng-c3554768778]   summary[_ngcontent-ng-c3554768778]::-webkit-details-marker{display:none}.early-title[_ngcontent-ng-c3554768778]{font-family:var(--font-mono);font-size:.75rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--text)}.early-range[_ngcontent-ng-c3554768778]{font-family:var(--font-mono);font-size:.72rem;color:var(--text-faint)}.early-toggle[_ngcontent-ng-c3554768778]{display:inline-flex;align-items:center;gap:.4rem;margin-inline-start:auto;font-size:.8rem;color:var(--text-muted);transition:color .2s ease}.early[_ngcontent-ng-c3554768778]   summary[_ngcontent-ng-c3554768778]:hover   .early-toggle[_ngcontent-ng-c3554768778]{color:var(--accent-text)}.chevron[_ngcontent-ng-c3554768778]{display:inline-block;line-height:1;transform:translateY(-.15em);transition:transform .25s ease}.early[open][_ngcontent-ng-c3554768778]   .chevron[_ngcontent-ng-c3554768778]{transform:translateY(.1em) rotate(180deg)}.when-open[_ngcontent-ng-c3554768778], .early[open][_ngcontent-ng-c3554768778]   .when-closed[_ngcontent-ng-c3554768778]{display:none}.early[open][_ngcontent-ng-c3554768778]   .when-open[_ngcontent-ng-c3554768778]{display:inline}.early-intro[_ngcontent-ng-c3554768778]{margin:0 0 1.25rem;font-size:.9rem;color:var(--text-muted)}.filters[_ngcontent-ng-c3554768778]{display:inline-flex;gap:.25rem;margin-bottom:1rem;padding:.3rem;border:1px solid var(--border);border-radius:999px;background:var(--bg-raised)}.filter[_ngcontent-ng-c3554768778]{display:inline-flex;align-items:center;gap:.45rem;padding:.35rem .9rem;font-size:.78rem;font-weight:500;color:var(--text-muted);border:0;border-radius:999px;background:transparent;transition:color .2s ease,background-color .2s ease}.filter[_ngcontent-ng-c3554768778]:hover{color:var(--text)}.filter.active[_ngcontent-ng-c3554768778]{color:var(--bg);background:var(--text)}.count[_ngcontent-ng-c3554768778]{font-family:var(--font-mono);font-size:.68rem;opacity:.6}.early-list[_ngcontent-ng-c3554768778]{margin:0;padding:0;list-style:none}.early-item[_ngcontent-ng-c3554768778]{display:grid;grid-template-columns:3.25rem 1fr auto;align-items:baseline;column-gap:1rem;padding:.8rem .75rem;margin:0 -.75rem;border-radius:.6rem;transition:background-color .2s ease}.early-item[_ngcontent-ng-c3554768778]:hover{background:var(--bg-raised)}.year[_ngcontent-ng-c3554768778]{font-family:var(--font-mono);font-size:.75rem;color:var(--text-faint)}.early-name[_ngcontent-ng-c3554768778]{font-weight:600;color:var(--text);transition:color .2s ease}.early-item[_ngcontent-ng-c3554768778]:hover   .early-name[_ngcontent-ng-c3554768778]{color:var(--accent-text)}.stack[_ngcontent-ng-c3554768778]{grid-column:2;font-size:.8rem;font-weight:400;color:var(--text-muted)}.arrow[_ngcontent-ng-c3554768778]{grid-column:3;grid-row:1;color:var(--text-faint);transition:transform .25s ease,color .25s ease}.early-item[_ngcontent-ng-c3554768778]:hover   .arrow[_ngcontent-ng-c3554768778]{transform:translate(calc(4px * var(--dir)));color:var(--accent-text)}.grid-item[_ngcontent-ng-c3554768778]{animation:_ngcontent-ng-c3554768778_appear .4s cubic-bezier(.2,.8,.2,1) both}@keyframes _ngcontent-ng-c3554768778_appear{0%{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}@media screen and (min-width:576px){.early-item[_ngcontent-ng-c3554768778]{grid-template-columns:3.25rem 1fr auto auto}.stack[_ngcontent-ng-c3554768778]{grid-column:3;grid-row:1;text-align:end}.arrow[_ngcontent-ng-c3554768778]{grid-column:4}}</style><style ng-app-id="ng">[_nghost-ng-c3890125771]{display:block}.card[_ngcontent-ng-c3890125771]{padding:1.75rem;border:1px solid var(--border);border-radius:1.25rem;background:var(--bg-raised)}.heading[_ngcontent-ng-c3890125771]{margin:0 0 .5rem;font-size:1.35rem;font-weight:700;letter-spacing:-.02em;color:var(--text)}.intro[_ngcontent-ng-c3890125771]{margin:0 0 1.5rem;font-size:.95rem}.fields[_ngcontent-ng-c3890125771]{display:grid;gap:1rem 1.25rem}.field[_ngcontent-ng-c3890125771]{display:flex;flex-direction:column;gap:.4rem}label[_ngcontent-ng-c3890125771]{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted)}input[_ngcontent-ng-c3890125771], textarea[_ngcontent-ng-c3890125771]{width:100%;padding:.75rem .9rem;font:inherit;font-size:.95rem;color:var(--text);border:1px solid var(--border-strong);border-radius:.7rem;background:var(--bg-input);transition:border-color .2s ease,box-shadow .2s ease}textarea[_ngcontent-ng-c3890125771]{resize:vertical;min-height:8rem}input[_ngcontent-ng-c3890125771]:focus, textarea[_ngcontent-ng-c3890125771]:focus{outline:none;border-color:#f472b6b3;box-shadow:0 0 0 4px #f472b624}input[aria-invalid=true][_ngcontent-ng-c3890125771], textarea[aria-invalid=true][_ngcontent-ng-c3890125771]{border-color:var(--danger)}.error[_ngcontent-ng-c3890125771]{font-size:.8rem;color:var(--danger-text)}.failure[_ngcontent-ng-c3890125771]{margin:1rem 0 0;padding:.75rem 1rem;font-size:.875rem;color:var(--danger-strong-text);border:1px solid var(--danger-border);border-radius:.7rem;background:var(--danger-bg)}.actions[_ngcontent-ng-c3890125771]{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.25rem;margin-top:1.5rem}.submit[_ngcontent-ng-c3890125771]{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.4rem;font-weight:600;font-size:.9rem;color:var(--bg);border:0;border-radius:999px;background:var(--gradient);transition:transform .2s ease,opacity .2s ease,box-shadow .2s ease}.submit[_ngcontent-ng-c3890125771]:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 12px 28px -14px #f472b6cc}.submit[_ngcontent-ng-c3890125771]:disabled{opacity:.75;cursor:progress}.spinner[_ngcontent-ng-c3890125771]{width:.9rem;height:.9rem;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:_ngcontent-ng-c3890125771_spin .8s linear infinite}.or[_ngcontent-ng-c3890125771]{font-size:.85rem;color:var(--text-muted)}.success[_ngcontent-ng-c3890125771]{display:flex;gap:1rem;align-items:flex-start;padding:1.25rem;border:1px solid var(--success-border);border-radius:1rem;background:var(--success-bg)}.check[_ngcontent-ng-c3890125771]{display:grid;place-items:center;flex:none;width:2.25rem;height:2.25rem;font-weight:700;color:var(--bg);border-radius:50%;background:var(--success)}.success-title[_ngcontent-ng-c3890125771]{margin:0;font-weight:600;color:var(--text)}.success-text[_ngcontent-ng-c3890125771]{margin:.2rem 0 .6rem;font-size:.9rem}.link-button[_ngcontent-ng-c3890125771]{padding:0;font-size:.875rem;font-weight:500;color:var(--text);border:0;background:none;text-decoration:underline;text-underline-offset:3px}.link-button[_ngcontent-ng-c3890125771]:hover{color:var(--accent-text)}@keyframes _ngcontent-ng-c3890125771_spin{to{transform:rotate(360deg)}}@media screen and (min-width:576px){.card[_ngcontent-ng-c3890125771]{padding:2rem}.fields[_ngcontent-ng-c3890125771]{grid-template-columns:1fr 1fr}.field.wide[_ngcontent-ng-c3890125771]{grid-column:1 / -1}}</style><style ng-app-id="ng">[_nghost-ng-c1259171756]{display:inline-flex;align-items:center;gap:.4rem}.control[_ngcontent-ng-c1259171756]{display:inline-grid;place-items:center;height:2.6rem;color:var(--text-muted);border:1px solid var(--border);border-radius:999px;background:var(--bg-raised);transition:color .2s ease,border-color .2s ease,transform .2s ease}.control[_ngcontent-ng-c1259171756]:hover{color:var(--text);border-color:var(--border-strong);transform:translateY(-2px)}.lang[_ngcontent-ng-c1259171756]{padding:0 1rem;font-size:.82rem;font-weight:600}.theme[_ngcontent-ng-c1259171756]{width:2.6rem;padding:0}svg[_ngcontent-ng-c1259171756]{width:1.05rem;height:1.05rem;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}</style><style ng-app-id="ng">.highlight[_ngcontent-ng-c3046719441]{font-weight:600;color:var(--text)}a[_ngcontent-ng-c3046719441]{color:var(--text);background-image:linear-gradient(var(--accent),var(--accent));background-size:0 1px;background-position:0 100%;background-repeat:no-repeat;transition:background-size .3s ease,color .2s ease}a[_ngcontent-ng-c3046719441]:hover{color:var(--accent-text);background-size:100% 1px}</style><style ng-app-id="ng">[_nghost-ng-c2146481828]{display:block;position:relative}.linked[_nghost-ng-c2146481828]{cursor:pointer}[class^=col][_ngcontent-ng-c2146481828]{padding-inline:0}.card-body-wrap[_ngcontent-ng-c2146481828]{position:relative;z-index:1}.period[_ngcontent-ng-c2146481828]{display:block;padding-top:.2rem;padding-inline-end:1.25rem;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--text-faint)}.location[_ngcontent-ng-c2146481828]{margin-top:.3rem;padding-inline-end:1.25rem;font-size:.78rem;color:var(--text-faint)}.roles[_ngcontent-ng-c2146481828]{display:flex;flex-direction:column;gap:.15rem;margin:-.2rem 0 .8rem;padding:0;padding-inline-start:.9rem;list-style:none;border-inline-start:1px solid var(--border-strong)}.roles[_ngcontent-ng-c2146481828]   li[_ngcontent-ng-c2146481828]{display:flex;flex-wrap:wrap;column-gap:.6rem;font-size:.82rem}.role-title[_ngcontent-ng-c2146481828]{color:var(--text)}.roles[_ngcontent-ng-c2146481828]   li[_ngcontent-ng-c2146481828] + li[_ngcontent-ng-c2146481828]   .role-title[_ngcontent-ng-c2146481828]{color:var(--text-muted)}.role-period[_ngcontent-ng-c2146481828]{font-family:var(--font-mono);font-size:.7rem;line-height:1.9;color:var(--text-faint)}.title[_ngcontent-ng-c2146481828]{display:inline;font-size:1.05rem;font-weight:600;letter-spacing:-.01em;line-height:1.4;color:var(--text)}.company[_ngcontent-ng-c2146481828]{color:var(--text-muted);font-weight:500;transition:color .2s}.arrow[_ngcontent-ng-c2146481828]{display:inline-block;margin-inline-start:.2rem;font-size:.9em;transition:transform .25s ease}.description[_ngcontent-ng-c2146481828]{font-size:.94rem;line-height:1.7}.summary[_ngcontent-ng-c2146481828]{margin:0 0 .6rem}.highlights[_ngcontent-ng-c2146481828]{margin:0;padding:0;list-style:none}.highlights[_ngcontent-ng-c2146481828] > li[_ngcontent-ng-c2146481828]{position:relative;margin:0 0 .45rem;padding-inline-start:1.1rem}.highlights[_ngcontent-ng-c2146481828] > li[_ngcontent-ng-c2146481828]:before{content:"";position:absolute;inset-inline-start:0;top:.7em;width:.35rem;height:.35rem;border-radius:50%;background:var(--accent);opacity:.7}.sub-items[_ngcontent-ng-c2146481828]{margin:.35rem 0 0;padding-inline-start:1rem}.sub-items[_ngcontent-ng-c2146481828]   li[_ngcontent-ng-c2146481828]{margin-bottom:.2rem}.sub-items[_ngcontent-ng-c2146481828]   li[_ngcontent-ng-c2146481828]::marker{color:var(--text-faint)}.tags[_ngcontent-ng-c2146481828]{gap:.45rem}.tag[_ngcontent-ng-c2146481828]{padding:.25rem .7rem;font-size:.72rem;font-weight:500;line-height:1.5;color:var(--accent-text);border:1px solid rgba(246,177,122,.2);border-radius:999px;background-color:#f6b17a14}.overlay[_ngcontent-ng-c2146481828]{position:absolute;inset:-1.25rem -1.5rem;z-index:0;border:1px solid transparent;border-radius:1rem;transition:background-color .25s ease,border-color .25s ease,box-shadow .25s ease}.opacity-half[_ngcontent-ng-c2146481828]{transition:opacity .25s ease}[_nghost-ng-c2146481828]:hover   .opacity-half[_ngcontent-ng-c2146481828]{opacity:1!important}.linked[_nghost-ng-c2146481828]:hover   .title[_ngcontent-ng-c2146481828], .linked[_nghost-ng-c2146481828]:hover   .company[_ngcontent-ng-c2146481828]{color:var(--accent-text)}[_nghost-ng-c2146481828]:hover   .arrow[_ngcontent-ng-c2146481828]{transform:translate(calc(3px * var(--dir)),-3px)}[_nghost-ng-c2146481828]:hover   .overlay[_ngcontent-ng-c2146481828]{border-color:var(--border);background-color:var(--bg-hover);box-shadow:inset 0 1px 0 0 var(--border),0 20px 40px -24px var(--shadow)}@media screen and (max-width:991px){.overlay[_ngcontent-ng-c2146481828]{display:none}}.compact[_nghost-ng-c2146481828]   .title[_ngcontent-ng-c2146481828]{font-size:.95rem;font-weight:500}.compact[_nghost-ng-c2146481828]   .description[_ngcontent-ng-c2146481828]{font-size:.875rem}.compact[_nghost-ng-c2146481828]   .summary[_ngcontent-ng-c2146481828]{margin-bottom:.4rem}.compact[_nghost-ng-c2146481828]   .tags[_ngcontent-ng-c2146481828]{margin-top:.75rem!important}.compact[_nghost-ng-c2146481828]   .tag[_ngcontent-ng-c2146481828]{color:var(--text-muted);border-color:var(--border);background-color:var(--bg-raised)}</style><style ng-app-id="ng">[_nghost-ng-c1873123946]{display:block}.card[_ngcontent-ng-c1873123946]{display:flex;flex-direction:column;height:100%;padding:.6rem;border:1px solid var(--border);border-radius:1rem;background:var(--bg-raised);transition:transform .3s cubic-bezier(.2,.8,.2,1),border-color .3s ease,box-shadow .3s ease}.card[_ngcontent-ng-c1873123946]:hover{transform:translateY(-4px);border-color:var(--border-strong);box-shadow:0 24px 48px -24px #a78bfa59}.plate[_ngcontent-ng-c1873123946]{position:relative;overflow:hidden;border-radius:.65rem;background:#f8fafc}.plate[_ngcontent-ng-c1873123946]   img[_ngcontent-ng-c1873123946]{display:block;width:100%;height:auto;aspect-ratio:16 / 9;object-fit:cover;transition:transform .5s cubic-bezier(.2,.8,.2,1)}.card[_ngcontent-ng-c1873123946]:hover   .plate[_ngcontent-ng-c1873123946]   img[_ngcontent-ng-c1873123946]{transform:scale(1.06)}.body[_ngcontent-ng-c1873123946]{padding:.9rem .4rem .35rem}.kind[_ngcontent-ng-c1873123946]{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-text)}.name[_ngcontent-ng-c1873123946]{display:flex;justify-content:space-between;gap:.5rem;margin:.25rem 0 .2rem;font-size:1rem;font-weight:600;letter-spacing:-.01em;color:var(--text)}.arrow[_ngcontent-ng-c1873123946]{color:var(--text-faint);transition:transform .25s ease,color .25s ease}.card[_ngcontent-ng-c1873123946]:hover   .arrow[_ngcontent-ng-c1873123946]{transform:translate(calc(4px * var(--dir)));color:var(--accent-text)}.stack[_ngcontent-ng-c1873123946]{margin:0;font-size:.82rem;color:var(--text-muted)}.plate[_ngcontent-ng-c1873123946]   adl-project-cover[_ngcontent-ng-c1873123946]     .label{display:none}.status[_ngcontent-ng-c1873123946]{position:absolute;z-index:1;top:.6rem;inset-inline-start:.6rem;display:inline-flex;align-items:center;gap:.45rem;padding:.25rem .65rem .25rem .55rem;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:#f1f5f9;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:#0a0e1ab3;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}.pulse[_ngcontent-ng-c1873123946]{position:relative;width:.45rem;height:.45rem;border-radius:50%;background:var(--success)}.pulse[_ngcontent-ng-c1873123946]:after{content:"";position:absolute;inset:0;border-radius:50%;background:inherit;animation:_ngcontent-ng-c1873123946_pulse 2s ease-out infinite}@keyframes _ngcontent-ng-c1873123946_pulse{0%{transform:scale(1);opacity:.7}to{transform:scale(3);opacity:0}}</style><style ng-app-id="ng">[_nghost-ng-c3387628060]{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.35rem;aspect-ratio:16 / 9;overflow:hidden;color:#fff;background:radial-gradient(120% 90% at 0% 0%,rgba(246,177,122,.9),transparent 55%),radial-gradient(120% 90% at 100% 100%,rgba(167,139,250,.95),transparent 60%),#f472b6}[_nghost-ng-c3387628060]:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.12) 1px,transparent 1px);background-size:24px 24px}.initials[_ngcontent-ng-c3387628060]{position:relative;font-size:clamp(2rem,6vw,3.25rem);font-weight:800;letter-spacing:-.04em;line-height:1}.label[_ngcontent-ng-c3387628060]{position:relative;max-width:90%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}</style></head>
+
+<body><!--nghm--><script type="text/javascript" id="ng-event-dispatch-contract">(()=>{function p(t,n,r,o,e,i,f,m){return{eventType:t,event:n,targetElement:r,eic:o,timeStamp:e,eia:i,eirp:f,eiack:m}}function u(t){let n=[],r=e=>{n.push(e)};return{c:t,q:n,et:[],etc:[],d:r,h:e=>{r(p(e.type,e,e.target,t,Date.now()))}}}function s(t,n,r){for(let o=0;o<n.length;o++){let e=n[o];(r?t.etc:t.et).push(e),t.c.addEventListener(e,t.h,r)}}function c(t,n,r,o,e=window){let i=u(t);e._ejsas||(e._ejsas={}),e._ejsas[n]=i,s(i,r),s(i,o,!0)}window.__jsaction_bootstrap=c;})();
+</script><script>window.__jsaction_bootstrap(document.body,"ng",["click","submit","input","compositionstart","compositionend"],["toggle","blur"]);</script>
+  <adl-root ng-version="22.2.3" ngh="22" ng-server-context="ssg"><router-outlet></router-outlet><adl-home _nghost-ng-c710586872="" ngh="2"><div _ngcontent-ng-c710586872="" aria-hidden="true" class="spotlight"></div><div _ngcontent-ng-c710586872="" class="mobile-bar"><a _ngcontent-ng-c710586872="" href="#" class="bar-logo" aria-label="Back to top" jsaction="click:;"><adl-logo _ngcontent-ng-c710586872="" _nghost-ng-c2440283958="" ngh="0"><svg _ngcontent-ng-c2440283958="" viewBox="20 20 472 456" aria-hidden="true" class="monogram"><defs _ngcontent-ng-c2440283958=""><linearGradient _ngcontent-ng-c2440283958="" gradientUnits="userSpaceOnUse" x1="60" y1="60" x2="452" y2="452" id="adl-logo-0-accent"><stop _ngcontent-ng-c2440283958="" offset="0" stop-color="#f6b17a"></stop><stop _ngcontent-ng-c2440283958="" offset=".55" stop-color="#f472b6"></stop><stop _ngcontent-ng-c2440283958="" offset="1" stop-color="#a78bfa"></stop></linearGradient><mask _ngcontent-ng-c2440283958="" maskUnits="userSpaceOnUse" id="adl-logo-0-under-first"><rect _ngcontent-ng-c2440283958="" width="512" height="512" fill="#fff"></rect><path _ngcontent-ng-c2440283958="" d="M190 452 L322 100 L454 452" fill="none" stroke="#000" stroke-width="92" stroke-miterlimit="10"></path></mask><clipPath _ngcontent-ng-c2440283958="" id="adl-logo-0-weave"><rect _ngcontent-ng-c2440283958="" y="312" width="512" height="200"></rect></clipPath><mask _ngcontent-ng-c2440283958="" maskUnits="userSpaceOnUse" id="adl-logo-0-under-second"><rect _ngcontent-ng-c2440283958="" width="512" height="512" fill="#fff"></rect><path _ngcontent-ng-c2440283958="" d="M58 452 L190 100 L322 452" fill="none" stroke="#000" stroke-width="92" stroke-miterlimit="10" clip-path="url(#adl-logo-0-weave)"></path></mask></defs><g _ngcontent-ng-c2440283958="" fill="none" stroke-miterlimit="10"><g _ngcontent-ng-c2440283958="" mask="url(#adl-logo-0-under-first)"><path _ngcontent-ng-c2440283958="" d="M58 452 L190 100 L322 452" stroke="currentColor" stroke-width="50"></path><path _ngcontent-ng-c2440283958="" d="M110 340 H270" stroke="currentColor" stroke-width="40"></path></g><g _ngcontent-ng-c2440283958="" mask="url(#adl-logo-0-under-second)"><path _ngcontent-ng-c2440283958="" d="M190 452 L322 100 L454 452" stroke-width="50" stroke="url(#adl-logo-0-accent)"></path><path _ngcontent-ng-c2440283958="" d="M242 340 H402" stroke-width="40" stroke="url(#adl-logo-0-accent)"></path></g></g></svg><!----></adl-logo></a><adl-navigation _ngcontent-ng-c710586872="" _nghost-ng-c601023480="" class="bar" ngh="1"><nav _ngcontent-ng-c601023480="" class="position-relative" aria-label="Sections"><ul _ngcontent-ng-c601023480="" class="header-menu"><li _ngcontent-ng-c601023480="" class="nav-item"><a _ngcontent-ng-c601023480="" class="header-menu-link nav-link d-flex align-items-center active" href="#about" aria-current="location"><span _ngcontent-ng-c601023480="" class="nav-indicator"></span><span _ngcontent-ng-c601023480="" class="text-uppercase link-name">about</span></a></li><li _ngcontent-ng-c601023480="" class="nav-item"><a _ngcontent-ng-c601023480="" class="header-menu-link nav-link d-flex align-items-center" href="#experience"><span _ngcontent-ng-c601023480="" class="nav-indicator"></span><span _ngcontent-ng-c601023480="" class="text-uppercase link-name">experience</span></a></li><li _ngcontent-ng-c601023480="" class="nav-item"><a _ngcontent-ng-c601023480="" class="header-menu-link nav-link d-flex align-items-center" href="#projects"><span _ngcontent-ng-c601023480="" class="nav-indicator"></span><span _ngcontent-ng-c601023480="" class="text-uppercase link-name">projects</span></a></li><li _ngcontent-ng-c601023480="" class="nav-item"><a _ngcontent-ng-c601023480="" class="header-menu-link nav-link d-flex align-items-center" href="#contact"><span _ngcontent-ng-c601023480="" class="nav-indicator"></span><span _ngcontent-ng-c601023480="" class="text-uppercase link-name">contact</span></a></li><!----></ul></nav></adl-navigation></div><div _ngcontent-ng-c710586872="" class="main position-relative"><div _ngcontent-ng-c710586872="" class="d-flex flex-column flex-lg-row justify-content-between gap-3"><header _ngcontent-ng-c710586872="" class="header d-flex flex-column justify-content-between"><div _ngcontent-ng-c710586872="" class="enter"><span _ngcontent-ng-c710586872="" class="eyebrow"><span _ngcontent-ng-c710586872="" aria-hidden="true" class="pulse"></span> Hello there, I'm </span><h1 _ngcontent-ng-c710586872="" class="name">Ahmad Adlouni</h1><p _ngcontent-ng-c710586872="" class="role"><span _ngcontent-ng-c710586872="" class="gradient-text">Senior Software Engineer at Siren Analytics</span><span _ngcontent-ng-c710586872="" aria-hidden="true" class="caret"></span></p><adl-navigation _ngcontent-ng-c710586872="" class="navigation-container" _nghost-ng-c601023480="" ngh="1"><nav _ngcontent-ng-c601023480="" class="position-relative" id="menu"><ul _ngcontent-ng-c601023480="" class="header-menu"><li _ngcontent-ng-c601023480="" class="nav-item"><a _ngcontent-ng-c601023480="" class="header-menu-link nav-link d-flex align-items-center active" href="#about" aria-current="location"><span _ngcontent-ng-c601023480="" class="nav-indicator"></span><span _ngcontent-ng-c601023480="" class="text-uppercase link-name">about</span></a></li><li _ngcontent-ng-c601023480="" class="nav-item"><a _ngcontent-ng-c601023480="" class="header-menu-link nav-link d-flex align-items-center" href="#experience"><span _ngcontent-ng-c601023480="" class="nav-indicator"></span><span _ngcontent-ng-c601023480="" class="text-uppercase link-name">experience</span></a></li><li _ngcontent-ng-c601023480="" class="nav-item"><a _ngcontent-ng-c601023480="" class="header-menu-link nav-link d-flex align-items-center" href="#projects"><span _ngcontent-ng-c601023480="" class="nav-indicator"></span><span _ngcontent-ng-c601023480="" class="text-uppercase link-name">projects</span></a></li><li _ngcontent-ng-c601023480="" class="nav-item"><a _ngcontent-ng-c601023480="" class="header-menu-link nav-link d-flex align-items-center" href="#contact"><span _ngcontent-ng-c601023480="" class="nav-indicator"></span><span _ngcontent-ng-c601023480="" class="text-uppercase link-name">contact</span></a></li><!----></ul></nav></adl-navigation></div><adl-footer _ngcontent-ng-c710586872="" class="mt-4 enter enter-delay" _nghost-ng-c3330618378="" ngh="4"><footer _ngcontent-ng-c3330618378=""><div _ngcontent-ng-c3330618378="" class="contact-info mb-4"><a _ngcontent-ng-c3330618378="" class="contact-line" href="mailto:adlouniahmad@outlook.com"><fa-icon _ngcontent-ng-c3330618378="" class="ng-fa-icon" ngh="2"><svg data-prefix="fas" data-icon="envelope" class="svg-inline--fa fa-envelope fa-fw" role="img" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"></path></svg></fa-icon><span _ngcontent-ng-c3330618378="">adlouniahmad@outlook.com</span></a><div _ngcontent-ng-c3330618378="" class="contact-line"><fa-icon _ngcontent-ng-c3330618378="" class="ng-fa-icon" ngh="2"><svg data-prefix="fas" data-icon="location-dot" class="svg-inline--fa fa-location-dot fa-fw" role="img" viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"></path></svg></fa-icon><span _ngcontent-ng-c3330618378="">Saida, Lebanon</span></div></div><div _ngcontent-ng-c3330618378="" class="footer-row"><div _ngcontent-ng-c3330618378="" class="d-flex gap-2"><a _ngcontent-ng-c3330618378="" rel="noopener" target="_blank" class="facebook icon-item" href="https://www.facebook.com/adlouni.ahmad/" title="facebook" aria-label="facebook"><fa-icon _ngcontent-ng-c3330618378="" class="ng-fa-icon" ngh="2"><svg data-prefix="fab" data-icon="facebook-f" class="svg-inline--fa fa-facebook-f fa-fw" role="img" viewBox="0 0 320 512" aria-hidden="true"><path fill="currentColor" d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"></path></svg></fa-icon></a><a _ngcontent-ng-c3330618378="" rel="noopener" target="_blank" class="icon-item instagram" href="https://www.instagram.com/ahmad_adlouni/" title="instagram" aria-label="instagram"><fa-icon _ngcontent-ng-c3330618378="" class="ng-fa-icon" ngh="2"><svg data-prefix="fab" data-icon="instagram" class="svg-inline--fa fa-instagram fa-fw" role="img" viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></fa-icon></a><a _ngcontent-ng-c3330618378="" rel="noopener" target="_blank" class="icon-item linkedIn" href="https://www.linkedin.com/in/adlouni-ahmad/" title="linkedIn" aria-label="linkedIn"><fa-icon _ngcontent-ng-c3330618378="" class="ng-fa-icon" ngh="2"><svg data-prefix="fab" data-icon="linkedin-in" class="svg-inline--fa fa-linkedin-in fa-fw" role="img" viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg></fa-icon></a><a _ngcontent-ng-c3330618378="" rel="noopener" target="_blank" class="github icon-item" href="https://www.github.com/adlouniahmad-dev" title="github" aria-label="github"><fa-icon _ngcontent-ng-c3330618378="" class="ng-fa-icon" ngh="2"><svg data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-fw" role="img" viewBox="0 0 496 512" aria-hidden="true"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></fa-icon></a><!----></div><adl-site-controls _ngcontent-ng-c3330618378="" path="/" _nghost-ng-c1259171756="" ngh="3"><a _ngcontent-ng-c1259171756="" class="control lang" title="اقرأ الموقع بالعربية" hreflang="ar" lang="ar" aria-label="اقرأ الموقع بالعربية" href="/ar" jsaction="click:;">العربية</a><button _ngcontent-ng-c1259171756="" type="button" class="control theme" title="Switch to light theme" aria-label="Switch to light theme" jsaction="click:;"><!----><svg _ngcontent-ng-c1259171756="" viewBox="0 0 24 24" aria-hidden="true"><circle _ngcontent-ng-c1259171756="" cx="12" cy="12" r="4.2"></circle><path _ngcontent-ng-c1259171756="" d="M12 2v2.2M12 19.8V22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2 12h2.2M19.8 12H22M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"></path></svg><!----></button></adl-site-controls></div></footer></adl-footer></header><main _ngcontent-ng-c710586872="" class="content"><adl-about _ngcontent-ng-c710586872="" class="enter-left" _nghost-ng-c2730517686="" ngh="8"><section _ngcontent-ng-c2730517686="" id="about" class="section"><h2 _ngcontent-ng-c2730517686="" class="section-title">About</h2><div _ngcontent-ng-c2730517686=""><p _ngcontent-ng-c2730517686=""><adl-inline-text _ngcontent-ng-c2730517686="" _nghost-ng-c3046719441="" ngh="5"><!----><!---->👋 Hi! I'm a <!----><!----><strong _ngcontent-ng-c3046719441="" class="highlight">Senior Software Engineer</strong><!----><!----><!----><!----><!----> at <!----><!----><!----><a _ngcontent-ng-c3046719441="" target="_blank" rel="noopener" href="https://sirenanalytics.com" jsaction="click:;">Siren Analytics</a><!----><!----><!----><!----> with 7+ years of experience building responsive, accessible and scalable web applications for government, enterprise and digital-service platforms.<!----><!----><!----></adl-inline-text></p><p _ngcontent-ng-c2730517686=""><adl-inline-text _ngcontent-ng-c2730517686="" _nghost-ng-c3046719441="" ngh="6"><!----><!---->I specialise in <!----><!----><strong _ngcontent-ng-c3046719441="" class="highlight">Angular, TypeScript and frontend architecture</strong><!----><!----><!----><!----><!---->, with deep experience in dynamic multi-step forms, configurable form-builder tools, dashboards, workflow interfaces and API integration. 💻<!----><!----><!----></adl-inline-text></p><p _ngcontent-ng-c2730517686=""><adl-inline-text _ngcontent-ng-c2730517686="" _nghost-ng-c3046719441="" ngh="7"><!----><!---->I've delivered bilingual Arabic/English (RTL) public-sector portals integrated with national government systems, offline-capable Progressive Web Apps for field data collection, and secure frontends hardened against penetration-test findings. 🚀<!----><!----><!----></adl-inline-text></p><p _ngcontent-ng-c2730517686=""><adl-inline-text _ngcontent-ng-c2730517686="" _nghost-ng-c3046719441="" ngh="7"><!----><!---->I'm comfortable across the full delivery lifecycle: requirements, prototyping, development, UAT, deployment, documentation, training and post-launch support. 📚<!----><!----><!----></adl-inline-text></p><p _ngcontent-ng-c2730517686=""><adl-inline-text _ngcontent-ng-c2730517686="" _nghost-ng-c3046719441="" ngh="6"><!----><!---->I build with AI coding tools like <!----><!----><strong _ngcontent-ng-c3046719441="" class="highlight">Claude Code</strong><!----><!----><!----><!----><!---->: I own the architecture, specs, code review and tests, and let AI speed up the implementation. 🤖<!----><!----><!----></adl-inline-text></p><!----><ul _ngcontent-ng-c2730517686="" class="skills" aria-label="Skills"><li _ngcontent-ng-c2730517686="" class="skill">Angular</li><li _ngcontent-ng-c2730517686="" class="skill">TypeScript</li><li _ngcontent-ng-c2730517686="" class="skill">RxJS</li><li _ngcontent-ng-c2730517686="" class="skill">NgRx</li><li _ngcontent-ng-c2730517686="" class="skill">Angular Material</li><li _ngcontent-ng-c2730517686="" class="skill">Angular Formly</li><li _ngcontent-ng-c2730517686="" class="skill">SCSS</li><li _ngcontent-ng-c2730517686="" class="skill">PWA / Offline-first</li><li _ngcontent-ng-c2730517686="" class="skill">RTL / Bilingual UI</li><li _ngcontent-ng-c2730517686="" class="skill">Dynamic Forms &amp; Form Builders</li><li _ngcontent-ng-c2730517686="" class="skill">Frontend Architecture</li><li _ngcontent-ng-c2730517686="" class="skill">Figma</li><li _ngcontent-ng-c2730517686="" class="skill">Node.js / Express</li><li _ngcontent-ng-c2730517686="" class="skill">Java / Spring Boot</li><li _ngcontent-ng-c2730517686="" class="skill">SQL</li><li _ngcontent-ng-c2730517686="" class="skill">Dialogflow CX / Twilio</li><li _ngcontent-ng-c2730517686="" class="skill">AI-assisted development</li><!----></ul><!----><p _ngcontent-ng-c2730517686="" class="sign-off">Welcome to my portfolio, where code meets creativity! ✨</p><!----></div></section></adl-about><adl-experiences _ngcontent-ng-c710586872="" _nghost-ng-c2901899718="" ngh="17"><section _ngcontent-ng-c2901899718="" id="experience" class="section"><h2 _ngcontent-ng-c2901899718="" class="section-title">Experience</h2><adl-experience _ngcontent-ng-c2901899718="" class="mb-5 linked" _nghost-ng-c2146481828="" ngh="10" jsaction="click:;"><div _ngcontent-ng-c2146481828="" class="overlay"></div><div _ngcontent-ng-c2146481828="" class="container-fluid card-body-wrap opacity-half"><div _ngcontent-ng-c2146481828="" class="row"><div _ngcontent-ng-c2146481828="" class="col-3 d-none d-md-block"><span _ngcontent-ng-c2146481828="" class="period d-block">Dec 2023 — Present</span><span _ngcontent-ng-c2146481828="" class="location d-block">Lebanon, Jordan</span><!----></div><div _ngcontent-ng-c2146481828="" class="col-sm-12 col-md-9"><div _ngcontent-ng-c2146481828="" class="mb-2"><a _ngcontent-ng-c2146481828="" target="_blank" rel="noopener" class="title" href="https://sirenanalytics.com" jsaction="click:;"> Senior Software Engineer <span _ngcontent-ng-c2146481828="" class="company">· Siren Analytics</span><span _ngcontent-ng-c2146481828="" aria-hidden="true" class="arrow">↗</span></a><!----><!----><span _ngcontent-ng-c2146481828="" class="period d-md-none"> Dec 2023 — Present<span _ngcontent-ng-c2146481828=""> · Lebanon, Jordan</span><!----></span></div><ol _ngcontent-ng-c2146481828="" class="roles" aria-label="Titles"><li _ngcontent-ng-c2146481828=""><span _ngcontent-ng-c2146481828="" class="role-title">Senior Software Engineer</span><span _ngcontent-ng-c2146481828="" class="role-period">Nov 2024 — Present</span></li><li _ngcontent-ng-c2146481828=""><span _ngcontent-ng-c2146481828="" class="role-title">Software Engineer</span><span _ngcontent-ng-c2146481828="" class="role-period">Dec 2023 — Nov 2024</span></li><!----></ol><!----><div _ngcontent-ng-c2146481828="" class="description"><p _ngcontent-ng-c2146481828="" class="summary">Lead frontend development for public-sector platforms and government service-delivery systems in Jordan and Lebanon, working with backend, QA, design and business-analysis teams. Promoted to Senior Software Engineer in November 2024.</p><!----><ul _ngcontent-ng-c2146481828="" class="highlights"><li _ngcontent-ng-c2146481828=""><adl-inline-text _ngcontent-ng-c2146481828="" _nghost-ng-c3046719441="" ngh="9"><strong _ngcontent-ng-c3046719441="" class="highlight">MoDEE–EMRC e-Licensing Portal (Jordan):</strong><!----><!----><!----><!----><!----> dozens of bilingual (Arabic/English) licensing and renewal services, with multi-step forms validated in real time against national registries through the Government Service Bus.<!----><!----><!----></adl-inline-text></li><!----><!----><li _ngcontent-ng-c2146481828=""><adl-inline-text _ngcontent-ng-c2146481828="" _nghost-ng-c3046719441="" ngh="9"><strong _ngcontent-ng-c3046719441="" class="highlight">DAEM National Social Assistance Platform (Lebanon):</strong><!----><!----><!----><!----><!----> main frontend developer across four Angular apps, including an offline-capable field-survey PWA and a citizen portal with QR and PDF417 ID-card scanning.<!----><!----><!----></adl-inline-text></li><!----><!----><li _ngcontent-ng-c2146481828=""><adl-inline-text _ngcontent-ng-c2146481828="" _nghost-ng-c3046719441="" ngh="6"><!----><!---->Led <!----><!----><strong _ngcontent-ng-c3046719441="" class="highlight">Form Studio</strong><!----><!----><!----><!----><!---->, a drag-and-drop form builder library shared across the DAEM apps, and the UI/UX revamp of three portals under one shared theme.<!----><!----><!----></adl-inline-text></li><!----><!----><li _ngcontent-ng-c2146481828=""><adl-inline-text _ngcontent-ng-c2146481828="" _nghost-ng-c3046719441="" ngh="9"><strong _ngcontent-ng-c3046719441="" class="highlight">PAX Foundation Project Management System:</strong><!----><!----><!----><!----><!----> applicant and back-office portals with phased review workflows, map-based project search and an AI assistant chat.<!----><!----><!----></adl-inline-text></li><!----><!----><li _ngcontent-ng-c2146481828=""><adl-inline-text _ngcontent-ng-c2146481828="" _nghost-ng-c3046719441="" ngh="7"><!----><!---->Remediated penetration-test findings (token storage, XSS, exposed file access) and added reCAPTCHA and session auto-logout.<!----><!----><!----></adl-inline-text></li><!----><!----><!----></ul><!----></div><div _ngcontent-ng-c2146481828="" class="d-flex flex-wrap align-items-center tags mt-3"><span _ngcontent-ng-c2146481828="" class="tag">Angular</span><span _ngcontent-ng-c2146481828="" class="tag">TypeScript</span><span _ngcontent-ng-c2146481828="" class="tag">Angular Material</span><span _ngcontent-ng-c2146481828="" class="tag">Angular Formly</span><span _ngcontent-ng-c2146481828="" class="tag">RxJS</span><span _ngcontent-ng-c2146481828="" class="tag">SCSS</span><span _ngcontent-ng-c2146481828="" class="tag">PWA</span><span _ngcontent-ng-c2146481828="" class="tag">RTL / Bilingual UI</span><!----></div></div></div></div></adl-experience><adl-experience _ngcontent-ng-c2901899718="" class="mb-5 linked" _nghost-ng-c2146481828="" ngh="11" jsaction="click:;"><div _ngcontent-ng-c2146481828="" class="overlay"></div><div _ngcontent-ng-c2146481828="" class="container-fluid card-body-wrap opacity-half"><div _ngcontent-ng-c2146481828="" class="row"><div _ngcontent-ng-c2146481828="" class="col-3 d-none d-md-block"><span _ngcontent-ng-c2146481828="" class="period d-block">Dec 2020 — Nov 2023</span><span _ngcontent-ng-c2146481828="" class="location d-block">California, United States</span><!----></div><div _ngcontent-ng-c2146481828="" class="col-sm-12 col-md-9"><div _ngcontent-ng-c2146481828="" class="mb-2"><a _ngcontent-ng-c2146481828="" target="_blank" rel="noopener" class="title" href="https://vestacare.com" jsaction="click:;"> Software Engineer, Senior UI &amp; Front-End Engineer <span _ngcontent-ng-c2146481828="" class="company">· VestaCare Inc.</span><span _ngcontent-ng-c2146481828="" aria-hidden="true" class="arrow">↗</span></a><!----><!----><span _ngcontent-ng-c2146481828="" class="period d-md-none"> Dec 2020 — Nov 2023<span _ngcontent-ng-c2146481828=""> · California, United States</span><!----></span></div><!----><div _ngcontent-ng-c2146481828="" class="description"><p _ngcontent-ng-c2146481828="" class="summary">Owned the complete software development life cycle for the VestaPay product, from analysis to testing, using Java, GWT, Spring Boot and Oracle Database.</p><!----><ul _ngcontent-ng-c2146481828="" class="highlights"><li _ngcontent-ng-c2146481828=""><adl-inline-text _ngcontent-ng-c2146481828="" _nghost-ng-c3046719441="" ngh="7"><!----><!---->Designed the MPR project in Figma as Senior UI and Front-End Engineer and led its transition from GWT to Angular 15, NgRx and Spring Boot.<!----><!----><!----></adl-inline-text></li><!----><!----><li _ngcontent-ng-c2146481828=""><adl-inline-text _ngcontent-ng-c2146481828="" _nghost-ng-c3046719441="" ngh="7"><!----><!---->Built dashboards, data tables and reusable UI components, and maintained the VSC dashboard with integrated live chat.<!----><!----><!----></adl-inline-text></li><!----><!----><li _ngcontent-ng-c2146481828=""><adl-inline-text _ngcontent-ng-c2146481828="" _nghost-ng-c3046719441="" ngh="7"><!----><!---->Developed Dialogflow CX chatbots on the Twilio Conversations API, extended with external APIs and webhooks.<!----><!----><!----></adl-inline-text></li><!----><!----><li _ngcontent-ng-c2146481828=""><adl-inline-text _ngcontent-ng-c2146481828="" _nghost-ng-c3046719441="" ngh="7"><!----><!---->Implemented a Node.js/Express server with JWT authentication and HTTPS.<!----><!----><!----></adl-inline-text></li><!----><!----><!----></ul><!----></div><div _ngcontent-ng-c2146481828="" class="d-flex flex-wrap align-items-center tags mt-3"><span _ngcontent-ng-c2146481828="" class="tag">Java</span><span _ngcontent-ng-c2146481828="" class="tag">GWT</span><span _ngcontent-ng-c2146481828="" class="tag">Spring Boot</span><span _ngcontent-ng-c2146481828="" class="tag">Oracle Database</span><span _ngcontent-ng-c2146481828="" class="tag">Angular</span><span _ngcontent-ng-c2146481828="" class="tag">RxJS</span><span _ngcontent-ng-c2146481828="" class="tag">NgRx</span><span _ngcontent-ng-c2146481828="" class="tag">UI/UX Design</span><span _ngcontent-ng-c2146481828="" class="tag">Figma</span><span _ngcontent-ng-c2146481828="" class="tag">Twilio</span><span _ngcontent-ng-c2146481828="" class="tag">Dialogflow CX</span><span _ngcontent-ng-c2146481828="" class="tag">Node.js</span><!----></div></div></div></div></adl-experience><adl-experience _ngcontent-ng-c2901899718="" class="mb-5 linked" _nghost-ng-c2146481828="" ngh="12" jsaction="click:;"><div _ngcontent-ng-c2146481828="" class="overlay"></div><div _ngcontent-ng-c2146481828="" class="container-fluid card-body-wrap opacity-half"><div _ngcontent-ng-c2146481828="" class="row"><div _ngcontent-ng-c2146481828="" class="col-3 d-none d-md-block"><span _ngcontent-ng-c2146481828="" class="period d-block">Feb 2023 — May 2023</span><span _ngcontent-ng-c2146481828="" class="location d-block">Saida, Lebanon</span><!----></div><div _ngcontent-ng-c2146481828="" class="col-sm-12 col-md-9"><div _ngcontent-ng-c2146481828="" class="mb-2"><a _ngcontent-ng-c2146481828="" target="_blank" rel="noopener" class="title" href="https://anera.org" jsaction="click:;"> Front-End Web Development and Database Instructor <span _ngcontent-ng-c2146481828="" class="company">· ANERA</span><span _ngcontent-ng-c2146481828="" aria-hidden="true" class="arrow">↗</span></a><!----><!----><span _ngcontent-ng-c2146481828="" class="period d-md-none"> Feb 2023 — May 2023<span _ngcontent-ng-c2146481828=""> · Saida, Lebanon</span><!----></span></div><!----><div _ngcontent-ng-c2146481828="" class="description"><p _ngcontent-ng-c2146481828="" class="summary">Taught Front-End Web Development and MySQL database management to Palestinian university students and recent graduates.</p><!----><ul _ngcontent-ng-c2146481828="" class="highlights"><li _ngcontent-ng-c2146481828=""><adl-inline-text _ngcontent-ng-c2146481828="" _nghost-ng-c3046719441="" ngh="7"><!----><!---->Curriculum: HTML, CSS layout, JavaScript and the DOM, Angular (routing, HttpClient, services) and MySQL.<!----><!----><!----></adl-inline-text></li><!----><!----><!----></ul><!----></div><div _ngcontent-ng-c2146481828="" class="d-flex flex-wrap align-items-center tags mt-3"><span _ngcontent-ng-c2146481828="" class="tag">Teaching</span><span _ngcontent-ng-c2146481828="" class="tag">Communication</span><span _ngcontent-ng-c2146481828="" class="tag">HTML</span><span _ngcontent-ng-c2146481828="" class="tag">CSS</span><span _ngcontent-ng-c2146481828="" class="tag">JavaScript</span><span _ngcontent-ng-c2146481828="" class="tag">Angular</span><span _ngcontent-ng-c2146481828="" class="tag">MySQL</span><!----></div></div></div></div></adl-experience><adl-experience _ngcontent-ng-c2901899718="" class="mb-5" _nghost-ng-c2146481828="" ngh="13" jsaction="click:;"><div _ngcontent-ng-c2146481828="" class="overlay"></div><div _ngcontent-ng-c2146481828="" class="container-fluid card-body-wrap opacity-half"><div _ngcontent-ng-c2146481828="" class="row"><div _ngcontent-ng-c2146481828="" class="col-3 d-none d-md-block"><span _ngcontent-ng-c2146481828="" class="period d-block">Jun 2019 — Jan 2023</span><!----></div><div _ngcontent-ng-c2146481828="" class="col-sm-12 col-md-9"><div _ngcontent-ng-c2146481828="" class="mb-2"><!----><span _ngcontent-ng-c2146481828="" class="title"> Full Stack Developer <span _ngcontent-ng-c2146481828="" class="company">· Freelance</span></span><!----><span _ngcontent-ng-c2146481828="" class="period d-md-none"> Jun 2019 — Jan 2023<!----></span></div><!----><div _ngcontent-ng-c2146481828="" class="description"><p _ngcontent-ng-c2146481828="" class="summary">Built full-stack web applications and Android apps published on Google Play (see Projects below).</p><!----><ul _ngcontent-ng-c2146481828="" class="highlights"><li _ngcontent-ng-c2146481828=""><adl-inline-text _ngcontent-ng-c2146481828="" _nghost-ng-c3046719441="" ngh="7"><!----><!---->Web apps with Angular, PHP Slim and MySQL / SQL Server, including admin dashboards, PWAs and RESTful APIs.<!----><!----><!----></adl-inline-text></li><!----><!----><li _ngcontent-ng-c2146481828=""><adl-inline-text _ngcontent-ng-c2146481828="" _nghost-ng-c3046719441="" ngh="7"><!----><!---->Integrated third-party APIs such as OnlineSim.io.<!----><!----><!----></adl-inline-text></li><!----><!----><!----></ul><!----></div><div _ngcontent-ng-c2146481828="" class="d-flex flex-wrap align-items-center tags mt-3"><span _ngcontent-ng-c2146481828="" class="tag">Angular</span><span _ngcontent-ng-c2146481828="" class="tag">PHP Slim</span><span _ngcontent-ng-c2146481828="" class="tag">MySQL</span><span _ngcontent-ng-c2146481828="" class="tag">SQL Server</span><span _ngcontent-ng-c2146481828="" class="tag">RESTful APIs</span><span _ngcontent-ng-c2146481828="" class="tag">Android</span><span _ngcontent-ng-c2146481828="" class="tag">Git</span><!----></div></div></div></div></adl-experience><adl-experience _ngcontent-ng-c2901899718="" class="mb-5 linked" _nghost-ng-c2146481828="" ngh="14" jsaction="click:;"><div _ngcontent-ng-c2146481828="" class="overlay"></div><div _ngcontent-ng-c2146481828="" class="container-fluid card-body-wrap opacity-half"><div _ngcontent-ng-c2146481828="" class="row"><div _ngcontent-ng-c2146481828="" class="col-3 d-none d-md-block"><span _ngcontent-ng-c2146481828="" class="period d-block">Feb 2019 — May 2019</span><span _ngcontent-ng-c2146481828="" class="location d-block">Beirut, Lebanon</span><!----></div><div _ngcontent-ng-c2146481828="" class="col-sm-12 col-md-9"><div _ngcontent-ng-c2146481828="" class="mb-2"><a _ngcontent-ng-c2146481828="" target="_blank" rel="noopener" class="title" href="https://bluering.com" jsaction="click:;"> Front-End Web Developer <span _ngcontent-ng-c2146481828="" class="company">· Bluering</span><span _ngcontent-ng-c2146481828="" aria-hidden="true" class="arrow">↗</span></a><!----><!----><span _ngcontent-ng-c2146481828="" class="period d-md-none"> Feb 2019 — May 2019<span _ngcontent-ng-c2146481828=""> · Beirut, Lebanon</span><!----></span></div><!----><div _ngcontent-ng-c2146481828="" class="description"><p _ngcontent-ng-c2146481828="" class="summary">Built interfaces and reusable components for the Bluering Retail platform with Angular 5, Bootstrap 4, HTML5 and CSS3.</p><!----><ul _ngcontent-ng-c2146481828="" class="highlights"><li _ngcontent-ng-c2146481828=""><adl-inline-text _ngcontent-ng-c2146481828="" _nghost-ng-c3046719441="" ngh="7"><!----><!---->Implemented design system standards, reusable UI modules and responsive layouts.<!----><!----><!----></adl-inline-text></li><!----><!----><li _ngcontent-ng-c2146481828=""><adl-inline-text _ngcontent-ng-c2146481828="" _nghost-ng-c3046719441="" ngh="7"><!----><!---->Improved navigation flows, form validation, loading performance and cross-browser compatibility.<!----><!----><!----></adl-inline-text></li><!----><!----><!----></ul><!----></div><div _ngcontent-ng-c2146481828="" class="d-flex flex-wrap align-items-center tags mt-3"><span _ngcontent-ng-c2146481828="" class="tag">HTML5</span><span _ngcontent-ng-c2146481828="" class="tag">CSS3</span><span _ngcontent-ng-c2146481828="" class="tag">Bootstrap</span><span _ngcontent-ng-c2146481828="" class="tag">JavaScript</span><span _ngcontent-ng-c2146481828="" class="tag">Angular</span><!----></div></div></div></div></adl-experience><!----><h3 _ngcontent-ng-c2901899718="" class="group-title">Internships</h3><adl-experience _ngcontent-ng-c2901899718="" class="mb-4 compact" _nghost-ng-c2146481828="" ngh="15" jsaction="click:;"><div _ngcontent-ng-c2146481828="" class="overlay"></div><div _ngcontent-ng-c2146481828="" class="container-fluid card-body-wrap opacity-half"><div _ngcontent-ng-c2146481828="" class="row"><div _ngcontent-ng-c2146481828="" class="col-3 d-none d-md-block"><span _ngcontent-ng-c2146481828="" class="period d-block">Aug 2018 — Sep 2018</span><span _ngcontent-ng-c2146481828="" class="location d-block">Beirut, Lebanon</span><!----></div><div _ngcontent-ng-c2146481828="" class="col-sm-12 col-md-9"><div _ngcontent-ng-c2146481828="" class="mb-2"><!----><span _ngcontent-ng-c2146481828="" class="title"> Software Developer Intern <span _ngcontent-ng-c2146481828="" class="company">· Vanrise</span></span><!----><span _ngcontent-ng-c2146481828="" class="period d-md-none"> Aug 2018 — Sep 2018<span _ngcontent-ng-c2146481828=""> · Beirut, Lebanon</span><!----></span></div><!----><div _ngcontent-ng-c2146481828="" class="description"><p _ngcontent-ng-c2146481828="" class="summary">Contributed to a single-page application built with AngularJS, C# / ASP.NET Web APIs and Microsoft SQL Server stored procedures.</p><!----><!----></div><div _ngcontent-ng-c2146481828="" class="d-flex flex-wrap align-items-center tags mt-3"><span _ngcontent-ng-c2146481828="" class="tag">AngularJS</span><span _ngcontent-ng-c2146481828="" class="tag">C#</span><span _ngcontent-ng-c2146481828="" class="tag">ASP.NET</span><span _ngcontent-ng-c2146481828="" class="tag">Web APIs</span><span _ngcontent-ng-c2146481828="" class="tag">SQL Server</span><!----></div></div></div></div></adl-experience><adl-experience _ngcontent-ng-c2901899718="" class="mb-4 compact" _nghost-ng-c2146481828="" ngh="16" jsaction="click:;"><div _ngcontent-ng-c2146481828="" class="overlay"></div><div _ngcontent-ng-c2146481828="" class="container-fluid card-body-wrap opacity-half"><div _ngcontent-ng-c2146481828="" class="row"><div _ngcontent-ng-c2146481828="" class="col-3 d-none d-md-block"><span _ngcontent-ng-c2146481828="" class="period d-block">Jun 2017 — Jun 2018</span><span _ngcontent-ng-c2146481828="" class="location d-block">Beirut, Lebanon</span><!----></div><div _ngcontent-ng-c2146481828="" class="col-sm-12 col-md-9"><div _ngcontent-ng-c2146481828="" class="mb-2"><!----><span _ngcontent-ng-c2146481828="" class="title"> Junior Software Developer Intern <span _ngcontent-ng-c2146481828="" class="company">· Integrated Digital Systems</span></span><!----><span _ngcontent-ng-c2146481828="" class="period d-md-none"> Jun 2017 — Jun 2018<span _ngcontent-ng-c2146481828=""> · Beirut, Lebanon</span><!----></span></div><!----><div _ngcontent-ng-c2146481828="" class="description"><p _ngcontent-ng-c2146481828="" class="summary">Worked on the "ID Card Reader" project, from requirements and UML design to a Symfony web dashboard.</p><!----><ul _ngcontent-ng-c2146481828="" class="highlights"><li _ngcontent-ng-c2146481828=""><adl-inline-text _ngcontent-ng-c2146481828="" _nghost-ng-c3046719441="" ngh="7"><!----><!---->Built the dashboard (Symfony MVC, Doctrine ORM, MySQL) with Google OAuth sign-in.<!----><!----><!----></adl-inline-text></li><!----><!----><li _ngcontent-ng-c2146481828=""><adl-inline-text _ngcontent-ng-c2146481828="" _nghost-ng-c3046719441="" ngh="7"><!----><!---->Created RESTful APIs for the companion Android app.<!----><!----><!----></adl-inline-text></li><!----><!----><!----></ul><!----></div><div _ngcontent-ng-c2146481828="" class="d-flex flex-wrap align-items-center tags mt-3"><span _ngcontent-ng-c2146481828="" class="tag">PHP</span><span _ngcontent-ng-c2146481828="" class="tag">Symfony</span><span _ngcontent-ng-c2146481828="" class="tag">Doctrine ORM</span><span _ngcontent-ng-c2146481828="" class="tag">MySQL</span><span _ngcontent-ng-c2146481828="" class="tag">Google OAuth</span><span _ngcontent-ng-c2146481828="" class="tag">RESTful APIs</span><span _ngcontent-ng-c2146481828="" class="tag">UML</span><!----></div></div></div></div></adl-experience><!----><!----></section></adl-experiences><adl-recommendations _ngcontent-ng-c710586872="" _nghost-ng-c125777909="" ngh="18"><!----></adl-recommendations><adl-portfolio _ngcontent-ng-c710586872="" _nghost-ng-c3554768778="" ngh="20"><section _ngcontent-ng-c3554768778="" id="projects" class="section"><h2 _ngcontent-ng-c3554768778="" class="section-title">Projects</h2><div _ngcontent-ng-c3554768778="" class="featured"><adl-product-item _ngcontent-ng-c3554768778="" class="grid-item" _nghost-ng-c1873123946="" ngh="19"><a _ngcontent-ng-c1873123946="" class="card" href="/projects/noura-clinic" jsaction="click:;"><div _ngcontent-ng-c1873123946="" class="plate"><span _ngcontent-ng-c1873123946="" class="status"><span _ngcontent-ng-c1873123946="" aria-hidden="true" class="pulse"></span>In progress</span><!----><!----><adl-project-cover _ngcontent-ng-c1873123946="" _nghost-ng-c3387628060="" ngh="2"><span _ngcontent-ng-c3387628060="" aria-hidden="true" class="initials">NM</span><span _ngcontent-ng-c3387628060="" class="label">Dt. Noura Masalkhi Nutrition Clinic</span></adl-project-cover><!----></div><div _ngcontent-ng-c1873123946="" class="body"><span _ngcontent-ng-c1873123946="" class="kind">Web · 2026<span _ngcontent-ng-c1873123946=""> · Freelance</span><!----></span><h3 _ngcontent-ng-c1873123946="" class="name"> Dt. Noura Masalkhi Nutrition Clinic <span _ngcontent-ng-c1873123946="" aria-hidden="true" class="arrow">→</span></h3><p _ngcontent-ng-c1873123946="" class="stack">Angular / Firebase</p></div></a></adl-product-item><adl-product-item _ngcontent-ng-c3554768778="" class="grid-item" _nghost-ng-c1873123946="" ngh="19"><a _ngcontent-ng-c1873123946="" class="card" href="/projects/form-studio" jsaction="click:;"><div _ngcontent-ng-c1873123946="" class="plate"><span _ngcontent-ng-c1873123946="" class="status"><span _ngcontent-ng-c1873123946="" aria-hidden="true" class="pulse"></span>In progress</span><!----><!----><adl-project-cover _ngcontent-ng-c1873123946="" _nghost-ng-c3387628060="" ngh="2"><span _ngcontent-ng-c3387628060="" aria-hidden="true" class="initials">FS</span><span _ngcontent-ng-c3387628060="" class="label">Form Studio</span></adl-project-cover><!----></div><div _ngcontent-ng-c1873123946="" class="body"><span _ngcontent-ng-c1873123946="" class="kind">Web · 2025<span _ngcontent-ng-c1873123946=""> · Siren Analytics</span><!----></span><h3 _ngcontent-ng-c1873123946="" class="name"> Form Studio <span _ngcontent-ng-c1873123946="" aria-hidden="true" class="arrow">→</span></h3><p _ngcontent-ng-c1873123946="" class="stack">Angular / Formly / RxJS</p></div></a></adl-product-item><!----></div><details _ngcontent-ng-c3554768778="" class="early" jsaction="toggle:;"><summary _ngcontent-ng-c3554768778=""><span _ngcontent-ng-c3554768778="" class="early-title">Early work</span><span _ngcontent-ng-c3554768778="" class="early-range">2019 – 2020</span><span _ngcontent-ng-c3554768778="" class="early-toggle"><span _ngcontent-ng-c3554768778="" class="when-closed">Show 9 projects</span><span _ngcontent-ng-c3554768778="" class="when-open">Hide</span><span _ngcontent-ng-c3554768778="" aria-hidden="true" class="chevron">⌄</span></span></summary><p _ngcontent-ng-c3554768778="" class="early-intro">Where it started: freelance projects from my first years as a developer, built while I was learning Android, PHP and Angular. Each one taught me something I still use today.</p><div _ngcontent-ng-c3554768778="" role="group" class="filters" aria-label="Filter early projects"><button _ngcontent-ng-c3554768778="" type="button" class="filter active" aria-pressed="true" jsaction="click:;"> All <span _ngcontent-ng-c3554768778="" class="count">9</span></button><button _ngcontent-ng-c3554768778="" type="button" class="filter" aria-pressed="false" jsaction="click:;"> Web <span _ngcontent-ng-c3554768778="" class="count">5</span></button><button _ngcontent-ng-c3554768778="" type="button" class="filter" aria-pressed="false" jsaction="click:;"> Mobile <span _ngcontent-ng-c3554768778="" class="count">4</span></button><!----></div><ul _ngcontent-ng-c3554768778="" class="early-list"><li _ngcontent-ng-c3554768778="" class="grid-item"><a _ngcontent-ng-c3554768778="" class="early-item" href="/projects/ask" jsaction="click:;"><span _ngcontent-ng-c3554768778="" class="year">2020</span><span _ngcontent-ng-c3554768778="" class="early-name">ASK - Agile Share Knowledge</span><span _ngcontent-ng-c3554768778="" class="stack">Angular / EF Core</span><span _ngcontent-ng-c3554768778="" aria-hidden="true" class="arrow">→</span></a></li><li _ngcontent-ng-c3554768778="" class="grid-item"><a _ngcontent-ng-c3554768778="" class="early-item" href="/projects/leb-phones" jsaction="click:;"><span _ngcontent-ng-c3554768778="" class="year">2020</span><span _ngcontent-ng-c3554768778="" class="early-name">LebPhones</span><span _ngcontent-ng-c3554768778="" class="stack">Slim PHP / PWA</span><span _ngcontent-ng-c3554768778="" aria-hidden="true" class="arrow">→</span></a></li><li _ngcontent-ng-c3554768778="" class="grid-item"><a _ngcontent-ng-c3554768778="" class="early-item" href="/projects/sim-phones" jsaction="click:;"><span _ngcontent-ng-c3554768778="" class="year">2020</span><span _ngcontent-ng-c3554768778="" class="early-name">Sim-Phones</span><span _ngcontent-ng-c3554768778="" class="stack">Angular / Slim PHP / PWA</span><span _ngcontent-ng-c3554768778="" aria-hidden="true" class="arrow">→</span></a></li><li _ngcontent-ng-c3554768778="" class="grid-item"><a _ngcontent-ng-c3554768778="" class="early-item" href="/projects/status-saver" jsaction="click:;"><span _ngcontent-ng-c3554768778="" class="year">2019</span><span _ngcontent-ng-c3554768778="" class="early-name">WhatsApp Status Saver</span><span _ngcontent-ng-c3554768778="" class="stack">Android Java</span><span _ngcontent-ng-c3554768778="" aria-hidden="true" class="arrow">→</span></a></li><li _ngcontent-ng-c3554768778="" class="grid-item"><a _ngcontent-ng-c3554768778="" class="early-item" href="/projects/mega-deals" jsaction="click:;"><span _ngcontent-ng-c3554768778="" class="year">2019</span><span _ngcontent-ng-c3554768778="" class="early-name">MegaDeals</span><span _ngcontent-ng-c3554768778="" class="stack">Angular / Slim PHP</span><span _ngcontent-ng-c3554768778="" aria-hidden="true" class="arrow">→</span></a></li><li _ngcontent-ng-c3554768778="" class="grid-item"><a _ngcontent-ng-c3554768778="" class="early-item" href="/projects/mms-server" jsaction="click:;"><span _ngcontent-ng-c3554768778="" class="year">2019</span><span _ngcontent-ng-c3554768778="" class="early-name">MMS Server</span><span _ngcontent-ng-c3554768778="" class="stack">Android Java</span><span _ngcontent-ng-c3554768778="" aria-hidden="true" class="arrow">→</span></a></li><li _ngcontent-ng-c3554768778="" class="grid-item"><a _ngcontent-ng-c3554768778="" class="early-item" href="/projects/gorraf" jsaction="click:;"><span _ngcontent-ng-c3554768778="" class="year">2019</span><span _ngcontent-ng-c3554768778="" class="early-name">Gorraf</span><span _ngcontent-ng-c3554768778="" class="stack">Flask / React / PostgreSQL</span><span _ngcontent-ng-c3554768778="" aria-hidden="true" class="arrow">→</span></a></li><li _ngcontent-ng-c3554768778="" class="grid-item"><a _ngcontent-ng-c3554768778="" class="early-item" href="/projects/domain-finder" jsaction="click:;"><span _ngcontent-ng-c3554768778="" class="year">2019</span><span _ngcontent-ng-c3554768778="" class="early-name">Domain Finder</span><span _ngcontent-ng-c3554768778="" class="stack">Android Java</span><span _ngcontent-ng-c3554768778="" aria-hidden="true" class="arrow">→</span></a></li><li _ngcontent-ng-c3554768778="" class="grid-item"><a _ngcontent-ng-c3554768778="" class="early-item" href="/projects/electronic-masbaha" jsaction="click:;"><span _ngcontent-ng-c3554768778="" class="year">2019</span><span _ngcontent-ng-c3554768778="" class="early-name">المسبحة الإلكترونية</span><span _ngcontent-ng-c3554768778="" class="stack">Android Java</span><span _ngcontent-ng-c3554768778="" aria-hidden="true" class="arrow">→</span></a></li><!----></ul></details><!----></section></adl-portfolio><adl-contact _ngcontent-ng-c710586872="" _nghost-ng-c3890125771="" ngh="21"><section _ngcontent-ng-c3890125771="" id="contact" class="section"><h2 _ngcontent-ng-c3890125771="" class="section-title">Contact</h2><div _ngcontent-ng-c3890125771="" class="card"><h3 _ngcontent-ng-c3890125771="" class="heading">Let's work together</h3><p _ngcontent-ng-c3890125771="" class="intro">Have a project in mind, a role to discuss, or just want to say hi? Send me a message and I'll get back to you.</p><!----><form _ngcontent-ng-c3890125771="" novalidate="" class="ng-untouched ng-pristine ng-invalid" jsaction="submit:;"><div _ngcontent-ng-c3890125771="" class="fields"><div _ngcontent-ng-c3890125771="" class="field"><label _ngcontent-ng-c3890125771="" for="contact-name">Name</label><input _ngcontent-ng-c3890125771="" id="contact-name" type="text" formcontrolname="name" autocomplete="name" aria-invalid="false" value="" class="ng-untouched ng-pristine ng-invalid" jsaction="input:;blur:;compositionstart:;compositionend:;"><!----></div><div _ngcontent-ng-c3890125771="" class="field"><label _ngcontent-ng-c3890125771="" for="contact-email">Email</label><input _ngcontent-ng-c3890125771="" id="contact-email" type="email" formcontrolname="email" autocomplete="email" aria-invalid="false" value="" class="ng-untouched ng-pristine ng-invalid" jsaction="input:;blur:;compositionstart:;compositionend:;"><!----></div><div _ngcontent-ng-c3890125771="" class="field wide"><label _ngcontent-ng-c3890125771="" for="contact-message">Message</label><textarea _ngcontent-ng-c3890125771="" id="contact-message" rows="5" formcontrolname="message" aria-invalid="false" class="ng-untouched ng-pristine ng-invalid" jsaction="input:;blur:;compositionstart:;compositionend:;"></textarea><!----></div></div><input _ngcontent-ng-c3890125771="" type="hidden" formcontrolname="gotcha" name="_gotcha" tabindex="-1" autocomplete="off" style="display: none !important;" value="" class="ng-untouched ng-pristine ng-valid" jsaction="input:;blur:;compositionstart:;compositionend:;"><!----><div _ngcontent-ng-c3890125771="" class="actions"><button _ngcontent-ng-c3890125771="" type="submit" class="submit"><!----> Send message <span _ngcontent-ng-c3890125771="" aria-hidden="true">→</span><!----></button><span _ngcontent-ng-c3890125771="" class="or">or email <a _ngcontent-ng-c3890125771="" dir="ltr" href="mailto:adlouniahmad@outlook.com">adlouniahmad@outlook.com</a></span></div></form><!----></div></section></adl-contact></main></div></div></adl-home><!----></adl-root>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SH0CP0QQDE"></script>
+  <!-- Google tag (gtag.js): only on the live site, so local development doesn't pollute the statistics -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-SH0CP0QQDE');
+    if (location.hostname === 'adlouniahmad-dev.github.io') {
+      var gtagScript = document.createElement('script');
+      gtagScript.async = true;
+      gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-SH0CP0QQDE';
+      document.head.appendChild(gtagScript);
+      gtag('js', new Date());
+      gtag('config', 'G-SH0CP0QQDE');
+    }
   </script>
 
-<script src="runtime.1745ef5b400bc4b1.js" type="module"></script><script src="polyfills.df3b6666818bc94e.js" type="module"></script><script src="scripts.97506bd3c2fd9df9.js" defer></script><script src="main.552803cbe1f124ba.js" type="module"></script><script>document.querySelectorAll('link[data-beasties-media]').forEach(function(l){l.media=l.getAttribute('data-beasties-media');l.removeAttribute('data-beasties-media')})</script></body>
+<script src="main-PZLY4M65.js" type="module"></script>
 
-</html>
+<script id="ng-state" type="application/json">{"__nghData__":[{"t":{"21":"t0"},"c":{"21":[]}},{"t":{"4":"t1"},"c":{"4":[{"i":"t1","r":1,"x":4}]}},{},{"t":{"8":"t3","9":"t4"},"c":{"8":[],"9":[{"i":"t4","r":1}]}},{"t":{"13":"t2"},"c":{"13":[{"i":"t2","r":1,"x":4}]}},{"t":{"1":"t6"},"c":{"1":[{"i":"t6","r":5,"t":{"0":"t7","1":"t8","2":"t9"},"c":{"0":[],"1":[],"2":[{"i":"t9","r":2,"e":{"0":1}}]}},{"i":"t6","r":4,"t":{"0":"t7","1":"t8","2":"t9"},"c":{"0":[{"i":"t7","r":1}],"1":[],"2":[]}},{"i":"t6","r":5,"t":{"0":"t7","1":"t8","2":"t9"},"c":{"0":[],"1":[],"2":[{"i":"t9","r":2,"e":{"0":1}}]}},{"i":"t6","r":4,"t":{"0":"t7","1":"t8","2":"t9"},"c":{"0":[],"1":[{"i":"t8","r":1}],"2":[]}},{"i":"t6","r":5,"t":{"0":"t7","1":"t8","2":"t9"},"c":{"0":[],"1":[],"2":[{"i":"t9","r":2,"e":{"0":1}}]}}]}},{"t":{"1":"t6"},"c":{"1":[{"i":"t6","r":5,"t":{"0":"t7","1":"t8","2":"t9"},"c":{"0":[],"1":[],"2":[{"i":"t9","r":2,"e":{"0":1}}]}},{"i":"t6","r":4,"t":{"0":"t7","1":"t8","2":"t9"},"c":{"0":[{"i":"t7","r":1}],"1":[],"2":[]}},{"i":"t6","r":5,"t":{"0":"t7","1":"t8","2":"t9"},"c":{"0":[],"1":[],"2":[{"i":"t9","r":2,"e":{"0":1}}]}}]}},{"t":{"1":"t6"},"c":{"1":[{"i":"t6","r":5,"t":{"0":"t7","1":"t8","2":"t9"},"c":{"0":[],"1":[],"2":[{"i":"t9","r":2,"e":{"0":1}}]}}]}},{"t":{"6":"t5","7":"t10","8":"t12"},"c":{"6":[{"i":"t5","r":1,"x":5}],"7":[{"i":"t10","r":1,"t":{"3":"t11"},"c":{"3":[{"i":"t11","r":1,"x":17}]}}],"8":[{"i":"t12","r":1}]}},{"t":{"1":"t6"},"c":{"1":[{"i":"t6","r":4,"t":{"0":"t7","1":"t8","2":"t9"},"c":{"0":[{"i":"t7","r":1}],"1":[],"2":[]}},{"i":"t6","r":5,"t":{"0":"t7","1":"t8","2":"t9"},"c":{"0":[],"1":[],"2":[{"i":"t9","r":2,"e":{"0":1}}]}}]}},{"t":{"6":"t14","9":"t15","10":"t16","13":"t17","14":"t18","16":"t20","17":"t21","20":"t25"},"c":{"6":[{"i":"t14","r":1}],"9":[{"i":"t15","r":1}],"10":[],"13":[{"i":"t17","r":1}],"14":[{"i":"t18","r":1,"t":{"3":"t19"},"c":{"3":[{"i":"t19","r":1,"x":2}]}}],"16":[{"i":"t20","r":1}],"17":[{"i":"t21","r":1,"t":{"2":"t22"},"c":{"2":[{"i":"t22","r":3,"t":{"0":"t23","1":"t24"},"c":{"0":[{"i":"t23","r":1}],"1":[]},"x":5}]}}],"20":[{"i":"t25","r":1,"x":8}]}},{"t":{"6":"t14","9":"t15","10":"t16","13":"t17","14":"t18","16":"t20","17":"t21","20":"t25"},"c":{"6":[{"i":"t14","r":1}],"9":[{"i":"t15","r":1}],"10":[],"13":[{"i":"t17","r":1}],"14":[],"16":[{"i":"t20","r":1}],"17":[{"i":"t21","r":1,"t":{"2":"t22"},"c":{"2":[{"i":"t22","r":3,"t":{"0":"t23","1":"t24"},"c":{"0":[{"i":"t23","r":1}],"1":[]},"x":4}]}}],"20":[{"i":"t25","r":1,"x":12}]}},{"t":{"6":"t14","9":"t15","10":"t16","13":"t17","14":"t18","16":"t20","17":"t21","20":"t25"},"c":{"6":[{"i":"t14","r":1}],"9":[{"i":"t15","r":1}],"10":[],"13":[{"i":"t17","r":1}],"14":[],"16":[{"i":"t20","r":1}],"17":[{"i":"t21","r":1,"t":{"2":"t22"},"c":{"2":[{"i":"t22","r":3,"t":{"0":"t23","1":"t24"},"c":{"0":[{"i":"t23","r":1}],"1":[]}}]}}],"20":[{"i":"t25","r":1,"x":7}]}},{"t":{"6":"t14","9":"t15","10":"t16","13":"t17","14":"t18","16":"t20","17":"t21","20":"t25"},"c":{"6":[],"9":[],"10":[{"i":"t16","r":1}],"13":[],"14":[],"16":[{"i":"t20","r":1}],"17":[{"i":"t21","r":1,"t":{"2":"t22"},"c":{"2":[{"i":"t22","r":3,"t":{"0":"t23","1":"t24"},"c":{"0":[{"i":"t23","r":1}],"1":[]},"x":2}]}}],"20":[{"i":"t25","r":1,"x":7}]}},{"t":{"6":"t14","9":"t15","10":"t16","13":"t17","14":"t18","16":"t20","17":"t21","20":"t25"},"c":{"6":[{"i":"t14","r":1}],"9":[{"i":"t15","r":1}],"10":[],"13":[{"i":"t17","r":1}],"14":[],"16":[{"i":"t20","r":1}],"17":[{"i":"t21","r":1,"t":{"2":"t22"},"c":{"2":[{"i":"t22","r":3,"t":{"0":"t23","1":"t24"},"c":{"0":[{"i":"t23","r":1}],"1":[]},"x":2}]}}],"20":[{"i":"t25","r":1,"x":5}]}},{"t":{"6":"t14","9":"t15","10":"t16","13":"t17","14":"t18","16":"t20","17":"t21","20":"t25"},"c":{"6":[{"i":"t14","r":1}],"9":[],"10":[{"i":"t16","r":1}],"13":[{"i":"t17","r":1}],"14":[],"16":[{"i":"t20","r":1}],"17":[],"20":[{"i":"t25","r":1,"x":5}]}},{"t":{"6":"t14","9":"t15","10":"t16","13":"t17","14":"t18","16":"t20","17":"t21","20":"t25"},"c":{"6":[{"i":"t14","r":1}],"9":[],"10":[{"i":"t16","r":1}],"13":[{"i":"t17","r":1}],"14":[],"16":[{"i":"t20","r":1}],"17":[{"i":"t21","r":1,"t":{"2":"t22"},"c":{"2":[{"i":"t22","r":3,"t":{"0":"t23","1":"t24"},"c":{"0":[{"i":"t23","r":1}],"1":[]},"x":2}]}}],"20":[{"i":"t25","r":1,"x":7}]}},{"t":{"5":"t13","6":"t26"},"c":{"5":[{"i":"t13","r":1,"x":5}],"6":[{"i":"t26","r":4,"t":{"4":"t27"},"c":{"4":[{"i":"t27","r":1,"x":2}]}}]}},{"t":{"0":"t28"},"c":{"0":[]}},{"t":{"2":"t30","3":"t31","4":"t32","9":"t33"},"c":{"2":[{"i":"t30","r":1}],"3":[],"4":[{"i":"t32","r":1}],"9":[{"i":"t33","r":1}]}},{"t":{"6":"t29","7":"t34"},"c":{"6":[{"i":"t29","r":1,"x":2}],"7":[{"i":"t34","r":1,"t":{"22":"t35","25":"t36"},"c":{"22":[{"i":"t35","r":1,"x":3}],"25":[{"i":"t36","r":1,"x":9}]}}]}},{"t":{"11":"t37","12":"t38"},"c":{"11":[],"12":[{"i":"t38","r":1,"t":{"7":"t39","13":"t40","19":"t41","21":"t42","24":"t43","25":"t44"},"c":{"7":[],"13":[],"19":[],"21":[],"24":[],"25":[{"i":"t44","r":2}]}}]}},{"c":{"0":[{"i":"c710586872","r":1}]}}]}</script><script>document.querySelectorAll('link[data-beasties-media]').forEach(function(l){l.media=l.getAttribute('data-beasties-media');l.removeAttribute('data-beasties-media')})</script></body></html>
