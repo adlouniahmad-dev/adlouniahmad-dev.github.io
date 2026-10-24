@@ -1,8 +1,20 @@
 <section class="section" id="about">
-  <h3 class="section-title">About</h3>
+  <h2 class="section-title">{{ 'section.about' | t }}</h2>
   <div>
-    @for (description of info.about; track description) {
-      <p [innerHtml]="description"></p>
+    @for (paragraph of info.about.paragraphs; track $index) {
+      <p><adl-inline-text [text]="paragraph"></adl-inline-text></p>
+    }
+
+    @if (info.about.skills?.length) {
+      <ul class="skills" [attr.aria-label]="'skills' | t">
+        @for (skill of info.about.skills; track skill) {
+          <li class="skill">{{ skill }}</li>
+        }
+      </ul>
+    }
+
+    @if (info.about.signOff) {
+      <p class="sign-off">{{ info.about.signOff }}</p>
     }
   </div>
 </section>

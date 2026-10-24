@@ -1,0 +1,11 @@
+/*
+ * Self-hosted web fonts (the @fontsource packages). Built as its own fonts.css, which index.html loads once
+ * the page has loaded, so the fonts never compete with the page itself; text shows in the system font first.
+ * The browser only downloads the subsets and weights a page actually uses.
+ */
+@import '@fontsource-variable/inter/wght.css';
+@import '@fontsource-variable/jetbrains-mono/wght.css';
+@import '@fontsource/ibm-plex-sans-arabic/arabic-400.css';
+@import '@fontsource/ibm-plex-sans-arabic/arabic-500.css';
+@import '@fontsource/ibm-plex-sans-arabic/arabic-600.css';
+@import '@fontsource/ibm-plex-sans-arabic/arabic-700.css';

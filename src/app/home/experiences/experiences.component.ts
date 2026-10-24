@@ -1,20 +1,25 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { IExperiece } from '../../shared/interfaces/experiece';
+import { Component } from '@angular/core';
+import { IExperience } from '../../shared/interfaces/experience';
+import { ExperienceType } from '../../shared/enums/experience-type';
 import { GeneralService } from '../../shared/services/general.service';
+import { ExperienceComponent } from './experience/experience.component';
+import { TranslatePipe } from '../../shared/i18n/translate.pipe';
 
 @Component({
     selector: 'adl-experiences',
     templateUrl: './experiences.component.html',
     styleUrl: './experiences.component.css',
-    changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+    imports: [ExperienceComponent, TranslatePipe]
 })
 export class ExperiencesComponent {
 
-  constructor(private generalService: GeneralService) {}
+  readonly positions: IExperience[];
+  readonly internships: IExperience[];
 
-  get experiences(): IExperiece[] {
-    return this.generalService.getExperience();
+  constructor(generalService: GeneralService) {
+    const all = generalService.getExperience();
+    this.positions = all.filter(experience => experience.type !== ExperienceType.Internship);
+    this.internships = all.filter(experience => experience.type === ExperienceType.Internship);
   }
 
 }

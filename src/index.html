@@ -3,49 +3,111 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Ahmad Adlouni - Software Engineer</title>
+  <title>Ahmad Adlouni - Senior Software Engineer</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="/assets/icons/icon-72x72.png">
-  <link rel="apple-touch-icon" href="/assets/icons/icon-96x96.png">
-  <link rel="apple-touch-icon" href="/assets/icons/icon-128x128.png">
-  <link rel="apple-touch-icon" href="/assets/icons/icon-144x144.png">
-  <link rel="apple-touch-icon" href="/assets/icons/icon-152x152.png">
-  <link rel="apple-touch-icon" href="/assets/icons/icon-180x180.png">
-  <link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
-  <link rel="apple-touch-icon" href="/assets/icons/icon-384x384.png">
-  <link rel="apple-touch-icon" href="/assets/icons/icon-512x512.png">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <!-- Web fonts load after the page, so they never hold up the first paint (see src/fonts.css) -->
+  <script>
+    addEventListener('load', function () {
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'fonts.css';
+      document.head.appendChild(link);
+    });
+  </script>
+  <noscript><link rel="stylesheet" href="fonts.css"></noscript>
 
   <meta name="google-site-verification" content="3mvB4O2lUauJu67WvVdlNUVHiuctebYoEpUMcJQKQN4" />
   
-  <meta name="theme-color" content="#2d3250">
-  <meta name="apple-mobile-web-app-status-bar" content="#2d3250">
-  <meta name="description" content="Seasoned Software Engineer at Siren Analytics and freelance Full Stack Web Developer, specializing in UI/UX with expertise in Java, Spring Boot, Angular, Twilio, NodeJS, and GWT. Passionate about innovation and continuous learning.">
-  <meta name="keywords" content="Software Engineer, Full Stack Web Developer, UI/UX Specialist, Java, Spring Boot, Angular, Twilio, NodeJS, GWT, Innovation, Continuous Learning, Freelance, Siren Analytics" />
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0a0e1a">
+  <!-- Theme before first paint, so there is no flash: the saved choice, otherwise dark -->
+  <script>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('adl.theme'); } catch (e) {}
+      var theme = saved === 'light' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', theme === 'light' ? '#f8fafc' : '#0a0e1a');
+    })();
+  </script>
+  <meta name="apple-mobile-web-app-status-bar" content="#0a0e1a">
+  <meta name="description" content="Senior Software Engineer at Siren Analytics with 7+ years of experience building responsive, accessible and scalable web applications for government, enterprise and digital-service platforms. Specialised in Angular, TypeScript and frontend architecture.">
+  <meta name="keywords" content="Senior Software Engineer, Frontend Engineer, Angular, TypeScript, RxJS, NgRx, Frontend Architecture, Progressive Web Apps, Form Builder, RTL, Arabic/English, Java, Spring Boot, Node.js, Siren Analytics, Lebanon" />
   <meta name="author" content="Ahmad Adlouni">
 
-  <meta property="og:title" content="Ahmad Adlouni - Software Engineer">
+  <meta property="og:title" content="Ahmad Adlouni - Senior Software Engineer">
   <meta property="og:url" content="https://adlouniahmad-dev.github.io/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/assets/icons/icon-512x512.png">
-  <meta property="og:description" content="Seasoned Software Engineer at Siren Analytics and freelance Full Stack Web Developer, specializing in UI/UX with expertise in Java, Spring Boot, Angular, Twilio, NodeJS, and GWT. Passionate about innovation and continuous learning.">
-  <meta property="og:site_name" content="Ahmad Adlouni - Software Engineer">
+  <meta property="og:image" content="https://adlouniahmad-dev.github.io/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ahmad Adlouni, Senior Software Engineer: Frontend and Angular">
+  <meta property="og:description" content="Senior Software Engineer at Siren Analytics with 7+ years of experience building responsive, accessible and scalable web applications for government, enterprise and digital-service platforms. Specialised in Angular, TypeScript and frontend architecture.">
+  <meta property="og:site_name" content="Ahmad Adlouni - Senior Software Engineer">
   <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ahmad Adlouni - Senior Software Engineer">
+  <meta name="twitter:description" content="Senior Software Engineer at Siren Analytics with 7+ years of experience building responsive, accessible and scalable web applications for government, enterprise and digital-service platforms. Specialised in Angular, TypeScript and frontend architecture.">
+  <meta name="twitter:image" content="https://adlouniahmad-dev.github.io/assets/og-image.png">
+  <meta name="twitter:image:alt" content="Ahmad Adlouni, Senior Software Engineer: Frontend and Angular">
+
+  <link rel="canonical" href="https://adlouniahmad-dev.github.io/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ahmad Adlouni",
+    "url": "https://adlouniahmad-dev.github.io/",
+    "jobTitle": "Senior Software Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Siren Analytics",
+      "url": "https://sirenanalytics.com"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Saida",
+      "addressCountry": "LB"
+    },
+    "knowsAbout": ["Angular", "TypeScript", "RxJS", "NgRx", "Angular Material", "Angular Formly", "Progressive Web Apps", "Frontend Architecture", "Web Accessibility", "UI/UX Design", "Node.js", "Java", "Spring Boot", "Dialogflow CX"],
+    "knowsLanguage": ["ar", "en"],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Beirut Arab University"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/adlouni-ahmad/",
+      "https://github.com/adlouniahmad-dev",
+      "https://www.facebook.com/adlouni.ahmad/",
+      "https://www.instagram.com/ahmad_adlouni/"
+    ]
+  }
+  </script>
 </head>
 
-<body data-spy="scroll" data-target="#menu" data-offset="100">
+<body>
   <adl-root></adl-root>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SH0CP0QQDE"></script>
+  <!-- Google tag (gtag.js): only on the live site, so local development doesn't pollute the statistics -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-SH0CP0QQDE');
+    if (location.hostname === 'adlouniahmad-dev.github.io') {
+      var gtagScript = document.createElement('script');
+      gtagScript.async = true;
+      gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-SH0CP0QQDE';
+      document.head.appendChild(gtagScript);
+      gtag('js', new Date());
+      gtag('config', 'G-SH0CP0QQDE');
+    }
   </script>
 
 </body>

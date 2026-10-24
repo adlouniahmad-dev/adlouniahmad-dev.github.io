@@ -1,15 +1,16 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ISocialNetwork } from '../../interfaces/social-network';
 import { faInstagram, faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { GeneralService } from '../../services/general.service';
 import { IContactInfo } from '../../interfaces/contact-info';
+import { FaIconComponent } from '@fortawesome/angular-fontawesome';
+import { SiteControlsComponent } from '../site-controls/site-controls.component';
 
 @Component({
     selector: 'adl-footer',
     templateUrl: './footer.component.html',
     styleUrls: ['./footer.component.css'],
-    changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+    imports: [FaIconComponent, SiteControlsComponent]
 })
 export class FooterComponent implements OnInit {
 

@@ -1,0 +1,34 @@
+// Slim Bootstrap build: only the reboot, the grid and the utility groups the templates use.
+// The full bootstrap.min.css was ~230 KB, almost all of it unused.
+@use "sass:map";
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+// Utility groups in use (see the class names in src/app/**/*.html). Add a key here when a template
+// starts using a utility from another group.
+$used-utilities: (
+  "display", "position", "overflow", "viewport-height",
+  "flex", "flex-direction", "flex-wrap", "justify-content", "align-items", "gap",
+  "margin", "margin-x", "margin-y", "margin-top", "margin-end", "margin-bottom", "margin-start",
+  "padding", "padding-x", "padding-y", "padding-top", "padding-end", "padding-bottom", "padding-start",
+  "text-align", "text-transform", "font-weight"
+);
+
+$kept: ();
+@each $key, $utility in $utilities {
+  @if index($used-utilities, $key) {
+    $kept: map.merge($kept, ($key: $utility));
+  }
+}
+$utilities: $kept;
+
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/utilities/api";

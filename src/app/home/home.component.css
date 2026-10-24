@@ -5,67 +5,177 @@
   padding: 0 1.5rem;
 }
 
+/* Soft glow that follows the cursor (desktop only, positioned from HomeComponent) */
+.spotlight {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .4s ease;
+  background: radial-gradient(600px circle at var(--spot-x, 50%) var(--spot-y, 50%), rgba(167, 139, 250, .09), transparent 40%);
+}
+
+:host.spotlight-on .spotlight {
+  opacity: 1;
+}
+
 .header,
 .content {
-  padding-top: 3rem;
+  padding-top: 3.5rem;
   width: 100%;
 }
 
 .content ::ng-deep .section {
   margin-bottom: 5rem;
+  scroll-margin-top: 6rem;
+}
+
+/* Greeting chip */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .35rem .85rem .35rem .7rem;
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  letter-spacing: .04em;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-raised);
+  backdrop-filter: blur(6px);
+}
+
+.pulse {
+  position: relative;
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  background: var(--success);
+}
+
+.pulse::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: inherit;
+  animation: pulse 2s ease-out infinite;
+}
+
+.name {
+  margin: 1.25rem 0 .5rem;
+  font-size: clamp(2.5rem, 6vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -.035em;
+  color: var(--text);
+}
+
+.role {
+  margin: 0;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-weight: 600;
+  letter-spacing: -.01em;
+}
+
+.caret {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  margin-inline-start: .3rem;
+  vertical-align: -.15em;
+  background: var(--accent-3);
+  animation: blink 1s step-end infinite;
 }
 
 .navigation-container {
   display: none;
 }
 
+/* Mobile section headings: sticky, frosted */
+/* Small screens: section headings (the top bar shows where you are, so they no longer stick) */
 :host ::ng-deep .section-title {
   display: block;
-  font-size: 1.1rem;
+  margin: 0 0 1.25rem;
+  padding: 0 0 .75rem;
+  font-family: var(--font-mono);
+  font-size: .8rem;
+  font-weight: 500;
+  letter-spacing: .12em;
   text-transform: uppercase;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Small screens: frosted bar with the monogram and section links */
+.mobile-bar {
   position: sticky;
-  z-index: 1;
+  z-index: 10;
   top: 0;
-  padding: 1.2rem 0;
-  background-color: var(--color-blue-dark-shade);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 -1.5rem;
+  padding-block: .45rem;
+  padding-inline: 1.5rem .75rem;
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
 }
 
-.welcoming {
-  font-size: 60%;
-  text-transform: uppercase;
-  color: #aa7142;
+.bar-logo {
+  display: flex;
+  font-size: .95rem;
 }
 
-@media screen and (min-width: 991px) {
+/* Very narrow phones: the four section links need the whole width */
+@media screen and (max-width: 359px) {
 
-  :host {
-    padding: 0 4.5rem;
+  .mobile-bar {
+    justify-content: center;
+    padding: .45rem .5rem;
   }
 
-  :host ::ng-deep .section-title {
+  .bar-logo {
     display: none;
   }
 
-  .header {
-    position: sticky;
-    top: 0;
-    max-height: 100vh;
-  }
+}
 
-  .header,
-  .content {
-    padding-bottom: 6rem;
-    width: 50%;
-  }
+/* The sidebar is always on screen, so it animates on load instead of on scroll (AOS) */
+.enter {
+  animation: enter .8s cubic-bezier(.2, .8, .2, 1) both;
+}
 
-  .content ::ng-deep .section {
-    margin-bottom: 9rem;
-  }
+.enter-delay {
+  animation-delay: .15s;
+}
 
-  .navigation-container {
-    display: block;
-  }
+.enter-left {
+  animation: enter-left .8s .1s cubic-bezier(.2, .8, .2, 1) both;
+}
 
+@keyframes enter-left {
+  from { opacity: 0; transform: translateX(calc(24px * var(--dir))); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes enter {
+  from { opacity: 0; transform: translateX(calc(-24px * var(--dir))); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: .7; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
 }
 
 @media screen and (min-width: 769px) {
@@ -73,6 +183,55 @@
   .header,
   .content {
     padding-top: 6rem;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+
+  :host {
+    padding: 0 4.5rem;
+  }
+
+  .mobile-bar {
+    display: none;
+  }
+
+  /* The sidebar menu labels the sections on desktop; keep the headings for screen readers and
+     search engines (display: none would break the heading order) */
+  :host ::ng-deep .section-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .header {
+    position: sticky;
+    top: 0;
+    max-height: 100vh;
+    overflow-y: auto;
+    padding-bottom: 6rem;
+    width: 48%;
+  }
+
+  .content {
+    padding-bottom: 6rem;
+    width: 52%;
+  }
+
+  .content ::ng-deep .section {
+    margin-bottom: 8rem;
+  }
+
+  .navigation-container {
+    display: block;
+    margin-top: 4rem;
   }
 
 }

@@ -1,96 +1,70 @@
-<section id="contact" class="py-5rem pb-120px">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h3 class="underline-center text-center mb-5" data-aos="fade-down"><span class="font-weight-lighter">Get</span> In Touch</h3>
+<section class="section" id="contact">
+  <h2 class="section-title">{{ 'section.contact' | t }}</h2>
+
+  <div class="card">
+    <h3 class="heading">{{ 'contactHeading' | t }}</h3>
+    <p class="intro">{{ 'contactIntro' | t }}</p>
+
+    @if (sent()) {
+      <div class="success" role="status">
+        <span class="check" aria-hidden="true">✓</span>
+        <div>
+          <p class="success-title">{{ 'sentTitle' | t }}</p>
+          <p class="success-text">{{ 'sentText' | t }}</p>
+          <button type="button" class="link-button" (click)="sendAnother()">{{ 'sendAnother' | t }}</button>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="container mt-5">
-    <div class="row overflow-hidden">
-      <div class="col-md-7 mb-5" data-aos="fade-right">
-        @if (!showSuccess) {
-          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-            <h4 class="mb-5">Get In Touch</h4>
-            <div class="form-group">
-              <label for="name" class="d-none">Name</label>
-              <input type="text" class="form-control" id="name" name="name" formControlName="name" required
-                [attr.disabled]="showLoader ? true : null" placeholder="Your Name *"
-                [ngClass]="{'is-invalid': form.name.errors && isSubmitted}">
-            </div>
-            <div class="form-group">
-              <label for="email" class="d-none">Email</label>
-              <input type="email" class="form-control" id="email" name="email" formControlName="email"
-                required [attr.disabled]="showLoader ? true : null" placeholder="Your Email *"
-                [ngClass]="{'is-invalid': form.email.errors && isSubmitted}">
-            </div>
-            <div class="form-group">
-              <label for="message" class="d-none">Message</label>
-              <textarea class="form-control" name="message" id="message" rows="4" name="message"
-                formControlName="message" required [attr.disabled]="showLoader ? true : null"
-                placeholder="Write a Message *"
-              [ngClass]="{'is-invalid': form.message.errors && isSubmitted}"></textarea>
-            </div>
-            <div class="mt-4">
-              @if (showLoader) {
-                <div class="loader d-flex justify-content-center">
-                  <div class="lds-ellipsis">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                  </div>
-                </div>
-              }
-              @if (!showLoader) {
-                <button type="submit" class="btn btn-primary text-uppercase px-4 py-3">Send Message</button>
-              }
-            </div>
-          </form>
-        } @else {
-          <div class="success-checkmark">
-            <div class="check-icon">
-              <span class="icon-line line-tip"></span>
-              <span class="icon-line line-long"></span>
-              <div class="icon-circle"></div>
-              <div class="icon-fix"></div>
-            </div>
+    } @else {
+      <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+        <div class="fields">
+          <div class="field">
+            <label for="contact-name">{{ 'field.name' | t }}</label>
+            <input id="contact-name" type="text" formControlName="name" autocomplete="name"
+              [attr.aria-invalid]="showError('name')" [attr.aria-describedby]="showError('name') ? 'contact-name-error' : null">
+            @if (showError('name')) {
+              <span class="error" id="contact-name-error">{{ 'error.name' | t }}</span>
+            }
           </div>
-          <div class="mt-4 text-center">
-            <span>Your message sent successfully<br>I'll be in touch shortly</span>
+
+          <div class="field">
+            <label for="contact-email">{{ 'field.email' | t }}</label>
+            <input id="contact-email" type="email" formControlName="email" autocomplete="email"
+              [attr.aria-invalid]="showError('email')" [attr.aria-describedby]="showError('email') ? 'contact-email-error' : null">
+            @if (showError('email')) {
+              <span class="error" id="contact-email-error">{{ 'error.email' | t }}</span>
+            }
           </div>
+
+          <div class="field wide">
+            <label for="contact-message">{{ 'field.message' | t }}</label>
+            <textarea id="contact-message" rows="5" formControlName="message"
+              [attr.aria-invalid]="showError('message')" [attr.aria-describedby]="showError('message') ? 'contact-message-error' : null"></textarea>
+            @if (showError('message')) {
+              <span class="error" id="contact-message-error">{{ 'error.message' | t }}</span>
+            }
+          </div>
+        </div>
+
+        <!-- spam trap: hidden from people, bots fill it in -->
+        <input type="hidden" formControlName="gotcha" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
+
+        @if (failed()) {
+          <p class="failure" role="alert">
+            {{ errorMessage() }} {{ 'alsoEmail' | t }} <a [href]="'mailto:' + email" dir="ltr">{{ email }}</a>.
+          </p>
         }
-        <ng-template #success>
-          <div class="success-checkmark">
-            <div class="check-icon">
-              <span class="icon-line line-tip"></span>
-              <span class="icon-line line-long"></span>
-              <div class="icon-circle"></div>
-              <div class="icon-fix"></div>
-            </div>
-          </div>
-          <div class="mt-4 text-center">
-            <span>Your message sent successfully<br>I'll be in touch shortly</span>
-          </div>
-        </ng-template>
-      </div>
-      <div class="col-md-5 pl-md-5" data-aos="fade-left">
-        <h4 class="mb-5">My Contact Details</h4>
-        <ul class="site-contact-details font-weight-lighter">
-          <li>
-            <span class="text-uppercase">Email</span>
-            adlouniahmad&#64;outlook.com
-          </li>
-          <li>
-            <span class="text-uppercase">Phone</span>
-            +961 71 387 643
-          </li>
-          <li>
-            <span class="text-uppercase">Address</span>
-            Saida, Lebanon
-          </li>
-        </ul>
-      </div>
-    </div>
+
+        <div class="actions">
+          <button type="submit" class="submit" [disabled]="sending()">
+            @if (sending()) {
+              <span class="spinner" aria-hidden="true"></span> {{ 'sending' | t }}
+            } @else {
+              {{ 'send' | t }} <span aria-hidden="true">{{ 'arrow.forward' | t }}</span>
+            }
+          </button>
+          <span class="or">{{ 'orEmail' | t }} <a [href]="'mailto:' + email" dir="ltr">{{ email }}</a></span>
+        </div>
+      </form>
+    }
   </div>
 </section>

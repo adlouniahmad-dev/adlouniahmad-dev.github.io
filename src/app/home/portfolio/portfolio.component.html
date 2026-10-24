@@ -1,13 +1,49 @@
-<section id="projects">
-  <h3 class="section-title">Projects</h3>
+<section class="section" id="projects">
+  <h2 class="section-title">{{ 'section.projects' | t }}</h2>
 
-  <div>
-    <div class="portfolio-container">
-      @for (item of portfolioItems; track item) {
-        <adl-product-item
-          [ngClass]="{'show-portfolio-item': item.tags.includes(filterValue) || filterValue == '*'}"
-          [item]="item"></adl-product-item>
-      }
-    </div>
+  <div class="featured">
+    @for (item of featured; track item.id) {
+      <adl-product-item class="grid-item" [item]="item"></adl-product-item>
+    }
   </div>
+
+  @if (early.length) {
+    <!-- <details> keeps the links in the prerendered HTML even while collapsed -->
+    <details class="early" [open]="earlyOpen" (toggle)="onEarlyToggle($event)">
+      <summary>
+        <span class="early-title">{{ 'earlyWork' | t }}</span>
+        <span class="early-range">{{ earlyRange }}</span>
+        <span class="early-toggle">
+          <span class="when-closed">{{ 'showProjects' | t: { n: early.length } }}</span>
+          <span class="when-open">{{ 'hide' | t }}</span>
+          <span class="chevron" aria-hidden="true">⌄</span>
+        </span>
+      </summary>
+
+      <p class="early-intro">{{ 'earlyIntro' | t }}</p>
+
+      <div class="filters" role="group" [attr.aria-label]="'filterEarly' | t">
+        @for (category of categories; track category.value) {
+          <button type="button" class="filter" [class.active]="category.value === filterValue"
+            [attr.aria-pressed]="category.value === filterValue" (click)="filterValue = category.value">
+            {{ category.name }}
+            <span class="count">{{ counts[category.value] }}</span>
+          </button>
+        }
+      </div>
+
+      <ul class="early-list">
+        @for (item of visibleEarly; track item.id) {
+          <li class="grid-item">
+            <a class="early-item" [routerLink]="link('projects', item.id)">
+              <span class="year">{{ item.year }}</span>
+              <span class="early-name">{{ item.name }}</span>
+              <span class="stack">{{ item.languages }}</span>
+              <span class="arrow" aria-hidden="true">{{ 'arrow.forward' | t }}</span>
+            </a>
+          </li>
+        }
+      </ul>
+    </details>
+  }
 </section>

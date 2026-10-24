@@ -2,7 +2,7 @@
 
 Personal portfolio site, live at **<https://adlouniahmad-dev.github.io/>**.
 
-Built with Angular 22, Bootstrap, Font Awesome and AOS scroll animations, and installable as a PWA via the Angular service worker.
+Built with Angular 22 (standalone components, zoneless), a slimmed-down Bootstrap 5 and Font Awesome, with self-hosted fonts, and installable as a PWA via the Angular service worker. The home page and every project page are prerendered to static HTML at build time so crawlers and link previews see the full content.
 
 ## Getting started
 
@@ -16,7 +16,9 @@ npm start        # dev server at http://localhost:4200
 
 ## Updating content
 
-All site content lives in [`src/app/shared/services/info.json`](src/app/shared/services/info.json). No component changes are needed to update it.
+All site content lives in [`src/app/shared/services/info.json`](src/app/shared/services/info.json), with the Arabic version in [`info.ar.json`](src/app/shared/services/info.ar.json). No component changes are needed to update it.
+
+The site is bilingual: English at `/` and Arabic (right-to-left) at `/ar/`, both prerendered. **The two content files must keep the same structure**, so when you add or change something in `info.json` (a project, an experience entry, a highlight), make the same change in `info.ar.json`, translating only the text. Interface text (buttons, labels, form messages) is in [`strings.ts`](src/app/shared/i18n/strings.ts); templates use it as `{{ 'key' | t }}`.
 
 | Key          | What it controls                                                     |
 | ------------ | -------------------------------------------------------------------- |
@@ -24,26 +26,34 @@ All site content lives in [`src/app/shared/services/info.json`](src/app/shared/s
 | `experience` | Work history entries (position, company, period, description, tags)  |
 | `contact`    | Email and location shown in the sidebar                              |
 | `social`     | Social profile links shown in the sidebar                            |
-| `categories` | Filter categories for the portfolio section                          |
-| `portfolio`  | Portfolio projects with images, links and details                    |
+| `categories` | Filter categories for the Projects section                           |
+| `portfolio`  | Projects with images, links and details (one page per `id`)          |
+| `recommendations` | Quotes from colleagues, e.g. LinkedIn recommendations (`quote`, `name`, `title`, optional `relationship` and `url`). The section is hidden while the list is empty. |
 
 Images go in [`src/assets/img/`](src/assets/img/). Keep them small: export at the size they're displayed and prefer WebP.
 
-The contact form (not currently shown on the page) posts to [Getform](https://getform.io); the endpoint is in [`contact.service.ts`](src/app/shared/services/contact.service.ts).
+The contact form posts to [Forminit](https://forminit.com) (formerly Getform). The form ID is in [`contact.service.ts`](src/app/shared/services/contact.service.ts); fields use Forminit's `fi-…` names, and `_gotcha` is the spam honeypot.
 
 ## Project structure
 
 ```text
 src/app/
-├── home/              # Main page (about + experience); portfolio and contact
-│                      # sections exist but aren't currently rendered
-├── portfolio-item/    # Project detail page
+├── home/              # Main page: about, experience, projects and contact
+├── portfolio-item/    # Project detail page (/projects/:id)
 ├── page-not-found/    # 404 page
+├── app.config.ts      # App providers (router, HTTP, hydration, service worker)
+├── app.routes.ts      # Routes; app.routes.server.ts sets which ones are prerendered
 └── shared/
-    ├── components/    # Navigation and footer
+    ├── components/    # Navigation, footer, logo, language and theme controls
+    ├── i18n/          # Interface text (strings.ts), the `t` pipe and the language service
     ├── interfaces/    # TypeScript types for info.json
-    └── services/      # Content (info.json) and contact form services
+    ├── services/      # Content (info.json), contact form and SEO services
+    └── theme/         # Light/dark theme
 ```
+
+The app runs without zone.js, and components use `OnPush` change detection (Angular's default). A template refreshes after its own events (clicks, input) and when a signal it reads changes. State that changes anywhere else, such as in an HTTP callback, a route subscription or a `window` listener, must be a signal or call `ChangeDetectorRef.markForCheck()`, otherwise the page won't update.
+
+Fonts (Inter, JetBrains Mono and IBM Plex Sans Arabic) come from the `@fontsource` packages, listed in [`src/fonts.css`](src/fonts.css). That file is built separately and loaded after the page, so text first shows in the system font.
 
 ## Building
 
@@ -51,10 +61,21 @@ src/app/
 npm run build
 ```
 
-Output goes to `dist/adlouniahmad-portfolio/`.
+Output goes to `dist/adlouniahmad-portfolio/browser/`. Every page is prerendered to static HTML in both languages: `/` and `/ar/`, and each project at `projects/<id>/` and `ar/projects/<id>/` (new projects in `info.json` are picked up automatically). After the Angular build, [`scripts/postbuild.mjs`](scripts/postbuild.mjs) writes `sitemap.xml` and copies the client-side shell to `404.html`, so GitHub Pages serves the app's own 404 page for unknown URLs.
+
+Prerendered routes are configured in [`app.routes.server.ts`](src/app/app.routes.server.ts). Code that touches `window` or `document` must only run in the browser (guard it with `isPlatformBrowser`), otherwise the build fails while prerendering.
+
+## Testing
+
+Both commands run against the production build, so run `npm run build` first. They serve it the way GitHub Pages does ([`scripts/serve-dist.mjs`](scripts/serve-dist.mjs), port 4317).
+
+```bash
+npm test             # Playwright end-to-end tests (e2e/): home, projects, contact form, Arabic pages, theme, SEO files
+npm run lighthouse   # Lighthouse CI: fails below 75 performance or 95 accessibility, best practices and SEO
+```
+
+Locally the tests use your installed Chrome; CI installs Playwright's Chromium. The performance budget is lower than the scores you'll see locally (90+) because GitHub's shared runners are slower and noisier; it's there to catch big regressions. The contact form tests mock Forminit, so nothing is sent.
 
 ## Deployment
 
-Pushing to `main` triggers the [Deploy workflow](.github/workflows/deploy.yml), which builds the site and publishes it to the `gh-pages` branch that GitHub Pages serves. It can also be run manually from the **Actions** tab.
-
-`npm run deploy` still works as a manual fallback; run `npm run build` first.
+The [CI workflow](.github/workflows/ci.yml) runs on every push and pull request: it builds the site, runs the end-to-end tests and the Lighthouse budgets. On pushes to `main`, once those pass, it publishes the tested build to the `gh-pages` branch that GitHub Pages serves. It can also be run manually from the **Actions** tab.

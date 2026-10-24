@@ -1,12 +1,31 @@
 ._404 {
-	font-size: 8rem;
+	font-size: clamp(6rem, 20vw, 10rem);
+	font-weight: 800;
+	letter-spacing: -.05em;
+	line-height: 1;
+	color: var(--text);
 }
 
 ._404 span {
-	color: var(--color-light-blue);
+	background: var(--gradient);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
 }
 
-/* a {
-	color: var(--color-light-blue);
-	text-decoration: none;
-} */
+p {
+	margin: 1rem 0 1.5rem;
+}
+
+a {
+	padding: .6rem 1.4rem;
+	font-size: .875rem;
+	border: 1px solid var(--border-strong);
+	border-radius: 999px;
+	background: var(--bg-raised);
+	transition: border-color .2s, color .2s;
+}
+
+a:hover {
+	border-color: var(--accent);
+}

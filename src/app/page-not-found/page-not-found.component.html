@@ -1,5 +1,5 @@
 <div class="_404-container vh-100 d-flex align-items-center justify-content-center flex-column">
     <h1 class="_404">4<span>0</span>4</h1>
-    <p>The page you request could not found.</p>
-    <a routerLink="/">Back Home</a>
+    <p>{{ 'notFound' | t }}</p>
+    <a [routerLink]="home">{{ 'backHome' | t }}</a>
 </div>

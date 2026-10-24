@@ -1,32 +1,21 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { faTerminal } from '@fortawesome/free-solid-svg-icons';
+import { Component } from '@angular/core';
 import { IInfo } from '../../shared/interfaces/info';
 import { GeneralService } from '../../shared/services/general.service';
+import { InlineTextComponent } from '../../shared/components/inline-text/inline-text.component';
+import { TranslatePipe } from '../../shared/i18n/translate.pipe';
 
 @Component({
     selector: 'adl-about',
     templateUrl: './about.component.html',
     styleUrls: ['./about.component.css'],
-    changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+    imports: [InlineTextComponent, TranslatePipe]
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent {
 
-  icons: any;
   info: IInfo;
 
   constructor(private generalService: GeneralService) { 
     this.info = generalService.getBasicInfo();
-  }
-
-  ngOnInit(): void {
-    this.initializeIcons();
-  }
-
-  initializeIcons(): void {
-    this.icons = {
-      terminal: faTerminal
-    };
   }
 
 }

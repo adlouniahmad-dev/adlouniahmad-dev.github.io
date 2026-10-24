@@ -1,39 +1,31 @@
-import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { Router } from '@angular/router';
-import { faLink, faInfo } from '@fortawesome/free-solid-svg-icons';
+import { Component, Input } from '@angular/core';
 import { IPortfolioItem } from '../../../shared/interfaces/portfolio-item';
+import { LanguageService } from '../../../shared/i18n/language.service';
+import { kindKey } from '../../../shared/i18n/strings';
+import { isInProgress } from '../../../shared/enums/project-status';
+import { RouterLink } from '@angular/router';
+import { ProjectCoverComponent } from '../../../shared/components/project-cover/project-cover.component';
+import { TranslatePipe } from '../../../shared/i18n/translate.pipe';
 
 @Component({
     selector: 'adl-product-item',
     templateUrl: './product-item.component.html',
     styleUrls: ['./product-item.component.css'],
-    changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+    imports: [RouterLink, ProjectCoverComponent, TranslatePipe]
 })
-export class ProductItemComponent implements OnInit {
+export class ProductItemComponent {
 
   @Input() item: IPortfolioItem;
-  icons: any;
 
-  constructor(private router: Router) { }
-
-  ngOnInit(): void {
-    this.initializeIcons();
+  readonly kindKey = kindKey;
+  get inProgress(): boolean {
+    return isInProgress(this.item);
   }
 
-  initializeIcons(): void {
-    this.icons = {
-      link: faLink,
-      info: faInfo
-    };
-  }
+  constructor(private language: LanguageService) {}
 
-  goToLink(): void {
-    window.open(this.item.link, '_blank');
-  }
-
-  navigateToDetails(id: string): void {
-    this.router.navigate(['/portfolio', id]);
+  get link(): string[] {
+    return this.language.link('projects', this.item.id);
   }
 
 }

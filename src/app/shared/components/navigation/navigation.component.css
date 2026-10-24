@@ -3,46 +3,115 @@
 }
 
 .header-menu {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .header-menu-link {
-	color: var(--color-secondary);
-  font-weight: normal;
   width: fit-content;
-}
-
-.nav-link {
-  padding: .5rem 0;
+  padding: .55rem 0;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  color: var(--text-faint);
 }
 
 .link-name {
-  font-size: .8rem;
+  font-size: .75rem;
+  letter-spacing: .14em;
 }
 
 .nav-indicator {
   width: 2rem;
-  margin-right: 1rem;
   height: 1px;
-  background-color: var(--color-secondary);
+  margin-inline-end: 1rem;
+  background-color: var(--text-faint);
 }
 
 .header-menu-link,
 .nav-indicator {
-  transition: all .3s;
+  transition: all .3s cubic-bezier(.2, .8, .2, 1);
 }
 
-.header-menu-link:hover:not(.active),
+.header-menu-link:hover,
 .header-menu-link.active {
-	color: var(--color-primary);
-  font-weight: 700;
+  color: var(--text);
 }
 
-.header-menu-link:hover:not(.active) .nav-indicator,
+.header-menu-link:hover .nav-indicator,
 .header-menu-link.active .nav-indicator {
-  background-color: var(--color-primary);
   width: 4rem;
+  background-color: var(--text);
 }
 
+.header-menu-link.active .nav-indicator {
+  height: 2px;
+  background: var(--gradient);
+}
+
+/* ---------- bar variant (small screens) ---------- */
+:host.bar .header-menu {
+  display: flex;
+  gap: .15rem;
+}
+
+:host.bar .header-menu-link {
+  position: relative;
+  padding: .5rem .6rem;
+}
+
+:host.bar .nav-indicator {
+  display: none;
+}
+
+:host.bar .link-name {
+  font-size: .7rem;
+  letter-spacing: .1em;
+}
+
+/* gradient underline instead of the indicator line */
+:host.bar .header-menu-link::after {
+  content: '';
+  position: absolute;
+  left: .6rem;
+  right: .6rem;
+  bottom: .2rem;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--gradient);
+  transform: scaleX(0);
+  transition: transform .3s cubic-bezier(.2, .8, .2, 1);
+}
+
+:host.bar .header-menu-link.active::after {
+  transform: scaleX(1);
+}
+
+/* Narrow phones: tighter links; if they still don't fit, they scroll sideways rather than overflow */
+:host.bar {
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+:host.bar::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (max-width: 400px) {
+
+  :host.bar .header-menu-link {
+    padding: .5rem .4rem;
+  }
+
+  :host.bar .header-menu-link::after {
+    left: .4rem;
+    right: .4rem;
+  }
+
+  :host.bar .link-name {
+    font-size: .64rem;
+    letter-spacing: .06em;
+  }
+
+}

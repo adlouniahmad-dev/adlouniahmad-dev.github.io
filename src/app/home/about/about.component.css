@@ -1,8 +1,48 @@
-:host ::ng-deep .work-position {
-  color: #aa7142;
-  font-weight: 500;
+:host {
+  display: block;
 }
 
-:host ::ng-deep .work-position::before {
-  content: '#';
+p {
+  margin-bottom: 1.1rem;
+  font-size: 1.02rem;
+}
+
+/* About uses the gradient for its highlights */
+adl-inline-text ::ng-deep .highlight {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: 1.75rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skill {
+  padding: .35rem .85rem;
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-raised);
+  transition: border-color .2s ease, transform .2s ease;
+}
+
+.skill:hover {
+  border-color: rgba(167, 139, 250, .5);
+  transform: translateY(-2px);
+}
+
+.sign-off {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text);
 }

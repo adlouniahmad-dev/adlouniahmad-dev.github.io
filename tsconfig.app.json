@@ -11,12 +11,12 @@
   },
   "files": [
     "src/main.ts",
-    "src/polyfills.ts"
+    "src/main.server.ts"
   ],
   "include": [
     "src/**/*.d.ts"
   ],
   "angularCompilerOptions": {
-    "strictTemplates": false
+    "strictTemplates": true
   }
 }

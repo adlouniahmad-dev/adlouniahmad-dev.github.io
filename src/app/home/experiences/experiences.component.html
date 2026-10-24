@@ -1,7 +1,14 @@
 <section class="section" id="experience">
-  <h3 class="section-title">Experience</h3>
+  <h2 class="section-title">{{ 'section.experience' | t }}</h2>
 
-  @for (experience of experiences; track experience) {
+  @for (experience of positions; track experience) {
     <adl-experience class="mb-5" [experience]="experience"></adl-experience>
+  }
+
+  @if (internships.length) {
+    <h3 class="group-title">{{ 'internships' | t }}</h3>
+    @for (experience of internships; track experience) {
+      <adl-experience class="mb-4" [experience]="experience" [compact]="true"></adl-experience>
+    }
   }
 </section>
